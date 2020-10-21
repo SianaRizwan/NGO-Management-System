@@ -22,7 +22,7 @@
          <children>
             <TextField fx:id="usernameTextfield" layoutX="337.0" layoutY="163.0" prefHeight="44.0" prefWidth="358.0" promptText="Username" />
             <PasswordField fx:id="passwordTextfield" layoutX="337.0" layoutY="245.0" prefHeight="44.0" prefWidth="358.0" promptText="Password" />
-            <Button fx:id="loginButton" layoutX="310.0" layoutY="420.0" mnemonicParsing="false" opacity="0.82" prefHeight="50.0" prefWidth="200.0" text="Login" textAlignment="CENTER">
+            <Button fx:id="loginButton" layoutX="310.0" layoutY="420.0" mnemonicParsing="false" onAction="#handleLogin" onMouseClicked="#handleLogin" opacity="0.82" prefHeight="50.0" prefWidth="200.0" text="Login" textAlignment="CENTER">
                <textFill>
                   <LinearGradient endX="1.0" endY="1.0" startX="0.8737864077669902" startY="0.8300970873786409">
                      <stops>
