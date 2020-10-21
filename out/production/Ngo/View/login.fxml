@@ -20,9 +20,9 @@
       </ImageView>
       <AnchorPane layoutX="793.0" layoutY="66.0" opacity="0.8" prefHeight="489.0" prefWidth="415.0" style="-fx-background-color: #8B0000;" AnchorPane.bottomAnchor="66.0" AnchorPane.leftAnchor="793.0" AnchorPane.rightAnchor="307.0" AnchorPane.topAnchor="66.0">
          <children>
-            <TextField layoutX="337.0" layoutY="163.0" prefHeight="44.0" prefWidth="358.0" promptText="Username" />
-            <PasswordField layoutX="337.0" layoutY="245.0" prefHeight="44.0" prefWidth="358.0" promptText="Password" />
-            <Button layoutX="310.0" layoutY="420.0" mnemonicParsing="false" opacity="0.82" prefHeight="50.0" prefWidth="200.0" text="Login" textAlignment="CENTER">
+            <TextField fx:id="usernameTextfield" layoutX="337.0" layoutY="163.0" prefHeight="44.0" prefWidth="358.0" promptText="Username" />
+            <PasswordField fx:id="passwordTextfield" layoutX="337.0" layoutY="245.0" prefHeight="44.0" prefWidth="358.0" promptText="Password" />
+            <Button fx:id="loginButton" layoutX="310.0" layoutY="420.0" mnemonicParsing="false" opacity="0.82" prefHeight="50.0" prefWidth="200.0" text="Login" textAlignment="CENTER">
                <textFill>
                   <LinearGradient endX="1.0" endY="1.0" startX="0.8737864077669902" startY="0.8300970873786409">
                      <stops>
@@ -58,7 +58,7 @@
          <font>
             <Font name="System Italic" size="18.0" />
          </font></Label>
-      <Button layoutX="126.0" layoutY="436.0" mnemonicParsing="false" onAction="#handleRegister" onMouseClicked="#handleRegister" opacity="0.74" prefHeight="50.0" prefWidth="230.0" style="-fx-background-color: fff4f2;" text="Register" textAlignment="CENTER">
+      <Button fx:id="registerButton" layoutX="126.0" layoutY="436.0" mnemonicParsing="false" onAction="#handleRegister" onMouseClicked="#handleRegister" opacity="0.74" prefHeight="50.0" prefWidth="230.0" style="-fx-background-color: fff4f2;" text="Register" textAlignment="CENTER">
          <textFill>
             <LinearGradient endX="1.0" endY="1.0" startX="0.8737864077669902" startY="0.8300970873786409">
                <stops>
