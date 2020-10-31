@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="updateEmployeePane" prefHeight="1282.0" prefWidth="1476.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EmployeeDet.UpdateEmployeeController">
+   <children>
+      <AnchorPane layoutX="375.0" layoutY="244.0" opacity="0.8" prefHeight="706.0" prefWidth="693.0" style="-fx-background-color: #8B0000;">
+         <children>
+            <Label layoutX="74.0" layoutY="75.0" text="Name :" textFill="WHITE">
+               <font>
+                  <Font name="Californian FB" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="108.0" layoutY="135.0" text="Id :" textFill="WHITE">
+               <font>
+                  <Font name="Californian FB" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="75.0" layoutY="188.0" text="Email :" textFill="WHITE">
+               <font>
+                  <Font name="Californian FB" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="236.0" text="Password :" textFill="WHITE">
+               <font>
+                  <Font name="Californian FB" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="288.0" text="Contact no :" textFill="WHITE">
+               <font>
+                  <Font name="Californian FB" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="7.0" layoutY="340.0" text="Date of Birth :" textFill="WHITE">
+               <font>
+                  <Font name="Californian FB" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="405.0" text="Designation :" textFill="WHITE">
+               <font>
+                  <Font name="Californian FB" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="58.0" layoutY="518.0" text="Address :" textFill="WHITE">
+               <font>
+                  <Font name="Californian FB" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="61.0" layoutY="463.0" text="Gender :" textFill="WHITE">
+               <font>
+                  <Font name="Californian FB" size="24.0" />
+               </font>
+            </Label>
+            <TextField layoutX="180.0" layoutY="72.0" prefHeight="31.0" prefWidth="434.0" promptText="Name">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="180.0" layoutY="132.0" prefHeight="31.0" prefWidth="434.0" promptText="Auto Id">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="180.0" layoutY="185.0" prefHeight="31.0" prefWidth="434.0" promptText="Email Id">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="180.0" layoutY="233.0" prefHeight="31.0" prefWidth="434.0" promptText="Password">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="180.0" layoutY="285.0" prefHeight="31.0" prefWidth="434.0" promptText="Phone no">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </TextField>
+            <DatePicker layoutX="182.0" layoutY="338.0" prefHeight="31.0" prefWidth="434.0" promptText="DOB" />
+            <TextField layoutX="180.0" layoutY="405.0" prefHeight="31.0" prefWidth="434.0" promptText="Designation">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </TextField>
+            <ComboBox layoutX="180.0" layoutY="462.0" prefHeight="31.0" prefWidth="434.0" promptText="Gender" />
+            <TextField layoutX="182.0" layoutY="517.0" prefHeight="31.0" prefWidth="434.0" promptText="Address">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </TextField>
+            <Button graphicTextGap="22.0" layoutX="327.0" layoutY="615.0" mnemonicParsing="false" onMouseClicked="#handleConfirmButton" opacity="0.82" prefHeight="42.0" prefWidth="135.0" style="-fx-background-color: FDAB9F;" text="Confirm">
+               <font>
+                  <Font name="Californian FB" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label layoutX="375.0" layoutY="171.0" prefHeight="42.0" prefWidth="410.0" text="Update Employee Details">
+         <font>
+            <Font name="Californian FB Bold" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
