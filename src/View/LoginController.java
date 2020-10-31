@@ -26,7 +26,7 @@ public class LoginController implements Initializable {
     }
     @FXML
     private void handleLogin() throws IOException {
-        AnchorPane EmployeeDetailsPane  = FXMLLoader.load(getClass().getResource("employeeDetails.fxml"));
+        AnchorPane EmployeeDetailsPane  = FXMLLoader.load(getClass().getResource("Main.fxml"));
         loginPane.getChildren().setAll(EmployeeDetailsPane);
     }
     @Override
