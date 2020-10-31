@@ -1,6 +1,5 @@
 package View;
 
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -27,7 +26,7 @@ public class LoginController implements Initializable {
     }
     @FXML
     private void handleLogin() throws IOException {
-        AnchorPane EmployeeDetailsPane  = FXMLLoader.load(getClass().getResource("../View/EmployeeDetails.fxml"));
+        AnchorPane EmployeeDetailsPane  = FXMLLoader.load(getClass().getResource("employeeDetails.fxml"));
         loginPane.getChildren().setAll(EmployeeDetailsPane);
     }
     @Override

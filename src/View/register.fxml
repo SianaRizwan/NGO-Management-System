@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="registerPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.RegisterController">
+<AnchorPane fx:id="registerPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.241" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.RegisterController">
    <children>
       <ImageView opacity="0.16" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
@@ -62,7 +62,7 @@
             <TextField fx:id="passwordTextfield" layoutX="200.0" layoutY="414.0" prefHeight="31.0" prefWidth="407.0" promptText="Enter password" />
             <TextField fx:id="retypePasswordTextfield" layoutX="200.0" layoutY="484.0" prefHeight="31.0" prefWidth="407.0" promptText="Confirm your Password" />
             <ComboBox fx:id="chooseCategoryCombobox" layoutX="200.0" layoutY="235.0" prefHeight="31.0" prefWidth="407.0" promptText="Choose your Category" />
-            <Button fx:id="confirmButton" layoutX="274.0" layoutY="629.0" mnemonicParsing="false" opacity="0.82" prefHeight="47.0" prefWidth="193.0" text="Confirm" />
+            <Button fx:id="confirmButton" graphicTextGap="22.0" layoutX="274.0" layoutY="629.0" mnemonicParsing="false" opacity="0.82" prefHeight="47.0" prefWidth="193.0" text="Confirm" />
             <Button fx:id="backToLoginPageButton" layoutX="233.0" layoutY="740.0" mnemonicParsing="false" onAction="#handleBackToLoginPage" onMouseClicked="#handleBackToLoginPage" opacity="0.82" prefHeight="47.0" prefWidth="291.0" text="Back To LoginPage" />
             <Label layoutX="73.0" layoutY="356.0" text="Email :" textFill="WHITE">
                <font>
