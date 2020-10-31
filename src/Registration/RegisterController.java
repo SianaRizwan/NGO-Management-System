@@ -1,4 +1,4 @@
-package View;
+package Registration;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,7 +21,7 @@ public class RegisterController implements Initializable {
     private Button backToLoginPageButton,confirmButton;
    @FXML
    private  void handleBackToLoginPage() throws IOException {
-       AnchorPane pane  = FXMLLoader.load(getClass().getResource("../View/login.fxml"));
+       AnchorPane pane  = FXMLLoader.load(getClass().getResource("../Login/login.fxml"));
        registerPane.getChildren().setAll(pane);
    }
     @Override

@@ -11,13 +11,13 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.EmployeeDetailsController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EmployeeDet.EmployeeDetailsController">
     <children>
       <Pane fx:id="employeeDetailsPane" prefHeight="1275.0" prefWidth="1473.0">
          <children>
             <Label layoutX="63.0" layoutY="52.0" prefHeight="98.0" prefWidth="511.0" text="Employee Details">
                <font>
-                  <Font name="System Bold" size="30.0" />
+                  <Font name="Californian FB Bold" size="36.0" />
                </font>
             </Label>
             <HBox alignment="CENTER_LEFT" layoutY="169.0" prefHeight="98.0" prefWidth="1426.0">
@@ -27,12 +27,12 @@
                <children>
                   <Button alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="330.0" style="-fx-background-color: FDAB9F;" text="Add New Employee">
                      <font>
-                        <Font name="System Bold" size="25.0" />
+                        <Font name="Californian FB" size="25.0" />
                      </font>
                   </Button>
                   <Button fx:id="updateButton" alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" onMouseClicked="#handleUpdate" prefHeight="55.0" prefWidth="330.0" style="-fx-background-color: FDAB9F;" text="Update Information">
                      <font>
-                        <Font name="System Bold" size="25.0" />
+                        <Font name="Californian FB" size="25.0" />
                      </font>
                      <HBox.margin>
                         <Insets left="100.0" />
@@ -40,7 +40,7 @@
                   </Button>
                   <Button alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="330.0" style="-fx-background-color: FDAB9F;" text="Delete Employee">
                      <font>
-                        <Font name="System Bold" size="25.0" />
+                        <Font name="Californian FB" size="25.0" />
                      </font>
                      <HBox.margin>
                         <Insets left="100.0" />

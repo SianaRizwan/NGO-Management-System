@@ -1,4 +1,4 @@
-package View;
+package EmployeeDet;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,7 +14,7 @@ public class EmployeeDetailsController implements Initializable {
     private Pane employeeDetailsPane;
     @FXML
     private void handleUpdate() throws IOException {
-        Pane pane  = FXMLLoader.load(getClass().getResource("../View/addNewEmployee.fxml"));
+        Pane pane  = FXMLLoader.load(getClass().getResource("updateEmployee.fxml"));
         employeeDetailsPane.getChildren().setAll(pane);
     }
     @Override

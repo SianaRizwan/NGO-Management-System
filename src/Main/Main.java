@@ -10,7 +10,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("../View/login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../Login/login.fxml"));
         primaryStage.setTitle("NGO Management System");
         primaryStage.setMaximized(true);
         primaryStage.setScene(new Scene(root));

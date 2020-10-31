@@ -1,4 +1,4 @@
-package View;
+package EmployeeDet;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,12 +9,12 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class AddNewEmployeeController implements Initializable {
+public class UpdateEmployeeController implements Initializable {
     @FXML
     private Pane updateEmployeePane;
     @FXML
     private void handleConfirmButton() throws IOException{
-        Pane pane  = FXMLLoader.load(getClass().getResource("../View/employeeDetails.fxml"));
+        Pane pane  = FXMLLoader.load(getClass().getResource("../EmployeeDet/employeeDetails.fxml"));
         updateEmployeePane.getChildren().setAll(pane);
     }
     @Override

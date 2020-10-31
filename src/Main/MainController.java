@@ -1,4 +1,4 @@
-package View;
+package Main;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,7 +16,7 @@ public class MainController implements Initializable {
     private BorderPane employeeDetailsBorderPane;
     @FXML
     private void viewDetails() throws IOException{
-        AnchorPane pane  = FXMLLoader.load(getClass().getResource("../View/employeeDetails.fxml"));
+        AnchorPane pane  = FXMLLoader.load(getClass().getResource("../EmployeeDet/employeeDetails.fxml"));
         employeeDetailsBorderPane.setCenter(pane);
     }
 

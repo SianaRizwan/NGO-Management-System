@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="updateEmployeePane" prefHeight="1282.0" prefWidth="1476.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.AddNewEmployeeController">
+<Pane fx:id="updateEmployeePane" prefHeight="1282.0" prefWidth="1476.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EmployeeDet.UpdateEmployeeController">
    <children>
       <AnchorPane layoutX="375.0" layoutY="244.0" opacity="0.8" prefHeight="706.0" prefWidth="693.0" style="-fx-background-color: #8B0000;">
          <children>
