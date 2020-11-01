@@ -74,7 +74,7 @@
                   <Font name="Calibri" size="18.0" />
                </font></TextField>
             <ComboBox fx:id="chooseCategoryCombobox" layoutX="200.0" layoutY="235.0" prefHeight="31.0" prefWidth="407.0" promptText="Choose your Category" />
-            <Button fx:id="confirmButton" graphicTextGap="22.0" layoutX="274.0" layoutY="629.0" mnemonicParsing="false" opacity="0.82" prefHeight="47.0" prefWidth="193.0" text="Confirm">
+            <Button fx:id="confirmButton" graphicTextGap="22.0" layoutX="274.0" layoutY="629.0" mnemonicParsing="false" onMouseClicked="#handleRegister" opacity="0.82" prefHeight="47.0" prefWidth="193.0" text="Confirm">
                <font>
                   <Font name="Calibri" size="24.0" />
                </font></Button>
