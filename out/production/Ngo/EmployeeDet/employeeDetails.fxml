@@ -6,63 +6,70 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EmployeeDet.EmployeeDetailsController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1350.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EmployeeDet.EmployeeDetailsController">
     <children>
-      <Pane fx:id="employeeDetailsPane" prefHeight="1275.0" prefWidth="1473.0">
-         <children>
-            <Label layoutX="63.0" layoutY="52.0" prefHeight="98.0" prefWidth="511.0" text="Employee Details">
-               <font>
-                  <Font name="Californian FB Bold" size="36.0" />
-               </font>
-            </Label>
-            <HBox alignment="CENTER_LEFT" layoutY="169.0" prefHeight="98.0" prefWidth="1426.0">
-               <padding>
-                  <Insets left="100.0" />
-               </padding>
-               <children>
-                  <Button alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="330.0" style="-fx-background-color: FDAB9F;" text="Add New Employee">
-                     <font>
-                        <Font name="Californian FB" size="25.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="updateButton" alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" onMouseClicked="#handleUpdate" prefHeight="55.0" prefWidth="330.0" style="-fx-background-color: FDAB9F;" text="Update Information">
-                     <font>
-                        <Font name="Californian FB" size="25.0" />
-                     </font>
-                     <HBox.margin>
+        <Pane fx:id="employeeDetailsPane" prefHeight="1275.0" prefWidth="1473.0">
+            <children>
+                <Label layoutX="63.0" layoutY="52.0" prefHeight="98.0" prefWidth="511.0" text="Employee Details">
+                    <font>
+                        <Font name="Californian FB Bold" size="36.0" />
+                    </font>
+                </Label>
+                <HBox alignment="CENTER_LEFT" layoutY="169.0" prefHeight="98.0" prefWidth="1426.0">
+                    <padding>
                         <Insets left="100.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="330.0" style="-fx-background-color: FDAB9F;" text="Delete Employee">
-                     <font>
-                        <Font name="Californian FB" size="25.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets left="100.0" />
-                     </HBox.margin>
-                  </Button>
-               </children>
-            </HBox>
-            <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="219.0" layoutY="318.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="862.0">
-               <content>
-                  <TableView minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="862.0">
-                    <columns>
-                      <TableColumn editable="false" maxWidth="250.0" minWidth="150.0" prefWidth="150.0" text="Name" />
-                      <TableColumn editable="false" maxWidth="250.0" minWidth="150.0" prefWidth="150.0" text="Email" />
-                        <TableColumn editable="false" maxWidth="250.0" minWidth="-Infinity" prefWidth="150.0" text="Phone No" />
-                        <TableColumn editable="false" maxWidth="300.0" minWidth="-Infinity" prefWidth="250.0" text="Address" />
-                        <TableColumn editable="false" maxWidth="300.0" minWidth="-Infinity" prefWidth="150.0" text="Designation" />
-                    </columns>
-                  </TableView>
-               </content>
-            </ScrollPane>
-         </children>
-      </Pane>
+                    </padding>
+                    <children>
+                        <Button alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="330.0" style="-fx-background-color: FDAB9F;" text="Add New Employee">
+                            <font>
+                                <Font name="Californian FB" size="25.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="updateButton" alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" onMouseClicked="#handleUpdate" prefHeight="55.0" prefWidth="330.0" style="-fx-background-color: FDAB9F;" text="Update Information">
+                            <font>
+                                <Font name="Californian FB" size="25.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="100.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="330.0" style="-fx-background-color: FDAB9F;" text="Delete Employee">
+                            <font>
+                                <Font name="Californian FB" size="25.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="100.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+                <ScrollPane layoutX="100.0" layoutY="363.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="1180.0">
+                    <content>
+                        <TableView fx:id="employeeTable" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="1180.0">
+                            <columns>
+                                <TableColumn fx:id="colEmpID" editable="false" maxWidth="300.0" minWidth="225.99996948242188" prefWidth="225.99996948242188" text="Employee ID" />
+                                <TableColumn fx:id="colEmpName" editable="false" minWidth="240.0" prefWidth="240.0" text="Name" />
+                                <TableColumn fx:id="colEmpPhone" editable="false" maxWidth="300.0" minWidth="-Infinity" prefWidth="253.0" text="Phone No" />
+                                <TableColumn fx:id="colEmpEmail" editable="false" maxWidth="300.0" minWidth="-Infinity" prefWidth="251.0" text="Email" />
+                                <TableColumn fx:id="colEmpDesignation" editable="false" maxWidth="300.0" minWidth="-Infinity" prefWidth="280.0" text="Designation" />
+                            </columns>
+                        </TableView>
+                    </content>
+                </ScrollPane>
+                <TextField fx:id="searchEmployeeTextField" layoutX="577.0" layoutY="295.0" prefHeight="31.0" prefWidth="298.0" promptText="Search" />
+                <Label fx:id="searchEmployeeLabel" alignment="CENTER" layoutX="423.0" layoutY="295.0" prefHeight="31.0" prefWidth="97.0" text=" Search" textAlignment="CENTER">
+                    <font>
+                        <Font name="Californian FB" size="20.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
     </children>
    <padding>
       <Insets bottom="100.0" top="100.0" />
