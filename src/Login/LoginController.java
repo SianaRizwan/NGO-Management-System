@@ -27,11 +27,7 @@ public class LoginController implements Initializable {
         AnchorPane pane  = FXMLLoader.load(getClass().getResource("../Registration/register.fxml"));
         loginPane.getChildren().setAll(pane);
     }
-    @FXML
-    private void handleLogin() throws IOException {
-        AnchorPane EmployeeDetailsPane  = FXMLLoader.load(getClass().getResource("../Main/main.fxml"));
-        loginPane.getChildren().setAll(EmployeeDetailsPane);
-    }
+
     public String getUsernameTextfield() {
         return usernameTextfield.getText().trim();
     }
@@ -60,10 +56,9 @@ public class LoginController implements Initializable {
         alert.showAndWait();
     }
 
-    public void login(ActionEvent actionEvent) throws IOException {
+    @FXML
+    private void handlelogin() throws IOException {
         Window owner = loginButton.getScene().getWindow();
-
-
         if (usernameTextfield.getText().isEmpty()) {
             showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
                     "Please enter your username");
@@ -75,9 +70,8 @@ public class LoginController implements Initializable {
             return;
         }
         if (loginModel.isLoginSuccessful(getUsernameTextfield(), getPasswordTextfield())) {
-            infoBox("Login Successful!", null, "Failed");
-
-            AnchorPane EmployeeDetailsPane  = FXMLLoader.load(getClass().getResource("../EmployeeInformation/employeeDetails.fxml"));
+            infoBox("Login Successful!", null, "Success");
+            AnchorPane EmployeeDetailsPane  = FXMLLoader.load(getClass().getResource("../Main/main.fxml"));
             loginPane.getChildren().setAll(EmployeeDetailsPane);
         } else {
             infoBox("Please enter correct username and Password", null, "Failed");

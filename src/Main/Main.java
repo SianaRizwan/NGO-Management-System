@@ -12,8 +12,9 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("../Login/login.fxml"));
         primaryStage.setTitle("NGO Management System");
-        primaryStage.setMaximized(true);
-        primaryStage.setScene(new Scene(root));
+        //primaryStage.setMaximized(true);
+        primaryStage.setScene(new Scene(root,1800,900));
+        primaryStage.setFullScreen(false);
         primaryStage.show();
     }
 

@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EmployeeDet.EmployeeDetailsController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EmployeeDet.EmployeeDetailsController">
     <children>
       <Pane fx:id="employeeDetailsPane" prefHeight="1275.0" prefWidth="1473.0">
          <children>
@@ -48,15 +48,15 @@
                   </Button>
                </children>
             </HBox>
-            <ScrollPane layoutX="153.0" layoutY="319.0" prefHeight="673.0" prefWidth="1178.0">
+            <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="219.0" layoutY="318.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="862.0">
                <content>
-                  <TableView prefHeight="669.0" prefWidth="1184.0">
+                  <TableView minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="862.0">
                     <columns>
-                      <TableColumn editable="false" maxWidth="300.0" minWidth="250.0" prefWidth="250.0" text="Name" />
-                      <TableColumn editable="false" minWidth="250.0" prefWidth="250.0" text="Email" />
-                        <TableColumn editable="false" maxWidth="300.0" minWidth="-Infinity" prefWidth="250.0" text="Phone No" />
+                      <TableColumn editable="false" maxWidth="250.0" minWidth="150.0" prefWidth="150.0" text="Name" />
+                      <TableColumn editable="false" maxWidth="250.0" minWidth="150.0" prefWidth="150.0" text="Email" />
+                        <TableColumn editable="false" maxWidth="250.0" minWidth="-Infinity" prefWidth="150.0" text="Phone No" />
                         <TableColumn editable="false" maxWidth="300.0" minWidth="-Infinity" prefWidth="250.0" text="Address" />
-                        <TableColumn editable="false" maxWidth="300.0" minWidth="-Infinity" prefWidth="250.0" text="Designation" />
+                        <TableColumn editable="false" maxWidth="300.0" minWidth="-Infinity" prefWidth="150.0" text="Designation" />
                     </columns>
                   </TableView>
                </content>
@@ -64,4 +64,7 @@
          </children>
       </Pane>
     </children>
+   <padding>
+      <Insets bottom="100.0" top="100.0" />
+   </padding>
 </AnchorPane>

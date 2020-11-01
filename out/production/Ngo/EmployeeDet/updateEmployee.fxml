@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="updateEmployeePane" prefHeight="1282.0" prefWidth="1476.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EmployeeDet.UpdateEmployeeController">
+<Pane fx:id="updateEmployeePane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EmployeeDet.UpdateEmployeeController">
    <children>
-      <AnchorPane layoutX="375.0" layoutY="244.0" opacity="0.8" prefHeight="706.0" prefWidth="693.0" style="-fx-background-color: #8B0000;">
+      <AnchorPane layoutX="375.0" layoutY="160.0" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="700.0" prefWidth="690.0" style="-fx-background-color: #8B0000;">
          <children>
             <Label layoutX="74.0" layoutY="75.0" text="Name :" textFill="WHITE">
                <font>
@@ -102,7 +102,7 @@
             </Button>
          </children>
       </AnchorPane>
-      <Label layoutX="375.0" layoutY="171.0" prefHeight="42.0" prefWidth="410.0" text="Update Employee Details">
+      <Label layoutX="375.0" layoutY="98.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="410.0" text="Update Employee Details">
          <font>
             <Font name="Californian FB Bold" size="36.0" />
          </font>
