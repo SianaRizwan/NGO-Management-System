@@ -36,4 +36,14 @@ public class MainController implements Initializable {
         AnchorPane pane  = FXMLLoader.load(getClass().getResource("../DoctorDetails/DoctorDetails.fxml"));
         employeeDetailsBorderPane.setCenter(pane);
     }
+    public void viewDonorDetails() throws IOException {
+        AnchorPane pane  = FXMLLoader.load(getClass().getResource("../DonorDetails/donorDetails.fxml"));
+        employeeDetailsBorderPane.setCenter(pane);
+    }
+    public void viewVolunteerDetails() throws IOException {
+        AnchorPane pane  = FXMLLoader.load(getClass().getResource("../VolunteerDetails/volunteerDetails.fxml"));
+        employeeDetailsBorderPane.setCenter(pane);
+    }
+
+
 }

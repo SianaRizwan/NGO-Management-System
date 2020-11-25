@@ -48,9 +48,7 @@
                                 <Insets top="10.0" />
                             </VBox.margin>
                         </Label>
-                        <Button alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false"
-                                onAction="#viewEmployeeDetails" onMouseClicked="#viewEmployeeDetails" prefHeight="54.0"
-                                prefWidth="544.0" style="-fx-background-color: fff4f2;" text="Employee Details">
+                        <Button alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" onAction="#viewEmployeeDetails" onMouseClicked="#viewEmployeeDetails" prefHeight="54.0" prefWidth="544.0" style="-fx-background-color: fff4f2;" text="Employee Details">
                             <font>
                                 <Font name="Californian FB Bold" size="25.0" />
                             </font>
@@ -58,9 +56,7 @@
                                 <Insets top="60.0" />
                             </VBox.margin>
                         </Button>
-                        <Button alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="54.0"
-                                prefWidth="544.0" style="-fx-background-color: fff4f2;" onAction="#viewDoctorDetails" onMouseClicked="#viewDoctorDetails"
-                                text="Doctor Details">
+                        <Button alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" onAction="#viewDoctorDetails" onMouseClicked="#viewDoctorDetails" prefHeight="54.0" prefWidth="544.0" style="-fx-background-color: fff4f2;" text="Doctor Details">
                             <font>
                                 <Font name="Californian FB Bold" size="25.0" />
                             </font>
@@ -68,7 +64,7 @@
                                 <Insets top="20.0" />
                             </VBox.margin>
                         </Button>
-                        <Button alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="544.0" style="-fx-background-color: fff4f2;" text="Donor Details">
+                        <Button alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" onMouseClicked="#viewDonorDetails" prefHeight="44.0" prefWidth="544.0" style="-fx-background-color: fff4f2;" text="Donor Details">
                             <font>
                                 <Font name="Californian FB Bold" size="25.0" />
                             </font>
@@ -76,7 +72,7 @@
                                 <Insets top="20.0" />
                             </VBox.margin>
                         </Button>
-                        <Button alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="544.0" style="-fx-background-color: fff4f2;" text="Volunteer Details">
+                        <Button alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" onAction="#viewVolunteerDetails" onMouseClicked="#viewVolunteerDetails" prefHeight="44.0" prefWidth="544.0" style="-fx-background-color: fff4f2;" text="Volunteer Details">
                             <font>
                                 <Font name="Californian FB Bold" size="25.0" />
                             </font>
@@ -110,7 +106,7 @@
                         </Button>
                         <Button alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" onMouseClicked="#handleLogOut" prefHeight="60.0" prefWidth="371.0" style="-fx-background-color: fff4f2;" text="Log Out">
                             <VBox.margin>
-                                <Insets top="60.0" />
+                                <Insets bottom="80.0" left="20.0" right="20.0" top="40.0" />
                             </VBox.margin>
                             <font>
                                 <Font name="Calibri Bold" size="36.0" />
