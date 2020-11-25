@@ -48,12 +48,24 @@
                                 <Insets top="10.0" />
                             </VBox.margin>
                         </Label>
-                        <Button alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" onAction="#viewDetails" onMouseClicked="#viewDetails" prefHeight="54.0" prefWidth="544.0" style="-fx-background-color: fff4f2;" text="Employee Details">
+                        <Button alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false"
+                                onAction="#viewEmployeeDetails" onMouseClicked="#viewEmployeeDetails" prefHeight="54.0"
+                                prefWidth="544.0" style="-fx-background-color: fff4f2;" text="Employee Details">
                             <font>
                                 <Font name="Californian FB Bold" size="25.0" />
                             </font>
                             <VBox.margin>
                                 <Insets top="60.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="54.0"
+                                prefWidth="544.0" style="-fx-background-color: fff4f2;" onAction="#viewDoctorDetails" onMouseClicked="#viewDoctorDetails"
+                                text="Doctor Details">
+                            <font>
+                                <Font name="Californian FB Bold" size="25.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="20.0" />
                             </VBox.margin>
                         </Button>
                         <Button alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="544.0" style="-fx-background-color: fff4f2;" text="Donor Details">

@@ -3,6 +3,7 @@ package Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 
@@ -17,7 +18,7 @@ public class MainController implements Initializable {
     @FXML
     private  AnchorPane mainPane;
     @FXML
-    private void viewDetails() throws IOException{
+    private void viewEmployeeDetails() throws IOException{
         AnchorPane pane  = FXMLLoader.load(getClass().getResource("../EmployeeDet/employeeDetails.fxml"));
         employeeDetailsBorderPane.setCenter(pane);
     }
@@ -29,5 +30,10 @@ public class MainController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+    }
+
+    public void viewDoctorDetails() throws IOException {
+        AnchorPane pane  = FXMLLoader.load(getClass().getResource("../DoctorDetails/DoctorDetails.fxml"));
+        employeeDetailsBorderPane.setCenter(pane);
     }
 }

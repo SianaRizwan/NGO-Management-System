@@ -1,5 +1,6 @@
 package Login;
 
+import Utilities.ShowAlertDialogue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -48,17 +49,13 @@ public class LoginController implements Initializable {
         alert.show();
     }
 
-    private void infoBox(String infoMessage, String headerText, String title) {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setContentText(infoMessage);
-        alert.setTitle(title);
-        alert.setHeaderText(headerText);
-        alert.showAndWait();
-    }
+
 
     @FXML
-    private void handlelogin() throws IOException {
+    public void handleLogin(ActionEvent actionEvent) throws IOException {
         Window owner = loginButton.getScene().getWindow();
+
+
         if (usernameTextfield.getText().isEmpty()) {
             showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
                     "Please enter your username");
@@ -70,11 +67,12 @@ public class LoginController implements Initializable {
             return;
         }
         if (loginModel.isLoginSuccessful(getUsernameTextfield(), getPasswordTextfield())) {
-            infoBox("Login Successful!", null, "Success");
+            new ShowAlertDialogue().infoBox("Login Successful!", null, "Login");
+
             AnchorPane EmployeeDetailsPane  = FXMLLoader.load(getClass().getResource("../Main/main.fxml"));
             loginPane.getChildren().setAll(EmployeeDetailsPane);
         } else {
-            infoBox("Please enter correct username and Password", null, "Failed");
+            new ShowAlertDialogue().infoBox("Please enter correct username and Password", null, "Login");
         }
     }
     @Override

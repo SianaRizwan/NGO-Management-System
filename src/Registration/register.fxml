@@ -65,11 +65,12 @@
                   <Font name="Calibri" size="18.0" />
                </font></TextField>
             <ComboBox fx:id="chooseCategoryCombobox" layoutX="200.0" layoutY="235.0" prefHeight="31.0" prefWidth="407.0" promptText="Choose your Category" />
-            <Button fx:id="confirmButton" graphicTextGap="22.0" layoutX="274.0" layoutY="629.0" mnemonicParsing="false" onMouseClicked="#handleRegister" opacity="0.82" prefHeight="47.0" prefWidth="193.0" text="Confirm">
+            <Button fx:id="confirmButton" graphicTextGap="22.0" layoutX="274.0" layoutY="629.0" mnemonicParsing="false" opacity="0.82" prefHeight="47.0" prefWidth="193.0" onMouseClicked="#confirmRegistration" onAction="#confirmRegistration"
+                    text="Confirm">
                <font>
                   <Font name="Calibri" size="24.0" />
                </font></Button>
-            <Button fx:id="backToLoginPageButton" layoutX="233.0" layoutY="740.0" mnemonicParsing="false" onAction="#handleBackToLoginPage" onMouseClicked="#handleBackToLoginPage" opacity="0.82" prefHeight="47.0" prefWidth="291.0" text="Back To LoginPage">
+            <Button fx:id="backToLoginPageButton" layoutX="233.0" layoutY="740.0" mnemonicParsing="false" onMouseClicked="#handleBackToLoginPage" onAction="#handleBackToLoginPage" opacity="0.82" prefHeight="47.0" prefWidth="291.0" text="Back To LoginPage">
                <font>
                   <Font name="Calibri" size="24.0" />
                </font></Button>

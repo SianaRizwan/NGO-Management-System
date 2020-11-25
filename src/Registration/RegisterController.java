@@ -1,5 +1,8 @@
 package Registration;
 
+import Registration.RegisterModel;
+import Utilities.ShowAlertDialogue;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -8,7 +11,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -50,23 +52,25 @@ public class RegisterController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
     }
-
+    ShowAlertDialogue showAlertDialogue=new ShowAlertDialogue();
     @FXML
-    private void handleRegister() {
+    public void confirmRegistration(ActionEvent actionEvent) {
         try {
             if (registerModel.validateEmail(getEmailTextfield())) {
                 if (getPasswordTextfield().equals(getRetypePasswordTextfield())) {
                     if (registerModel.isRegistrationSuccessful(getUserNameTextfield(), getEmailTextfield(), getPasswordTextfield())) {
-                        infoBox("registration Successful!", null, "Failed");
+                        showAlertDialogue.infoBox("registration Successful!", null, "Failed");
+                        AnchorPane pane = FXMLLoader.load(getClass().getResource("../Login/login.fxml"));
+                        registerPane.getChildren().setAll(pane);
                     } else
-                        infoBox("registration unsuccessful!", null, "Failed");
+                        showAlertDialogue.infoBox("registration unsuccessful!", null, "Failed");
                 }
                 else
-                    infoBox("pass doesn't mathch!", null, "Failed");
+                    showAlertDialogue.infoBox("pass doesn't mathch!", null, "Failed");
 
             }
             else
-                infoBox("input valid email!", null, "Failed");
+                showAlertDialogue.infoBox("input valid email!", null, "Failed");
 
 
         } catch (Exception e) {
@@ -75,11 +79,6 @@ public class RegisterController implements Initializable {
 
     }
 
-    private void infoBox(String infoMessage, String headerText, String title) {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setContentText(infoMessage);
-        alert.setTitle(title);
-        alert.setHeaderText(headerText);
-        alert.showAndWait();
-    }
+
+
 }

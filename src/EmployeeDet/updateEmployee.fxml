@@ -4,12 +4,14 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="updateEmployeePane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EmployeeDet.UpdateEmployeeController">
+<Pane fx:id="updateEmployeePane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1350.0"
+      xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EmployeeDet.UpdateEmployeeController">
    <children>
       <AnchorPane layoutX="375.0" layoutY="160.0" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="700.0" prefWidth="690.0" style="-fx-background-color: #8B0000;">
          <children>
@@ -58,48 +60,42 @@
                   <Font name="Californian FB" size="24.0" />
                </font>
             </Label>
-            <TextField layoutX="180.0" layoutY="72.0" prefHeight="31.0" prefWidth="434.0" promptText="Name">
+            <TextField fx:id="employeeName" layoutX="180.0" layoutY="72.0" prefHeight="31.0" prefWidth="434.0" promptText="Name">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>
             </TextField>
-            <TextField layoutX="180.0" layoutY="132.0" prefHeight="31.0" prefWidth="434.0" promptText="Auto Id">
+            <TextField fx:id="employeeID" layoutX="180.0" layoutY="132.0" onAction="#IDOnEnter" prefHeight="31.0" prefWidth="434.0" promptText="Auto Id">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>
             </TextField>
-            <TextField layoutX="180.0" layoutY="185.0" prefHeight="31.0" prefWidth="434.0" promptText="Email Id">
+            <TextField fx:id="employeeEmailID" layoutX="180.0" layoutY="185.0" prefHeight="31.0" prefWidth="434.0" promptText="Email Id">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>
             </TextField>
-            <TextField layoutX="180.0" layoutY="233.0" prefHeight="31.0" prefWidth="434.0" promptText="Password">
+            <TextField fx:id="employeePhoneNumber" layoutX="180.0" layoutY="285.0" prefHeight="31.0" prefWidth="434.0" promptText="Phone no">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>
             </TextField>
-            <TextField layoutX="180.0" layoutY="285.0" prefHeight="31.0" prefWidth="434.0" promptText="Phone no">
+            <DatePicker fx:id="employeeDOB" layoutX="182.0" layoutY="338.0" prefHeight="31.0" prefWidth="434.0" promptText="DOB" />
+            <ComboBox fx:id="employeeDesignation" editable="false" layoutX="180.0" layoutY="405.0" prefHeight="31.0" prefWidth="434.0" promptText="Designation" />
+
+
+            <ComboBox fx:id="employeeGender" layoutX="180.0" layoutY="462.0" prefHeight="31.0" prefWidth="434.0" promptText="Gender" />
+            <TextField fx:id="employeeAddress" layoutX="182.0" layoutY="517.0" prefHeight="31.0" prefWidth="434.0" promptText="Address">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>
             </TextField>
-            <DatePicker layoutX="182.0" layoutY="338.0" prefHeight="31.0" prefWidth="434.0" promptText="DOB" />
-            <TextField layoutX="180.0" layoutY="405.0" prefHeight="31.0" prefWidth="434.0" promptText="Designation">
-               <font>
-                  <Font name="Calibri" size="18.0" />
-               </font>
-            </TextField>
-            <ComboBox layoutX="180.0" layoutY="462.0" prefHeight="31.0" prefWidth="434.0" promptText="Gender" />
-            <TextField layoutX="182.0" layoutY="517.0" prefHeight="31.0" prefWidth="434.0" promptText="Address">
-               <font>
-                  <Font name="Calibri" size="18.0" />
-               </font>
-            </TextField>
-            <Button graphicTextGap="22.0" layoutX="327.0" layoutY="615.0" mnemonicParsing="false" onMouseClicked="#handleConfirmButton" opacity="0.82" prefHeight="42.0" prefWidth="135.0" style="-fx-background-color: FDAB9F;" text="Confirm">
+            <Button fx:id="confirmUpdateBtn" graphicTextGap="22.0" layoutX="327.0" layoutY="615.0" mnemonicParsing="false" onMouseClicked="#handleConfirmButton" opacity="0.82" prefHeight="42.0" prefWidth="135.0" style="-fx-background-color: FDAB9F;" text="Confirm">
                <font>
                   <Font name="Californian FB" size="18.0" />
                </font>
             </Button>
+            <PasswordField fx:id="employeePassword" layoutX="180.0" layoutY="235.0" prefHeight="34.0" prefWidth="434.0" promptText="Password" />
          </children>
       </AnchorPane>
       <Label layoutX="375.0" layoutY="98.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="410.0" text="Update Employee Details">
