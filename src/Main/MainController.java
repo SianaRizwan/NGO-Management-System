@@ -45,5 +45,10 @@ public class MainController implements Initializable {
         employeeDetailsBorderPane.setCenter(pane);
     }
 
+    public void viewSupplyDetails() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("../SupplyDetails/supplyDetails.fxml"));
+        employeeDetailsBorderPane.setCenter(pane);
+    }
+
 
 }
