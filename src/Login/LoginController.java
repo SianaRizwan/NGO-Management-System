@@ -1,5 +1,6 @@
 package Login;
 
+import Utilities.ShowAlertDialogue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -27,11 +28,7 @@ public class LoginController implements Initializable {
         AnchorPane pane  = FXMLLoader.load(getClass().getResource("../Registration/register.fxml"));
         loginPane.getChildren().setAll(pane);
     }
-    @FXML
-    private void handleLogin() throws IOException {
-        AnchorPane EmployeeDetailsPane  = FXMLLoader.load(getClass().getResource("../Main/main.fxml"));
-        loginPane.getChildren().setAll(EmployeeDetailsPane);
-    }
+
     public String getUsernameTextfield() {
         return usernameTextfield.getText().trim();
     }
@@ -52,15 +49,10 @@ public class LoginController implements Initializable {
         alert.show();
     }
 
-    private void infoBox(String infoMessage, String headerText, String title) {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setContentText(infoMessage);
-        alert.setTitle(title);
-        alert.setHeaderText(headerText);
-        alert.showAndWait();
-    }
 
-    public void login(ActionEvent actionEvent) throws IOException {
+
+    @FXML
+    public void handleLogin(ActionEvent actionEvent) throws IOException {
         Window owner = loginButton.getScene().getWindow();
 
 
@@ -75,12 +67,12 @@ public class LoginController implements Initializable {
             return;
         }
         if (loginModel.isLoginSuccessful(getUsernameTextfield(), getPasswordTextfield())) {
-            infoBox("Login Successful!", null, "Failed");
+            new ShowAlertDialogue().infoBox("Login Successful!", null, "Login");
 
-            AnchorPane EmployeeDetailsPane  = FXMLLoader.load(getClass().getResource("../EmployeeInformation/employeeDetails.fxml"));
+            AnchorPane EmployeeDetailsPane  = FXMLLoader.load(getClass().getResource("../Main/main.fxml"));
             loginPane.getChildren().setAll(EmployeeDetailsPane);
         } else {
-            infoBox("Please enter correct username and Password", null, "Failed");
+            new ShowAlertDialogue().infoBox("Please enter correct username and Password", null, "Login");
         }
     }
     @Override

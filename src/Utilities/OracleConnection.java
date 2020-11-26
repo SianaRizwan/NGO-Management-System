@@ -7,9 +7,9 @@ import java.sql.Statement;
 
 public class OracleConnection {
     static final String JDBC_DRIVER = "oracle.jdbc.driver.OracleDriver";
-    static final String DB_URL = "jdbc:oracle:thin:@localhost:1521:xe";
-    static final String USER = "C##SIANA";
-    static final String PASS = "Test123";
+    static final String DB_URL = "jdbc:oracle:thin:@localhost:1522:xe";
+    static final String USER = "C##SPL2";
+    static final String PASS = "spl2";
     public Connection conn = null;
     Statement stmt = null;
 
