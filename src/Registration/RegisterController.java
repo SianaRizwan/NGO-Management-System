@@ -21,8 +21,6 @@ public class RegisterController implements Initializable {
     private AnchorPane registerPane;
     @FXML
     private TextField userNameTextfield, emailTextfield, passwordTextfield, retypePasswordTextfield;
-    @FXML
-    private Button backToLoginPageButton, confirmButton;
 
     @FXML
     private void handleBackToLoginPage() throws IOException {
@@ -52,14 +50,14 @@ public class RegisterController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
     }
-    ShowAlertDialogue showAlertDialogue=new ShowAlertDialogue();
-    @FXML
+ShowAlertDialogue showAlertDialogue=new ShowAlertDialogue();
+@FXML
     public void confirmRegistration(ActionEvent actionEvent) {
         try {
             if (registerModel.validateEmail(getEmailTextfield())) {
                 if (getPasswordTextfield().equals(getRetypePasswordTextfield())) {
                     if (registerModel.isRegistrationSuccessful(getUserNameTextfield(), getEmailTextfield(), getPasswordTextfield())) {
-                        showAlertDialogue.infoBox("registration Successful!", null, "Failed");
+                         showAlertDialogue.infoBox("registration Successful!", null, "Failed");
                         AnchorPane pane = FXMLLoader.load(getClass().getResource("../Login/login.fxml"));
                         registerPane.getChildren().setAll(pane);
                     } else

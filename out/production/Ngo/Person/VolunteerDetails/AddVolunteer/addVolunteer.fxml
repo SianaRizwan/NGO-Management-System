@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane fx:id="addVolunteerPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Person.VolunteerDetails.AddVolunteer.AddVolunteerController">
+    <children>
+        <AnchorPane layoutX="375.0" layoutY="160.0" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="700.0" prefWidth="690.0" style="-fx-background-color: #8B0000;">
+            <children>
+                <Label layoutX="74.0" layoutY="75.0" text="Name :" textFill="WHITE">
+                    <font>
+                        <Font name="Californian FB" size="24.0" />
+                    </font>
+                </Label>
+                <Label layoutX="75.0" layoutY="141.0" text="Email :" textFill="WHITE">
+                    <font>
+                        <Font name="Californian FB" size="24.0" />
+                    </font>
+                </Label>
+                <Label layoutX="27.0" layoutY="200.0" text="Contact no :" textFill="WHITE">
+                    <font>
+                        <Font name="Californian FB" size="24.0" />
+                    </font>
+                </Label>
+                <Label layoutX="48.0" layoutY="336.0" text="Address :" textFill="WHITE">
+                    <font>
+                        <Font name="Californian FB" size="24.0" />
+                    </font>
+                </Label>
+                <Label layoutX="62.0" layoutY="267.0" text="Gender :" textFill="WHITE">
+                    <font>
+                        <Font name="Californian FB" size="24.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="VolunteerName" layoutX="180.0" layoutY="72.0" prefHeight="31.0" prefWidth="434.0" promptText="Name">
+                    <font>
+                        <Font name="Calibri" size="18.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="VolunteerEmailID" layoutX="180.0" layoutY="138.0" prefHeight="31.0" prefWidth="434.0" promptText="Email Id">
+                    <font>
+                        <Font name="Calibri" size="18.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="VolunteerPhoneNumber" layoutX="180.0" layoutY="197.0" prefHeight="31.0" prefWidth="434.0" promptText="Phone no">
+                    <font>
+                        <Font name="Calibri" size="18.0" />
+                    </font>
+                </TextField>
+
+
+                <ComboBox fx:id="VolunteerGender" layoutX="182.0" layoutY="266.0" prefHeight="31.0" prefWidth="434.0" promptText="Gender" />
+                <TextField fx:id="VolunteerAddress" layoutX="180.0" layoutY="336.0" prefHeight="31.0" prefWidth="434.0" promptText="Address">
+                    <font>
+                        <Font name="Calibri" size="18.0" />
+                    </font>
+                </TextField>
+                <Button fx:id="confirmAddBtn" graphicTextGap="22.0" layoutX="287.0" layoutY="542.0" mnemonicParsing="false" onAction="#handleConfirmVolunteerAddBtn" opacity="0.82" prefHeight="42.0" prefWidth="135.0" style="-fx-background-color: FDAB9F;" text="Confirm">
+                    <font>
+                        <Font name="Californian FB" size="18.0" />
+                    </font>
+                </Button>
+                <TextField fx:id="VolunteerOccupation" layoutX="182.0" layoutY="406.0" prefHeight="31.0" prefWidth="434.0" promptText="Occupation">
+                    <font>
+                        <Font name="Calibri" size="18.0" />
+                    </font>
+                </TextField>
+                <Label layoutX="13.0" layoutY="409.0" text="Occupation :" textFill="WHITE">
+                    <font>
+                        <Font name="Californian FB" size="24.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <Label layoutX="375.0" layoutY="98.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="410.0" text="Add A Volunteer">
+            <font>
+                <Font name="Californian FB Bold" size="36.0" />
+            </font>
+        </Label>
+    </children>
+
+</AnchorPane>

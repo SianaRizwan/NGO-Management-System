@@ -24,7 +24,7 @@ public class SupplyDetailsController implements Initializable {
 
     @FXML
     private void handleSupplyFood(ActionEvent event) throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("food.fxml"));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("Food/food.fxml"));
         supplyDetailsPane.getChildren().setAll(pane);
     }
 

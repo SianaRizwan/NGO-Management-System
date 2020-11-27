@@ -20,19 +20,19 @@
          </image>
       </ImageView>
       <AnchorPane layoutX="793.0" layoutY="66.0" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="733.0" prefWidth="785.0" style="-fx-background-color: #8B0000;" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="750.0" AnchorPane.rightAnchor="265.0" AnchorPane.topAnchor="70.0">
-      <children>
-         <TextField fx:id="usernameTextfield" layoutX="337.0" layoutY="163.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="350.0" promptText="Username" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="150.0">
-            <font>
-               <Font name="Calibri" size="18.0" />
-            </font></TextField>
-         <PasswordField fx:id="passwordTextfield" layoutX="337.0" layoutY="245.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="350.0" promptText="Password" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="150.0">
-            <font>
-               <Font name="Calibri" size="18.0" />
-            </font></PasswordField>
-         <Button fx:id="loginButton" layoutX="310.0" layoutY="420.0" mnemonicParsing="false" onAction="#handleLogin" onMouseClicked="#handleLogin" opacity="0.82" prefHeight="50.0" prefWidth="200.0" text="Login" textAlignment="CENTER">
-            <textFill>
-               <LinearGradient endX="1.0" endY="1.0" startX="0.8737864077669902" startY="0.8300970873786409">
-                  <stops>
+         <children>
+            <TextField fx:id="usernameTextfield" layoutX="337.0" layoutY="163.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="350.0" promptText="Username" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="150.0">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font></TextField>
+            <PasswordField fx:id="passwordTextfield" layoutX="337.0" layoutY="245.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="350.0" promptText="Password" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="150.0">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font></PasswordField>
+            <Button fx:id="loginButton" layoutX="310.0" layoutY="420.0" mnemonicParsing="false" onAction="#handleLogin" onMouseClicked="#handleLogin" opacity="0.82" prefHeight="50.0" prefWidth="200.0" text="Login" textAlignment="CENTER">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.8737864077669902" startY="0.8300970873786409">
+                     <stops>
                         <Stop color="#140101" />
                         <Stop color="WHITE" offset="1.0" />
                      </stops>
@@ -47,20 +47,20 @@
                   <Font name="Californian FB Bold" size="36.0" />
                </font>
             </Label>
-         <Label layoutX="135.0" layoutY="168.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" text="Username :" textFill="WHITE" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="560.0">
-            <font>
-               <Font name="Californian FB" size="24.0" />
-            </font>
-         </Label>
-         <Label layoutX="135.0" layoutY="250.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" text="Password :" textFill="WHITE" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="560.0">
-            <font>
-               <Font name="Californian FB" size="24.0" />
-            </font>
-         </Label>
-      </children>
-      <padding>
-         <Insets left="5.0" right="3.0" />
-      </padding>
+            <Label layoutX="135.0" layoutY="168.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" text="Username :" textFill="WHITE" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="560.0">
+               <font>
+                  <Font name="Californian FB" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="135.0" layoutY="250.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" text="Password :" textFill="WHITE" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="560.0">
+               <font>
+                  <Font name="Californian FB" size="24.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="5.0" right="3.0" />
+         </padding>
       </AnchorPane>
       <Label alignment="CENTER" layoutX="105.0" layoutY="113.0" prefHeight="65.0" prefWidth="321.0" text="Welcome To Astha" textAlignment="CENTER">
          <font>

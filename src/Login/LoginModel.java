@@ -9,24 +9,24 @@ public class LoginModel {
     OracleConnection oracleConnection = new OracleConnection();
     private String uid;
 
-    /* protected boolean isEmpAvailable(){
-         int n=-1;
-         try {
-             String sql="select count(emp_id) from employee";
-             OracleConnection oc=new OracleConnection();
-             PreparedStatement ps=oc.conn.prepareStatement(sql);
-             ResultSet rs=ps.executeQuery();
-             if(rs.next()){
-                 n=rs.getInt(1);
-             }
-             if(n==0) {
-                 return false;
-             }
-         } catch (Exception e) {
-             e.printStackTrace();
-         }
-         return true;
-     }*/
+   /* protected boolean isEmpAvailable(){
+        int n=-1;
+        try {
+            String sql="select count(emp_id) from employee";
+            OracleConnection oc=new OracleConnection();
+            PreparedStatement ps=oc.conn.prepareStatement(sql);
+            ResultSet rs=ps.executeQuery();
+            if(rs.next()){
+                n=rs.getInt(1);
+            }
+            if(n==0) {
+                return false;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return true;
+    }*/
     protected boolean isLoginSuccessful(String username, String password) {
         try {
             String sql = "select name,password from employee where name=? and password=?";
