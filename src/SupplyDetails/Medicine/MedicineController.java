@@ -1,5 +1,7 @@
 package SupplyDetails.Medicine;
 
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -59,10 +61,11 @@ public class MedicineController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         populateTableView();
+        searchFilterData(searchMedicineTextField, medicineTable);
     }
 
     private void populateTableView(){
-        colMedicineItemID.setCellValueFactory(new PropertyValueFactory<>("id"));
+//        colMedicineItemID.setCellValueFactory(new PropertyValueFactory<>("id"));
         colMedicineName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colMedicineQuantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         colMedicineBuyingPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
@@ -72,6 +75,28 @@ public class MedicineController implements Initializable {
             System.out.println("medicineController: initialize");
             e.printStackTrace();
         }
+    }
+
+//    <TableColumn fx:id="colMedicineItemID" editable="false" maxWidth="1000.0" minWidth="225.99996948242188" prefWidth="300.0" text="Item ID" />
+
+    private void searchFilterData(TextField searchField, TableView<Medicine> table) {
+        try {
+            FilteredList<Medicine> filteredList = new FilteredList<>(medicineModel.getMedicineTableRecords(), b -> true);
+
+            searchField.textProperty().addListener((observable, oldValue, newValue) -> {
+                filteredList.setPredicate(medicine -> medicineModel.isMatchSuccessful(newValue, medicine));
+                sortFilteredData(filteredList, table);
+            });
+        } catch (SQLException throwables) {
+            System.out.println("FoodDetailsController : search box");
+            throwables.printStackTrace();
+        }
+    }
+
+    private void sortFilteredData(FilteredList<Medicine> filteredList, TableView<Medicine> medicineTable) {
+        SortedList<Medicine> sortedList = new SortedList<>(filteredList);
+        sortedList.comparatorProperty().bind(medicineTable.comparatorProperty());
+        medicineTable.setItems(sortedList);
     }
 }
 

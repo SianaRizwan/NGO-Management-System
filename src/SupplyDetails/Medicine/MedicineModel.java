@@ -11,7 +11,7 @@ import java.sql.SQLException;
 
 public class MedicineModel {
     protected ObservableList<Medicine> getMedicineTableRecords() throws SQLException {
-        String sql = "select distinct id,name,sum(qty) qty,sum(unit_price*qty) price from HEALTH_PRODUCT where id LIKE 'M%' group by name order by name";
+        String sql = "select distinct name,sum(qty) qty,sum(unit_price*qty) price from HEALTH_PRODUCT where id LIKE 'M%' group by name order by name";
         ObservableList<Medicine> medicineList =FXCollections.observableArrayList();
 
         try {
@@ -19,12 +19,12 @@ public class MedicineModel {
             PreparedStatement ps = oc.conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while (rs.next()){
-                String id = rs.getString("id");
+//                String id = rs.getString("id");
                 String name = rs.getString("name");
-                int qty = rs.getInt(3);
-                int price = rs.getInt(4);
+                int qty = rs.getInt(2);
+                int price = rs.getInt(3);
 
-                Medicine medicine = new Medicine(price,qty,name,id);
+                Medicine medicine = new Medicine(price,qty,name);
                 medicineList.add(medicine);
             }
 

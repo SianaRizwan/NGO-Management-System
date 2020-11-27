@@ -20,7 +20,6 @@
                  <content>
                      <TableView fx:id="medicineTable" prefHeight="500.0" prefWidth="1200.0">
                          <columns>
-                             <TableColumn fx:id="colMedicineItemID" editable="false" maxWidth="1000.0" minWidth="225.99996948242188" prefWidth="300.0" text="Item ID" />
                              <TableColumn fx:id="colMedicineName" editable="false" minWidth="240.0" prefWidth="300.0" text="Name" />
                              <TableColumn fx:id="colMedicineQuantity" editable="false" maxWidth="1000.0" minWidth="-Infinity" prefWidth="300.0" text="Quantity" />
                              <TableColumn fx:id="colMedicineBuyingPrice" editable="false" maxWidth="1000.0" minWidth="-Infinity" prefWidth="300.0" text="Buying Price" />

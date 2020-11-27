@@ -18,11 +18,11 @@ public class Medicine {
         this.id = id;
     }
 
-    public Medicine(int price, int quantity, String name, String id) {
+    public Medicine(int price, int quantity, String name) {
         this.price = price;
         this.quantity = quantity;
         this.name = name;
-        this.id = id;
+        //this.id = id;
     }
 
     public int getPrice() {
