@@ -68,7 +68,12 @@
             </TextField>
             <DatePicker fx:id="foodPurchaseDate" layoutX="200.0" layoutY="295.0" prefHeight="31.0" prefWidth="435.0" promptText="Purchase Date" />
             <DatePicker fx:id="foodExpiryDate" layoutX="200.0" layoutY="350.0" prefHeight="31.0" prefWidth="435.0" promptText="Expiry Date" />
-            <Button layoutX="289.0" layoutY="446.0" mnemonicParsing="false" onAction="#handleConfirmAddFood" style="-fx-background-color: FDAB9F;" text="Confirm">
+            <Button layoutX="200.0" layoutY="452.0" mnemonicParsing="false" onAction="#handleConfirmAddFood" style="-fx-background-color: FDAB9F;" text="Confirm">
+               <font>
+                  <Font name="Californian FB" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="434.0" layoutY="452.0" mnemonicParsing="false" onAction="#handleBackFood" prefHeight="34.0" prefWidth="86.0" style="-fx-background-color: FDAB9F;" text="Back">
                <font>
                   <Font name="Californian FB" size="18.0" />
                </font>

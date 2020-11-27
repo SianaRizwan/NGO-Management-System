@@ -2,14 +2,17 @@ package SupplyDetails.Food.AddFood;
 
 import SupplyDetails.SupplyInformation;
 import Utilities.ShowAlertDialogue;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import org.controlsfx.control.textfield.TextFields;
 
-import javafx.event.ActionEvent;
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -41,7 +44,7 @@ public class AddFoodSupplyController {
     private Button confirmAddFoodBtn;
 
     @FXML
-    void handleConfirmAddFood(ActionEvent event) throws ParseException {
+    void handleConfirmAddFood() throws ParseException {
         Date pDate = new SimpleDateFormat("MM/dd/yyyy").parse(foodPurchaseDate.getEditor().getText());
         Date eDate = new SimpleDateFormat("MM/dd/yyyy").parse(foodExpiryDate.getEditor().getText());
         if (new AddFoodSupplyModel().isAddFoodSuccessful(foodName.getText(),pDate,eDate,
@@ -64,5 +67,10 @@ public class AddFoodSupplyController {
     public void initialize() {
         TextFields.bindAutoCompletion(foodName, new SupplyInformation().getItemNameList("select distinct name from Food"));
         System.out.println("ll");
+    }
+
+    public void handleBackFood() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("../food.fxml"));
+        addNewSupplyPane.getChildren().setAll(pane);
     }
 }
