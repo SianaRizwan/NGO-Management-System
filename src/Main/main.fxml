@@ -19,7 +19,7 @@
         </ImageView>
         <BorderPane fx:id="employeeDetailsBorderPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1285.0" prefWidth="1800.0">
             <left>
-                <VBox alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="900.0" prefWidth="450.0" spacing="5.0" style="-fx-background-color: #8B0000;" BorderPane.alignment="CENTER">
+                <VBox alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="1285.0" prefWidth="375.0" spacing="5.0" style="-fx-background-color: #8B0000;" BorderPane.alignment="CENTER">
                     <children>
                         <Label text="WELCOME" textFill="WHITE">
                             <VBox.margin>
