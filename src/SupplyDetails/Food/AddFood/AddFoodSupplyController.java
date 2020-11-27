@@ -1,11 +1,17 @@
 package SupplyDetails.Food.AddFood;
 
+import SupplyDetails.SupplyInformation;
+import Utilities.ShowAlertDialogue;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import org.controlsfx.control.textfield.TextFields;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class AddFoodSupplyController {
 
@@ -34,8 +40,28 @@ public class AddFoodSupplyController {
     private Button confirmAddFoodBtn;
 
     @FXML
-    void handleConfirmAddFood(MouseEvent event) {
+    void handleConfirmAddFood() throws ParseException {
+        Date pDate = new SimpleDateFormat("MM/dd/yyyy").parse(foodPurchaseDate.getEditor().getText());
+        Date eDate = new SimpleDateFormat("MM/dd/yyyy").parse(foodExpiryDate.getEditor().getText());
+        if (new AddFoodSupplyModel().isAddFoodSuccessful(foodName.getText(),pDate,eDate,
+                Integer.parseInt(foodQuantity.getText()),Integer.parseInt(foodPrice.getText()),foodSupplier.getText())){
+            new ShowAlertDialogue().infoBox("Food Item Add Successful!", null, "Add Food Supply");
+            refreshTextField();
+
+        }
 
     }
+    private void refreshTextField() {
+        foodExpiryDate.getEditor().setText("");
+        foodPurchaseDate.getEditor().setText("");
+        foodName.setText("");
+        foodPrice.setText("");
+        foodQuantity.setText("");
+        foodSupplier.setText("");
 
+    }
+    public void initialize() {
+        TextFields.bindAutoCompletion(foodName, new SupplyInformation().getItemNameList("select distinct name from Food"));
+        System.out.println("ll");
+    }
 }
