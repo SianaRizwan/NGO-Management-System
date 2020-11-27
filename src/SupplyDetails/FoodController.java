@@ -2,17 +2,24 @@ package SupplyDetails;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class FoodController implements Initializable {
+
+    @FXML
+    private Pane foodDetailsPane;
 
     @FXML
     private TableView<?> foodTable;
@@ -36,17 +43,18 @@ public class FoodController implements Initializable {
     private Label searchFoodLabel;
 
     @FXML
-    public void handleAddFood(ActionEvent event) {
+    private void handleAddFood(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("addFoodSupply.fxml"));
+        foodDetailsPane.getChildren().setAll(pane);
+    }
+
+    @FXML
+    private void handleDeleteFood(ActionEvent event) {
 
     }
 
     @FXML
-    public void handleDeleteFood(ActionEvent event) {
-
-    }
-
-    @FXML
-    public void handleUpdateFood(ActionEvent event) {
+    private void handleUpdateFood(ActionEvent event) {
 
     }
 

@@ -14,7 +14,7 @@
 
 <AnchorPane fx:id="foodSupplyDetailsPane" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SupplyDetails.FoodController">
    <children>
-      <Pane layoutX="1.0" prefHeight="1275.0" prefWidth="1473.0">
+      <Pane fx:id="foodDetailsPane" layoutX="1.0" prefHeight="1275.0" prefWidth="1473.0">
          <children>
             <Label layoutX="63.0" layoutY="52.0" prefHeight="98.0" prefWidth="511.0" text="Food Supply Details">
                <font>
@@ -23,7 +23,7 @@
             </Label>
             <HBox alignment="CENTER" layoutX="23.0" layoutY="169.0" prefHeight="98.0" prefWidth="1432.0" spacing="100.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#handleAddFood" prefHeight="55.0" prefWidth="330.0" style="-fx-background-color: FDAB9F;" text="Add New Supply">
+                  <Button mnemonicParsing="false" onAction="#handleAddFood" onMouseClicked="#handleAddFood" prefHeight="55.0" prefWidth="330.0" style="-fx-background-color: FDAB9F;" text="Add New Supply">
                      <font>
                         <Font name="Californian FB" size="24.0" />
                      </font>
