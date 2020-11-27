@@ -5,10 +5,10 @@ import Utilities.ShowAlertDialogue;
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import org.controlsfx.control.textfield.TextFields;
 
+import javafx.event.ActionEvent;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -40,7 +40,7 @@ public class AddMedicineSupplyController {
     private TextField medicineManufacturer;
 
     @FXML
-    private void handleConfirmAddMedicine(MouseEvent event) throws ParseException {
+    private void handleConfirmAddMedicine(ActionEvent event) throws ParseException {
         Date purDate = new SimpleDateFormat("MM/DD/YYYY").parse(medicinePurchaseDate.getEditor().getText());
         Date expDate = new SimpleDateFormat("MM/DD/YYYY").parse(medicineExpiryDate.getEditor().getText());
 

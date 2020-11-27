@@ -9,6 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import org.controlsfx.control.textfield.TextFields;
 
+import javafx.event.ActionEvent;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -40,7 +41,7 @@ public class AddFoodSupplyController {
     private Button confirmAddFoodBtn;
 
     @FXML
-    void handleConfirmAddFood() throws ParseException {
+    void handleConfirmAddFood(ActionEvent event) throws ParseException {
         Date pDate = new SimpleDateFormat("MM/dd/yyyy").parse(foodPurchaseDate.getEditor().getText());
         Date eDate = new SimpleDateFormat("MM/dd/yyyy").parse(foodExpiryDate.getEditor().getText());
         if (new AddFoodSupplyModel().isAddFoodSuccessful(foodName.getText(),pDate,eDate,
