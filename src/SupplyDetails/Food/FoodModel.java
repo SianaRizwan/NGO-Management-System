@@ -9,7 +9,6 @@ import javafx.collections.ObservableList;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Date;
 
 public class FoodModel {
 
@@ -22,8 +21,8 @@ public class FoodModel {
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 String name = rs.getString("name");
-              int qty=rs.getInt(2);
-              int price=rs.getInt(3);
+                int qty=rs.getInt(2);
+                int price=rs.getInt(3);
 
                 Food food = new Food(name, qty,price);
 
