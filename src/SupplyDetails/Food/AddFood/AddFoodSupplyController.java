@@ -1,4 +1,4 @@
-package SupplyDetails;
+package SupplyDetails.Food.AddFood;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

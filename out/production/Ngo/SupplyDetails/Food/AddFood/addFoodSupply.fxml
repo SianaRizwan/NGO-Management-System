@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="addNewSupplyPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SupplyDetails.AddFoodSupplyController">
+<AnchorPane fx:id="addNewFoodPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SupplyDetails.Food.AddFood.AddFoodSupplyController">
    <children>
        <Label layoutX="375.0" layoutY="98.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="410.0" text="Add New Supply">
            <font>
@@ -68,7 +68,7 @@
             </TextField>
             <DatePicker layoutX="200.0" layoutY="295.0" prefHeight="31.0" prefWidth="435.0" promptText="Purchase Date" />
             <DatePicker layoutX="200.0" layoutY="350.0" prefHeight="31.0" prefWidth="435.0" promptText="Expiry Date" />
-            <Button fx:id="confirmAddFoodBtn" layoutX="289.0" layoutY="446.0" mnemonicParsing="false" onMouseClicked="#handleConfirmAddFood" style="-fx-background-color: FDAB9F;" text="Confirm">
+            <Button layoutX="289.0" layoutY="446.0" mnemonicParsing="false" style="-fx-background-color: FDAB9F;" text="Confirm">
                <font>
                   <Font name="Californian FB" size="18.0" />
                </font>
