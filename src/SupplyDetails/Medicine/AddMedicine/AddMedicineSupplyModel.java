@@ -11,7 +11,7 @@ public class AddMedicineSupplyModel {
             java.sql.Date pur_date = new java.sql.Date(pDate.getTime());
             java.sql.Date exp_date = new java.sql.Date(eDate.getTime());
 
-            String sql = "insert into health_product(name,purchase_date,expire_date,qty,supplier,manufacturer,unit_price,type) values(?,?,?,?,?,?,?,1)";
+            String sql = "insert into health_product(name,purchase_date,expire_date,qty,supplier,manufacturer,unit_price,type) values(?,?,?,?,?,?,?,2)";
 
             OracleConnection oc = new OracleConnection();
             PreparedStatement ps = oc.conn.prepareStatement(sql);
