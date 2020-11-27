@@ -34,6 +34,12 @@ public class SupplyDetailsController implements Initializable {
         supplyDetailsPane.getChildren().setAll(pane);
     }
 
+    @FXML
+    private void handleSupplyVaccine(ActionEvent event) throws IOException {
+//        AnchorPane pane = FXMLLoader.load(getClass().getResource("Vaccine/Vaccine.fxml"));
+//        supplyDetailsPane.getChildren().setAll(pane);
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
