@@ -46,29 +46,29 @@
                   <Font name="Californian FB" size="24.0" />
                </font>
             </Label>
-            <TextField layoutX="200.0" layoutY="75.0" prefHeight="31.0" prefWidth="435.0" promptText="Name">
+            <TextField fx:id="foodName" layoutX="200.0" layoutY="75.0" prefHeight="31.0" prefWidth="435.0" promptText="Name">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>
             </TextField>
-            <TextField layoutX="200.0" layoutY="130.0" prefHeight="31.0" prefWidth="435.0" promptText="Supplier Name">
+            <TextField fx:id="foodSupplier" layoutX="200.0" layoutY="130.0" prefHeight="31.0" prefWidth="435.0" promptText="Supplier Name">
                <font>
                   <Font size="18.0" />
                </font>
             </TextField>
-            <TextField layoutX="200.0" layoutY="185.0" prefHeight="31.0" prefWidth="435.0" promptText="Quantity">
+            <TextField fx:id="foodQuantity" layoutX="200.0" layoutY="185.0" prefHeight="31.0" prefWidth="435.0" promptText="Quantity">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>
             </TextField>
-            <TextField layoutX="200.0" layoutY="240.0" prefHeight="31.0" prefWidth="435.0" promptText="Per unit price">
+            <TextField fx:id="foodPrice" layoutX="200.0" layoutY="240.0" prefHeight="31.0" prefWidth="435.0" promptText="Per unit price">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>
             </TextField>
-            <DatePicker layoutX="200.0" layoutY="295.0" prefHeight="31.0" prefWidth="435.0" promptText="Purchase Date" />
-            <DatePicker layoutX="200.0" layoutY="350.0" prefHeight="31.0" prefWidth="435.0" promptText="Expiry Date" />
-            <Button layoutX="289.0" layoutY="446.0" mnemonicParsing="false" style="-fx-background-color: FDAB9F;" text="Confirm">
+            <DatePicker fx:id="foodPurchaseDate" layoutX="200.0" layoutY="295.0" prefHeight="31.0" prefWidth="435.0" promptText="Purchase Date" />
+            <DatePicker fx:id="foodExpiryDate" layoutX="200.0" layoutY="350.0" prefHeight="31.0" prefWidth="435.0" promptText="Expiry Date" />
+            <Button layoutX="302.0" layoutY="444.0" mnemonicParsing="false" style="-fx-background-color: FDAB9F;" text="Confirm">
                <font>
                   <Font name="Californian FB" size="18.0" />
                </font>

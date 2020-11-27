@@ -2,14 +2,20 @@ package SupplyDetails.Medicine;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
-public class MedicineController {
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class MedicineController implements Initializable {
 
     @FXML
     private Pane medicineDetailsPane;
@@ -36,8 +42,9 @@ public class MedicineController {
     private Label searchMedicineLabel;
 
     @FXML
-    void handleAddMedicine(MouseEvent event) {
-
+    private void handleAddMedicine(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("AddMedicine/addMedicineSupply.fxml"));
+        medicineDetailsPane.getChildren().setAll(pane);
     }
 
     @FXML
@@ -50,5 +57,9 @@ public class MedicineController {
 
     }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
 }
 
