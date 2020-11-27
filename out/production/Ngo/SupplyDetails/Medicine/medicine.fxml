@@ -15,28 +15,6 @@
                      <Font name="Californian FB Bold" size="36.0" />
                  </font>
              </Label>
-             <HBox alignment="CENTER" layoutX="23.0" layoutY="169.0" prefHeight="98.0" prefWidth="1432.0" spacing="100.0">
-                 <children>
-                     <Button mnemonicParsing="false" onAction="#handleAddMedicine" onMouseClicked="#handleAddMedicine" prefHeight="55.0" prefWidth="330.0" style="-fx-background-color: FDAB9F;" text="Add New Supply">
-                         <font>
-                             <Font name="Californian FB" size="24.0" />
-                         </font>
-                     </Button>
-                     <Button mnemonicParsing="false" onAction="#handleUpdateMedicine" prefHeight="55.0" prefWidth="330.0" style="-fx-background-color: FDAB9F;" text="Update Information">
-                         <font>
-                             <Font name="Californian FB" size="24.0" />
-                         </font>
-                     </Button>
-                     <Button mnemonicParsing="false" onAction="#handleDeleteMedicine" prefHeight="55.0" prefWidth="330.0" style="-fx-background-color: FDAB9F;" text="Delete">
-                         <font>
-                             <Font name="Californian FB" size="24.0" />
-                         </font>
-                     </Button>
-                 </children>
-                 <padding>
-                     <Insets bottom="15.0" left="100.0" right="100.0" top="15.0" />
-                 </padding>
-             </HBox>
 
              <ScrollPane layoutX="100.0" layoutY="377.0" prefHeight="500.0" prefWidth="1200.0">
                  <content>
@@ -50,12 +28,20 @@
                      </TableView>
                  </content>
              </ScrollPane>
-             <TextField fx:id="searchMedicineTextField" layoutX="577.0" layoutY="295.0" prefHeight="31.0" prefWidth="298.0" promptText="Search" />
-             <Label fx:id="searchMedicineLabel" alignment="CENTER" layoutX="423.0" layoutY="295.0" prefHeight="31.0" prefWidth="97.0" text=" Search" textAlignment="CENTER">
+             <TextField fx:id="searchMedicineTextField" layoutX="832.0" layoutY="201.0" prefHeight="55.0" prefWidth="308.0" promptText="Search">
                  <font>
-                     <Font name="Californian FB" size="20.0" />
+                     <Font size="25.0" />
+                 </font></TextField>
+             <Label fx:id="searchMedicineLabel" alignment="CENTER" layoutX="640.0" layoutY="201.0" prefHeight="55.0" prefWidth="122.0" text=" Search" textAlignment="CENTER">
+                 <font>
+                     <Font name="Californian FB" size="30.0" />
                  </font>
              </Label>
+             <Button layoutX="222.0" layoutY="201.0" mnemonicParsing="false" onAction="#handleAddMedicine" onMouseClicked="#handleAddMedicine" prefHeight="55.0" prefWidth="330.0" style="-fx-background-color: FDAB9F;" text="Add New Supply">
+                 <font>
+                     <Font name="Californian FB" size="24.0" />
+                 </font>
+             </Button>
          </children>
        </Pane>
 
