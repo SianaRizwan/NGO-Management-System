@@ -1,5 +1,6 @@
 package SupplyDetails.Vaccine;
 
+import SupplyDetails.Vaccine.ViewVaccineDetails.ViewVaccineInformationController;
 import Utilities.ShowAlertDialogue;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
@@ -7,13 +8,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -85,6 +86,30 @@ public class VaccineController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         populateTableView();
         searchFilterData(searchVaccineTextField, vaccineTable);
+        viewDetails();
+    }
+
+    private void viewDetails() {
+        vaccineTable.setRowFactory(tv -> {
+            TableRow<Vaccine> row = new TableRow<>();
+            row.setOnMouseClicked(event -> {
+                if (event.getClickCount() == 2 && (!row.isEmpty())) {
+                    try {
+                        FXMLLoader loader=new FXMLLoader(getClass().getResource("ViewVaccineDetails/ViewVaccineInformation.fxml"));
+                        AnchorPane pane = loader.load();
+                        ViewVaccineInformationController view=loader.getController();
+                        view.displayInformation(getVaccineName());
+                        Stage stage = new Stage(StageStyle.DECORATED);
+                        stage.setTitle("Item Details");
+                        stage.setScene(new Scene(pane));
+                        stage.show();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+            return row;
+        });
     }
 
     private void populateTableView(){

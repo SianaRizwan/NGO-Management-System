@@ -3,11 +3,11 @@ package SupplyDetails.Vaccine;
 import java.util.Date;
 
 public class Vaccine {
-    int price, quantity;
+    int price, quantity,type;
     Date pDate, eDate;
     String name,supplier,manufacturer,id;
 
-    public Vaccine(int price, int quantity, Date pdate, Date edate, String name, String supplier, String manufacturer, String id) {
+    public Vaccine(int price, int quantity, Date pdate, Date edate, String name, String supplier, String manufacturer, String id,int type) {
         this.price = price;
         this.quantity = quantity;
         this.pDate = pdate;
@@ -16,6 +16,7 @@ public class Vaccine {
         this.supplier = supplier;
         this.manufacturer = manufacturer;
         this.id = id;
+        this.type=type;
     }
 
     public Vaccine(int price, int quantity, String name) {
@@ -38,6 +39,14 @@ public class Vaccine {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
     }
 
     public Date getpDate() {

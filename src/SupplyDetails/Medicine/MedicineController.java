@@ -1,5 +1,6 @@
 package SupplyDetails.Medicine;
 
+import SupplyDetails.Medicine.ViewMedicineDetails.ViewMedicineInformationController;
 import Utilities.ShowAlertDialogue;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
@@ -7,13 +8,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -82,8 +83,33 @@ public class MedicineController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        viewDetails();
         populateTableView();
+
         searchFilterData(searchMedicineTextField, medicineTable);
+    }
+
+    private void viewDetails() {
+        medicineTable.setRowFactory(tv -> {
+            TableRow<Medicine> row = new TableRow<>();
+            row.setOnMouseClicked(event -> {
+                if (event.getClickCount() == 2 && (!row.isEmpty())) {
+                    try {
+                        FXMLLoader loader=new FXMLLoader(getClass().getResource("ViewMedicineDetails/ViewMedicineInformation.fxml"));
+                        AnchorPane pane = loader.load();
+                        ViewMedicineInformationController view=loader.getController();
+                        view.displayInformation(getMedName());
+                        Stage stage = new Stage(StageStyle.DECORATED);
+                        stage.setTitle("Item Details");
+                        stage.setScene(new Scene(pane));
+                        stage.show();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+            return row;
+        });
     }
 
     private void populateTableView(){
@@ -97,6 +123,7 @@ public class MedicineController implements Initializable {
             e.printStackTrace();
         }
     }
+
 
     private void searchFilterData(TextField searchField, TableView<Medicine> table) {
         try {
