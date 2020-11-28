@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class MedicineModel {
-    protected ObservableList<Medicine> getMedicineTableRecords() throws SQLException {
+    public ObservableList<Medicine> getMedicineTableRecords() throws SQLException {
         String sql = "select distinct name,sum(qty) qty,sum(unit_price*qty) price from HEALTH_PRODUCT where id LIKE 'M%' group by name order by name";
         ObservableList<Medicine> medicineList =FXCollections.observableArrayList();
 
@@ -41,7 +41,7 @@ public class MedicineModel {
         return new SupplyInformation().isDeleteSelectedItemSuccessful(name,sql);
 
     }
-    protected  boolean isMatchSuccessful(String newValue, Medicine medicine) {
+    public boolean isMatchSuccessful(String newValue, Medicine medicine) {
         if (newValue == null || newValue.isEmpty()) {
             return true;
         }

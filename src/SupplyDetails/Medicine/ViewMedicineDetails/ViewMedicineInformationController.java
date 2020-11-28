@@ -53,7 +53,7 @@ public class ViewMedicineInformationController {
     ViewMedicineInformationModel view = new ViewMedicineInformationModel();
 
     @FXML
-    void handleBackButton(ActionEvent event) throws IOException {
+    void handleBackButton() throws IOException {
         FXMLLoader.load(getClass().getResource("../medicine.fxml"));
         Stage stage = (Stage) medicineDetailsPane.getScene().getWindow();
         stage.close();
@@ -67,9 +67,7 @@ public class ViewMedicineInformationController {
         colPurchaseDate.setCellValueFactory(new PropertyValueFactory<>("pdate"));
         colExpireDate.setCellValueFactory(new PropertyValueFactory<>("edate"));
         colSupplier.setCellValueFactory(new PropertyValueFactory<>("supplier"));
-        colManufacturer.setCellValueFactory(new PropertyValueFactory<>("Manufacturer"));
-        colType.setCellValueFactory(new PropertyValueFactory<>("type"));
-
+        colManufacturer.setCellValueFactory(new PropertyValueFactory<>("manufacturer"));
         try {
             informationTable.setItems(view.getMedicineTableRecords(name));
         } catch (SQLException throwables) {

@@ -2,7 +2,7 @@ package Person.DonorDetails;
 
 
 import Utilities.OracleConnection;
-import Utilities.PersonalInformation;
+import Person.PersonalInformation;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 

@@ -2,7 +2,7 @@ package Person.EmployeeDet.UpdateEmployee;
 
 import Person.EmployeeDet.EmployeeDetailsModel;
 import Utilities.ShowAlertDialogue;
-import Utilities.PersonalInformation;
+import Person.PersonalInformation;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import org.controlsfx.control.textfield.TextFields;
 
 import java.net.URL;
@@ -37,7 +38,8 @@ public class UpdateEmployeeController implements Initializable {
     public ComboBox employeeDesignation;
     @FXML
     public TextField employeeAddress;
-
+@FXML
+        private AnchorPane updateEmployeePane;
     UpdateEmployeeModel updateEmployeeModel = new UpdateEmployeeModel();
 
     private final ObservableList<String> gender = FXCollections.observableArrayList("Male", "Female", "Others");

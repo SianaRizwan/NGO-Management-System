@@ -1,6 +1,8 @@
 package Person.DoctorDetails.AddDoctor;
 
 import Person.DoctorDetails.DoctorDetailsModel;
+import Person.PersonalInformation;
+import Utilities.PhoneValidator;
 import Utilities.ShowAlertDialogue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -17,7 +19,6 @@ import java.util.Date;
 public class AddDoctorController {
     @FXML
     private AnchorPane addDoctorPane;
-
     @FXML
     private TextField DoctorName;
 
@@ -45,20 +46,23 @@ public class AddDoctorController {
     @FXML
     private TextField DoctorAvailableTime;
 
-    private ObservableList<String> gender = FXCollections.observableArrayList("Male", "Female", "Others");
-    private ObservableList<String> speciality = FXCollections.observableArrayList();
-
+    private final ObservableList<String> gender = FXCollections.observableArrayList("Male", "Female", "Others");
+    private final ObservableList<String> speciality = FXCollections.observableArrayList();
+PhoneValidator phoneValidator=new PhoneValidator();
 
     @FXML
-    public void handleConfirmButton() throws ParseException {
+    private void handleConfirmButton() throws ParseException {
         Date dobDate = new SimpleDateFormat("MM/dd/yyyy").parse(DoctorDOB.getEditor().getText());
+       if (new PersonalInformation().checkValidation(DoctorEmailID.getText())&& phoneValidator.validate(DoctorPhoneNumber.getText())){
         if (new AddDoctorModel().isAddDoctorSuccessful(DoctorName.getText(), dobDate, DoctorGender.getSelectionModel().getSelectedItem().toString(),
                 DoctorAddress.getText(), DoctorPhoneNumber.getText(), DoctorSpeciality.getSelectionModel().getSelectedItem().toString(),
                 DoctorEmailID.getText(), DoctorQualification.getText(), DoctorAvailableTime.getText())) {
-            new ShowAlertDialogue().infoBox("Doctor Add Successful!", null, "Add Doctor");
+            new ShowAlertDialogue().infoBox("Doctor Add Successful!", null, "Add Doctor" );
             refreshTextField();
 
-        }
+        }}else {
+           new ShowAlertDialogue().infoBox("Insert Valid Email or Phone Number", null, "Add Doctor" );
+       }
 
     }
 

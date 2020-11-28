@@ -51,12 +51,12 @@ public class MedicineController implements Initializable {
 
     @FXML
     private void handleAddMedicine(ActionEvent event) throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("../HealthProducts/AddHealthProd/addHealthProd.fxml"));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("../AddHealthProducts/AddHealthProd/addHealthProd.fxml"));
         medicineDetailsPane.getChildren().setAll(pane);
     }
 
     @FXML
-    void handleDeleteMedicine(ActionEvent event) {
+    void handleDeleteMedicine() {
         Medicine removeSelectedMed = medicineTable.getSelectionModel().getSelectedItem();
         if(removeSelectedMed == null){
             new ShowAlertDialogue().infoBox("No Medicine Item Is Selected", null, "Remove An Item");

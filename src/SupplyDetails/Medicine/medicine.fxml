@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.text.Font?>
+
 <AnchorPane style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SupplyDetails.Medicine.MedicineController">
    <children>
        <Pane fx:id="medicineDetailsPane" layoutX="1.0" prefHeight="1275.0" prefWidth="1473.0">
@@ -24,6 +30,13 @@
                              <TableColumn fx:id="colMedicineQuantity" editable="false" maxWidth="1000.0" minWidth="-Infinity" prefWidth="300.0" text="Quantity" />
                              <TableColumn fx:id="colMedicineBuyingPrice" editable="false" maxWidth="1000.0" minWidth="-Infinity" prefWidth="300.0" text="Buying Price" />
                          </columns>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#handleDeleteMedicine" text="Remove" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                      </TableView>
                  </content>
              </ScrollPane>

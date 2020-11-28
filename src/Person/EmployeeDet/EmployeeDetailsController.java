@@ -26,7 +26,8 @@ public class EmployeeDetailsController implements Initializable {
     public Label searchEmployeeLabel;
     @FXML
     private TextField searchEmployeeTextField;
-
+    @FXML
+    private AnchorPane employeeDetailsAnchorPane;
     @FXML
     private Pane employeeDetailsPane;
     @FXML
@@ -60,9 +61,9 @@ public class EmployeeDetailsController implements Initializable {
             row.setOnMouseClicked(event -> {
                 if (event.getClickCount() == 2 && (!row.isEmpty())) {
                     try {
-                        FXMLLoader loader=new FXMLLoader(getClass().getResource("ViewEmployeeInformation/ViewEmployeeInformation.fxml"));
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewEmployeeInformation/ViewEmployeeInformation.fxml"));
                         AnchorPane pane = loader.load();
-                        ViewEmployeeInformationController view=loader.getController();
+                        ViewEmployeeInformationController view = loader.getController();
                         view.displayInformation(getEmployeeId());
                         Stage stage = new Stage(StageStyle.DECORATED);
                         stage.setTitle("Employee Details");
@@ -84,7 +85,9 @@ public class EmployeeDetailsController implements Initializable {
         searchFilterData(searchEmployeeTextField, employeeTable);
 
     }
-EmployeeDetailsModel employeeDetailsModel=new EmployeeDetailsModel();
+
+    EmployeeDetailsModel employeeDetailsModel = new EmployeeDetailsModel();
+
     private void searchFilterData(TextField searchField, TableView<Employee> table) {
         try {
             FilteredList<Employee> filteredList = new FilteredList<>(employeeDetailsModel.getEmployeeTableRecords(), b -> true);
@@ -120,11 +123,11 @@ EmployeeDetailsModel employeeDetailsModel=new EmployeeDetailsModel();
         }
     }
 
-@FXML
+    @FXML
     private void handleEmployeeRemoveOption() {
         Employee removeSelectedEmployee = employeeTable.getSelectionModel().getSelectedItem();
         if (removeSelectedEmployee == null) {
-            new ShowAlertDialogue().infoBox("no employee is selected", null, "Remove an Employee");
+            new ShowAlertDialogue().infoBox("no employee is selected", null, "Remove an Employee" );
             return;
         }
         int ans = new ShowAlertDialogue().confirmationBox("Do you want to remove this Employee?", null, "remove employee");
@@ -133,13 +136,13 @@ EmployeeDetailsModel employeeDetailsModel=new EmployeeDetailsModel();
 
             employeeTable.getItems().removeAll(employeeTable.getSelectionModel().getSelectedItem());
             if (new EmployeeDetailsModel().isDeleteEmployeeSuccessful(employeeId)) {
-                new ShowAlertDialogue().infoBox("delete Successful!", null, "delete Employee");
+                new ShowAlertDialogue().infoBox("delete Successful!", null, "delete Employee" );
             } else {
-                new ShowAlertDialogue().infoBox("Delete Failed!", null, "delete Employee");
+                new ShowAlertDialogue().infoBox("Delete Failed!", null, "delete Employee" );
 
             }
         } else {
-            new ShowAlertDialogue().infoBox("cancel", null, "Remove an Employee");
+            new ShowAlertDialogue().infoBox("cancel", null, "Remove an Employee" );
 
         }
     }

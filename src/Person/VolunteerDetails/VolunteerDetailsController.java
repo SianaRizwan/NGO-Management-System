@@ -23,7 +23,8 @@ import java.sql.SQLException;
 public class VolunteerDetailsController {
     @FXML
     private Pane VolunteerDetailsPane;
-
+@FXML
+private AnchorPane VolunteerAncPane;
 
     @FXML
     private TableView<Volunteer> VolunteerTable;
@@ -122,7 +123,7 @@ public class VolunteerDetailsController {
     public void handleRemoveVolunteerOption() {
         Volunteer removeSelectedVolunteer = VolunteerTable.getSelectionModel().getSelectedItem();
         if (removeSelectedVolunteer == null) {
-            new ShowAlertDialogue().infoBox("no Volunteer is selected", null, "Remove an Volunteer");
+            new ShowAlertDialogue().infoBox("no Volunteer is selected", null, "Remove an Volunteer" );
             return;
         }
         int ans = new ShowAlertDialogue().confirmationBox("Do you want to remove this Volunteer?", null, "remove Volunteer");
@@ -131,13 +132,13 @@ public class VolunteerDetailsController {
 
             VolunteerTable.getItems().removeAll(VolunteerTable.getSelectionModel().getSelectedItem());
             if (new VolunteerDetailsModel().isDeleteVolunteerSuccessful(VolunteerId)) {
-                new ShowAlertDialogue().infoBox("delete Successful!", null, "delete Volunteer");
+                new ShowAlertDialogue().infoBox("delete Successful!", null, "delete Volunteer" );
             } else {
-                new ShowAlertDialogue().infoBox("Delete Failed!", null, "delete Volunteer");
+                new ShowAlertDialogue().infoBox("Delete Failed!", null, "delete Volunteer" );
 
             }
         } else {
-            new ShowAlertDialogue().infoBox("cancel", null, "Remove a Volunteer");
+            new ShowAlertDialogue().infoBox("cancel", null, "Remove a Volunteer" );
 
         }
     }

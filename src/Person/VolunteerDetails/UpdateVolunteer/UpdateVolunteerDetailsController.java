@@ -1,12 +1,15 @@
 package Person.VolunteerDetails.UpdateVolunteer;
 
-import Utilities.PersonalInformation;
+import Person.PersonalInformation;
 import Utilities.ShowAlertDialogue;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import org.controlsfx.control.textfield.TextFields;
 
 public class UpdateVolunteerDetailsController {
+    @FXML
+    public AnchorPane updateVolunteerPane;
     @FXML
     private TextField VolunteerID;
 

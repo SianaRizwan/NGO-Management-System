@@ -67,12 +67,17 @@ public class LoginController implements Initializable {
             return;
         }
         if (loginModel.isLoginSuccessful(getUsernameTextfield(), getPasswordTextfield())) {
-            new ShowAlertDialogue().infoBox("Login Successful!", null, "Login");
+            new ShowAlertDialogue().infoBox("Login Successful!", null, "Login" );
 
             AnchorPane EmployeeDetailsPane  = FXMLLoader.load(getClass().getResource("../Main/main.fxml"));
             loginPane.getChildren().setAll(EmployeeDetailsPane);
         } else {
-            new ShowAlertDialogue().infoBox("Please enter correct username and Password", null, "Login");
+        //    usernameTextfield.getStyleClass().add("wrong-credentials");
+          //  passwordTextfield.getStyleClass().add("wrong-credentials");
+            new ShowAlertDialogue().infoBox("Please enter correct username and Password", null, "Login" );
+            usernameTextfield.setText("");
+            passwordTextfield.setText("");
+            usernameTextfield.requestFocus();
         }
     }
     @Override

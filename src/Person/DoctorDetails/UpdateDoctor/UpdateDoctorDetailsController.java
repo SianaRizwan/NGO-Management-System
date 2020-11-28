@@ -1,14 +1,16 @@
 package Person.DoctorDetails.UpdateDoctor;
 
 import Utilities.ShowAlertDialogue;
-import Utilities.PersonalInformation;
+import Person.PersonalInformation;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 import org.controlsfx.control.textfield.TextFields;
 
 public class UpdateDoctorDetailsController {
     UpdateDoctorDetailsModel updateDoctorDetailsModel = new UpdateDoctorDetailsModel();
-
+    @FXML
+    private AnchorPane updateDoctorPane;
     @FXML
     private TextField DoctorID;
 
@@ -45,7 +47,7 @@ public class UpdateDoctorDetailsController {
     public void handleConfirmButton() {
         if (updateDoctorDetailsModel.isUpdateDoctorSuccessful(DoctorAddress.getText(), DoctorPhoneNumber.getText(),
                 DoctorQualification.getText(), DoctorEmailID.getText(), DoctorAvailableTime.getText(), DoctorID.getText())) {
-            new ShowAlertDialogue().infoBox("update Successful!", null, "update Doctor");
+            new ShowAlertDialogue().infoBox("update Successful!", null, "update Doctor" );
             refreshTextField();
 
         }

@@ -1,4 +1,7 @@
-package Utilities;
+package Person;
+
+import Utilities.EmailValidator;
+import Utilities.OracleConnection;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -65,6 +68,11 @@ public class PersonalInformation {
             return false;
         }
         return false;
+    }
+
+    public   boolean checkValidation(String email){
+        EmailValidator emailValidator = new EmailValidator();
+        return emailValidator.validate(email);
     }
 
 }

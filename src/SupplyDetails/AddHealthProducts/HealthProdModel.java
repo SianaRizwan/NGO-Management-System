@@ -1,4 +1,4 @@
-package SupplyDetails.HealthProducts;
+package SupplyDetails.AddHealthProducts;
 
 import SupplyDetails.Medicine.Medicine;
 import SupplyDetails.SupplyInformation;

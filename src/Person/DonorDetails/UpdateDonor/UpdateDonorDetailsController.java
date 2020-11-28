@@ -1,14 +1,16 @@
 package Person.DonorDetails.UpdateDonor;
 
 
-import Utilities.PersonalInformation;
+import Person.PersonalInformation;
 import Utilities.ShowAlertDialogue;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 import org.controlsfx.control.textfield.TextFields;
 
 public class UpdateDonorDetailsController {
-
+@FXML
+private AnchorPane updateDonorPane;
     @FXML
     private TextField DonorID;
 
@@ -32,7 +34,7 @@ public class UpdateDonorDetailsController {
     void handleConfirmUpdateBtn() {
 if (updateDonorModel.isUpdateDonorSuccessful(DonorAddress.getText(),DonorPhoneNumber.getText(),DonorOccupation.getText(),
         DonorEmailID.getText(),DonorID.getText())){
-    new ShowAlertDialogue().infoBox("update Successful!", null, "update Doctor");
+    new ShowAlertDialogue().infoBox("update Successful!", null, "update Doctor" );
     refreshTextField();
 
 }

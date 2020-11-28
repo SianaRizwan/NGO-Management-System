@@ -4,12 +4,14 @@ import SupplyDetails.Vaccine.ViewVaccineDetails.ViewVaccineInformationController
 import Utilities.ShowAlertDialogue;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableRow;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -28,36 +30,31 @@ public class VaccineController implements Initializable {
     private Pane vaccineDetailsPane;
 
     @FXML
-    private TableView<SupplyDetails.Vaccine.Vaccine> vaccineTable;
+    private TableView<Vaccine> vaccineTable;
+
+     @FXML
+    private TableColumn<Vaccine, String> colVaccineName;
 
     @FXML
-    private TableColumn<?, ?> colVaccineItemID;
+    private TableColumn<Vaccine, Integer> colVaccineQuantity;
 
     @FXML
-    private TableColumn<SupplyDetails.Vaccine.Vaccine, String> colVaccineName;
-
-    @FXML
-    private TableColumn<SupplyDetails.Vaccine.Vaccine, Integer> colVaccineQuantity;
-
-    @FXML
-    private TableColumn<SupplyDetails.Vaccine.Vaccine, Integer> colVaccineBuyingPrice;
+    private TableColumn<Vaccine, Integer> colVaccineBuyingPrice;
 
     @FXML
     private TextField searchVaccineTextField;
 
-    @FXML
-    private Label searchVaccineLabel;
 
     VaccineModel vaccineModel = new VaccineModel();
 
     @FXML
-    void handleAddVaccine(ActionEvent event) throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("../HealthProducts/AddHealthProd/addHealthProd.fxml"));
+    void handleAddVaccine() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("../AddHealthProducts/AddHealthProd/addHealthProd.fxml"));
         vaccineDetailsPane.getChildren().setAll(pane);
     }
 
     @FXML
-    void handleDeleteVaccine(ActionEvent event) {
+    void handleDeleteVaccine() {
         Vaccine removeSelectedMed = vaccineTable.getSelectionModel().getSelectedItem();
         if(removeSelectedMed == null){
             new ShowAlertDialogue().infoBox("No Item Is Selected", null, "Remove An Item");

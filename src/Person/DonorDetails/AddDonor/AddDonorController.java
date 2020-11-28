@@ -29,7 +29,7 @@ public class AddDonorController {
     @FXML
     private TextField DonorOccupation;
 
-    private ObservableList<String> gender = FXCollections.observableArrayList("Male", "Female", "Others");
+    private final ObservableList<String> gender = FXCollections.observableArrayList("Male", "Female", "Others");
     public void initialize() {
         DonorGender.setItems(gender);
 
@@ -39,7 +39,7 @@ public class AddDonorController {
     public void handleDonorAddConfirmBtn() {
         if(new AddDonorModel().isAddDonorSuccessful(DonorName.getText(),DonorGender.getSelectionModel().getSelectedItem().toString(),
                 DonorAddress.getText(),DonorPhoneNumber.getText(),DonorOccupation.getText(),DonorEmailID.getText())){
-            new ShowAlertDialogue().infoBox("Donor Add Successful!", null, "Add Donor");
+            new ShowAlertDialogue().infoBox("Donor Add Successful!", null, "Add Donor" );
             refreshTextField();
 
         }

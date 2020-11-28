@@ -19,6 +19,8 @@ import java.sql.SQLException;
 
 public class donorDetailsController {
     @FXML
+    private AnchorPane donorAncPane;
+    @FXML
     private Pane DonorDetailsPane;
 
     @FXML

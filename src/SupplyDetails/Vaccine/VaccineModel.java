@@ -10,9 +10,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class VaccineModel {
-    protected ObservableList<SupplyDetails.Vaccine.Vaccine> getVaccineTableRecords() throws SQLException {
+    protected ObservableList<Vaccine> getVaccineTableRecords() throws SQLException {
         String sql = "select distinct name,sum(qty) qty,sum(unit_price*qty) price from HEALTH_PRODUCT where id LIKE 'V%' group by name order by name";
-        ObservableList<SupplyDetails.Vaccine.Vaccine> vaccineList = FXCollections.observableArrayList();
+        ObservableList<Vaccine> vaccineList = FXCollections.observableArrayList();
 
         try {
             OracleConnection oc = new OracleConnection();
@@ -23,7 +23,7 @@ public class VaccineModel {
                 int qty = rs.getInt(2);
                 int price = rs.getInt(3);
 
-                SupplyDetails.Vaccine.Vaccine vaccine = new SupplyDetails.Vaccine.Vaccine(price,qty,name);
+                Vaccine vaccine = new Vaccine(price,qty,name);
                 vaccineList.add(vaccine);
             }
 

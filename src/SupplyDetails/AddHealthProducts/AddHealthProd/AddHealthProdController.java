@@ -1,4 +1,4 @@
-package SupplyDetails.HealthProducts.AddHealthProd;
+package SupplyDetails.AddHealthProducts.AddHealthProd;
 
 import SupplyDetails.SupplyInformation;
 import Utilities.ShowAlertDialogue;
@@ -49,8 +49,8 @@ public class AddHealthProdController {
 
     @FXML
     void handleConfirmAddHealthProd(ActionEvent event) throws ParseException {
-        Date purDate = new SimpleDateFormat("MM/DD/YYYY").parse(healthProdPurchaseDate.getEditor().getText());
-        Date expDate = new SimpleDateFormat("MM/DD/YYYY").parse(healthProdExpiryDate.getEditor().getText());
+        Date purDate = new SimpleDateFormat("MM/dd/yyyy").parse(healthProdPurchaseDate.getEditor().getText());
+        Date expDate = new SimpleDateFormat("MM/dd/yyyy").parse(healthProdExpiryDate.getEditor().getText());
 
         if(new AddHealthProdModel().isAddHealthProdSuccessful(healthProdName.getText(), purDate, expDate, Integer.parseInt(healthProdQuantity.getText()), Integer.parseInt(healthProdPrice.getText()), healthProdSupplier.getText(),healthProdManufacturer.getText(),String.valueOf(healthprodTypeCombo.getValue()))){
             new ShowAlertDialogue().infoBox("Health Product Added Successfully", null, "Add Health Supply");

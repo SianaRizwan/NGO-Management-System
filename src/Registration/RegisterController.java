@@ -1,6 +1,7 @@
 package Registration;
 
 import Registration.RegisterModel;
+import Utilities.PhoneValidator;
 import Utilities.ShowAlertDialogue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

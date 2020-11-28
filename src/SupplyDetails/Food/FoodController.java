@@ -4,7 +4,6 @@ import SupplyDetails.Food.ViewFoodDetails.ViewFoodInformationController;
 import Utilities.ShowAlertDialogue;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -23,15 +22,13 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class FoodController implements Initializable {
-
+    @FXML
+    public AnchorPane foodSupplyDetailsPane;
     @FXML
     private Pane foodDetailsPane;
 
     @FXML
     private TableView<Food> foodTable;
-
-    @FXML
-    private TableColumn<Food, String> colFoodItemID;
 
     @FXML
     private TableColumn<Food, String> colFoodName;
@@ -55,10 +52,10 @@ public class FoodController implements Initializable {
     }
 
     @FXML
-    private void handleDeleteFood(ActionEvent event) {
+    private void handleDeleteFood() {
         Food removeSelectedFood = foodTable.getSelectionModel().getSelectedItem();
         if (removeSelectedFood == null) {
-            new ShowAlertDialogue().infoBox("No Food Item is selected", null, "Remove an Food Item");
+            new ShowAlertDialogue().infoBox("no Food Item is selected", null, "Remove an Food Item");
             return;
         }
         int ans = new ShowAlertDialogue().confirmationBox("Do you want to remove this item?", null, "remove item");
@@ -78,15 +75,14 @@ public class FoodController implements Initializable {
         }
     }
 
-    public String getFoodName() {
-        String foodName = foodTable.getSelectionModel().getSelectedItem().getName();
-        return foodName;
+    private String getFoodName() {
+        return foodTable.getSelectionModel().getSelectedItem().getName();
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         populateTableView();
-         viewDetails();
+        viewDetails();
         searchFilterData(searchFoodTextField, foodTable);
 
     }
@@ -97,9 +93,9 @@ public class FoodController implements Initializable {
             row.setOnMouseClicked(event -> {
                 if (event.getClickCount() == 2 && (!row.isEmpty())) {
                     try {
-                        FXMLLoader loader=new FXMLLoader(getClass().getResource("ViewFoodDetails/ViewFoodInformation.fxml"));
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewFoodDetails/ViewFoodInformation.fxml"));
                         AnchorPane pane = loader.load();
-                        ViewFoodInformationController view=loader.getController();
+                        ViewFoodInformationController view = loader.getController();
                         view.displayInformation(getFoodName());
                         Stage stage = new Stage(StageStyle.DECORATED);
                         stage.setTitle("Item Details");

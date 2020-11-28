@@ -1,7 +1,7 @@
 package Person.DoctorDetails.UpdateDoctor;
 
 import Utilities.OracleConnection;
-import Utilities.PersonalInformation;
+import Person.PersonalInformation;
 
 import java.sql.PreparedStatement;
 

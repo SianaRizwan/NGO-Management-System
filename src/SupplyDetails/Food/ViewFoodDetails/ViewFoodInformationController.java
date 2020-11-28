@@ -57,7 +57,6 @@ public class ViewFoodInformationController {
         colPurchaseDate.setCellValueFactory(new PropertyValueFactory<>("pdate"));
         colExpireDate.setCellValueFactory(new PropertyValueFactory<>("edate"));
         colSupplier.setCellValueFactory(new PropertyValueFactory<>("supplier"));
-
         try {
             informationTable.setItems(view.getFoodTableRecords(name));
         } catch (SQLException throwables) {

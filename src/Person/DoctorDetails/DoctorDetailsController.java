@@ -24,7 +24,8 @@ import java.sql.SQLException;
 public class DoctorDetailsController {
     @FXML
     public Pane DoctorDetailsPane;
-
+    @FXML
+    public AnchorPane DoctorDetailsAnchorPane;
     @FXML
     private TableView<Doctor> DoctorTable;
 
@@ -120,6 +121,7 @@ public class DoctorDetailsController {
             });
             return row;
         });
+
     }
 
 
@@ -128,7 +130,7 @@ public class DoctorDetailsController {
     public void handleRemoveDoctorOption() {
         Doctor removeSelectedDoctor=DoctorTable.getSelectionModel().getSelectedItem();
         if(removeSelectedDoctor==null){
-            new ShowAlertDialogue().infoBox("no Doctor is selected",null,"Remove an Doctor");
+            new ShowAlertDialogue().infoBox("no Doctor is selected",null,"Remove an Doctor" );
             return;
         }
         int ans = new ShowAlertDialogue().confirmationBox("Do you want to remove this Doctor?", null, "remove Doctor");
@@ -137,15 +139,15 @@ public class DoctorDetailsController {
 
             DoctorTable.getItems().removeAll(DoctorTable.getSelectionModel().getSelectedItem());
             if (new DoctorDetailsModel().isDeleteDoctorSuccessful(doctorId)) {
-                new ShowAlertDialogue().infoBox("delete Successful!", null, "delete Doctor");
+                new ShowAlertDialogue().infoBox("delete Successful!", null, "delete Doctor" );
             }
             else {
-                new ShowAlertDialogue().infoBox("Delete Failed!", null, "delete Doctor");
+                new ShowAlertDialogue().infoBox("Delete Failed!", null, "delete Doctor" );
 
             }
         }
         else {
-            new ShowAlertDialogue().infoBox("cancel",null,"Remove a Doctor");
+            new ShowAlertDialogue().infoBox("cancel",null,"Remove a Doctor" );
 
         }
     }

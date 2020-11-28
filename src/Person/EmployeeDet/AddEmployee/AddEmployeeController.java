@@ -53,7 +53,7 @@ public class AddEmployeeController {
         if (new AddEmployeeModel().isAddEmployeeSuccessful(employeeName.getText(),dobDate, employeeGender.getSelectionModel().getSelectedItem().toString(),
                 employeeAddress.getText(), employeePhoneNumber.getText(), employeeDesignation.getSelectionModel().getSelectedItem().toString(),
                 employeeEmailID.getText(), employeePassword.getText())) {
-            new ShowAlertDialogue().infoBox("Employee Add Successful!", null, "Add Employee");
+            new ShowAlertDialogue().infoBox("Employee Add Successful!", null, "Add Employee" );
             refreshTextField();
         }
     }

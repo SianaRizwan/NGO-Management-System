@@ -1,5 +1,9 @@
-package SupplyDetails.Medicine;
+package SupplyDetails.AddHealthProducts;
 
+import SupplyDetails.Food.Food;
+import SupplyDetails.Medicine.Medicine;
+import SupplyDetails.Medicine.MedicineModel;
+import Utilities.ShowAlertDialogue;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
@@ -53,10 +57,8 @@ public class HealthProdController implements Initializable {
         medicineDetailsPane.getChildren().setAll(pane);
     }
 
-    @FXML
-    void handleDeleteMedicine(ActionEvent event) {
 
-    }
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

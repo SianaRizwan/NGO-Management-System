@@ -3,20 +3,19 @@ package SupplyDetails.Medicine;
 import java.util.Date;
 
 public class Medicine {
-    int price, quantity,type;
-    Date pDate, eDate;
+    int price, quantity;
+    String pdate, edate;
     String name,supplier,manufacturer,id;
 
-    public Medicine(int price, int quantity, Date pdate, Date edate, String name, String supplier, String manufacturer, String id,int type) {
+    public Medicine(int price, int quantity, String pdate, String edate, String name, String supplier, String manufacturer, String id) {
         this.price = price;
         this.quantity = quantity;
-        this.pDate = pdate;
-        this.eDate = edate;
+        this.pdate = pdate;
+        this.edate = edate;
         this.name = name;
         this.supplier = supplier;
         this.manufacturer = manufacturer;
         this.id = id;
-        this.type=type;
     }
 
     public Medicine(int price, int quantity, String name) {
@@ -41,28 +40,21 @@ public class Medicine {
         this.quantity = quantity;
     }
 
-    public int getType() {
-        return type;
+
+    public String getPdate() {
+        return pdate;
     }
 
-    public void setType(int type) {
-        this.type = type;
+    public void setPdate(String pDate) {
+        this.pdate = pDate;
     }
 
-    public Date getpDate() {
-        return pDate;
+    public String getEdate() {
+        return edate;
     }
 
-    public void setpDate(Date pDate) {
-        this.pDate = pDate;
-    }
-
-    public Date geteDate() {
-        return eDate;
-    }
-
-    public void seteDate(Date eDate) {
-        this.eDate = eDate;
+    public void setEdate(String eDate) {
+        this.edate = eDate;
     }
 
     public String getName() {

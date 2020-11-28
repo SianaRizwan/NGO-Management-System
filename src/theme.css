@@ -1,0 +1,63 @@
+* {
+    -fx-primary: #8B0000;
+    -fx-primaryText: #f3e4e4;
+    -fx-secondary: #FDAB9F;
+    -fx-buttonText: #282525;
+    -fx-wrongColor: #ea7979;
+}
+
+.bg {
+    -fx-background-color: -fx-primary;
+}
+
+.glyph-icon {
+    -fx-fill: -fx-primaryText;
+
+}
+.combo-box{
+    -fx-text-fill: -fx-primaryText;
+    -fx-prompt-text-fill: -fx-primaryText;
+    -jfx-focus-color: -fx-primaryText;
+    -fx-font-size: 18px;
+}
+
+.combo-box .text-field {
+    -fx-prompt-text-fill: -fx-primaryText ;
+}
+
+.combo-box  .input .text-field {
+    -fx-prompt-text-fill: -fx-primaryText;
+}
+
+.text-field {
+    -fx-text-fill: -fx-primaryText;
+    -fx-prompt-text-fill: -fx-primaryText;
+    -jfx-focus-color: -fx-primaryText;
+    -fx-font-size: 18px;
+}
+
+.button {
+    -fx-background-color: -fx-secondary;
+    -fx-text-fill: -fx-buttonText;
+    -fx-background-radius: 10px;
+}
+
+.button:hover {
+    -fx-background-color: -fx-secondary;
+    -fx-text-fill: BlACK;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+}
+
+.wrong-credentials {
+    -jfx-unfocus-color: -fx-wrongColor;
+    -jfx-focus-color: -fx-wrongColor;
+    -fx-text-fill: -fx-wrongColor;
+    -fx-prompt-text-fill: -fx-wrongColor;
+}
+.date{
+    -fx-text-fill: -fx-primaryText;
+    -fx-prompt-text-fill: -fx-primaryText;
+    -jfx-focus-color: -fx-primaryText;
+    -fx-font-size: 18px;
+}
