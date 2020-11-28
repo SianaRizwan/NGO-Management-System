@@ -1,5 +1,6 @@
 package SupplyDetails.Vaccine;
 
+import Utilities.ShowAlertDialogue;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
@@ -56,7 +57,28 @@ public class VaccineController implements Initializable {
 
     @FXML
     void handleDeleteVaccine(ActionEvent event) {
+        Vaccine removeSelectedMed = vaccineTable.getSelectionModel().getSelectedItem();
+        if(removeSelectedMed == null){
+            new ShowAlertDialogue().infoBox("No Item Is Selected", null, "Remove An Item");
+            return;
+        }
 
+        int ans = new ShowAlertDialogue().confirmationBox("Do You Want To Remove This Item?",null, "Remove Item");
+        if(ans == 1){
+            String medName = getVaccineName();
+
+            vaccineTable.getItems().removeAll(vaccineTable.getSelectionModel().getSelectedItem());
+            if(vaccineModel.isDeleteSelectedVaccineSuccessful(medName)){
+                new ShowAlertDialogue().infoBox("delete Successful!", null, "Delete Vaccine item");
+            } else {
+                new ShowAlertDialogue().infoBox("Delete Failed!", null, "Delete Vaccine item");
+            }
+        }
+    }
+
+    private String getVaccineName(){
+        String medName = vaccineTable.getSelectionModel().getSelectedItem().getName();
+        return medName;
     }
 
     @Override

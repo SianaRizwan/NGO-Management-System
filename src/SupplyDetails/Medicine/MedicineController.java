@@ -1,5 +1,6 @@
 package SupplyDetails.Medicine;
 
+import Utilities.ShowAlertDialogue;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
@@ -55,7 +56,28 @@ public class MedicineController implements Initializable {
 
     @FXML
     void handleDeleteMedicine(ActionEvent event) {
+        Medicine removeSelectedMed = medicineTable.getSelectionModel().getSelectedItem();
+        if(removeSelectedMed == null){
+            new ShowAlertDialogue().infoBox("No Medicine Item Is Selected", null, "Remove An Item");
+            return;
+        }
 
+        int ans = new ShowAlertDialogue().confirmationBox("Do You Want To Remove This Item?",null, "Remove Item");
+        if(ans == 1){
+            String medName = getMedName();
+
+            medicineTable.getItems().removeAll(medicineTable.getSelectionModel().getSelectedItem());
+            if(medicineModel.isDeleteSelectedMedicineSuccessful(medName)){
+                new ShowAlertDialogue().infoBox("delete Successful!", null, "Delete Medicine item");
+            } else {
+                new ShowAlertDialogue().infoBox("Delete Failed!", null, "Delete Medicine item");
+            }
+        }
+    }
+
+    private String getMedName(){
+        String medName = medicineTable.getSelectionModel().getSelectedItem().getName();
+        return medName;
     }
 
     @Override

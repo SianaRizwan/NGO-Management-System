@@ -58,7 +58,7 @@ public class FoodController implements Initializable {
     private void handleDeleteFood(ActionEvent event) {
         Food removeSelectedFood = foodTable.getSelectionModel().getSelectedItem();
         if (removeSelectedFood == null) {
-            new ShowAlertDialogue().infoBox("no Food Item is selected", null, "Remove an Food Item");
+            new ShowAlertDialogue().infoBox("No Food Item is selected", null, "Remove an Food Item");
             return;
         }
         int ans = new ShowAlertDialogue().confirmationBox("Do you want to remove this item?", null, "remove item");
