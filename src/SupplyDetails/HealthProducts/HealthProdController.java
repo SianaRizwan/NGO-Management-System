@@ -1,5 +1,7 @@
 package SupplyDetails.Medicine;
 
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,7 +19,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class MedicineController implements Initializable {
+public class HealthProdController implements Initializable {
 
     @FXML
     private Pane medicineDetailsPane;
@@ -47,7 +49,7 @@ public class MedicineController implements Initializable {
 
     @FXML
     private void handleAddMedicine(ActionEvent event) throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("../HealthProducts/AddHealthProd/addHealthProd.fxml"));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("AddMedicine/addMedicineSupply.fxml"));
         medicineDetailsPane.getChildren().setAll(pane);
     }
 
@@ -59,7 +61,7 @@ public class MedicineController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         populateTableView();
-        //searchFilterData(searchMedicineTextField, medicineTable);
+        searchFilterData(searchMedicineTextField, medicineTable);
     }
 
     private void populateTableView(){
@@ -75,24 +77,25 @@ public class MedicineController implements Initializable {
         }
     }
 
-//    private void searchFilterData(TextField searchField, TableView<Medicine> table) {
-//        try {
-//            FilteredList<Medicine> filteredList = new FilteredList<>(medicineModel.getMedicineTableRecords(), b -> true);
-//
-//            searchField.textProperty().addListener((observable, oldValue, newValue) -> {
-//                filteredList.setPredicate(medicine -> medicineModel.isMatchSuccessful(newValue, medicine));
-//                sortFilteredData(filteredList, table);
-//            });
-//        } catch (SQLException throwables) {
-//            System.out.println("FoodDetailsController : search box");
-//            throwables.printStackTrace();
-//        }
-//    }
-//
-//    private void sortFilteredData(FilteredList<Medicine> filteredList, TableView<Medicine> medicineTable) {
-//        SortedList<Medicine> sortedList = new SortedList<>(filteredList);
-//        sortedList.comparatorProperty().bind(medicineTable.comparatorProperty());
-//        medicineTable.setItems(sortedList);
-    //}
+    private void searchFilterData(TextField searchField, TableView<Medicine> table) {
+        try {
+            FilteredList<Medicine> filteredList = new FilteredList<>(medicineModel.getMedicineTableRecords(), b -> true);
+
+            searchField.textProperty().addListener((observable, oldValue, newValue) -> {
+                filteredList.setPredicate(medicine -> medicineModel.isMatchSuccessful(newValue, medicine));
+                sortFilteredData(filteredList, table);
+            });
+        } catch (SQLException throwables) {
+            System.out.println("FoodDetailsController : search box");
+            throwables.printStackTrace();
+        }
+    }
+
+    private void sortFilteredData(FilteredList<Medicine> filteredList, TableView<Medicine> medicineTable) {
+        SortedList<Medicine> sortedList = new SortedList<>(filteredList);
+        sortedList.comparatorProperty().bind(medicineTable.comparatorProperty());
+        medicineTable.setItems(sortedList);
+    }
 }
+
 

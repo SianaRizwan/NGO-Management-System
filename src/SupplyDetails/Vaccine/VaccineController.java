@@ -41,7 +41,7 @@ public class VaccineController {
 
     @FXML
     void handleAddVaccine(ActionEvent event) throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("AddVaccine/addVaccineSupply.fxml"));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("../HealthProducts/AddHealthProd/addHealthProd.fxml"));
         vaccineDetailsPane.getChildren().setAll(pane);
     }
 

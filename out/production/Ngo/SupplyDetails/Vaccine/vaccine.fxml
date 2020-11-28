@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
@@ -8,7 +7,6 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
@@ -26,7 +24,6 @@
                     <content>
                         <TableView fx:id="vaccineTable" prefHeight="500.0" prefWidth="1200.0">
                             <columns>
-                                <TableColumn fx:id="colVaccineItemID" editable="false" maxWidth="1000.0" minWidth="225.99996948242188" prefWidth="300.0" text="Item ID" />
                                 <TableColumn fx:id="colVaccineName" editable="false" minWidth="240.0" prefWidth="300.0" text="Name" />
                                 <TableColumn fx:id="colVaccineQuantity" editable="false" maxWidth="1000.0" minWidth="-Infinity" prefWidth="300.0" text="Quantity" />
                                 <TableColumn fx:id="colVaccineBuyingPrice" editable="false" maxWidth="1000.0" minWidth="-Infinity" prefWidth="300.0" text="Buying Price" />

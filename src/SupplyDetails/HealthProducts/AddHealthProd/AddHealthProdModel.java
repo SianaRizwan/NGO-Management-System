@@ -1,17 +1,27 @@
-package SupplyDetails.Medicine.AddMedicine;
+package SupplyDetails.HealthProducts.AddHealthProd;
 
 import Utilities.OracleConnection;
 
 import java.sql.PreparedStatement;
 import java.util.Date;
 
-public class AddMedicineSupplyModel {
-    public boolean isAddMedicineSuccessful(String name, Date pDate, Date eDate, int qty, int price, String supplier, String manufacturer){
+public class AddHealthProdModel {
+    public boolean isAddHealthProdSuccessful(String name, Date pDate, Date eDate, int qty, int price, String supplier, String manufacturer, String type){
         try {
             java.sql.Date pur_date = new java.sql.Date(pDate.getTime());
             java.sql.Date exp_date = new java.sql.Date(eDate.getTime());
 
-            String sql = "insert into health_product(name,purchase_date,expire_date,qty,supplier,manufacturer,unit_price,type) values(?,?,?,?,?,?,?,1)";
+            int type_int;
+
+            if(type.equals("Medicine")){
+                type_int=1;
+            }else if(type.equals("Vaccine")){
+                type_int=2;
+            } else if (type.equals("Emergency")){
+                type_int=3;
+            } else type_int=-1;
+
+            String sql = "insert into health_product(name,purchase_date,expire_date,qty,supplier,manufacturer,unit_price,type) values(?,?,?,?,?,?,?,"+type_int+")";
 
             OracleConnection oc = new OracleConnection();
             PreparedStatement ps = oc.conn.prepareStatement(sql);
