@@ -1,6 +1,5 @@
 package SupplyDetails.Vaccine;
 
-import SupplyDetails.Medicine.Medicine;
 import SupplyDetails.SupplyInformation;
 import Utilities.OracleConnection;
 import javafx.collections.FXCollections;
@@ -11,9 +10,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class VaccineModel {
-    protected ObservableList<Vaccine> getVaccineTableRecords() throws SQLException {
+    protected ObservableList<SupplyDetails.Vaccine.Vaccine> getVaccineTableRecords() throws SQLException {
         String sql = "select distinct name,sum(qty) qty,sum(unit_price*qty) price from HEALTH_PRODUCT where id LIKE 'V%' group by name order by name";
-        ObservableList<Vaccine> vaccineList = FXCollections.observableArrayList();
+        ObservableList<SupplyDetails.Vaccine.Vaccine> vaccineList = FXCollections.observableArrayList();
 
         try {
             OracleConnection oc = new OracleConnection();
@@ -24,7 +23,7 @@ public class VaccineModel {
                 int qty = rs.getInt(2);
                 int price = rs.getInt(3);
 
-                Vaccine vaccine = new Vaccine(price,qty,name);
+                SupplyDetails.Vaccine.Vaccine vaccine = new SupplyDetails.Vaccine.Vaccine(price,qty,name);
                 vaccineList.add(vaccine);
             }
 
@@ -42,10 +41,10 @@ public class VaccineModel {
         return new SupplyInformation().isDeleteSelectedItemSuccessful(name,sql);
 
     }
-    protected  boolean isMatchSuccessful(String newValue, Medicine medicine) {
+    protected  boolean isMatchSuccessful(String newValue, Vaccine vaccine) {
         if (newValue == null || newValue.isEmpty()) {
             return true;
         }
-        return String.valueOf(medicine.getName()).contains(newValue);
+        return String.valueOf(vaccine.getName()).contains(newValue);
     }
 }

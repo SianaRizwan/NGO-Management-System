@@ -1,5 +1,7 @@
 package SupplyDetails.Vaccine;
 
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,19 +26,19 @@ public class VaccineController implements Initializable {
     private Pane vaccineDetailsPane;
 
     @FXML
-    private TableView<Vaccine> vaccineTable;
+    private TableView<SupplyDetails.Vaccine.Vaccine> vaccineTable;
 
     @FXML
     private TableColumn<?, ?> colVaccineItemID;
 
     @FXML
-    private TableColumn<Vaccine, String> colVaccineName;
+    private TableColumn<SupplyDetails.Vaccine.Vaccine, String> colVaccineName;
 
     @FXML
-    private TableColumn<Vaccine, Integer> colVaccineQuantity;
+    private TableColumn<SupplyDetails.Vaccine.Vaccine, Integer> colVaccineQuantity;
 
     @FXML
-    private TableColumn<Vaccine, Integer> colVaccineBuyingPrice;
+    private TableColumn<SupplyDetails.Vaccine.Vaccine, Integer> colVaccineBuyingPrice;
 
     @FXML
     private TextField searchVaccineTextField;
@@ -60,7 +62,7 @@ public class VaccineController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         populateTableView();
-        //searchFilterData(searchMedicineTextField, medicineTable);
+        searchFilterData(searchVaccineTextField, vaccineTable);
     }
 
     private void populateTableView(){
@@ -73,6 +75,26 @@ public class VaccineController implements Initializable {
             System.out.println("vaccineController: initialize");
             e.printStackTrace();
         }
+    }
+
+    private void searchFilterData(TextField searchField, TableView<Vaccine> table) {
+        try {
+            FilteredList<Vaccine> filteredList = new FilteredList<>(vaccineModel.getVaccineTableRecords(), b -> true);
+
+            searchField.textProperty().addListener((observable, oldValue, newValue) -> {
+                filteredList.setPredicate(vaccine -> vaccineModel.isMatchSuccessful(newValue, vaccine));
+                sortFilteredData(filteredList, table);
+            });
+        } catch (SQLException throwables) {
+            System.out.println("vacDetailsController : search box");
+            throwables.printStackTrace();
+        }
+    }
+
+    private void sortFilteredData(FilteredList<Vaccine> filteredList, TableView<Vaccine> vaccineTable) {
+        SortedList<Vaccine> sortedList = new SortedList<>(filteredList);
+        sortedList.comparatorProperty().bind(vaccineTable.comparatorProperty());
+        vaccineTable.setItems(sortedList);
     }
 
 }
