@@ -1,5 +1,6 @@
-package SupplyDetails.Medicine;
+package SupplyDetails.Vaccine;
 
+import SupplyDetails.Medicine.Medicine;
 import SupplyDetails.SupplyInformation;
 import Utilities.OracleConnection;
 import javafx.collections.FXCollections;
@@ -9,10 +10,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class MedicineModel {
-    protected ObservableList<Medicine> getMedicineTableRecords() throws SQLException {
-        String sql = "select distinct name,sum(qty) qty,sum(unit_price*qty) price from HEALTH_PRODUCT where id LIKE 'M%' group by name order by name";
-        ObservableList<Medicine> medicineList =FXCollections.observableArrayList();
+public class VaccineModel {
+    protected ObservableList<Vaccine> getVaccineTableRecords() throws SQLException {
+        String sql = "select distinct name,sum(qty) qty,sum(unit_price*qty) price from HEALTH_PRODUCT where id LIKE 'V%' group by name order by name";
+        ObservableList<Vaccine> vaccineList = FXCollections.observableArrayList();
 
         try {
             OracleConnection oc = new OracleConnection();
@@ -23,20 +24,20 @@ public class MedicineModel {
                 int qty = rs.getInt(2);
                 int price = rs.getInt(3);
 
-                Medicine medicine = new Medicine(price,qty,name);
-                medicineList.add(medicine);
+                Vaccine vaccine = new Vaccine(price,qty,name);
+                vaccineList.add(vaccine);
             }
 
-            return medicineList;
+            return vaccineList;
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("getTableRecords : medModel");
+            System.out.println("getTableRecords : vacModel");
             throw e;
         }
 
     }
 
-    protected boolean isDeleteSelectedMedicineSuccessful(String name) {
+    protected boolean isDeleteSelectedVaccineSuccessful(String name) {
         String sql = "delete from HEALTH_PRODUCT where name=?";
         return new SupplyInformation().isDeleteSelectedItemSuccessful(name,sql);
 

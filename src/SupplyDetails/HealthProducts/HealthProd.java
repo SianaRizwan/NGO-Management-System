@@ -1,24 +1,24 @@
-package SupplyDetails.Vaccine;
+package SupplyDetails.HealthProducts;
 
 import java.util.Date;
 
-public class Vaccine {
+public class HealthProd {
     int price, quantity;
     Date pDate, eDate;
     String name,supplier,manufacturer,id;
 
-    public Vaccine(int price, int quantity, Date pdate, Date edate, String name, String supplier, String manufacturer, String id) {
+    public HealthProd(int price, int quantity, Date pDate, Date eDate, String name, String supplier, String manufacturer, String id) {
         this.price = price;
         this.quantity = quantity;
-        this.pDate = pdate;
-        this.eDate = edate;
+        this.pDate = pDate;
+        this.eDate = eDate;
         this.name = name;
         this.supplier = supplier;
         this.manufacturer = manufacturer;
         this.id = id;
     }
 
-    public Vaccine(int price, int quantity, String name) {
+    public HealthProd(int price, int quantity, String name) {
         this.price = price;
         this.quantity = quantity;
         this.name = name;
