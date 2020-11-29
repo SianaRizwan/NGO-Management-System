@@ -69,7 +69,7 @@ public class LoginController implements Initializable {
         if (loginModel.isLoginSuccessful(getUsernameTextfield(), getPasswordTextfield())) {
             new ShowAlertDialogue().infoBox("Login Successful!", null, "Login" );
 
-            AnchorPane EmployeeDetailsPane  = FXMLLoader.load(getClass().getResource("../Main/main.fxml"));
+            AnchorPane EmployeeDetailsPane  = FXMLLoader.load(getClass().getResource("../Main/Dashboard.fxml"));
             loginPane.getChildren().setAll(EmployeeDetailsPane);
         } else {
         //    usernameTextfield.getStyleClass().add("wrong-credentials");

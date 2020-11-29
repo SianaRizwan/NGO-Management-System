@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
@@ -28,22 +27,20 @@
                         <Font name="Californian FB" size="18.0" />
                     </font>
                 </Button>
-                <JFXTextField fx:id="healthProdName" layoutX="166.0" layoutY="121.0" prefHeight="31.0" prefWidth="435.0" promptText="Product Name" stylesheets="@../../theme.css" />
-                <JFXTextField fx:id="healthProdSupplier" layoutX="166.0" layoutY="186.0" prefHeight="31.0" prefWidth="435.0" promptText="Supplier Name" stylesheets="@../../theme.css" />
-                <JFXTextField fx:id="healthProdQuantity" layoutX="166.0" layoutY="255.0" prefHeight="31.0" prefWidth="435.0" promptText="Enter Quantity" stylesheets="@../../theme.css" />
-                <JFXTextField fx:id="healthProdPrice" layoutX="166.0" layoutY="323.0" prefHeight="31.0" prefWidth="435.0" promptText="Unit Price" stylesheets="@../../theme.css" />
-                <JFXTextField fx:id="healthProdManufacturer" layoutX="166.0" layoutY="524.0" prefHeight="31.0" prefWidth="435.0" promptText="Manufacturer Name" stylesheets="@../../theme.css" />
-                <JFXComboBox fx:id="healthprodTypeCombo" editable="true" labelFloat="true" layoutX="166.0" layoutY="58.0" prefHeight="31.0" prefWidth="435.0" promptText="Choose Product Type" style="-fx-text-fill: #f3e4e4;" styleClass="input" stylesheets="@../../theme.css" />
-                <JFXDatePicker fx:id="healthProdPurchaseDate" defaultColor="#f3e4e4" layoutX="166.0" layoutY="393.0" prefHeight="31.0" prefWidth="435.0" promptText="Purchase Date" stylesheets="@../../theme.css" />
-                <JFXDatePicker fx:id="healthProdExpiryDate" defaultColor="#f3e4e4" layoutX="166.0" layoutY="458.0" prefHeight="34.0" prefWidth="435.0" promptText="Expiry Date" stylesheets="@../../theme.css" />
-                <FontAwesomeIconView glyphName="MEDKIT" layoutX="110.0" layoutY="86.0" size="25" wrappingWidth="33.0" />
-                <FontAwesomeIconView glyphName="PRODUCT_HUNT" layoutX="110.0" layoutY="149.0" size="25" wrappingWidth="15.0" />
-                <FontAwesomeIconView glyphName="USERS" layoutX="110.0" layoutY="214.0" size="25" />
-                <FontAwesomeIconView glyphName="BALANCE_SCALE" layoutX="110.0" layoutY="283.0" size="25" text="" />
-                <FontAwesomeIconView glyphName="MONEY" layoutX="110.0" layoutY="351.0" size="25" />
-                <FontAwesomeIconView glyphName="CALENDAR" layoutX="110.0" layoutY="421.0" size="25" />
-                <FontAwesomeIconView glyphName="CALENDAR" layoutX="110.0" layoutY="486.0" size="25" />
-                <FontAwesomeIconView glyphName="USERS" layoutX="110.0" layoutY="552.0" size="25" text="" />
+                <JFXTextField fx:id="healthProdName" layoutX="167.0" layoutY="86.0" prefHeight="31.0" prefWidth="435.0" promptText="Product Name" stylesheets="@../../theme.css" />
+                <JFXTextField fx:id="healthProdSupplier" layoutX="167.0" layoutY="151.0" prefHeight="31.0" prefWidth="435.0" promptText="Supplier Name" stylesheets="@../../theme.css" />
+                <JFXTextField fx:id="healthProdQuantity" layoutX="167.0" layoutY="220.0" prefHeight="31.0" prefWidth="435.0" promptText="Enter Quantity" stylesheets="@../../theme.css" />
+                <JFXTextField fx:id="healthProdPrice" layoutX="167.0" layoutY="288.0" prefHeight="31.0" prefWidth="435.0" promptText="Unit Price" stylesheets="@../../theme.css" />
+                <JFXTextField fx:id="healthProdManufacturer" layoutX="167.0" layoutY="489.0" prefHeight="31.0" prefWidth="435.0" promptText="Manufacturer Name" stylesheets="@../../theme.css" />
+                <JFXDatePicker fx:id="healthProdPurchaseDate" defaultColor="#f3e4e4" layoutX="167.0" layoutY="358.0" prefHeight="31.0" prefWidth="435.0" promptText="Purchase Date" stylesheets="@../../theme.css" />
+                <JFXDatePicker fx:id="healthProdExpiryDate" defaultColor="#f3e4e4" layoutX="167.0" layoutY="423.0" prefHeight="34.0" prefWidth="435.0" promptText="Expiry Date" stylesheets="@../../theme.css" />
+                <FontAwesomeIconView glyphName="PRODUCT_HUNT" layoutX="111.0" layoutY="114.0" size="25" wrappingWidth="15.0" />
+                <FontAwesomeIconView glyphName="USERS" layoutX="111.0" layoutY="179.0" size="25" />
+                <FontAwesomeIconView glyphName="BALANCE_SCALE" layoutX="111.0" layoutY="248.0" size="25" text="" />
+                <FontAwesomeIconView glyphName="MONEY" layoutX="111.0" layoutY="316.0" size="25" />
+                <FontAwesomeIconView glyphName="CALENDAR" layoutX="111.0" layoutY="386.0" size="25" />
+                <FontAwesomeIconView glyphName="CALENDAR" layoutX="111.0" layoutY="451.0" size="25" />
+                <FontAwesomeIconView glyphName="USERS" layoutX="111.0" layoutY="517.0" size="25" text="" />
             </children></AnchorPane>
     </children>
 </AnchorPane>

@@ -1,5 +1,6 @@
 package SupplyDetails.Medicine;
 
+import SupplyDetails.AddHealthProducts.AddHealthProdController;
 import SupplyDetails.Medicine.ViewMedicineDetails.ViewMedicineInformationController;
 import Utilities.ShowAlertDialogue;
 import javafx.collections.transformation.FilteredList;
@@ -46,7 +47,10 @@ public class MedicineController implements Initializable {
 
     @FXML
     private void handleAddMedicine() throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("../AddHealthProducts/addHealthProd.fxml"));
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("../AddHealthProducts/addHealthProd.fxml"));
+        AnchorPane pane = loader.load();
+        AddHealthProdController prod=loader.getController();
+        prod.setType(1);
         medicineDetailsPane.getChildren().setAll(pane);
     }
 

@@ -6,12 +6,14 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import org.controlsfx.control.textfield.TextFields;
 
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -42,23 +44,24 @@ public class AddHealthProdController {
     @FXML
     private TextField healthProdManufacturer;
 
-    @FXML
-    private ComboBox healthprodTypeCombo;
 
     private ObservableList<String> type = FXCollections.observableArrayList("Medicine", "Vaccine", "Emergency");
+    private int prodType;
 
     @FXML
     void handleConfirmAddHealthProd(ActionEvent event) throws ParseException {
         Date purDate = new SimpleDateFormat("MM/dd/yyyy").parse(healthProdPurchaseDate.getEditor().getText());
         Date expDate = new SimpleDateFormat("MM/dd/yyyy").parse(healthProdExpiryDate.getEditor().getText());
 
-        if(new AddHealthProdModel().isAddHealthProdSuccessful(healthProdName.getText(), purDate, expDate, Integer.parseInt(healthProdQuantity.getText()), Integer.parseInt(healthProdPrice.getText()), healthProdSupplier.getText(),healthProdManufacturer.getText(),String.valueOf(healthprodTypeCombo.getValue()))){
+        if (new AddHealthProdModel().isAddHealthProdSuccessful(healthProdName.getText(), purDate, expDate, Integer.parseInt(healthProdQuantity.getText()),
+                Integer.parseInt(healthProdPrice.getText()), healthProdSupplier.getText(), healthProdManufacturer.getText(), getType()
+        )) {
             new ShowAlertDialogue().infoBox("Health Product Added Successfully", null, "Add Health Supply");
             refreshTextField();
         }
     }
 
-    private void refreshTextField(){
+    private void refreshTextField() {
         healthProdExpiryDate.getEditor().setText("");
         healthProdPurchaseDate.getEditor().setText("");
         healthProdName.setText("");
@@ -68,12 +71,30 @@ public class AddHealthProdController {
         healthProdSupplier.setText("");
     }
 
-    public void initialize(){
-        healthprodTypeCombo.setItems(type);
+    public void initialize() {
         TextFields.bindAutoCompletion(healthProdName, new SupplyInformation().getItemNameList("select distinct name from HEALTH_PRODUCT"));
         System.out.println("ll");
     }
 
-    public void handleBackHealth(ActionEvent actionEvent) {
+    public void setType(int type) {
+        prodType = type;
+    }
+
+    private int getType() {
+        return prodType;
+    }
+
+    @FXML
+    private void handleBackHealth(ActionEvent actionEvent) throws IOException {
+        AnchorPane pane = null;
+        if (getType() == 1) {
+            pane = FXMLLoader.load(getClass().getResource("../Medicine/medicine.fxml"));
+        } else if (getType() == 2) {
+            pane = FXMLLoader.load(getClass().getResource("../Vaccine/vaccine.fxml"));
+        } else if (getType() == 3) {
+            pane = FXMLLoader.load(getClass().getResource("../Emergency/EmergencySupply.fxml"));
+        }
+
+        addNewHealthProdPane.getChildren().setAll(pane);
     }
 }
