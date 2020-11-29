@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addNewSupplyPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SupplyDetails.Food.AddFood.AddFoodSupplyController">
+   <children>
+       <Label layoutX="375.0" layoutY="98.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="410.0" text="Add New Supply">
+           <font>
+               <Font name="Californian FB Bold" size="36.0" />
+           </font>
+       </Label>
+       <AnchorPane layoutX="375.0" layoutY="160.0" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="700.0" prefWidth="690.0" style="-fx-background-color: #8B0000;">
+         <children>
+            <Button layoutX="200.0" layoutY="452.0" mnemonicParsing="false" onAction="#handleConfirmAddFood" style="-fx-background-color: FDAB9F;" stylesheets="@../../../theme.css" text="Confirm">
+               <font>
+                  <Font name="Californian FB" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="434.0" layoutY="452.0" mnemonicParsing="false" onAction="#handleBackFood" prefHeight="34.0" prefWidth="86.0" style="-fx-background-color: FDAB9F;" stylesheets="@../../../theme.css" text="Back">
+               <font>
+                  <Font name="Californian FB" size="18.0" />
+               </font>
+            </Button>
+            <JFXTextField fx:id="foodName" layoutX="202.0" layoutY="77.0" prefHeight="31.0" prefWidth="435.0" promptText="Enter Food Name" stylesheets="@../../../theme.css" />
+            <JFXTextField fx:id="foodSupplier" layoutX="202.0" layoutY="134.0" prefHeight="31.0" prefWidth="435.0" promptText="Enter Supplier Name" stylesheets="@../../../theme.css" />
+            <JFXTextField fx:id="foodQuantity" layoutX="202.0" layoutY="187.0" prefHeight="31.0" prefWidth="435.0" promptText="Enter Quantity" stylesheets="@../../../theme.css" />
+            <JFXTextField fx:id="foodPrice" layoutX="200.0" layoutY="242.0" prefHeight="31.0" prefWidth="435.0" promptText="Enter Price" stylesheets="@../../../theme.css" />
+            <JFXDatePicker fx:id="foodPurchaseDate" defaultColor="#f3e4e4" layoutX="200.0" layoutY="295.0" prefHeight="31.0" prefWidth="435.0" promptText="Purchase Date" stylesheets="@../../../theme.css" />
+            <JFXDatePicker fx:id="foodExpiryDate" defaultColor="#f3e4e4" layoutX="200.0" layoutY="350.0" prefHeight="31.0" prefWidth="435.0" promptText="Expiry Date" stylesheets="@../../../theme.css" />
+            <FontAwesomeIconView glyphName="PAGELINES" layoutX="132.0" layoutY="107.0" size="25" />
+            <FontAwesomeIconView glyphName="USERS" layoutX="132.0" layoutY="167.0" size="25" />
+            <FontAwesomeIconView glyphName="BALANCE_SCALE" layoutX="132.0" layoutY="217.0" size="25" />
+            <FontAwesomeIconView glyphName="MONEY" layoutX="132.0" layoutY="267.0" size="25" />
+            <FontAwesomeIconView glyphName="CALENDAR" layoutX="132.0" layoutY="317.0" size="25" />
+            <FontAwesomeIconView glyphName="CALENDAR" layoutX="132.0" layoutY="377.0" size="25" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

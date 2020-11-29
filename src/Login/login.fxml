@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -12,27 +13,19 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="loginPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1800.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Login.LoginController">
+<AnchorPane fx:id="loginPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1800.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Login.LoginController">
    <children>
       <ImageView opacity="0.16" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
             <Image url="@../images/back.jpg" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="793.0" layoutY="66.0" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="733.0" prefWidth="785.0" style="-fx-background-color: #8B0000;" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="750.0" AnchorPane.rightAnchor="265.0" AnchorPane.topAnchor="70.0">
-      <children>
-         <TextField fx:id="usernameTextfield" layoutX="337.0" layoutY="163.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="350.0" promptText="Username" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="150.0">
-            <font>
-               <Font name="Calibri" size="18.0" />
-            </font></TextField>
-         <PasswordField fx:id="passwordTextfield" layoutX="337.0" layoutY="245.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="350.0" promptText="Password" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="150.0">
-            <font>
-               <Font name="Calibri" size="18.0" />
-            </font></PasswordField>
-         <Button fx:id="loginButton" layoutX="310.0" layoutY="420.0" mnemonicParsing="false" onAction="#handleLogin" onMouseClicked="#handleLogin" opacity="0.82" prefHeight="50.0" prefWidth="200.0" text="Login" textAlignment="CENTER">
-            <textFill>
-               <LinearGradient endX="1.0" endY="1.0" startX="0.8737864077669902" startY="0.8300970873786409">
-                  <stops>
+      <AnchorPane layoutX="793.0" layoutY="66.0" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="733.0" prefWidth="785.0" styleClass="bg" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="750.0" AnchorPane.rightAnchor="265.0" AnchorPane.topAnchor="70.0">
+         <children>
+            <Button fx:id="loginButton" layoutX="310.0" layoutY="420.0" mnemonicParsing="false" onAction="#handleLogin" onMouseClicked="#handleLogin" opacity="0.82" prefHeight="50.0" prefWidth="200.0" text="Login" textAlignment="CENTER">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.8737864077669902" startY="0.8300970873786409">
+                     <stops>
                         <Stop color="#140101" />
                         <Stop color="WHITE" offset="1.0" />
                      </stops>
@@ -42,25 +35,27 @@
                   <Font name="Californian FB" size="18.0" />
                </font>
             </Button>
-            <Label layoutX="354.0" layoutY="38.0" prefHeight="65.0" prefWidth="112.0" text="Sign In" textAlignment="CENTER" textFill="WHITE">
+            <Label layoutX="337.0" layoutY="38.0" prefHeight="65.0" prefWidth="112.0" text="Sign In" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Californian FB Bold" size="36.0" />
                </font>
             </Label>
-         <Label layoutX="135.0" layoutY="168.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" text="Username :" textFill="WHITE" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="560.0">
-            <font>
-               <Font name="Californian FB" size="24.0" />
-            </font>
-         </Label>
-         <Label layoutX="135.0" layoutY="250.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="70.0" text="Password :" textFill="WHITE" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="560.0">
-            <font>
-               <Font name="Californian FB" size="24.0" />
-            </font>
-         </Label>
-      </children>
-      <padding>
-         <Insets left="5.0" right="3.0" />
-      </padding>
+            <JFXTextField fx:id="usernameTextfield" labelFloat="true" layoutX="208.0" layoutY="168.0" prefHeight="31.0" prefWidth="370.0" promptText="Username">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="passwordTextfield" labelFloat="true" layoutX="208.0" layoutY="269.0" prefHeight="31.0" prefWidth="370.0" promptText="Password">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </JFXPasswordField>
+            <FontAwesomeIconView glyphName="USER" layoutX="156.0" layoutY="205.0" size="30" />
+            <FontAwesomeIconView glyphName="KEY" layoutX="156.0" layoutY="306.0" size="30" />
+         </children>
+         <padding>
+            <Insets left="5.0" right="3.0" />
+         </padding>
       </AnchorPane>
       <Label alignment="CENTER" layoutX="105.0" layoutY="113.0" prefHeight="65.0" prefWidth="321.0" text="Welcome To Astha" textAlignment="CENTER">
          <font>

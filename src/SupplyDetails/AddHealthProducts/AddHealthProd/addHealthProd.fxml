@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addNewHealthProdPane" prefHeight="900.0" prefWidth="1350.0" stylesheets="@../../../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SupplyDetails.AddHealthProducts.AddHealthProd.AddHealthProdController">
+    <children>
+        <Label layoutX="375.0" layoutY="98.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="410.0" text="Add New Supply">
+            <font>
+                <Font name="Californian FB Bold" size="36.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="375.0" layoutY="164.0" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="700.0" prefWidth="690.0" style="-fx-background-color: #8B0000;" stylesheets="@../../../theme.css">
+            <children>
+                <Button layoutX="302.0" layoutY="549.0" mnemonicParsing="false" onAction="#handleConfirmAddHealthProd" onMouseClicked="#handleConfirmAddHealthProd" style="-fx-background-color: FDAB9F;" stylesheets="@../../../theme.css" text="Confirm">
+                    <font>
+                        <Font name="Californian FB" size="18.0" />
+                    </font>
+                </Button>
+                <Button layoutX="434.0" layoutY="549.0" mnemonicParsing="false" onAction="#handleBackHealth" prefHeight="34.0" prefWidth="86.0" style="-fx-background-color: FDAB9F;" stylesheets="@../../../theme.css" text="Back">
+                    <font>
+                        <Font name="Californian FB" size="18.0" />
+                    </font>
+                </Button>
+            <JFXTextField fx:id="healthProdName" layoutX="200.0" layoutY="132.0" prefHeight="31.0" prefWidth="435.0" promptText="Product Name" stylesheets="@../../../theme.css" />
+            <JFXTextField fx:id="healthProdSupplier" layoutX="200.0" layoutY="189.0" prefHeight="31.0" prefWidth="435.0" promptText="Supplier Name" stylesheets="@../../../theme.css" />
+            <JFXTextField fx:id="healthProdQuantity" layoutX="200.0" layoutY="242.0" prefHeight="31.0" prefWidth="435.0" promptText="Enter Quantity" stylesheets="@../../../theme.css" />
+            <JFXTextField fx:id="healthProdPrice" layoutX="200.0" layoutY="297.0" prefHeight="31.0" prefWidth="435.0" promptText="Unit Price" stylesheets="@../../../theme.css" />
+            <JFXTextField fx:id="healthProdManufacturer" layoutX="200.0" layoutY="462.0" prefHeight="31.0" prefWidth="435.0" promptText="Manufacturer Name" stylesheets="@../../../theme.css" />
+            <JFXComboBox fx:id="healthprodTypeCombo" layoutX="200.0" layoutY="75.0" prefHeight="31.0" prefWidth="435.0" promptText="Choose Product Type" stylesheets="@../../../theme.css" />
+            <JFXDatePicker fx:id="healthProdPurchaseDate" defaultColor="#f3e4e4" layoutX="200.0" layoutY="350.0" prefHeight="31.0" prefWidth="435.0" promptText="Purchase Date" stylesheets="@../../../theme.css" />
+            <JFXDatePicker fx:id="healthProdExpiryDate" defaultColor="#f3e4e4" layoutX="200.0" layoutY="405.0" prefHeight="34.0" prefWidth="435.0" promptText="Expiry Date" stylesheets="@../../../theme.css" />
+            <FontAwesomeIconView glyphName="MEDKIT" layoutX="132.0" layoutY="103.0" size="25" wrappingWidth="33.0" />
+            <FontAwesomeIconView glyphName="PRODUCT_HUNT" layoutX="132.0" layoutY="160.0" size="25" wrappingWidth="15.0" />
+            <FontAwesomeIconView glyphName="USERS" layoutX="132.0" layoutY="217.0" size="25" />
+            <FontAwesomeIconView glyphName="BALANCE_SCALE" layoutX="132.0" layoutY="270.0" size="25" />
+            <FontAwesomeIconView glyphName="MONEY" layoutX="132.0" layoutY="325.0" size="25" />
+            <FontAwesomeIconView glyphName="CALENDAR" layoutX="132.0" layoutY="378.0" size="25" />
+            <FontAwesomeIconView glyphName="CALENDAR" layoutX="132.0" layoutY="433.0" size="25" />
+            <FontAwesomeIconView glyphName="USERS" layoutX="132.0" layoutY="490.0" size="25" />
+            </children></AnchorPane>
+    </children>
+</AnchorPane>

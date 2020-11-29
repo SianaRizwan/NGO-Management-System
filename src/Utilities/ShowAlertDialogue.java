@@ -1,11 +1,14 @@
 package Utilities;
 
+
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
-
+import javafx.scene.effect.BoxBlur;
+import javafx.scene.layout.AnchorPane;
 import java.util.Optional;
 
 public class ShowAlertDialogue {
+
     public void infoBox(String infoMessage, String headerText, String title) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setContentText(infoMessage);
