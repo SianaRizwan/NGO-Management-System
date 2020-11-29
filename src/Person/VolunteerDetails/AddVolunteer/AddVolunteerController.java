@@ -1,5 +1,7 @@
 package Person.VolunteerDetails.AddVolunteer;
 
+import Person.PersonalInformation;
+import Utilities.PhoneValidator;
 import Utilities.ShowAlertDialogue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -37,13 +39,15 @@ public class AddVolunteerController {
 
 @FXML
     public void handleConfirmVolunteerAddBtn() {
+    if (new PersonalInformation().checkValidation(VolunteerEmailID.getText())&& new PhoneValidator().validate(VolunteerPhoneNumber.getText())){
         if(new AddVolunteerModel().isAddVolunteerSuccessful(VolunteerName.getText(),VolunteerGender.getSelectionModel().getSelectedItem().toString(),
                 VolunteerAddress.getText(),VolunteerPhoneNumber.getText(),VolunteerOccupation.getText(),VolunteerEmailID.getText())){
             new ShowAlertDialogue().infoBox("Volunteer Add Successful!", null, "Add Volunteer");
             refreshTextField();
-
         }
-    }
+}else {
+        new ShowAlertDialogue().infoBox("Insert Valid Email or Phone Number", null, "Add Volunteer" );
+    }    }
 
     private void refreshTextField() {
         VolunteerName.setText("");

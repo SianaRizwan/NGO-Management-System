@@ -1,4 +1,4 @@
-package SupplyDetails.AddHealthProducts.AddHealthProd;
+package SupplyDetails.AddHealthProducts;
 
 import Utilities.OracleConnection;
 
@@ -21,7 +21,7 @@ public class AddHealthProdModel {
                 type_int=3;
             } else type_int=-1;
 
-            String sql = "insert into health_product(name,purchase_date,expire_date,qty,supplier,manufacturer,unit_price,types) values(?,?,?,?,?,?,?,?)";
+            String sql = "insert into health_product(name,purchase_date,expire_date,qty,supplier,manufacturer,unit_price,type) values(?,?,?,?,?,?,?,?)";
 
             OracleConnection oc = new OracleConnection();
             PreparedStatement ps = oc.conn.prepareStatement(sql);

@@ -1,5 +1,7 @@
 package Person.DonorDetails.AddDonor;
 
+import Person.PersonalInformation;
+import Utilities.PhoneValidator;
 import Utilities.ShowAlertDialogue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -37,12 +39,16 @@ public class AddDonorController {
 
 
     public void handleDonorAddConfirmBtn() {
-        if(new AddDonorModel().isAddDonorSuccessful(DonorName.getText(),DonorGender.getSelectionModel().getSelectedItem().toString(),
+        if (new PersonalInformation().checkValidation(DonorEmailID.getText())&& new PhoneValidator().validate(DonorPhoneNumber.getText())){
+            if(new AddDonorModel().isAddDonorSuccessful(DonorName.getText(),DonorGender.getSelectionModel().getSelectedItem().toString(),
                 DonorAddress.getText(),DonorPhoneNumber.getText(),DonorOccupation.getText(),DonorEmailID.getText())){
             new ShowAlertDialogue().infoBox("Donor Add Successful!", null, "Add Donor" );
             refreshTextField();
 
         }
+    }else {
+        new ShowAlertDialogue().infoBox("Insert Valid Email or Phone Number", null, "Add Donor" );
+    }
     }
 
     private void refreshTextField() {

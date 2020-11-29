@@ -66,7 +66,7 @@ public class ViewVaccineInformationController {
         colPurchaseDate.setCellValueFactory(new PropertyValueFactory<>("pdate"));
         colExpireDate.setCellValueFactory(new PropertyValueFactory<>("edate"));
         colSupplier.setCellValueFactory(new PropertyValueFactory<>("supplier"));
-        colManufacturer.setCellValueFactory(new PropertyValueFactory<>("Manufacturer"));
+        colManufacturer.setCellValueFactory(new PropertyValueFactory<>("manufacturer"));
 
         try {
             informationTableVaccine.setItems(view.getVaccineTableRecords(name));

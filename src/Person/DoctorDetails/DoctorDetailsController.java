@@ -62,6 +62,7 @@ public class DoctorDetailsController {
     public void initialize() {
         populateTableView();
         viewDetails();
+        searchDoctorTextField.getStyleClass().add("search-field");
         searchFilterData(searchDoctorTextField, DoctorTable);
     }
 

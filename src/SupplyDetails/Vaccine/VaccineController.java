@@ -8,10 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableRow;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -49,7 +46,7 @@ public class VaccineController implements Initializable {
 
     @FXML
     void handleAddVaccine() throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("../AddHealthProducts/AddHealthProd/addHealthProd.fxml"));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("../AddHealthProducts/addHealthProd.fxml"));
         vaccineDetailsPane.getChildren().setAll(pane);
     }
 
@@ -75,13 +72,13 @@ public class VaccineController implements Initializable {
     }
 
     private String getVaccineName(){
-        String medName = vaccineTable.getSelectionModel().getSelectedItem().getName();
-        return medName;
+        return vaccineTable.getSelectionModel().getSelectedItem().getName();
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         populateTableView();
+        searchVaccineTextField.getStyleClass().add("search-field");
         searchFilterData(searchVaccineTextField, vaccineTable);
         viewDetails();
     }

@@ -48,7 +48,7 @@
                 </HBox>
                 <ScrollPane layoutX="100.0" layoutY="377.0" prefHeight="500.0" prefWidth="1200.0">
                     <content>
-                        <TableView fx:id="DoctorTable" prefHeight="500.0" prefWidth="1200.0">
+                        <TableView fx:id="DoctorTable" prefHeight="500.0" prefWidth="1200.0" style="-fx-prompt-text-fill: #8B0000; -fx-text-fill: BLACK; -jfx-focus-color: #8B0000;" styleClass="search-field" stylesheets="@../../theme.css">
                             <columns>
                                 <TableColumn fx:id="colDoctorID" editable="false" maxWidth="300.0" minWidth="225.99996948242188" prefWidth="225.99996948242188" text="Doctor ID" />
                                 <TableColumn fx:id="colDoctorName" editable="false" minWidth="240.0" prefWidth="240.0" text="Name" />
@@ -66,7 +66,7 @@
                         </TableView>
                     </content>
                 </ScrollPane>
-            <JFXTextField fx:id="searchDoctorTextField" focusColor="#900f0f" labelFloat="true" layoutX="100.0" layoutY="301.0" prefHeight="31.0" prefWidth="265.0" promptText="Search" style="-fx-border-color: FDAB9F; -fx-text-fill: BLACK;">
+            <JFXTextField fx:id="searchDoctorTextField" focusColor="#900f0f" labelFloat="true" layoutX="100.0" layoutY="301.0" prefHeight="31.0" prefWidth="265.0" promptText="Search" style="-fx-text-fill: BLACK; -jfx-focus-color: #8B0000; -fx-prompt-text-fill: #8B0000;" unFocusColor="#900f0f">
                <font>
                   <Font size="18.0" />
                </font>

@@ -1,6 +1,8 @@
 package Person.EmployeeDet.AddEmployee;
 
 import Person.EmployeeDet.EmployeeDetailsModel;
+import Person.PersonalInformation;
+import Utilities.PhoneValidator;
 import Utilities.ShowAlertDialogue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -50,11 +52,15 @@ public class AddEmployeeController {
     @FXML
     void handleConfirmButton(MouseEvent event) throws ParseException {
         Date dobDate = new SimpleDateFormat("MM/dd/yyyy").parse(employeeDOB.getEditor().getText());
-        if (new AddEmployeeModel().isAddEmployeeSuccessful(employeeName.getText(),dobDate, employeeGender.getSelectionModel().getSelectedItem().toString(),
+        if (new PersonalInformation().checkValidation(employeeEmailID.getText())&& new PhoneValidator().validate(employeePhoneNumber.getText())){
+            if (new AddEmployeeModel().isAddEmployeeSuccessful(employeeName.getText(),dobDate, employeeGender.getSelectionModel().getSelectedItem().toString(),
                 employeeAddress.getText(), employeePhoneNumber.getText(), employeeDesignation.getSelectionModel().getSelectedItem().toString(),
                 employeeEmailID.getText(), employeePassword.getText())) {
             new ShowAlertDialogue().infoBox("Employee Add Successful!", null, "Add Employee" );
             refreshTextField();
+        }
+        }else {
+            new ShowAlertDialogue().infoBox("Insert Valid Email or Phone Number", null, "Add Employee" );
         }
     }
 

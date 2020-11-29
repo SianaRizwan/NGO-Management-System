@@ -1,6 +1,7 @@
 package Person.VolunteerDetails.UpdateVolunteer;
 
 import Person.PersonalInformation;
+import Utilities.PhoneValidator;
 import Utilities.ShowAlertDialogue;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
@@ -31,12 +32,15 @@ public class UpdateVolunteerDetailsController {
     UpdateVolunteerModel updateVolunteerModel=new UpdateVolunteerModel();
     @FXML
     void handleConfirmUpdateBtn() {
-        if (updateVolunteerModel.isUpdateVolunteerSuccessful(VolunteerAddress.getText(),VolunteerPhoneNumber.getText(),VolunteerOccupation.getText(),
+        if (new PersonalInformation().checkValidation(VolunteerEmailID.getText())&& new PhoneValidator().validate(VolunteerPhoneNumber.getText())){
+            if (updateVolunteerModel.isUpdateVolunteerSuccessful(VolunteerAddress.getText(),VolunteerPhoneNumber.getText(),VolunteerOccupation.getText(),
                 VolunteerEmailID.getText(),VolunteerID.getText())){
             new ShowAlertDialogue().infoBox("update Successful!", null, "update Doctor");
             refreshTextField();
 
-        }
+        }}else {
+        new ShowAlertDialogue().infoBox("Insert Valid Email or Phone Number", null, "Update Volunteer" );
+    }
     }
 
     private void refreshTextField() {

@@ -4,7 +4,6 @@ import SupplyDetails.Medicine.ViewMedicineDetails.ViewMedicineInformationControl
 import Utilities.ShowAlertDialogue;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -29,8 +28,6 @@ public class MedicineController implements Initializable {
     @FXML
     private TableView<Medicine> medicineTable;
 
-    @FXML
-    private TableColumn<Medicine, String> colMedicineItemID;
 
     @FXML
     private TableColumn<Medicine, String> colMedicineName;
@@ -44,14 +41,12 @@ public class MedicineController implements Initializable {
     @FXML
     private TextField searchMedicineTextField;
 
-    @FXML
-    private Label searchMedicineLabel;
 
     MedicineModel medicineModel = new MedicineModel();
 
     @FXML
-    private void handleAddMedicine(ActionEvent event) throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("../AddHealthProducts/AddHealthProd/addHealthProd.fxml"));
+    private void handleAddMedicine() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("../AddHealthProducts/addHealthProd.fxml"));
         medicineDetailsPane.getChildren().setAll(pane);
     }
 
@@ -77,15 +72,14 @@ public class MedicineController implements Initializable {
     }
 
     private String getMedName(){
-        String medName = medicineTable.getSelectionModel().getSelectedItem().getName();
-        return medName;
+        return medicineTable.getSelectionModel().getSelectedItem().getName();
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         viewDetails();
         populateTableView();
-
+        searchMedicineTextField.getStyleClass().add("search-field");
         searchFilterData(searchMedicineTextField, medicineTable);
     }
 

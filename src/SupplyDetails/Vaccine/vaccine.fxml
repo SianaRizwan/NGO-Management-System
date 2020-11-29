@@ -30,13 +30,13 @@
                                 <TableColumn fx:id="colVaccineQuantity" editable="false" maxWidth="1000.0" minWidth="-Infinity" prefWidth="300.0" text="Quantity" />
                                 <TableColumn fx:id="colVaccineBuyingPrice" editable="false" maxWidth="1000.0" minWidth="-Infinity" prefWidth="300.0" text="Buying Price" />
                             </columns>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" onAction="#handleDeleteVaccine" text="Remove" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
+                            <contextMenu>
+                                <ContextMenu>
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#handleDeleteVaccine" text="Remove" />
+                                    </items>
+                                </ContextMenu>
+                            </contextMenu>
                         </TableView>
                     </content>
                 </ScrollPane>

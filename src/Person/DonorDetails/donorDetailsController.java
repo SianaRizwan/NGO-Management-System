@@ -57,7 +57,9 @@ public class donorDetailsController {
     public void initialize() {
                 populateTableView();
         viewDetails();
-                searchFilterData(searchDonorTextField, DonorTable);
+        searchDonorTextField.getStyleClass().add("search-field");
+
+        searchFilterData(searchDonorTextField, DonorTable);
     }
 
     private void viewDetails() {

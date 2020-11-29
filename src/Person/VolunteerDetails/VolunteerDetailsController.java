@@ -59,6 +59,8 @@ private AnchorPane VolunteerAncPane;
     public void initialize() {
         populateTableView();
         viewDetails();
+        searchVolunteerTextField.getStyleClass().add("search-field");
+
         searchFilterData(searchVolunteerTextField, VolunteerTable);
     }
 

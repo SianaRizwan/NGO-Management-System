@@ -61,3 +61,6 @@
     -jfx-focus-color: -fx-primaryText;
     -fx-font-size: 18px;
 }
+.jfx-date-picker > .jfx-text-field {
+-jfx-label-float: true;
+}

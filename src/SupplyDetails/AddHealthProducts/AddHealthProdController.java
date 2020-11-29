@@ -1,4 +1,4 @@
-package SupplyDetails.AddHealthProducts.AddHealthProd;
+package SupplyDetails.AddHealthProducts;
 
 import SupplyDetails.SupplyInformation;
 import Utilities.ShowAlertDialogue;
@@ -74,4 +74,6 @@ public class AddHealthProdController {
         System.out.println("ll");
     }
 
+    public void handleBackHealth(ActionEvent actionEvent) {
+    }
 }

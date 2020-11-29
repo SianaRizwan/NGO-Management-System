@@ -82,6 +82,8 @@ public class EmployeeDetailsController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         populateTableView();
         viewDetails();
+        searchEmployeeTextField.getStyleClass().add("search-field");
+
         searchFilterData(searchEmployeeTextField, employeeTable);
 
     }
