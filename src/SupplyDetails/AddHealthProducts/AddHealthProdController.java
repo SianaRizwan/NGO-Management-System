@@ -1,4 +1,4 @@
-package SupplyDetails.AddHealthProducts.AddHealthProd;
+package SupplyDetails.AddHealthProducts;
 
 import SupplyDetails.SupplyInformation;
 import Utilities.ShowAlertDialogue;
@@ -6,14 +6,12 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import org.controlsfx.control.textfield.TextFields;
 
-import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -75,8 +73,7 @@ public class AddHealthProdController {
         TextFields.bindAutoCompletion(healthProdName, new SupplyInformation().getItemNameList("select distinct name from HEALTH_PRODUCT"));
         System.out.println("ll");
     }
-    public void handleBackHealth() throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("../Medicine/medicine.fxml"));
-        addNewHealthProdPane.getChildren().setAll(pane);
+
+    public void handleBackHealth(ActionEvent actionEvent) {
     }
 }

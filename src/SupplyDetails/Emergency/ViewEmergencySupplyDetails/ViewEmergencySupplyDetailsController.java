@@ -1,11 +1,10 @@
-package SupplyDetails.Vaccine.ViewVaccineDetails;
+package SupplyDetails.Emergency.ViewEmergencySupplyDetails;
 
-import SupplyDetails.Vaccine.Vaccine;
+import SupplyDetails.Emergency.Emergency;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -14,50 +13,46 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Date;
 
-public class ViewVaccineInformationController {
+
+public class ViewEmergencySupplyDetailsController {
+    @FXML
+    private AnchorPane viewDetailspane;
 
     @FXML
-    private AnchorPane vaccineDetailsPane;
+    private TableView<Emergency> informationTable;
 
     @FXML
-    private TableView<Vaccine> informationTableVaccine;
+    private TableColumn<Emergency, String> colID;
 
     @FXML
-    private TableColumn<Vaccine, String> colID;
+    private TableColumn<Emergency, String> colName;
 
     @FXML
-    private TableColumn<Vaccine, String> colName;
+    private TableColumn<Emergency, Date> colPurchaseDate;
 
     @FXML
-    private TableColumn<Vaccine, Date> colPurchaseDate;
+    private TableColumn<Emergency,Date> colExpireDate;
 
     @FXML
-    private TableColumn<Vaccine, Date> colExpireDate;
+    private TableColumn<Emergency,Integer> colQuantity;
 
     @FXML
-    private TableColumn<Vaccine, Integer> colQuantity;
+    private TableColumn<Emergency, String> colSupplier;
 
     @FXML
-    private TableColumn<Vaccine, String> colSupplier;
+    private TableColumn<Emergency, String> colManufacturer;
 
     @FXML
-    private TableColumn<Vaccine, String> colManufacturer;
+    private TableColumn<Emergency, Integer> colPrice;
 
-    @FXML
-    private TableColumn<Vaccine, Integer> colPrice;
+    ViewEmergencySupplyDetailsModel view=new ViewEmergencySupplyDetailsModel();
 
-    @FXML
-    private TableColumn<Vaccine, Integer> colType;
 
-    ViewVaccineInformationModel view = new ViewVaccineInformationModel();
-
-    @FXML
-    void handleBackButton(ActionEvent event) throws IOException {
+    public void handleBackButton(ActionEvent actionEvent) throws IOException {
         FXMLLoader.load(getClass().getResource("../vaccine.fxml"));
-        Stage stage = (Stage) vaccineDetailsPane.getScene().getWindow();
+        Stage stage = (Stage) viewDetailspane.getScene().getWindow();
         stage.close();
     }
-
     public void displayInformation(String name) {
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colQuantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
@@ -69,7 +64,7 @@ public class ViewVaccineInformationController {
         colManufacturer.setCellValueFactory(new PropertyValueFactory<>("manufacturer"));
 
         try {
-            informationTableVaccine.setItems(view.getVaccineTableRecords(name));
+            informationTable.setItems(view.getEmergencyTableRecords(name));
         } catch (SQLException throwables) {
             System.out.println("medController: initialize");
             throwables.printStackTrace();

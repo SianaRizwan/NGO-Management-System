@@ -83,6 +83,7 @@ public class FoodController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         populateTableView();
         viewDetails();
+        searchFoodTextField.getStyleClass().add("search-field");
         searchFilterData(searchFoodTextField, foodTable);
 
     }

@@ -18,8 +18,9 @@ public class SupplyDetailsController implements Initializable {
     private Pane supplyDetailsPane;
 
     @FXML
-    public void handleSupplyEmergency(ActionEvent event) {
-
+    public void handleSupplyEmergency(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("Emergency/EmergencySupply.fxml"));
+        supplyDetailsPane.getChildren().setAll(pane);
     }
 
     @FXML

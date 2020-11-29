@@ -3,6 +3,7 @@ package Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 
@@ -14,6 +15,7 @@ import java.util.ResourceBundle;
 public class MainController implements Initializable {
     @FXML
     private BorderPane employeeDetailsBorderPane;
+
     @FXML
     private  AnchorPane mainPane;
     @FXML
@@ -28,7 +30,6 @@ public class MainController implements Initializable {
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
     }
 
     public void viewDoctorDetails() throws IOException {

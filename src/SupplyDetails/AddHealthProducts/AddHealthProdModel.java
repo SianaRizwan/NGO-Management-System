@@ -1,4 +1,4 @@
-package SupplyDetails.AddHealthProducts.AddHealthProd;
+package SupplyDetails.AddHealthProducts;
 
 import Utilities.OracleConnection;
 
