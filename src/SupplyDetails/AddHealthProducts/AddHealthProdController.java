@@ -2,12 +2,8 @@ package SupplyDetails.AddHealthProducts;
 
 import SupplyDetails.SupplyInformation;
 import Utilities.ShowAlertDialogue;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -45,11 +41,10 @@ public class AddHealthProdController {
     private TextField healthProdManufacturer;
 
 
-    private ObservableList<String> type = FXCollections.observableArrayList("Medicine", "Vaccine", "Emergency");
     private int prodType;
 
     @FXML
-    void handleConfirmAddHealthProd(ActionEvent event) throws ParseException {
+    void handleConfirmAddHealthProd() throws ParseException {
         Date purDate = new SimpleDateFormat("MM/dd/yyyy").parse(healthProdPurchaseDate.getEditor().getText());
         Date expDate = new SimpleDateFormat("MM/dd/yyyy").parse(healthProdExpiryDate.getEditor().getText());
 
@@ -85,7 +80,7 @@ public class AddHealthProdController {
     }
 
     @FXML
-    private void handleBackHealth(ActionEvent actionEvent) throws IOException {
+    private void handleBackHealth() throws IOException {
         AnchorPane pane = null;
         if (getType() == 1) {
             pane = FXMLLoader.load(getClass().getResource("../Medicine/medicine.fxml"));

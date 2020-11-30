@@ -5,13 +5,11 @@ import Utilities.ShowAlertDialogue;
 import Person.PersonalInformation;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.layout.AnchorPane;
 import org.controlsfx.control.textfield.TextFields;
 
 public class UpdateDoctorDetailsController {
     UpdateDoctorDetailsModel updateDoctorDetailsModel = new UpdateDoctorDetailsModel();
-    @FXML
-    private AnchorPane updateDoctorPane;
+
     @FXML
     private TextField DoctorID;
 

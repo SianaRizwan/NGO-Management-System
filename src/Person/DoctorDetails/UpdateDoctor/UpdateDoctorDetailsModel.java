@@ -23,7 +23,7 @@ public class UpdateDoctorDetailsModel {
                 return true;
             }
         } catch (Exception e) {
-            System.out.println("  doctorModel /// isUpdatedoctorSuccessful\n\n");
+            System.out.println("  doctorModel /// isUpdateDoctorSuccessful\n\n");
             e.printStackTrace();
 
             return false;

@@ -3,10 +3,8 @@ package Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-
 
 import java.io.IOException;
 import java.net.URL;
@@ -47,6 +45,12 @@ public class DashboardController implements Initializable {
 
     public void viewSupplyDetails() throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("../SupplyDetails/supplyDetails.fxml"));
+        employeeDetailsBorderPane.setCenter(pane);
+    }
+
+    @FXML
+    public void viewAccountsDetails() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("../Accounts/Accounts.fxml"));
         employeeDetailsBorderPane.setCenter(pane);
     }
 }

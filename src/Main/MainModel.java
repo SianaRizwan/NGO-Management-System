@@ -12,7 +12,7 @@ public class MainModel {
             OracleConnection oc=new OracleConnection();
             PreparedStatement ps=oc.conn.prepareStatement(sql);
             ResultSet rs= ps.executeQuery();
-            while (rs.next()){
+            if (rs.next()){
                 return rs.getInt(1);
             }
         } catch (Exception e) {

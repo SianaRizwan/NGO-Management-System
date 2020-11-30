@@ -3,6 +3,9 @@
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/ojdbc6.jar!/" />
       <root url="jar://$PROJECT_DIR$/controlsfx-8.40.14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/fontawesomefx-commons-8.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/fontawesomefx-fontawesome-4.7.0-5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jfoenix-8.0.10.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
