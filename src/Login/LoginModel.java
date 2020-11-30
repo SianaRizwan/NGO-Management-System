@@ -7,37 +7,18 @@ import java.sql.ResultSet;
 
 public class LoginModel {
     OracleConnection oracleConnection = new OracleConnection();
-    private String uid;
+    private static String designation;
 
-   /* protected boolean isEmpAvailable(){
-        int n=-1;
-        try {
-            String sql="select count(emp_id) from employee";
-            OracleConnection oc=new OracleConnection();
-            PreparedStatement ps=oc.conn.prepareStatement(sql);
-            ResultSet rs=ps.executeQuery();
-            if(rs.next()){
-                n=rs.getInt(1);
-            }
-            if(n==0) {
-                return false;
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return true;
-    }*/
+
     protected boolean isLoginSuccessful(String username, String password) {
         try {
-            String sql = "select name,password from employee where name=? and password=?";
-            PreparedStatement ps=oracleConnection.conn.prepareStatement(sql);
-            ps.setString(1,username);
-            ps.setString(2,password);
-            ResultSet resultSet=ps.executeQuery();
-            System.out.println(username.getClass().getSimpleName()+"     "+password.getClass().getSimpleName());
-            if (resultSet.next()){
-                uid=resultSet.getString(1);
-                System.out.println(uid);
+            String sql = "select name,password,designation from employee where name=? and password=?";
+            PreparedStatement ps = oracleConnection.conn.prepareStatement(sql);
+            ps.setString(1, username);
+            ps.setString(2, password);
+            ResultSet resultSet = ps.executeQuery();
+            if (resultSet.next()) {
+                designation = resultSet.getString(3);
                 return true;
             }
         } catch (Exception e) {
@@ -46,10 +27,9 @@ public class LoginModel {
         return false;
 
     }
-    public String getUID() {
-        System.out.println(uid+" login uid");
-        return uid;
 
+    public static String getDesignation() {
+        return designation;
     }
 
 }

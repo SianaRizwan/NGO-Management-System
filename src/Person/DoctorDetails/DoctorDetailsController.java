@@ -2,16 +2,14 @@ package Person.DoctorDetails;
 
 
 import Person.DoctorDetails.ViewDoctorInformation.ViewDoctorInformationController;
+import Person.PersonalInformation;
 import Utilities.ShowAlertDialogue;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableRow;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -28,7 +26,11 @@ public class DoctorDetailsController {
     public AnchorPane DoctorDetailsAnchorPane;
     @FXML
     private TableView<Doctor> DoctorTable;
+    @FXML
+    private Button addButton;
 
+    @FXML
+    private Button updateButton;
     @FXML
     private TableColumn<Doctor, Integer> colDoctorID;
 
@@ -62,6 +64,10 @@ public class DoctorDetailsController {
     public void initialize() {
         populateTableView();
         viewDetails();
+        if(!(new PersonalInformation().checkDesignation())){
+            addButton.setVisible(false);
+            updateButton.setVisible(false);
+        }
         searchDoctorTextField.getStyleClass().add("search-field");
         searchFilterData(searchDoctorTextField, DoctorTable);
     }
@@ -154,7 +160,6 @@ public class DoctorDetailsController {
     }
 
     public String getDoctorID() {
-        String doctorId = DoctorTable.getSelectionModel().getSelectedItem().id;
-        return doctorId;
+        return DoctorTable.getSelectionModel().getSelectedItem().id;
     }
 }

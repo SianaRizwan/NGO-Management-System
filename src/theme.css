@@ -33,14 +33,33 @@
     -fx-text-fill: -fx-primaryText;
     -fx-prompt-text-fill: -fx-primaryText;
     -jfx-focus-color: -fx-primaryText;
+    -jfx-label-float: true;
     -fx-font-size: 18px;
 }
+.search-field{
+    -fx-text-fill: BLACK;
+    -fx-prompt-text-fill: -fx-primary;
+    -jfx-focus-color: -fx-primary;
+    -fx-font-size: 18px;
+}
+
 
 .button {
     -fx-background-color: -fx-secondary;
     -fx-text-fill: -fx-buttonText;
     -fx-background-radius: 10px;
 }
+.dashboard-button{
+    -fx-background-color: -fx-secondary;
+    -fx-text-fill: -fx-buttonText;
+    -fx-background-radius: 10px;
+}
+.logout-button{
+    -fx-background-color: -fx-secondary;
+    -fx-text-fill: -fx-buttonText;
+    -fx-background-radius: 10px;
+}
+
 
 .button:hover {
     -fx-background-color: -fx-secondary;
@@ -48,6 +67,22 @@
     -fx-font-weight: bold;
     -fx-font-size: 20px;
 }
+
+.supply-button {
+    -fx-background-color: White;
+}
+
+.supply-button:hover {
+    -fx-background-color: #f8f1f1;
+}
+
+.dashboard-button:hover {
+      -fx-font-size: 25px;
+}
+
+.logout-button:hover{
+    -fx-font-size: 35px;
+    }
 
 .wrong-credentials {
     -jfx-unfocus-color: -fx-wrongColor;
@@ -62,5 +97,5 @@
     -fx-font-size: 18px;
 }
 .jfx-date-picker > .jfx-text-field {
--jfx-label-float: true;
+    -jfx-label-float: true;
 }

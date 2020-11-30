@@ -28,7 +28,7 @@
                   <Insets left="100.0" />
                </padding>
                <children>
-                  <Button alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleAddNew" prefHeight="55.0" prefWidth="330.0" style="-fx-background-color: FDAB9F;" text="Add New Employee">
+                  <Button fx:id="addButton" alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleAddNew" prefHeight="55.0" prefWidth="330.0" style="-fx-background-color: FDAB9F;" text="Add New Employee">
                      <font>
                         <Font name="Californian FB" size="25.0" />
                      </font>

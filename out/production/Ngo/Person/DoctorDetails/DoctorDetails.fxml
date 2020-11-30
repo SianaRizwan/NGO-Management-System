@@ -28,7 +28,7 @@
                         <Insets left="100.0" />
                     </padding>
                     <children>
-                        <Button alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleAddNew" prefHeight="55.0" prefWidth="330.0" style="-fx-background-color: FDAB9F;" text="Add New Doctor">
+                        <Button fx:id="addButton" alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleAddNew" prefHeight="55.0" prefWidth="330.0" style="-fx-background-color: FDAB9F;" text="Add New Doctor">
                             <font>
                                 <Font name="Californian FB" size="25.0" />
                             </font>
@@ -46,7 +46,7 @@
                         </Button>
                     </children>
                 </HBox>
-                <ScrollPane layoutX="100.0" layoutY="377.0" prefHeight="500.0" prefWidth="1200.0">
+                <ScrollPane layoutX="100.0" layoutY="351.0" prefHeight="500.0" prefWidth="1200.0">
                     <content>
                         <TableView fx:id="DoctorTable" prefHeight="500.0" prefWidth="1200.0" style="-fx-prompt-text-fill: #8B0000; -fx-text-fill: BLACK; -jfx-focus-color: #8B0000;" styleClass="search-field" stylesheets="@../../theme.css">
                             <columns>
@@ -66,7 +66,7 @@
                         </TableView>
                     </content>
                 </ScrollPane>
-            <JFXTextField fx:id="searchDoctorTextField" focusColor="#900f0f" labelFloat="true" layoutX="100.0" layoutY="301.0" prefHeight="31.0" prefWidth="265.0" promptText="Search" style="-fx-text-fill: BLACK; -jfx-focus-color: #8B0000; -fx-prompt-text-fill: #8B0000;" unFocusColor="#900f0f">
+            <JFXTextField fx:id="searchDoctorTextField" focusColor="#900f0f" labelFloat="true" layoutX="100.0" layoutY="287.0" prefHeight="31.0" prefWidth="265.0" promptText="Search" style="-fx-text-fill: BLACK; -jfx-focus-color: #8B0000; -fx-prompt-text-fill: #8B0000;" unFocusColor="#900f0f">
                <font>
                   <Font size="18.0" />
                </font>

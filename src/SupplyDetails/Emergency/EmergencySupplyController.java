@@ -1,5 +1,6 @@
 package SupplyDetails.Emergency;
 
+import SupplyDetails.AddHealthProducts.AddHealthProdController;
 import SupplyDetails.Emergency.ViewEmergencySupplyDetails.ViewEmergencySupplyDetailsController;
 import Utilities.ShowAlertDialogue;
 import javafx.collections.transformation.FilteredList;
@@ -69,6 +70,15 @@ public class EmergencySupplyController {
             return row;
         });
     }
+
+    public void handleAddOption() throws IOException {
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("../AddHealthProducts/addHealthProd.fxml"));
+        AnchorPane pane = loader.load();
+        AddHealthProdController prod=loader.getController();
+        prod.setType(3);
+        EmergencySupplyDetailsPane.getChildren().setAll(pane);
+    }
+
     private String getEmergencyName(){
         return emergencySupplyTable.getSelectionModel().getSelectedItem().getName();
     }
@@ -125,8 +135,5 @@ public class EmergencySupplyController {
         }
     }
 
-    public void handleAddOption() throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("../AddHealthProducts/addHealthProd.fxml"));
-        EmergencySupplyDetailsPane.getChildren().setAll(pane);
-    }
+
 }

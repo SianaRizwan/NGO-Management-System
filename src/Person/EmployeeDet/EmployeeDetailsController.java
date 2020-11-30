@@ -1,6 +1,8 @@
 package Person.EmployeeDet;
 
+import Login.LoginModel;
 import Person.EmployeeDet.ViewEmployeeInformation.ViewEmployeeInformationController;
+import Person.PersonalInformation;
 import Utilities.ShowAlertDialogue;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
@@ -42,6 +44,11 @@ public class EmployeeDetailsController implements Initializable {
     private TableColumn<Employee, String> colEmpDesignation;
     @FXML
     private TableView<Employee> employeeTable;
+    @FXML
+    private Button addButton;
+
+    @FXML
+    private Button updateButton;
 
     @FXML
     private void handleUpdate() throws IOException {
@@ -82,6 +89,11 @@ public class EmployeeDetailsController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         populateTableView();
         viewDetails();
+        if (!(new PersonalInformation().checkDesignation())) {
+            addButton.setVisible(false);
+            updateButton.setVisible(false);
+        }
+
         searchEmployeeTextField.getStyleClass().add("search-field");
 
         searchFilterData(searchEmployeeTextField, employeeTable);
@@ -150,7 +162,6 @@ public class EmployeeDetailsController implements Initializable {
     }
 
     public int getEmployeeId() {
-        System.out.println("llll");
         return employeeTable.getSelectionModel().getSelectedItem().getId();
     }
 }

@@ -7,10 +7,17 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-
+MainModel mainModel=new MainModel();
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("../Login/login.fxml"));
+        Parent root;
+        if (mainModel.checkEmployeeNumber()==0){
+            root = FXMLLoader.load(getClass().getResource("../Registration/register.fxml"));
+
+        }
+        else{
+            root = FXMLLoader.load(getClass().getResource("../Login/login.fxml"));
+        }
         primaryStage.setTitle("NGO Management System");
         //primaryStage.setMaximized(true);
         primaryStage.setScene(new Scene(root,1800,900));

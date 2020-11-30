@@ -3,8 +3,6 @@ package Utilities;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
-import javafx.scene.effect.BoxBlur;
-import javafx.scene.layout.AnchorPane;
 import java.util.Optional;
 
 public class ShowAlertDialogue {

@@ -6,20 +6,20 @@ import java.sql.PreparedStatement;
 import java.util.Date;
 
 public class AddHealthProdModel {
-    public boolean isAddHealthProdSuccessful(String name, Date pDate, Date eDate, int qty, int price, String supplier, String manufacturer, String type){
+    public boolean isAddHealthProdSuccessful(String name, Date pDate, Date eDate, int qty, int price, String supplier, String manufacturer, int type){
         try {
             java.sql.Date pur_date = new java.sql.Date(pDate.getTime());
             java.sql.Date exp_date = new java.sql.Date(eDate.getTime());
 
             int type_int;
 
-            if(type.equals("Medicine")){
+           /* if(type.equals("Medicine")){
                 type_int=1;
             }else if(type.equals("Vaccine")){
                 type_int=2;
             } else if (type.equals("Emergency")){
                 type_int=3;
-            } else type_int=-1;
+            } else type_int=-1;*/
 
             String sql = "insert into health_product(name,purchase_date,expire_date,qty,supplier,manufacturer,unit_price,type) values(?,?,?,?,?,?,?,?)";
 
@@ -33,7 +33,7 @@ public class AddHealthProdModel {
             ps.setString(5, supplier);
             ps.setString(6, manufacturer);
             ps.setInt(7, price);
-            ps.setInt(8,type_int);
+            ps.setInt(8,type);
 
             int x = ps.executeUpdate();
 

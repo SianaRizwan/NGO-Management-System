@@ -62,21 +62,5 @@
             <Font name="Californian FB Bold" size="36.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="76.0" layoutY="363.0" prefHeight="56.0" prefWidth="395.0" text="If you are new then click on Register button">
-         <font>
-            <Font name="Californian FB Italic" size="24.0" />
-         </font></Label>
-      <Button fx:id="registerButton" layoutX="126.0" layoutY="436.0" mnemonicParsing="false" onAction="#handleRegister" onMouseClicked="#handleRegister" opacity="0.74" prefHeight="50.0" prefWidth="230.0" style="-fx-background-color: fff4f2;" text="Register" textAlignment="CENTER">
-         <textFill>
-            <LinearGradient endX="1.0" endY="1.0" startX="0.8737864077669902" startY="0.8300970873786409">
-               <stops>
-                  <Stop color="#140101" />
-                  <Stop color="#fffefe" offset="1.0" />
-               </stops>
-            </LinearGradient>
-         </textFill>
-         <font>
-            <Font name="Californian FB" size="18.0" />
-         </font></Button>
    </children>
 </AnchorPane>

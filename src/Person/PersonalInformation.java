@@ -1,5 +1,6 @@
 package Person;
 
+import Login.LoginModel;
 import Utilities.EmailValidator;
 import Utilities.OracleConnection;
 
@@ -30,7 +31,9 @@ public class PersonalInformation {
 
         return list;
     }
-
+public boolean checkDesignation(){
+        return new LoginModel().getDesignation().contains("Admin");
+}
     public String[] setInformationInUpdateWindow(String[] info, String Doctor_id, String sql) {
         List<String> list = new ArrayList<>();
         try {

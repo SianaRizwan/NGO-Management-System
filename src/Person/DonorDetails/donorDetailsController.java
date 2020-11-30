@@ -144,7 +144,6 @@ public class donorDetailsController {
     }
 
     private String getDonorID() {
-        String DonorId = DonorTable.getSelectionModel().getSelectedItem().getId();
-        return DonorId;
+        return DonorTable.getSelectionModel().getSelectedItem().getId();
     }
 }
