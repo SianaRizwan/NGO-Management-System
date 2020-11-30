@@ -99,3 +99,8 @@
 .jfx-date-picker > .jfx-text-field {
     -jfx-label-float: true;
 }
+
+.tab_dashboard:hover {
+    -fx-background-color: #751919;
+    -fx-cursor: hand;
+}
