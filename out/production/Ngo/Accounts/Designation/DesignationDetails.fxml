@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXComboBox?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
-
-<AnchorPane fx:id="designationDetailsAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accounts.Designation.DesignationDetailsController">
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Accounts.Designation.DesignationDetailsController"
+            prefHeight="400.0" prefWidth="600.0">
     <children>
         <Pane fx:id="designationDetailsPane" prefHeight="1275.0" prefWidth="1473.0">
             <children>
@@ -22,7 +24,7 @@
                     </font>
                 </Label>
                 <ScrollPane layoutX="245.0" layoutY="600.0" prefHeight="350.0" prefWidth="1000.0">
-               <content>
+                    <content>
                         <TableView fx:id="designationTable" prefHeight="350.0" prefWidth="1000.0">
                             <columns>
                                 <TableColumn fx:id="colDesigID" editable="false" maxWidth="300.0" minWidth="225.99996948242188" prefWidth="250.0" text="Designation ID" />
@@ -31,22 +33,23 @@
                                 <TableColumn fx:id="colDesigSalary" editable="false" maxWidth="300.0" minWidth="-Infinity" prefWidth="250.0" text="Salary" />
                             </columns>
                         </TableView>
-               </content></ScrollPane>
+                    </content></ScrollPane>
                 <JFXTextField fx:id="searchDesigTextField" focusColor="#900f0f" labelFloat="true" layoutX="242.0" layoutY="506.0" prefHeight="31.0" prefWidth="265.0" promptText="Search">
                     <font>
                         <Font size="18.0" />
                     </font>
                 </JFXTextField>
-            <AnchorPane layoutX="345.0" layoutY="152.0" prefHeight="279.0" prefWidth="712.0" style="-fx-background-color: #8B0000;">
-               <children>
-                  <JFXTextField fx:id="desigNameTextField" layoutX="181.0" layoutY="100.0" prefHeight="31.0" prefWidth="350.0" promptText="Designation" />
-                  <JFXTextField fx:id="desigSalaryTextField" layoutX="181.0" layoutY="155.0" prefHeight="30.0" prefWidth="350.0" promptText="Salary" />
-                  <FontAwesomeIconView glyphName="USER_PLUS" layoutX="135.0" layoutY="122.0" size="20" />
-                  <JFXButton layoutX="324.0" layoutY="220.0" onAction="#desigConfirmBtn" onMouseClicked="#desigConfirmBtn" text="Add" />
-                  <JFXComboBox fx:id="desigTypeComboBox" layoutX="181.0" layoutY="45.0" prefHeight="30.0" prefWidth="350.0" />
-               </children>
-            </AnchorPane>
+                <AnchorPane layoutX="345.0" layoutY="152.0" prefHeight="279.0" prefWidth="712.0" style="-fx-background-color: #8B0000;">
+                    <children>
+                        <JFXTextField fx:id="desigNameTextField" layoutX="181.0" layoutY="100.0" prefHeight="31.0" prefWidth="350.0" promptText="Designation" />
+                        <JFXTextField fx:id="desigSalaryTextField" layoutX="181.0" layoutY="155.0" prefHeight="30.0" prefWidth="350.0" promptText="Salary" />
+                        <FontAwesomeIconView glyphName="USER_PLUS" layoutX="135.0" layoutY="122.0" size="20" />
+                        <JFXButton layoutX="324.0" layoutY="220.0" onAction="#desigConfirmBtn" onMouseClicked="#desigConfirmBtn" text="Add" />
+                        <JFXComboBox fx:id="desigTypeComboBox" layoutX="181.0" layoutY="45.0" prefHeight="30.0" prefWidth="350.0" />
+                    </children>
+                </AnchorPane>
             </children>
         </Pane>
     </children>
+
 </AnchorPane>

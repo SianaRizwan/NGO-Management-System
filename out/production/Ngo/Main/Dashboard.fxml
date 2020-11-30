@@ -96,7 +96,9 @@
                                 <Font name="Californian FB Bold" size="25.0" />
                             </font>
                         </Button>
-                        <Button alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" onAction="#viewAccountsDetails" onMouseClicked="#viewAccountsDetails" prefHeight="54.0" prefWidth="544.0" style="-fx-background-color: fff4f2;" styleClass="dashboard-button" text="Accounts">
+                        <Button alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="544.0"
+                                style="-fx-background-color: fff4f2;" onAction="#viewAccountsDetails"
+                                styleClass="dashboard-button" text="Accounts">
                             <font>
                                 <Font name="Californian FB Bold" size="25.0" />
                             </font>

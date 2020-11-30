@@ -3,43 +3,25 @@ package Accounts;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
-public class AccountsController implements Initializable {
-
+public class AccountsController {
     @FXML
     private Pane AccountsPane;
 
-    @FXML
-    private void handleAccountsDesig(ActionEvent event) throws IOException {
+    public void handleAccountsDesig(ActionEvent actionEvent) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("Designation/DesignationDetails.fxml"));
-        AccountsPane.getChildren().setAll(pane);
+        AccountsPane.getChildren().setAll(pane); }
+
+    public void handleAccountsExpenses(ActionEvent actionEvent) {
     }
 
-    @FXML
-    void handleAccountsDonation(ActionEvent event) {
-
+    public void handleAccountsEvent(ActionEvent actionEvent) {
     }
 
-    @FXML
-    void handleAccountsEvent(ActionEvent event) {
-
-    }
-
-    @FXML
-    void handleAccountsExpenses(ActionEvent event) {
-
-    }
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
+    public void handleAccountsDonation(ActionEvent actionEvent) {
     }
 }
-

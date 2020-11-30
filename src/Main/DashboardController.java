@@ -1,10 +1,12 @@
 package Main;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+
 
 import java.io.IOException;
 import java.net.URL;
@@ -47,9 +49,8 @@ public class DashboardController implements Initializable {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("../SupplyDetails/supplyDetails.fxml"));
         employeeDetailsBorderPane.setCenter(pane);
     }
-
     @FXML
-    public void viewAccountsDetails() throws IOException {
+    public void viewAccountsDetails(ActionEvent event) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("../Accounts/Accounts.fxml"));
         employeeDetailsBorderPane.setCenter(pane);
     }
