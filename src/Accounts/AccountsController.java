@@ -3,18 +3,21 @@ package Accounts;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class AccountsController {
+public class AccountsController implements Initializable {
 
     @FXML
     private Pane AccountsPane;
 
     @FXML
-    void handleAccountsDesig(ActionEvent event) throws IOException {
+    private void handleAccountsDesig(ActionEvent event) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("Designation/Designation.fxml"));
         AccountsPane.getChildren().setAll(pane);
     }
@@ -34,5 +37,9 @@ public class AccountsController {
 
     }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
 }
 
