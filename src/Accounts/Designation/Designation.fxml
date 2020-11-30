@@ -39,11 +39,11 @@
                 </JFXTextField>
             <AnchorPane layoutX="345.0" layoutY="152.0" prefHeight="279.0" prefWidth="712.0" style="-fx-background-color: #8B0000;">
                <children>
-                  <JFXTextField layoutX="181.0" layoutY="100.0" prefHeight="31.0" prefWidth="350.0" promptText="Designation" />
-                  <JFXTextField layoutX="181.0" layoutY="155.0" prefHeight="30.0" prefWidth="350.0" promptText="Salary" />
+                  <JFXTextField fx:id="desigNameTextField" layoutX="181.0" layoutY="100.0" prefHeight="31.0" prefWidth="350.0" promptText="Designation" />
+                  <JFXTextField fx:id="desigSalaryTextField" layoutX="181.0" layoutY="155.0" prefHeight="30.0" prefWidth="350.0" promptText="Salary" />
                   <FontAwesomeIconView glyphName="USER_PLUS" layoutX="135.0" layoutY="122.0" size="20" />
-                  <JFXButton layoutX="324.0" layoutY="220.0" text="Add" />
-                  <JFXComboBox layoutX="181.0" layoutY="45.0" prefHeight="30.0" prefWidth="350.0" />
+                  <JFXButton layoutX="324.0" layoutY="220.0" onAction="#desigConfirmBtn" onMouseClicked="#desigConfirmBtn" text="Add" />
+                  <JFXComboBox fx:id="desigTypeComboBox" layoutX="181.0" layoutY="45.0" prefHeight="30.0" prefWidth="350.0" />
                </children>
             </AnchorPane>
             </children>
