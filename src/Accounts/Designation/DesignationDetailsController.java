@@ -65,6 +65,12 @@ public class DesignationDetailsController implements Initializable {
         }else {
             new ShowAlertDialogue().infoBox("Designation Added Failed!",null,"Add Designation");
         }
+        refreshTextField();
+    }
+
+    private void refreshTextField() {
+        desigNameTextField.setText("");
+        desigSalaryTextField.setText("");
     }
 
     void populateTableView(){
