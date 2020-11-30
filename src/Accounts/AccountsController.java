@@ -18,7 +18,7 @@ public class AccountsController implements Initializable {
 
     @FXML
     private void handleAccountsDesig(ActionEvent event) throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("Designation/Designation.fxml"));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("Designation/DesignationDetails.fxml"));
         AccountsPane.getChildren().setAll(pane);
     }
 

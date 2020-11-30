@@ -1,30 +1,37 @@
 package Accounts.Designation;
 
 import Utilities.OracleConnection;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class DesignationModel {
-    public boolean isDesignationAddedSuccessful(String type, String name, int salary){
+    public ObservableList<Designation> getDesignationTableRecords() throws SQLException {
+        String sql = "select id, designation_name, type, amount from designation";
+        ObservableList<Designation> designations = FXCollections.observableArrayList();
         try {
-            String sql = "insert into designation (designation_name,type,amount) values(?,?,?)";
-
             OracleConnection oc = new OracleConnection();
             PreparedStatement ps = oc.conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
 
-            ps.setString(1,name);
-            ps.setString(2,type);
-            ps.setInt(3,salary);
+            while (rs.next()){
+                String id = rs.getString(1);
+                String name = rs.getString(2);
+                String type = rs.getString(3);
+                int salary = rs.getInt(4);
 
-            int x= ps.executeUpdate();
-            if(x>0){
-                return true;
+                Designation designation = new Designation(salary,name,type,id);
+
+                designations.add(designation);
             }
+            return designations;
         } catch (Exception e) {
-            System.out.println("isDesignationAddedSuccessful\n\n");
+            System.out.println("getTableRecords : desigModel");
             e.printStackTrace();
-            return false;
+            throw e;
         }
-        return false;
     }
 }
