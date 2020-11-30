@@ -1,6 +1,5 @@
 package Main;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -50,7 +49,7 @@ public class DashboardController implements Initializable {
     }
 
     @FXML
-    public void viewAccountsDetails(ActionEvent event) throws IOException {
+    public void viewAccountsDetails() throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("../Accounts/Accounts.fxml"));
         employeeDetailsBorderPane.setCenter(pane);
     }
