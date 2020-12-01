@@ -3,6 +3,8 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
@@ -12,7 +14,7 @@
     <children>
     <Pane fx:id="eventDetailsPane" prefHeight="1275.0" prefWidth="1473.0">
     <children>
-    <Label layoutX="73.0" layoutY="15.0" prefHeight="98.0" prefWidth="511.0" text="Events Scheduling">
+    <Label layoutX="73.0" layoutY="15.0" prefHeight="98.0" prefWidth="511.0" text="Events">
         <font>
             <Font name="Californian FB" size="36.0" />
         </font>
@@ -23,14 +25,22 @@
                      <children>
                         <Pane layoutX="-1.0" layoutY="244.0" prefHeight="65.0" prefWidth="434.0" style="-fx-background-color: #f3e4e4;">
                            <children>
-                              <Label alignment="CENTER" layoutX="50.0" layoutY="11.0" prefHeight="58.0" prefWidth="331.0" text="Schedule an Event">
+                              <Label alignment="CENTER" layoutX="50.0" layoutY="11.0" onMouseClicked="#handleCreateEvent" prefHeight="58.0" prefWidth="331.0" text="Schedule an Event">
                                  <font>
                                     <Font name="Californian FB" size="25.0" />
                                  </font>
                               </Label>
                            </children>
                         </Pane>
-                        <JFXButton layoutX="48.0" layoutY="25.0" prefHeight="233.0" prefWidth="331.0" />
+                        <JFXButton layoutX="48.0" layoutY="25.0" onAction="#handleCreateEvent" onMouseClicked="#handleCreateEvent" prefHeight="233.0" prefWidth="331.0">
+                         <graphic>
+                             <ImageView fitHeight="160.0" fitWidth="242.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                     <Image url="@../images/scheduleEvent.jpg" />
+                                 </image>
+                             </ImageView>
+                         </graphic>
+                        </JFXButton>
                          
                      </children>
                   </AnchorPane>
@@ -45,7 +55,15 @@
                               </Label>
                            </children>
                         </Pane>
-                        <JFXButton layoutX="48.0" layoutY="25.0" prefHeight="233.0" prefWidth="331.0" />
+                        <JFXButton layoutX="48.0" layoutY="25.0" prefHeight="233.0" prefWidth="331.0">
+                            <graphic>
+                                <ImageView fitHeight="160.0" fitWidth="242.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/History.jpg" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </JFXButton>
                      </children>
                   </AnchorPane>
                </children>

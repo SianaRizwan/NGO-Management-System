@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: #ffffff;" styleClass="supply-button" stylesheets="@../../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EventDetails.CreateEvent.CreateEventController">
+    <children>
+    <Pane fx:id="createEventPane" prefHeight="1275.0" prefWidth="1473.0">
+    <children>
+    <Label layoutX="73.0" layoutY="15.0" prefHeight="98.0" prefWidth="511.0" text="Events Scheduling">
+        <font>
+            <Font name="Californian FB" size="36.0" />
+        </font>
+    </Label>
+        <AnchorPane layoutX="375.0" layoutY="160.0" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="646.0" prefWidth="690.0" style="-fx-background-color: #8B0000;">
+            <children>
+                <Button layoutX="200.0" layoutY="558.0" mnemonicParsing="false" style="-fx-background-color: FDAB9F;" stylesheets="@../../theme.css" text="Confirm">
+                    <font>
+                        <Font name="Californian FB" size="18.0" />
+                    </font>
+                </Button>
+                <Button layoutX="434.0" layoutY="558.0" mnemonicParsing="false" onAction="#handleBackBtn" onMouseClicked="#handleBackBtn" prefHeight="34.0" prefWidth="86.0" style="-fx-background-color: FDAB9F;" stylesheets="@../../theme.css" text="Back">
+                    <font>
+                        <Font name="Californian FB" size="18.0" />
+                    </font>
+                </Button>
+                <JFXTextField fx:id="eventName" layoutX="159.0" layoutY="77.0" prefHeight="31.0" prefWidth="435.0" promptText="Enter Events Name" stylesheets="@../../theme.css" />
+                <JFXTextField fx:id="eventVolunteerName" layoutX="159.0" layoutY="147.0" prefHeight="31.0" prefWidth="435.0" promptText="Enter Volunteer Name" stylesheets="@../../theme.css" />
+                <Button layoutX="162.0" layoutY="206.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="235.0" style="-fx-background-color: FDAB9F;" stylesheets="@../../theme.css" text="View Assigned Volunteers">
+                    <font>
+                        <Font name="Californian FB" size="18.0" />
+                    </font>
+                </Button>
+                <JFXTextField fx:id="eventEmployeeName" layoutX="159.0" layoutY="273.0" prefHeight="31.0" prefWidth="435.0" promptText="Enter Emlpoyee Name" stylesheets="@../../theme.css" />
+                <Button layoutX="161.0" layoutY="338.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="235.0" style="-fx-background-color: FDAB9F;" stylesheets="@../../theme.css" text="View Assigned Employees">
+                    <font>
+                        <Font name="Californian FB" size="18.0" />
+                    </font>
+                </Button>
+                <JFXTextField fx:id="estimatedBudget" layoutX="159.0" layoutY="381.0" prefHeight="31.0" prefWidth="435.0" promptText="Estimated budget" stylesheets="@../../theme.css" />
+                <JFXDatePicker fx:id="eventDate" defaultColor="#f3e4e4" layoutX="159.0" layoutY="458.0" prefHeight="31.0" prefWidth="435.0" promptText="Date of the event" stylesheets="@../../theme.css" />
+                <FontAwesomeIconView glyphName="CALENDAR_ALT" layoutX="97.0" layoutY="107.0" size="25" />
+                <FontAwesomeIconView glyphName="USERS" layoutX="97.0" layoutY="180.0" size="25" />
+                <FontAwesomeIconView glyphName="USERS" layoutX="97.0" layoutY="301.0" size="25" />
+                <FontAwesomeIconView glyphName="MONEY" layoutX="95.0" layoutY="409.0" size="25" />
+                <FontAwesomeIconView glyphName="CALENDAR" layoutX="96.0" layoutY="486.0" size="25" />
+            </children>
+        </AnchorPane>
+    </children>
+    </Pane>
+    </children>
+</AnchorPane>
