@@ -1,7 +1,9 @@
 package Person.EmployeeDet.ViewEmployeeInformation;
 
+import Person.PersonalInformation;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -35,11 +37,21 @@ public class ViewEmployeeInformationController {
 
     @FXML
     private TextField showEmployeeAddress;
+    @FXML
+    private Label salaryLabel;
+
+    @FXML
+    private TextField showSalary;
 
     ViewEmployeeInformationModel viewEmployeeInformationModel = new ViewEmployeeInformationModel();
 
     public void displayInformation(int id) {
-        String[] list = new String[8];
+        if (!(new PersonalInformation().checkDesignation())) {
+            salaryLabel.setVisible(false);
+            showSalary.setVisible(false);
+
+        }
+        String[] list = new String[11];
         String[] info = viewEmployeeInformationModel.showEmployeeDetails(list, id);
         showEmployeeID.setText(info[0]);
         showEmployeeName.setText(info[1]);
@@ -49,7 +61,7 @@ public class ViewEmployeeInformationController {
         showEmployeeAddress.setText(info[5]);
         showEmployeeContact.setText(info[6]);
         showEmployeeDesignation.setText(info[7]);
-
+        showSalary.setText(info[8]);
     }
 
     @FXML
@@ -59,4 +71,4 @@ public class ViewEmployeeInformationController {
         stage.close();
     }
 
-   }
+}
