@@ -528,6 +528,48 @@ return total;
 end;
 /
 
+---------show Doctor salary
+create or replace function show_Doctor_Salary(doc_id varchar2)
+return number
+is 
+salary number;
+begin
+select amount into salary from doctor,designation where speciality=designation_name and doctor_id=doc_id;
+
+return salary;
+end;
+/
+
+---------show employee salary
+create or replace function show_employee_Salary(e_id varchar2)
+return number
+is 
+salary number;
+begin
+select amount into salary from employee,designation where designation=designation_name and emp_id=e_id;
+
+return salary;
+end;
+/
+
+
+------count the total number of employee
+create or replace function num_of_employee(desig varchar2,fid varchar2)
+return number
+is 
+types varchar2(10);
+total number;
+begin
+select lpad(fid,'1') into types from dual;
+if types='E' then
+select count(designation)into total from designation,employee where designation_name=designation and designation=desig;
+elsif types='D' then
+select count(speciality)into total from designation,doctor where designation_name=speciality and speciality=desig;
+end if;
+return total;
+end;
+/
+
 DROP TABLE HEALTH_PRODUCT;
 DROP TABLE FOOD;
 DROP TABLE volunteer;

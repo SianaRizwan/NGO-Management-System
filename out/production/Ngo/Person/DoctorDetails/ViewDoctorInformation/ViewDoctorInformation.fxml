@@ -6,72 +6,78 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="viewDetails" prefHeight="667.0" prefWidth="572.0" style="-fx-background-color: #F7E9E9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Person.DoctorDetails.ViewDoctorInformation.ViewDoctorInformationController">
+<AnchorPane fx:id="viewDetails" prefHeight="684.0" prefWidth="572.0" style="-fx-background-color: #F7E9E9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Person.DoctorDetails.ViewDoctorInformation.ViewDoctorInformationController">
    <children>
-      <Label layoutX="138.0" layoutY="76.0" text="ID :">
+      <Label layoutX="135.0" layoutY="53.0" text="ID :">
          <font>
             <Font name="Californian FB Bold" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="showDoctorID" alignment="CENTER_RIGHT" editable="false" layoutX="316.0" layoutY="72.0" promptText="ID" style="-fx-background-color: #F7E9E9;" />
-      <Label layoutX="103.0" layoutY="129.0" text="NAME :">
+      <TextField fx:id="showDoctorID" alignment="CENTER_RIGHT" editable="false" layoutX="313.0" layoutY="49.0" promptText="ID" style="-fx-background-color: #F7E9E9;" />
+      <Label layoutX="100.0" layoutY="106.0" text="NAME :">
          <font>
             <Font name="Californian FB Bold" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="showDoctorName" alignment="CENTER_RIGHT" editable="false" layoutX="316.0" layoutY="125.0" promptText="NAME" style="-fx-background-color: #F7E9E9;" />
-      <Label layoutX="50.0" layoutY="179.0" text="SPECIALITY :">
+      <TextField fx:id="showDoctorName" alignment="CENTER_RIGHT" editable="false" layoutX="313.0" layoutY="102.0" promptText="NAME" style="-fx-background-color: #F7E9E9;" />
+      <Label layoutX="47.0" layoutY="156.0" text="SPECIALITY :">
          <font>
             <Font name="Californian FB Bold" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="showDoctorSpeciality" alignment="CENTER_RIGHT" editable="false" layoutX="316.0" layoutY="175.0" promptText="SPECIALITY" style="-fx-background-color: #F7E9E9;" />
-      <Label layoutX="32.0" layoutY="272.0" text="CONTACT NO :">
+      <TextField fx:id="showDoctorSpeciality" alignment="CENTER_RIGHT" editable="false" layoutX="313.0" layoutY="152.0" promptText="SPECIALITY" style="-fx-background-color: #F7E9E9;" />
+      <Label layoutX="29.0" layoutY="249.0" text="CONTACT NO :">
          <font>
             <Font name="Californian FB Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="102.0" layoutY="223.0" text="EMAIL :">
+      <Label layoutX="99.0" layoutY="200.0" text="EMAIL :">
          <font>
             <Font name="Californian FB Bold" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="showDoctorEmail" alignment="CENTER_RIGHT" editable="false" layoutX="316.0" layoutY="219.0" promptText="EMAIL" style="-fx-background-color: #F7E9E9;" />
-      <TextField fx:id="showDoctorContact" alignment="CENTER_RIGHT" editable="false" layoutX="316.0" layoutY="268.0" promptText="CONTACT NO" style="-fx-background-color: #F7E9E9;" />
-      <Label layoutX="80.0" layoutY="432.0" text="ADDRESS :">
+      <TextField fx:id="showDoctorEmail" alignment="CENTER_RIGHT" editable="false" layoutX="313.0" layoutY="196.0" promptText="EMAIL" style="-fx-background-color: #F7E9E9;" />
+      <TextField fx:id="showDoctorContact" alignment="CENTER_RIGHT" editable="false" layoutX="313.0" layoutY="245.0" promptText="CONTACT NO" style="-fx-background-color: #F7E9E9;" />
+      <Label layoutX="77.0" layoutY="409.0" text="ADDRESS :">
          <font>
             <Font name="Californian FB Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="83.0" layoutY="383.0" text="GENDER :">
+      <Label layoutX="80.0" layoutY="360.0" text="GENDER :">
          <font>
             <Font name="Californian FB Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="25.0" layoutY="325.0" text=" DATE of BIRTH :">
+      <Label layoutX="22.0" layoutY="302.0" text=" DATE of BIRTH :">
          <font>
             <Font name="Californian FB Bold" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="showDoctorDOB" alignment="CENTER_RIGHT" editable="false" layoutX="316.0" layoutY="321.0" promptText="DATE of BIRTH" style="-fx-background-color: #F7E9E9;" />
-      <TextField fx:id="showDoctorGender" alignment="CENTER_RIGHT" editable="false" layoutX="316.0" layoutY="379.0" promptText="GENDER" style="-fx-background-color: #F7E9E9;" />
-      <TextField fx:id="showDoctorAddress" alignment="CENTER_RIGHT" editable="false" layoutX="316.0" layoutY="428.0" promptText="ADDRESS" style="-fx-background-color: #F7E9E9;" />
-      <Button graphicTextGap="22.0" layoutX="473.0" layoutY="616.0" mnemonicParsing="false" onAction="#handleBackButton" style="-fx-background-color: FDAB9F;" text="BACK">
+      <TextField fx:id="showDoctorDOB" alignment="CENTER_RIGHT" editable="false" layoutX="313.0" layoutY="298.0" promptText="DATE of BIRTH" style="-fx-background-color: #F7E9E9;" />
+      <TextField fx:id="showDoctorGender" alignment="CENTER_RIGHT" editable="false" layoutX="313.0" layoutY="356.0" promptText="GENDER" style="-fx-background-color: #F7E9E9;" />
+      <TextField fx:id="showDoctorAddress" alignment="CENTER_RIGHT" editable="false" layoutX="313.0" layoutY="405.0" promptText="ADDRESS" style="-fx-background-color: #F7E9E9;" />
+      <Button graphicTextGap="22.0" layoutX="473.0" layoutY="628.0" mnemonicParsing="false" onAction="#handleBackButton" style="-fx-background-color: FDAB9F;" text="BACK">
          <font>
             <Font name="Californian FB Bold" size="15.0" />
          </font>
       </Button>
-      <Label layoutX="17.0" layoutY="547.0" text="QUALIFICATION :">
+      <Label layoutX="14.0" layoutY="524.0" text="QUALIFICATION :">
          <font>
             <Font name="Californian FB Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="26.0" layoutY="487.0" text="AVAILABLE HR :">
+      <Label layoutX="23.0" layoutY="464.0" text="AVAILABLE HR :">
          <font>
             <Font name="Californian FB Bold" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="showDoctorAvailableTime" alignment="CENTER_RIGHT" editable="false" layoutX="316.0" layoutY="483.0" promptText="AVAILABLE HOUR" style="-fx-background-color: #F7E9E9;" />
-      <TextField fx:id="showDoctorQualification" alignment="CENTER_RIGHT" editable="false" layoutX="316.0" layoutY="543.0" promptText="QUALIFICATION" style="-fx-background-color: #F7E9E9;" />
+      <TextField fx:id="showDoctorAvailableTime" alignment="CENTER_RIGHT" editable="false" layoutX="313.0" layoutY="460.0" promptText="AVAILABLE HOUR" style="-fx-background-color: #F7E9E9;" />
+      <TextField fx:id="showDoctorQualification" alignment="CENTER_RIGHT" editable="false" layoutX="313.0" layoutY="520.0" promptText="QUALIFICATION" style="-fx-background-color: #F7E9E9;" />
+      <Label fx:id="salaryLabel" layoutX="87.0" layoutY="576.0" text="SALARY :">
+         <font>
+            <Font name="Californian FB Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="showDoctorSalary" alignment="CENTER_RIGHT" editable="false" layoutX="313.0" layoutY="572.0" promptText="SALARY" style="-fx-background-color: #F7E9E9;" />
    </children>
 </AnchorPane>

@@ -139,7 +139,7 @@
                         </Text>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER_LEFT" onMouseClicked="#viewAccountsDetails" prefHeight="80.0" prefWidth="200.0" styleClass="tab_dashboard">
+                  <HBox fx:id="dashboardAccounts" alignment="CENTER_LEFT" onMouseClicked="#viewAccountsDetails" prefHeight="80.0" prefWidth="200.0" styleClass="tab_dashboard">
                      <children>
                         <FontAwesomeIconView glyphName="BOOK" size="20">
                            <HBox.margin>
