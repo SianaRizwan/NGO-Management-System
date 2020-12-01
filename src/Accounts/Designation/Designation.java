@@ -1,14 +1,23 @@
 package Accounts.Designation;
 
 public class Designation {
-    int salary;
+    int salary,numOfEmployee;
     String desigName, desigType, desigID;
 
-    public Designation(int salary, String desigName, String desigType, String desigID) {
+    public int getNumOfEmployee() {
+        return numOfEmployee;
+    }
+
+    public void setNumOfEmployee(int numOfEmployee) {
+        this.numOfEmployee = numOfEmployee;
+    }
+
+    public Designation(int salary, String desigName, String desigType, String desigID, int numOfEmployee) {
         this.salary = salary;
         this.desigName = desigName;
         this.desigType = desigType;
         this.desigID = desigID;
+        this.numOfEmployee=numOfEmployee;
     }
 
     public int getSalary() {
