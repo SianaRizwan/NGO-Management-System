@@ -4,8 +4,13 @@ import Utilities.ShowAlertDialogue;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,6 +21,9 @@ public class LoginController implements Initializable {
     private AnchorPane loginPane;
     @FXML
     private TextField usernameTextfield,passwordTextfield;
+
+    @FXML
+    private Label changePassword;
 
 
 
@@ -59,5 +67,13 @@ ShowAlertDialogue alert=new ShowAlertDialogue();
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+    }
+
+    public void handleChangePassword() throws IOException {
+        AnchorPane pane  = FXMLLoader.load(getClass().getResource("ChangePassword/ChangePassword.fxml"));
+        Stage stage = new Stage(StageStyle.DECORATED);
+        stage.setTitle("ChangePassword");
+        stage.setScene(new Scene(pane));
+        stage.show();
     }
 }

@@ -40,6 +40,8 @@ public class DesignationDetailsController implements Initializable {
 
     @FXML
     private TableColumn<Designation, Integer> colDesigSalary;
+    @FXML
+    private TableColumn<Designation, Integer> colEmpCount;
 
     @FXML
     private JFXTextField searchDesigTextField;
@@ -59,9 +61,12 @@ public class DesignationDetailsController implements Initializable {
     DesignationModel designationModel = new DesignationModel();
 
     @FXML
-    void desigConfirmBtn(ActionEvent event) {
+    void desigConfirmBtn() {
         if(designationDetailsModel.isDesignationAddedSuccessful(String.valueOf(desigTypeComboBox.getValue()),desigNameTextField.getText(),Integer.parseInt(desigSalaryTextField.getText()))){
             new ShowAlertDialogue().infoBox("Designation Added Successful!",null,"Add Designation");
+            populateTableView();
+            desigNameTextField.setText("");
+            desigSalaryTextField.setText("");
         }else {
             new ShowAlertDialogue().infoBox("Designation Added Failed!",null,"Add Designation");
         }
@@ -71,7 +76,8 @@ public class DesignationDetailsController implements Initializable {
         colDesigID.setCellValueFactory(new PropertyValueFactory<>("desigID"));
         colDesigName.setCellValueFactory(new PropertyValueFactory<>("desigName"));
         colDesigType.setCellValueFactory(new PropertyValueFactory<>("desigType"));
-        colDesigSalary.setCellValueFactory(new PropertyValueFactory<>("Salary"));
+        colDesigSalary.setCellValueFactory(new PropertyValueFactory<>("salary"));
+        colEmpCount.setCellValueFactory(new PropertyValueFactory<>("numOfEmployee"));
 
         try {
             designationTable.setItems(designationModel.getDesignationTableRecords());

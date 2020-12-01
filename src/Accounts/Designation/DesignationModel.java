@@ -10,7 +10,7 @@ import java.sql.SQLException;
 
 public class DesignationModel {
     public ObservableList<Designation> getDesignationTableRecords() throws SQLException {
-        String sql = "select id, designation_name, type, amount from designation";
+        String sql = "select id, designation_name, type, amount,num_of_employee(designation_name,id) from designation order by id";
         ObservableList<Designation> designations = FXCollections.observableArrayList();
         try {
             OracleConnection oc = new OracleConnection();
@@ -22,8 +22,9 @@ public class DesignationModel {
                 String name = rs.getString(2);
                 String type = rs.getString(3);
                 int salary = rs.getInt(4);
+                int employeeCount=rs.getInt(5);
 
-                Designation designation = new Designation(salary,name,type,id);
+                Designation designation = new Designation(salary,name,type,id,employeeCount);
 
                 designations.add(designation);
             }

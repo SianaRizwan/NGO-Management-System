@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: #ffffff;" styleClass="supply-button" stylesheets="@../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EventDetails.EventsController">
+    <children>
+    <Pane fx:id="eventDetailsPane" prefHeight="1275.0" prefWidth="1473.0">
+    <children>
+    <Label layoutX="73.0" layoutY="15.0" prefHeight="98.0" prefWidth="511.0" text="Events Scheduling">
+        <font>
+            <Font name="Californian FB" size="36.0" />
+        </font>
+    </Label>
+            <HBox alignment="CENTER" layoutX="88.0" layoutY="247.0" prefHeight="319.0" prefWidth="1300.0" spacing="180.0">
+               <children>
+                  <AnchorPane prefHeight="293.0" prefWidth="434.0">
+                     <children>
+                        <Pane layoutX="-1.0" layoutY="244.0" prefHeight="65.0" prefWidth="434.0" style="-fx-background-color: #f3e4e4;">
+                           <children>
+                              <Label alignment="CENTER" layoutX="50.0" layoutY="11.0" prefHeight="58.0" prefWidth="331.0" text="Schedule an Event">
+                                 <font>
+                                    <Font name="Californian FB" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <JFXButton layoutX="48.0" layoutY="25.0" prefHeight="233.0" prefWidth="331.0" />
+                         
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="293.0" prefWidth="434.0">
+                     <children>
+                        <Pane layoutX="-1.0" layoutY="244.0" prefHeight="65.0" prefWidth="434.0" style="-fx-background-color: #f3e4e4;">
+                           <children>
+                              <Label alignment="CENTER" layoutX="50.0" layoutY="11.0" prefHeight="58.0" prefWidth="331.0" text="View Events History">
+                                 <font>
+                                    <Font name="Californian FB" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <JFXButton layoutX="48.0" layoutY="25.0" prefHeight="233.0" prefWidth="331.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+               <padding>
+                  <Insets left="30.0" right="30.0" />
+               </padding>
+            </HBox>
+    </children>
+    </Pane>
+    </children>
+</AnchorPane>
