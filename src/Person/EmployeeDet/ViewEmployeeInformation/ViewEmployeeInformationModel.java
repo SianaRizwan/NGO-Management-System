@@ -11,10 +11,11 @@ public class ViewEmployeeInformationModel {
     protected String[] showEmployeeDetails(String[] info, int emp_id) {
         try {
             List<String> list = new ArrayList<>();
-            String sql = "select * from employee where emp_id=?";
+            String sql = "select employee.*,show_employee_Salary(?) from employee where emp_id=?";
             OracleConnection oc = new OracleConnection();
             PreparedStatement ps = oc.conn.prepareStatement(sql);
             ps.setInt(1, emp_id);
+            ps.setInt(2, emp_id);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 list.add(String.valueOf(rs.getInt(1)));
@@ -25,6 +26,8 @@ public class ViewEmployeeInformationModel {
                 list.add(rs.getString(7));
                 list.add(rs.getString(8));
                 list.add(rs.getString(9));
+                list.add(String.valueOf(rs.getInt(10)));
+
             }
             info = list.toArray(info);
             return info;

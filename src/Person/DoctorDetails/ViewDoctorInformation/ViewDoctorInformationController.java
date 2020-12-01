@@ -1,7 +1,9 @@
 package Person.DoctorDetails.ViewDoctorInformation;
 
+import Person.PersonalInformation;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -10,6 +12,9 @@ import java.io.IOException;
 
 
 public class ViewDoctorInformationController {
+    @FXML
+    private Label salaryLabel;
+
     @FXML
     private AnchorPane viewDetails;
 
@@ -41,11 +46,21 @@ public class ViewDoctorInformationController {
     private TextField showDoctorAvailableTime;
 
     @FXML
+    private TextField showDoctorSalary;
+
+    @FXML
     private TextField showDoctorQualification;
     ViewDoctorInformationModel viewDoctorInformationModel = new ViewDoctorInformationModel();
 
     public void displayInformation(String id) {
-        String[] list = new String[8];
+        if (!(new PersonalInformation().checkDesignation())) {
+            salaryLabel.setVisible(false);
+            showDoctorSalary.setVisible(false);
+
+                    }
+
+
+        String[] list = new String[11];
         String[] info = viewDoctorInformationModel.showDoctorDetails(list, id);
         showDoctorID.setText(info[0]);
         showDoctorName.setText(info[1]);
@@ -57,6 +72,8 @@ public class ViewDoctorInformationController {
         showDoctorSpeciality.setText(info[7]);
         showDoctorAvailableTime.setText(info[8]);
         showDoctorQualification.setText(info[9]);
+        showDoctorSalary.setText(info[10]);
+
 
     }
 

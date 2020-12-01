@@ -11,10 +11,11 @@ public class ViewDoctorInformationModel {
     protected String[] showDoctorDetails(String[] info, String doc_id) {
         try {
             List<String> list = new ArrayList<>();
-            String sql = "select * from doctor where doctor_id=?";
+            String sql = "select doctor.*,show_Doctor_Salary(?) from doctor where doctor_id=?";
             OracleConnection oc = new OracleConnection();
             PreparedStatement ps = oc.conn.prepareStatement(sql);
             ps.setString(1, doc_id);
+            ps.setString(2, doc_id);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 list.add(rs.getString(1));
@@ -24,6 +25,7 @@ public class ViewDoctorInformationModel {
                 for (int i = 5; i < 11; i++) {
                     list.add(rs.getString(i));
                 }
+                list.add(String.valueOf(rs.getInt(11)));
             }
             info = list.toArray(info);
             return info;

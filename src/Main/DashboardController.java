@@ -1,10 +1,12 @@
 package Main;
 
+import Login.LoginModel;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 
 import java.io.IOException;
 import java.net.URL;
@@ -16,6 +18,10 @@ public class DashboardController implements Initializable {
 
     @FXML
     private  AnchorPane mainPane;
+
+    @FXML
+    private HBox dashboardAccounts;
+
     @FXML
     private void viewEmployeeDetails() throws IOException{
         AnchorPane pane  = FXMLLoader.load(getClass().getResource("../Person/EmployeeDet/employeeDetails.fxml"));
@@ -28,6 +34,9 @@ public class DashboardController implements Initializable {
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        if (!(new LoginModel().getDesignation().contains("Admin"))){
+            dashboardAccounts.setVisible(false);
+        }
     }
 
     public void viewDoctorDetails() throws IOException {
@@ -51,6 +60,11 @@ public class DashboardController implements Initializable {
     @FXML
     public void viewAccountsDetails() throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("../Accounts/Accounts.fxml"));
+        employeeDetailsBorderPane.setCenter(pane);
+    }
+    @FXML
+    public void viewEventsDetails() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("../EventDetails/Events.fxml"));
         employeeDetailsBorderPane.setCenter(pane);
     }
 }

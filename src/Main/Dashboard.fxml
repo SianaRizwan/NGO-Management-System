@@ -122,7 +122,7 @@
                         </Text>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0" styleClass="tab_dashboard">
+                  <HBox alignment="CENTER_LEFT" onMouseClicked="#viewEventsDetails" prefHeight="80.0" prefWidth="200.0" styleClass="tab_dashboard">
                      <children>
                         <FontAwesomeIconView glyphName="CALENDAR" size="20">
                            <HBox.margin>
@@ -139,7 +139,7 @@
                         </Text>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER_LEFT" onMouseClicked="#viewAccountsDetails" prefHeight="80.0" prefWidth="200.0" styleClass="tab_dashboard">
+                  <HBox fx:id="dashboardAccounts" alignment="CENTER_LEFT" onMouseClicked="#viewAccountsDetails" prefHeight="80.0" prefWidth="200.0" styleClass="tab_dashboard">
                      <children>
                         <FontAwesomeIconView glyphName="BOOK" size="20">
                            <HBox.margin>
