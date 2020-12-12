@@ -18,7 +18,7 @@
             <Image url="@../images/background.jpg" />
          </image>
       </ImageView>
-        <BorderPane fx:id="employeeDetailsBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.97" prefHeight="1285.0" prefWidth="2000.0" style="-fx-background-color: #ffe0e3;">
+        <BorderPane fx:id="employeeDetailsBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.983" prefHeight="1285.0" prefWidth="2000.0" style="-fx-background-color: #ffe0e3;">
          <left>
             <VBox prefWidth="350.0" style="-fx-background-color: #8B0000;" BorderPane.alignment="CENTER">
                <children>

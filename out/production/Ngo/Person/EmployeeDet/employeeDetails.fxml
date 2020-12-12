@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="employeeDetailsAnchorPane" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Person.EmployeeDet.EmployeeDetailsController">
+<AnchorPane fx:id="employeeDetailsAnchorPane" style="-fx-background-color: #ffe0e3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Person.EmployeeDet.EmployeeDetailsController">
    <children>
       <Pane fx:id="employeeDetailsPane" prefHeight="1275.0" prefWidth="1473.0">
          <children>
