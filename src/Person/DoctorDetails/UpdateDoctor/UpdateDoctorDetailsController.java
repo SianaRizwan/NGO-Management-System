@@ -1,6 +1,5 @@
 package Person.DoctorDetails.UpdateDoctor;
 
-import Utilities.PhoneValidator;
 import Utilities.ShowAlertDialogue;
 import Person.PersonalInformation;
 import javafx.fxml.FXML;
@@ -44,7 +43,7 @@ public class UpdateDoctorDetailsController {
     }
 
     public void handleConfirmButton() {
-        if (new PersonalInformation().checkValidation(DoctorEmailID.getText())&& new PhoneValidator().validate(DoctorPhoneNumber.getText())){
+        if (new PersonalInformation().checkEmailAndPhoneValidation(DoctorEmailID.getText(),DoctorPhoneNumber.getText())){
 
             if (updateDoctorDetailsModel.isUpdateDoctorSuccessful(DoctorAddress.getText(), DoctorPhoneNumber.getText(),
                 DoctorQualification.getText(), DoctorEmailID.getText(), DoctorAvailableTime.getText(), DoctorID.getText())) {

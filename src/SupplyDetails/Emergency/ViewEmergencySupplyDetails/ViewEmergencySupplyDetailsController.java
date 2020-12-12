@@ -44,6 +44,10 @@ public class ViewEmergencySupplyDetailsController {
 
     @FXML
     private TableColumn<Emergency, Integer> colPrice;
+    @FXML
+    private TextField monthNumber;
+    String itemName;
+
 
     ViewEmergencySupplyDetailsModel view=new ViewEmergencySupplyDetailsModel();
 
@@ -54,6 +58,30 @@ public class ViewEmergencySupplyDetailsController {
         stage.close();
     }
     public void displayInformation(String name) {
+        itemName=name;
+
+        setTableViewValue();
+
+        try {
+            informationTable.setItems(view.getEmergencyTableRecords(name,6));
+        } catch (SQLException throwables) {
+            System.out.println("medController: initialize");
+            throwables.printStackTrace();
+        }
+
+    }
+    public void IDOnEnter() {
+        setTableViewValue();
+
+        try {
+            informationTable.setItems(view.getEmergencyTableRecords(itemName, Integer.parseInt(monthNumber.getText())));
+        } catch (SQLException throwables) {
+            System.out.println("foodController: initialize");
+            throwables.printStackTrace();
+        }
+    }
+
+    private void setTableViewValue() {
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colQuantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         colPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
@@ -62,14 +90,6 @@ public class ViewEmergencySupplyDetailsController {
         colExpireDate.setCellValueFactory(new PropertyValueFactory<>("edate"));
         colSupplier.setCellValueFactory(new PropertyValueFactory<>("supplier"));
         colManufacturer.setCellValueFactory(new PropertyValueFactory<>("manufacturer"));
-
-        try {
-            informationTable.setItems(view.getEmergencyTableRecords(name));
-        } catch (SQLException throwables) {
-            System.out.println("medController: initialize");
-            throwables.printStackTrace();
-        }
-
     }
 
 }

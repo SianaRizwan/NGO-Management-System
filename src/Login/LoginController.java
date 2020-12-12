@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -25,7 +26,8 @@ public class LoginController implements Initializable {
     @FXML
     private Label changePassword;
 
-
+    @FXML
+    private Label signUp;
 
     public String getUsernameTextfield() {
         return usernameTextfield.getText().trim();
@@ -75,5 +77,11 @@ ShowAlertDialogue alert=new ShowAlertDialogue();
         stage.setTitle("ChangePassword");
         stage.setScene(new Scene(pane));
         stage.show();
+    }
+
+    public void handleSignUp() throws IOException {
+        AnchorPane pane  = FXMLLoader.load(getClass().getResource("../Registration/register.fxml"));
+        loginPane.getChildren().setAll(pane);
+
     }
 }

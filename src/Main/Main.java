@@ -1,5 +1,6 @@
 package Main;
 
+import Registration.RegisterModel;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,11 +8,10 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-MainModel mainModel=new MainModel();
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root;
-        if (mainModel.checkEmployeeNumber()==0){
+        if (new RegisterModel().checkEmployeeNumber()==0){
             root = FXMLLoader.load(getClass().getResource("../Registration/register.fxml"));
 
         }
@@ -30,3 +30,5 @@ MainModel mainModel=new MainModel();
         launch(args);
     }
 }
+
+// testing

@@ -1,41 +1,68 @@
 package Registration;
 
-import Utilities.EmailValidator;
 import Utilities.OracleConnection;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Date;
 
 public class RegisterModel {
     OracleConnection oc = new OracleConnection();
     private int empID;
+    public boolean isRegistrationSuccessful(String name, Date dobDate, String gender, String address, String phone,
+                                           String email, String password) {
 
-    public boolean isRegistrationSuccessful(String name, String email, String password) {
-        setDesignation();
         try {
-            String sql = "insert into employee(name,email,password,designation) values(?,?,?,?)";
+            java.sql.Date sqlDate = new java.sql.Date(dobDate.getTime());
 
-            PreparedStatement ps = oc.conn.prepareStatement(sql);
-            ps.setString(1, name);
-            ps.setString(2, email);
-            ps.setString(3, password);
-            ps.setString(4,"Admin");
-            int x = ps.executeUpdate();
+            String sql="insert into employee(name,email,password,gender,phone,dob,designation,address) values(?,?,?,?,?,?,?,?)";
+            OracleConnection oc=new OracleConnection();
+            PreparedStatement ps=oc.conn.prepareStatement(sql);
+            ps.setString(1,name);
+            ps.setString(2,email);
+            ps.setString(3,password);
+            ps.setString(4,gender);
+            ps.setString(5,phone);
+            ps.setDate(6,sqlDate);
+            if (checkEmployeeNumber()==0){
+                setDesignation();
+                ps.setString(7,"Admin");
+                            }
+            else{
+                ps.setString(7,"N/A");
 
-            if (x > 0) {
+            }
+            ps.setString(8,address);
+
+            int x=ps.executeUpdate();
+            if(x>0){
                 return true;
             }
         } catch (Exception e) {
-            System.out.println(e + " registration fail");
+            System.out.println("isAddEmployeeSuccessful\n\n");
+            e.printStackTrace();
             return false;
         }
+
+
         return false;
     }
 
-    EmailValidator emailValidator = new EmailValidator();
-
-    public boolean validateEmail(String email) {
-        return emailValidator.validate(email);
+    public int checkEmployeeNumber(){
+        try {
+            String sql="select count(emp_id) from employee";
+            OracleConnection oc=new OracleConnection();
+            PreparedStatement ps=oc.conn.prepareStatement(sql);
+            ResultSet rs= ps.executeQuery();
+            if (rs.next()){
+                return rs.getInt(1);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
     }
+
     private  void setDesignation(){
         try{
             String  sql="insert into designation(designation_name,type) values (?,?)";

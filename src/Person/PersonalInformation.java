@@ -1,7 +1,6 @@
 package Person;
 
 import Login.LoginModel;
-import Utilities.EmailValidator;
 import Utilities.OracleConnection;
 
 import java.sql.PreparedStatement;
@@ -31,9 +30,11 @@ public class PersonalInformation {
 
         return list;
     }
-public boolean checkDesignation(){
+
+    public boolean checkDesignation() {
         return new LoginModel().getDesignation().contains("Admin");
-}
+    }
+
     public String[] setInformationInUpdateWindow(String[] info, String Doctor_id, String sql) {
         List<String> list = new ArrayList<>();
         try {
@@ -41,7 +42,7 @@ public boolean checkDesignation(){
             PreparedStatement ps = oc.conn.prepareStatement(sql);
             ps.setString(1, Doctor_id);
             ResultSet rs = ps.executeQuery();
-            ResultSetMetaData resultSetMetaData= rs.getMetaData();
+            ResultSetMetaData resultSetMetaData = rs.getMetaData();
             while (rs.next()) {
                 for (int i = 1; i <= resultSetMetaData.getColumnCount(); i++) {
                     list.add(rs.getString(i));
@@ -55,9 +56,10 @@ public boolean checkDesignation(){
         }
         return null;
     }
-    public boolean isDeleteSuccessful(String id,String sql) {
+
+    public boolean isDeleteSuccessful(String id, String sql) {
         try {
-            OracleConnection oc=new OracleConnection();
+            OracleConnection oc = new OracleConnection();
             PreparedStatement ps = oc.conn.prepareStatement(sql);
             ps.setString(1, id);
             ResultSet rs = ps.executeQuery();
@@ -73,9 +75,45 @@ public boolean checkDesignation(){
         return false;
     }
 
-    public   boolean checkValidation(String email){
-        EmailValidator emailValidator = new EmailValidator();
-        return emailValidator.validate(email);
+
+    public boolean checkEmailAndPhoneValidation(String email, String phone) {
+        String ans = null;
+        try {
+            String sql = "select check_validation(?,?) from dual";
+            OracleConnection oc = new OracleConnection();
+            PreparedStatement ps = oc.conn.prepareStatement(sql);
+            ps.setString(1, email);
+            ps.setString(2, phone);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                ans = rs.getString(1);
+            }
+            return ans.equalsIgnoreCase("TRUE");
+        } catch (Exception e) {
+            System.out.println("email\n");
+            e.printStackTrace();
+        }
+        return false;
     }
+
+    public boolean checkPasswordValidation(String password) {
+        String ans = null;
+        try {
+            String sql = "select check_password(?) from dual";
+            OracleConnection oc = new OracleConnection();
+            PreparedStatement ps = oc.conn.prepareStatement(sql);
+            ps.setString(1, password);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                ans = rs.getString(1);
+            }
+            return ans.equalsIgnoreCase("TRUE");
+        } catch (Exception e) {
+            System.out.println("email\n");
+            e.printStackTrace();
+        }
+        return false;
+    }
+
 
 }

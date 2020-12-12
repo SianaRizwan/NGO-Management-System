@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -48,6 +49,10 @@ public class ViewVaccineInformationController {
 
     @FXML
     private TableColumn<Vaccine, Integer> colType;
+    @FXML
+    private TextField monthNumber;
+    String itemName;
+
 
     ViewVaccineInformationModel view = new ViewVaccineInformationModel();
 
@@ -59,6 +64,31 @@ public class ViewVaccineInformationController {
     }
 
     public void displayInformation(String name) {
+        itemName=name;
+       setTableViewValue();
+
+        try {
+            informationTableVaccine.setItems(view.getVaccineTableRecords(name,6));
+        } catch (SQLException throwables) {
+            System.out.println("medController: initialize");
+            throwables.printStackTrace();
+        }
+
+    }
+    public void IDOnEnter() {
+        setTableViewValue();
+        System.out.println("ppppp");
+
+        try {
+            System.out.println("pop");
+            informationTableVaccine.setItems(view.getVaccineTableRecords(itemName, Integer.parseInt(monthNumber.getText())));
+        } catch (SQLException throwables) {
+            System.out.println("foodController: initialize");
+            throwables.printStackTrace();
+        }
+    }
+
+    private void setTableViewValue() {
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colQuantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         colPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
@@ -67,14 +97,6 @@ public class ViewVaccineInformationController {
         colExpireDate.setCellValueFactory(new PropertyValueFactory<>("edate"));
         colSupplier.setCellValueFactory(new PropertyValueFactory<>("supplier"));
         colManufacturer.setCellValueFactory(new PropertyValueFactory<>("manufacturer"));
-
-        try {
-            informationTableVaccine.setItems(view.getVaccineTableRecords(name));
-        } catch (SQLException throwables) {
-            System.out.println("medController: initialize");
-            throwables.printStackTrace();
-        }
-
     }
 
 }

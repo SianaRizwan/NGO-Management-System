@@ -1,10 +1,13 @@
 package SupplyDetails.Food.ViewFoodDetails;
 
 import SupplyDetails.Food.Food;
+import com.jfoenix.controls.JFXTextField;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -40,8 +43,13 @@ public class ViewFoodInformationController {
 
     @FXML
     private TableColumn<Food, Integer> colPrice;
+    @FXML
+    private TextField monthNumber;
+    String itemName;
 
-    ViewFoodInformationModel view=new ViewFoodInformationModel();
+    ViewFoodInformationModel view = new ViewFoodInformationModel();
+
+
 
     @FXML
     void handleBackButton() throws IOException {
@@ -49,7 +57,20 @@ public class ViewFoodInformationController {
         Stage stage = (Stage) foodDetailsPane.getScene().getWindow();
         stage.close();
     }
+
     public void displayInformation(String name) {
+        itemName = name;
+        setTableViewValue();
+
+        try {
+            informationTable.setItems(view.getFoodTableRecords(name, 6));
+        } catch (SQLException throwables) {
+            System.out.println("foodController: initialize");
+            throwables.printStackTrace();
+        }
+    }
+
+    private void setTableViewValue() {
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colQuantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         colPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
@@ -57,8 +78,13 @@ public class ViewFoodInformationController {
         colPurchaseDate.setCellValueFactory(new PropertyValueFactory<>("pdate"));
         colExpireDate.setCellValueFactory(new PropertyValueFactory<>("edate"));
         colSupplier.setCellValueFactory(new PropertyValueFactory<>("supplier"));
+    }
+
+    public void IDOnEnter() {
+        setTableViewValue();
+
         try {
-            informationTable.setItems(view.getFoodTableRecords(name));
+            informationTable.setItems(view.getFoodTableRecords(itemName, Integer.parseInt(monthNumber.getText())));
         } catch (SQLException throwables) {
             System.out.println("foodController: initialize");
             throwables.printStackTrace();
