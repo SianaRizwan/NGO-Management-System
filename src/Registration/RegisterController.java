@@ -1,27 +1,57 @@
 package Registration;
 
-import Registration.RegisterModel;
-import Utilities.PhoneValidator;
+import Person.PersonalInformation;
 import Utilities.ShowAlertDialogue;
-import javafx.event.ActionEvent;
+import com.jfoenix.controls.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 
 public class RegisterController implements Initializable {
     @FXML
     private AnchorPane registerPane;
+
+
     @FXML
-    private TextField userNameTextfield, emailTextfield, passwordTextfield, retypePasswordTextfield;
+    private Button confirmButton;
+
+    @FXML
+    private Button backToLoginPageButton;
+
+    @FXML
+    private JFXTextField userNameTextfield;
+
+    @FXML
+    private JFXTextField emailTextfield;
+
+    @FXML
+    private JFXPasswordField passwordTextfield;
+
+    @FXML
+    private JFXTextField employeePhoneNumber;
+
+    @FXML
+    private JFXComboBox employeeGender;
+
+    @FXML
+    private JFXDatePicker employeeDOB;
+
+    @FXML
+    private JFXTextField employeeAddress;
+
+    @FXML
+    private JFXPasswordField retypePasswordTextfield;
 
     @FXML
     private void handleBackToLoginPage() throws IOException {
@@ -47,29 +77,38 @@ public class RegisterController implements Initializable {
         return retypePasswordTextfield.getText();
     }
 
+    private ObservableList<String> gender = FXCollections.observableArrayList("Male", "Female", "Others");
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        employeeGender.setItems(gender);
 
     }
-ShowAlertDialogue showAlertDialogue=new ShowAlertDialogue();
-@FXML
-    public void confirmRegistration(ActionEvent actionEvent) {
-        try {
-            if (registerModel.validateEmail(getEmailTextfield())) {
-                if (getPasswordTextfield().equals(getRetypePasswordTextfield())) {
-                    if (registerModel.isRegistrationSuccessful(getUserNameTextfield(), getEmailTextfield(), getPasswordTextfield())) {
-                         showAlertDialogue.infoBox("registration Successful!", null, "Failed");
-                        AnchorPane pane = FXMLLoader.load(getClass().getResource("../Login/login.fxml"));
-                        registerPane.getChildren().setAll(pane);
-                    } else
-                        showAlertDialogue.infoBox("registration unsuccessful!", null, "Failed");
-                }
-                else
-                    showAlertDialogue.infoBox("pass doesn't mathch!", null, "Failed");
 
-            }
-            else
-                showAlertDialogue.infoBox("input valid email!", null, "Failed");
+    ShowAlertDialogue showAlertDialogue = new ShowAlertDialogue();
+
+    @FXML
+    public void confirmRegistration() {
+        try {
+            Date dobDate = new SimpleDateFormat("MM/dd/yyyy").parse(employeeDOB.getEditor().getText());
+
+            if (new PersonalInformation().checkEmailAndPhoneValidation(getEmailTextfield(), employeePhoneNumber.getText())) {
+                if (new PersonalInformation().checkPasswordValidation(getPasswordTextfield())) {
+                    if (getPasswordTextfield().equals(getRetypePasswordTextfield())) {
+                        if (registerModel.isRegistrationSuccessful(getUserNameTextfield(), dobDate, employeeGender.getSelectionModel().getSelectedItem().toString(),
+                                employeeAddress.getText(), employeePhoneNumber.getText(), getEmailTextfield(), getPasswordTextfield())) {
+                            showAlertDialogue.infoBox("registration Successful!", null, "Failed");
+                            AnchorPane pane = FXMLLoader.load(getClass().getResource("../Login/login.fxml"));
+                            registerPane.getChildren().setAll(pane);
+                        } else
+                            showAlertDialogue.infoBox("registration unsuccessful!", null, "Failed");
+                    } else
+                        showAlertDialogue.infoBox("pass doesn't mathch!", null, "Failed");
+
+                } else
+                    showAlertDialogue.infoBox("input valid email!", null, "Failed");
+            } else
+                showAlertDialogue.infoBox("input valid email and contact number!", null, "Failed");
 
 
         } catch (Exception e) {
@@ -77,7 +116,6 @@ ShowAlertDialogue showAlertDialogue=new ShowAlertDialogue();
         }
 
     }
-
 
 
 }

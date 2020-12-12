@@ -50,9 +50,14 @@
                   <Font size="23.0" />
                </font>
             </JFXPasswordField>
-            <Label fx:id="changePassword" alignment="CENTER" contentDisplay="CENTER" layoutX="314.0" layoutY="519.0" onMouseClicked="#handleChangePassword" prefHeight="24.0" prefWidth="130.0" styleClass="label-password" text="Change Password" textFill="#f2e3e3" />
+            <Label fx:id="changePassword" alignment="CENTER" contentDisplay="CENTER" layoutX="309.0" layoutY="562.0" onMouseClicked="#handleChangePassword" prefHeight="24.0" prefWidth="130.0" styleClass="label-password" text="Change Password" textFill="#f2e3e3" />
             <FontAwesomeIconView glyphName="USER" layoutX="140.0" layoutY="255.0" size="30" />
             <FontAwesomeIconView glyphName="KEY" layoutX="140.0" layoutY="355.0" size="30" />
+            <Label fx:id="signUp" alignment="CENTER" contentDisplay="CENTER" layoutX="315.0" layoutY="524.0" onMouseClicked="#handleSignUp" prefHeight="24.0" prefWidth="130.0" styleClass="label-password" text="SIGN UP" textFill="#f2e3e3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
          </children>
          <padding>
             <Insets left="5.0" right="3.0" />

@@ -44,7 +44,7 @@
                         <JFXTextField fx:id="desigNameTextField" layoutX="181.0" layoutY="100.0" prefHeight="31.0" prefWidth="350.0" promptText="Designation" />
                         <JFXTextField fx:id="desigSalaryTextField" layoutX="181.0" layoutY="164.0" prefHeight="30.0" prefWidth="350.0" promptText="Salary" />
                         <FontAwesomeIconView glyphName="USER_PLUS" layoutX="136.0" layoutY="127.0" size="20" />
-                        <JFXButton layoutX="301.0" layoutY="226.0" onAction="#desigConfirmBtn" onMouseClicked="#desigConfirmBtn" prefHeight="31.0" prefWidth="82.0" styleClass="password-change" text="Add" />
+                        <JFXButton layoutX="254.0" layoutY="226.0" onAction="#desigConfirmBtn" onMouseClicked="#desigConfirmBtn" prefHeight="31.0" prefWidth="82.0" styleClass="password-change" text="Add" />
                         <JFXComboBox fx:id="desigTypeComboBox" editable="true" labelFloat="true" layoutX="181.0" layoutY="33.0" prefHeight="30.0" prefWidth="350.0" promptText="Category" />
                   <FontAwesomeIconView glyphName="MONEY" layoutX="135.0" layoutY="190.0" size="20" />
                   <EmojiOneView glyphName="REGIONAL_INDICATOR_C" layoutX="135.0" layoutY="62.0" size="21" />

@@ -2,7 +2,6 @@ package Person.DonorDetails.UpdateDonor;
 
 
 import Person.PersonalInformation;
-import Utilities.PhoneValidator;
 import Utilities.ShowAlertDialogue;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -34,7 +33,7 @@ public class UpdateDonorDetailsController {
 
     @FXML
     void handleConfirmUpdateBtn() {
-        if (new PersonalInformation().checkValidation(DonorEmailID.getText())&& new PhoneValidator().validate(DonorPhoneNumber.getText())){
+        if (new PersonalInformation().checkEmailAndPhoneValidation(DonorEmailID.getText(),DonorPhoneNumber.getText())){
             if (updateDonorModel.isUpdateDonorSuccessful(DonorAddress.getText(), DonorPhoneNumber.getText(), DonorOccupation.getText(),
                 DonorEmailID.getText(), DonorID.getText())) {
             new ShowAlertDialogue().infoBox("update Successful!", null, "update Doctor");

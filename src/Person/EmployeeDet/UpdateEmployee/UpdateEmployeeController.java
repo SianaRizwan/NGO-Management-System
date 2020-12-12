@@ -1,7 +1,6 @@
 package Person.EmployeeDet.UpdateEmployee;
 
 import Person.EmployeeDet.EmployeeDetailsModel;
-import Utilities.PhoneValidator;
 import Utilities.ShowAlertDialogue;
 import Person.PersonalInformation;
 import javafx.collections.FXCollections;
@@ -49,7 +48,7 @@ public class UpdateEmployeeController implements Initializable {
     @FXML
     private void handleConfirmButton() throws  ParseException {
         Date dobDate = new SimpleDateFormat("MM/dd/yyyy").parse(employeeDOB.getEditor().getText());
-        if (new PersonalInformation().checkValidation(employeeEmailID.getText())&& new PhoneValidator().validate(employeePhoneNumber.getText())){
+        if (new PersonalInformation().checkEmailAndPhoneValidation(employeeEmailID.getText(),employeePhoneNumber.getText())){
             if (updateEmployeeModel.isUpdateEmployeeSuccessful(dobDate, employeeGender.getSelectionModel().getSelectedItem().toString(),
                 employeeAddress.getText(), employeePhoneNumber.getText(), employeeDesignation.getSelectionModel().getSelectedItem().toString(),
                 employeeEmailID.getText(), employeePassword.getText(), Integer.parseInt(employeeID.getText()))) {

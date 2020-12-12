@@ -14,13 +14,14 @@ import java.util.List;
 
 public class ViewFoodInformationModel {
 
-    protected ObservableList<Food> getFoodTableRecords(String item) throws SQLException {
-        String sql = "select * from food where name=? and purchase_date > add_months(sysdate,-6) order by purchase_date";
+    protected ObservableList<Food> getFoodTableRecords(String item,int month) throws SQLException {
+        String sql = "select * from food where name=? and purchase_date > add_months(sysdate,-?) order by purchase_date";
         ObservableList<Food> foodList = FXCollections.observableArrayList();
         try {
             OracleConnection oc = new OracleConnection();
             PreparedStatement ps = oc.conn.prepareStatement(sql);
             ps.setString(1, item);
+            ps.setInt(2,month);
 
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {

@@ -104,3 +104,12 @@
     -fx-background-color: #751919;
     -fx-cursor: hand;
 }
+
+.label-password:hover {
+    -fx-font-weight: bold;
+}
+
+.password-change:hover {
+    -fx-font-weight: bold;
+-fx-font-size: 15px;
+}

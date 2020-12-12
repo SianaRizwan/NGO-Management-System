@@ -11,14 +11,15 @@ import java.sql.SQLException;
 import java.util.Date;
 
 public class ViewEmergencySupplyDetailsModel {
-    protected ObservableList<Emergency> getEmergencyTableRecords(String item) throws SQLException {
-        String sql = "select * from HEALTH_PRODUCT where name=? and purchase_date > add_months(sysdate,-6) order by purchase_date";
+    protected ObservableList<Emergency> getEmergencyTableRecords(String item,int month) throws SQLException {
+        String sql = "select * from HEALTH_PRODUCT where name=? and purchase_date > add_months(sysdate,-?) order by purchase_date";
         ObservableList<Emergency> vacList = FXCollections.observableArrayList();
 
         try {
             OracleConnection oc = new OracleConnection();
             PreparedStatement ps = oc.conn.prepareStatement(sql);
             ps.setString(1, item);
+            ps.setInt(2,month);
 
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {

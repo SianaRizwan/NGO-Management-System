@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
@@ -15,7 +17,7 @@
    <children>
       <ImageView opacity="0.16" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
-            <Image url="@../images/back.jpg" />
+            <Image url="@../images/background.jpg" />
          </image>
       </ImageView>
       <AnchorPane layoutX="562.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="1271.0" prefWidth="689.0" style="-fx-background-color: #8B0000;" stylesheets="@../theme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="590.0" AnchorPane.rightAnchor="590.0" AnchorPane.topAnchor="0.0">
@@ -33,22 +35,35 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Button fx:id="confirmButton" graphicTextGap="22.0" layoutX="274.0" layoutY="629.0" mnemonicParsing="false" onAction="#confirmRegistration" onMouseClicked="#confirmRegistration" opacity="0.82" prefHeight="47.0" prefWidth="193.0" text="Confirm">
+            <Button fx:id="confirmButton" graphicTextGap="22.0" layoutX="282.0" layoutY="750.0" mnemonicParsing="false" onAction="#confirmRegistration" onMouseClicked="#confirmRegistration" opacity="0.82" prefHeight="47.0" prefWidth="193.0" text="Confirm">
                <font>
                   <Font name="Calibri" size="24.0" />
                </font></Button>
-            <Button fx:id="backToLoginPageButton" layoutX="233.0" layoutY="740.0" mnemonicParsing="false" onAction="#handleBackToLoginPage" onMouseClicked="#handleBackToLoginPage" opacity="0.82" prefHeight="47.0" prefWidth="291.0" text="Back To LoginPage">
+            <Button fx:id="backToLoginPageButton" layoutX="233.0" layoutY="831.0" mnemonicParsing="false" onAction="#handleBackToLoginPage" onMouseClicked="#handleBackToLoginPage" opacity="0.82" prefHeight="47.0" prefWidth="291.0" text="Back To LoginPage">
                <font>
                   <Font name="Calibri" size="24.0" />
                </font></Button>
-            <JFXTextField fx:id="userNameTextfield" labelFloat="true" layoutX="196.0" layoutY="224.0" prefHeight="31.0" prefWidth="407.0" promptText="Username" stylesheets="@../theme.css" />
-            <JFXTextField fx:id="emailTextfield" labelFloat="true" layoutX="196.0" layoutY="306.0" prefHeight="31.0" prefWidth="407.0" promptText="Email ID" stylesheets="@../theme.css" />
-            <FontAwesomeIconView glyphName="ENVELOPE" layoutX="132.0" layoutY="341.0" size="30" />
-            <FontAwesomeIconView glyphName="KEY" layoutX="132.0" layoutY="510.0" size="30" />
-            <FontAwesomeIconView glyphName="KEY" layoutX="132.0" layoutY="424.0" size="30" />
-            <FontAwesomeIconView glyphName="USER" layoutX="132.0" layoutY="256.0" size="30" />
-            <JFXPasswordField fx:id="passwordTextfield" labelFloat="true" layoutX="196.0" layoutY="391.0" prefHeight="44.0" prefWidth="407.0" promptText="Password" />
-            <JFXPasswordField fx:id="retypePasswordTextfield" labelFloat="true" layoutX="196.0" layoutY="477.0" prefHeight="44.0" prefWidth="407.0" promptText="Retype Password" />
+            <JFXTextField fx:id="userNameTextfield" labelFloat="true" layoutX="187.0" layoutY="179.0" prefHeight="44.0" prefWidth="434.0" promptText="Name" />
+            <JFXTextField fx:id="emailTextfield" labelFloat="true" layoutX="187.0" layoutY="245.0" prefHeight="44.0" prefWidth="434.0" promptText="Email ID" />
+            <FontAwesomeIconView glyphName="USER_CIRCLE_ALT" layoutX="136.0" layoutY="212.0" size="25" />
+            <FontAwesomeIconView glyphName="ENVELOPE_ALT" layoutX="135.0" layoutY="276.0" size="25" />
+            <JFXPasswordField fx:id="passwordTextfield" labelFloat="true" layoutX="187.0" layoutY="310.0" prefHeight="39.0" prefWidth="434.0" promptText="Password" />
+            <JFXTextField fx:id="employeePhoneNumber" labelFloat="true" layoutX="187.0" layoutY="453.0" prefHeight="44.0" prefWidth="434.0" promptText="Contact No." />
+            <JFXComboBox fx:id="employeeGender" editable="true" labelFloat="true" layoutX="183.0" layoutY="598.0" prefHeight="31.0" prefWidth="434.0" promptText="Gender" styleClass="input" />
+            <JFXDatePicker fx:id="employeeDOB" defaultColor="#f3e4e4" layoutX="187.0" layoutY="527.0" prefHeight="39.0" prefWidth="434.0" promptText="Date of Birth" styleClass="date" />
+            <FontAwesomeIconView glyphName="PHONE" layoutX="140.0" layoutY="483.0" size="25" />
+            <FontAwesomeIconView glyphName="TRANSGENDER" layoutX="135.0" layoutY="626.0" size="25" />
+            <FontAwesomeIconView glyphName="CALENDAR" layoutX="140.0" layoutY="555.0" size="25" />
+            <JFXTextField fx:id="employeeAddress" labelFloat="true" layoutX="185.0" layoutY="661.0" prefHeight="44.0" prefWidth="434.0" promptText="Address" />
+            <FontAwesomeIconView glyphName="ADDRESS_BOOK_ALT" layoutX="138.0" layoutY="691.0" size="25" />
+            <FontAwesomeIconView glyphName="KEY" layoutX="137.0" layoutY="338.0" size="25" />
+            <JFXPasswordField fx:id="retypePasswordTextfield" labelFloat="true" layoutX="187.0" layoutY="394.0" prefHeight="39.0" prefWidth="434.0" promptText="Retype Password" />
+            <FontAwesomeIconView glyphName="KEY" layoutX="137.0" layoutY="422.0" size="25" />
+            <Label fx:id="password_label" layoutX="159.0" layoutY="349.0" text="**must be at least 7 letters long and contain at least one digit, one capital letter" textFill="#eed8d8">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>
