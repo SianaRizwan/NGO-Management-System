@@ -16,7 +16,9 @@ public class AccountsController {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("Designation/DesignationDetails.fxml"));
         AccountsPane.getChildren().setAll(pane); }
 
-    public void handleAccountsExpenses(ActionEvent actionEvent) {
+    public void handleAccountsExpenses(ActionEvent actionEvent) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("Expenses/ExpensesDetails.fxml"));
+        AccountsPane.getChildren().setAll(pane);
     }
 
     public void handleAccountsEvent(ActionEvent actionEvent) {

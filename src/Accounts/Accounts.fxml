@@ -17,7 +17,7 @@
                 </Label>
                 <JFXButton buttonType="RAISED" layoutX="375.0" layoutY="202.0" onAction="#handleAccountsDesig" onMouseClicked="#handleAccountsDesig" prefHeight="198.0" prefWidth="209.0" styleClass="supply-button" text="Designation">
                 </JFXButton>
-                <JFXButton buttonType="RAISED" layoutX="758.0" layoutY="202.0" onAction="#handleAccountsExpenses" prefHeight="198.0" prefWidth="209.0" styleClass="supply-button" text=" ">
+                <JFXButton buttonType="RAISED" layoutX="758.0" layoutY="202.0" onAction="#handleAccountsExpenses" onMouseClicked="#handleAccountsExpenses" prefHeight="198.0" prefWidth="209.0" styleClass="supply-button" text="Expenses">
                 </JFXButton>
                 <JFXButton buttonType="RAISED" layoutX="758.0" layoutY="544.0" onAction="#handleAccountsEvent" prefHeight="198.0" prefWidth="209.0" styleClass="supply-button" text=" ">
 
