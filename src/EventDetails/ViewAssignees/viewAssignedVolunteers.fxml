@@ -19,7 +19,7 @@
                 <TableColumn fx:id="colAddress" prefWidth="127.0" style="-fx-background-color: #EEB1B1;" text="ADDRESS" />
             </columns>
         </TableView>
-        <Button graphicTextGap="22.0" layoutX="867.0" layoutY="507.0" mnemonicParsing="false" onAction="#handleBackButton" onMouseClicked="#handleBackButton" style="-fx-background-color: FDAB9F;" text="BACK">
+        <Button graphicTextGap="22.0" layoutX="867.0" layoutY="507.0" mnemonicParsing="false" onAction="#handleBackButton" style="-fx-background-color: FDAB9F;" text="BACK">
             <font>
                 <Font name="Californian FB Bold" size="15.0" />
             </font>

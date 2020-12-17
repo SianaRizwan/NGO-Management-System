@@ -19,12 +19,12 @@ public class CreateEventController  implements Initializable {
     @FXML
     private Pane createEventPane;
     @FXML
-    private void handleBackBtn(ActionEvent event) throws IOException {
+    private void handleBackBtn() throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("../Events.fxml"));
         createEventPane.getChildren().setAll(pane);
     }
     @FXML
-    private void handleViewAssignedEmployees(ActionEvent event) throws IOException{
+    private void handleViewAssignedEmployees() throws IOException{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../ViewAssignees/viewAssignedEmployees.fxml"));
         AnchorPane pane = loader.load();
         Stage stage = new Stage(StageStyle.DECORATED);
@@ -33,7 +33,7 @@ public class CreateEventController  implements Initializable {
         stage.show();
     }
     @FXML
-    private void handleViewAssignedVolunteers(ActionEvent event) throws IOException{
+    private void handleViewAssignedVolunteers() throws IOException{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../ViewAssignees/viewAssignedVolunteers.fxml"));
         AnchorPane pane = loader.load();
         Stage stage = new Stage(StageStyle.DECORATED);
