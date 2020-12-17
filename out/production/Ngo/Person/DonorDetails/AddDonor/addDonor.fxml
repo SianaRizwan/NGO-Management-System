@@ -12,7 +12,7 @@
     <children>
         <AnchorPane layoutX="375.0" layoutY="160.0" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="674.0" prefWidth="690.0" style="-fx-background-color: #8B0000;">
             <children>
-                <Button fx:id="confirmAddBtn" graphicTextGap="22.0" layoutX="284.0" layoutY="536.0" mnemonicParsing="false" onAction="#handleDonorAddConfirmBtn" opacity="0.82" prefHeight="42.0" prefWidth="135.0" style="-fx-background-color: FDAB9F;" text="Confirm">
+                <Button fx:id="confirmAddBtn" graphicTextGap="22.0" layoutX="277.0" layoutY="543.0" mnemonicParsing="false" onAction="#handleDonorAddConfirmBtn" opacity="0.82" prefHeight="42.0" prefWidth="135.0" style="-fx-background-color: FDAB9F;" text="Confirm">
                     <font>
                         <Font name="Californian FB" size="18.0" />
                     </font>
@@ -29,6 +29,16 @@
             <FontAwesomeIconView glyphName="PHONE" layoutX="98.0" layoutY="260.0" size="25" />
             <FontAwesomeIconView glyphName="TRANSGENDER" layoutX="97.0" layoutY="331.0" size="25" />
             <FontAwesomeIconView glyphName="ENVELOPE" layoutX="97.0" layoutY="185.0" size="25" />
+            <Button graphicTextGap="22.0" layoutX="90.0" layoutY="543.0" mnemonicParsing="false" onAction="#handleImportFileButton" opacity="0.82" prefHeight="42.0" prefWidth="135.0" style="-fx-background-color: FDAB9F;" text="Import File">
+               <font>
+                  <Font name="Californian FB" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="backButton" graphicTextGap="22.0" layoutX="468.0" layoutY="543.0" mnemonicParsing="false" onAction="#handleBackButton" opacity="0.82" prefHeight="42.0" prefWidth="135.0" style="-fx-background-color: FDAB9F;" text="Back">
+               <font>
+                  <Font name="Californian FB" size="18.0" />
+               </font>
+            </Button>
             </children>
         </AnchorPane>
         <Label layoutX="375.0" layoutY="98.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="410.0" text="Add A Donor">

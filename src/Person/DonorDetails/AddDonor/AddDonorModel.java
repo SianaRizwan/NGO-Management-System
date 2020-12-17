@@ -1,10 +1,20 @@
 package Person.DonorDetails.AddDonor;
 
+import Person.ImportPersonnelFile;
+import Person.PersonalInformation;
 import Utilities.OracleConnection;
 
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class AddDonorModel {
+
+    protected boolean addDonor(){
+        String sql="call add_donor(?) ";
+        return new ImportPersonnelFile().addPerson(sql);
+    }
+
+
     protected boolean isAddDonorSuccessful(String name, String gender, String address, String phone, String occupation, String email) {
 
         try {

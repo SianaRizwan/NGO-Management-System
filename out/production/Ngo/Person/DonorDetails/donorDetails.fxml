@@ -52,21 +52,21 @@
                                 <TableColumn fx:id="colDonorPhone" editable="false" maxWidth="454.0" minWidth="-Infinity" prefWidth="293.0" text="Phone No" />
                                 <TableColumn fx:id="colDonorEmail" editable="false" maxWidth="468.0" minWidth="-Infinity" prefWidth="286.0" text="Email" />
                             </columns>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" onAction="#handleRemoveDonorOption" text="Remove" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
+                            <contextMenu>
+                                <ContextMenu>
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#handleRemoveDonorOption" text="Remove" />
+                                    </items>
+                                </ContextMenu>
+                            </contextMenu>
                         </TableView>
                     </content>
                 </ScrollPane>
-            <JFXTextField fx:id="searchDonorTextField" focusColor="#900f0f" labelFloat="true" layoutX="110.0" layoutY="311.0" prefHeight="31.0" prefWidth="265.0" promptText="Search" unFocusColor="#900f0f">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </JFXTextField>
+                <JFXTextField fx:id="searchDonorTextField" focusColor="#900f0f" labelFloat="true" layoutX="110.0" layoutY="311.0" prefHeight="31.0" prefWidth="265.0" promptText="Search" unFocusColor="#900f0f">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </JFXTextField>
             </children>
         </Pane>
     </children>

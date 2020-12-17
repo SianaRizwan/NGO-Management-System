@@ -55,9 +55,9 @@
                      </columns>
                      <contextMenu>
                         <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" onAction="#handleEmployeeRemoveOption" text="Remove Employee" />
-                          </items>
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#handleEmployeeRemoveOption" text="Remove Employee" />
+                           </items>
                         </ContextMenu>
                      </contextMenu>
                   </TableView>

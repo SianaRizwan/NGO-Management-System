@@ -1,6 +1,7 @@
 package Registration;
 
 import Person.PersonalInformation;
+import Person.Validation;
 import Utilities.ShowAlertDialogue;
 import com.jfoenix.controls.*;
 import javafx.collections.FXCollections;
@@ -92,8 +93,8 @@ public class RegisterController implements Initializable {
         try {
             Date dobDate = new SimpleDateFormat("MM/dd/yyyy").parse(employeeDOB.getEditor().getText());
 
-            if (new PersonalInformation().checkEmailAndPhoneValidation(getEmailTextfield(), employeePhoneNumber.getText())) {
-                if (new PersonalInformation().checkPasswordValidation(getPasswordTextfield())) {
+            if (new Validation().checkEmailAndPhoneValidation(getEmailTextfield(), employeePhoneNumber.getText())) {
+                if (new Validation().checkPasswordValidation(getPasswordTextfield())) {
                     if (getPasswordTextfield().equals(getRetypePasswordTextfield())) {
                         if (registerModel.isRegistrationSuccessful(getUserNameTextfield(), dobDate, employeeGender.getSelectionModel().getSelectedItem().toString(),
                                 employeeAddress.getText(), employeePhoneNumber.getText(), getEmailTextfield(), getPasswordTextfield())) {

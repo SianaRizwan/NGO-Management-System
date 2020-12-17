@@ -1,17 +1,19 @@
 package Person.EmployeeDet.AddEmployee;
 
 import Person.EmployeeDet.EmployeeDetailsModel;
+import Person.ImportPersonnelFile;
 import Person.PersonalInformation;
+import Person.Validation;
 import Utilities.ShowAlertDialogue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -49,20 +51,19 @@ public class AddEmployeeController {
     private ObservableList<String> designation = FXCollections.observableArrayList();
 
     @FXML
-    void handleConfirmButton(MouseEvent event) throws ParseException {
+    void handleConfirmButton() throws ParseException {
         Date dobDate = new SimpleDateFormat("MM/dd/yyyy").parse(employeeDOB.getEditor().getText());
-        if (new PersonalInformation().checkEmailAndPhoneValidation(employeeEmailID.getText(),employeePhoneNumber.getText())){
-            if (new AddEmployeeModel().isAddEmployeeSuccessful(employeeName.getText(),dobDate, employeeGender.getSelectionModel().getSelectedItem().toString(),
-                employeeAddress.getText(), employeePhoneNumber.getText(), employeeDesignation.getSelectionModel().getSelectedItem().toString(),
-                employeeEmailID.getText(), employeePassword.getText())) {
-            new ShowAlertDialogue().infoBox("Employee Add Successful!", null, "Add Employee" );
-            refreshTextField();
-        }
-        }else {
-            new ShowAlertDialogue().infoBox("Insert Valid Email or Phone Number", null, "Add Employee" );
+        if (new Validation().checkEmailAndPhoneValidation(employeeEmailID.getText(), employeePhoneNumber.getText())) {
+            if (new AddEmployeeModel().isAddEmployeeSuccessful(employeeName.getText(), dobDate, employeeGender.getSelectionModel().getSelectedItem().toString(),
+                    employeeAddress.getText(), employeePhoneNumber.getText(), employeeDesignation.getSelectionModel().getSelectedItem().toString(),
+                    employeeEmailID.getText(), employeePassword.getText())) {
+                new ShowAlertDialogue().infoBox("Employee Add Successful!", null, "Add Employee");
+                refreshTextField();
+            }
+        } else {
+            new ShowAlertDialogue().infoBox("Insert Valid Email or Phone Number", null, "Add Employee");
         }
     }
-
 
 
     private void refreshTextField() {
@@ -73,6 +74,7 @@ public class AddEmployeeController {
         employeePassword.setText("");
         employeeName.setText("");
     }
+
     public void initialize() {
 
         employeeGender.setItems(gender);
@@ -80,6 +82,21 @@ public class AddEmployeeController {
         employeeDesignation.setItems(designation);
 
 
+    }
+
+    @FXML
+    void handleImportFileButton() throws Exception{
+      //  String fileName = new ImportPersonnelFile().getFileDirectory();
+        if (new AddEmployeeModel().addEmployee()) {
+            new ShowAlertDialogue().infoBox("Employee Added Successfully", null, "employee add");
+        } else new ShowAlertDialogue().infoBox("Select Correct File", null, "employee add");
+
+    }
+
+    @FXML
+    void handleBackButton() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("../employeeDetails.fxml"));
+        AddEmployeePane.getChildren().setAll(pane);
     }
 
 
