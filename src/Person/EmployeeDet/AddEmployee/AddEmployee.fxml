@@ -12,9 +12,9 @@
 
 <AnchorPane fx:id="AddEmployeePane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1350.0" stylesheets="@../../../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Person.EmployeeDet.AddEmployee.AddEmployeeController">
     <children>
-        <AnchorPane layoutX="375.0" layoutY="161.0" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="700.0" prefWidth="690.0" style="-fx-background-color: #8B0000;">
+        <AnchorPane layoutX="375.0" layoutY="111.0" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="741.0" prefWidth="690.0" style="-fx-background-color: #8B0000;">
             <children>
-                <Button fx:id="confirmUpdateBtn" graphicTextGap="22.0" layoutX="286.0" layoutY="615.0" mnemonicParsing="false" onMouseClicked="#handleConfirmButton" opacity="0.82" prefHeight="42.0" prefWidth="135.0" style="-fx-background-color: FDAB9F;" text="Confirm">
+                <Button fx:id="confirmUpdateBtn" graphicTextGap="22.0" layoutX="300.0" layoutY="622.0" mnemonicParsing="false" onMouseClicked="#handleConfirmButton" opacity="0.82" prefHeight="42.0" prefWidth="135.0" style="-fx-background-color: FDAB9F;" text="Confirm">
                     <font>
                         <Font name="Californian FB" size="18.0" />
                     </font>
@@ -35,9 +35,19 @@
             <FontAwesomeIconView glyphName="ADDRESS_BOOK_ALT" layoutX="133.0" layoutY="555.0" size="25" />
             <FontAwesomeIconView glyphName="KEY" layoutX="132.0" layoutY="218.0" size="25" />
             <FontAwesomeIconView glyphName="BRIEFCASE" layoutX="132.0" layoutY="489.0" size="25" />
+            <Button graphicTextGap="22.0" layoutX="109.0" layoutY="622.0" mnemonicParsing="false" onAction="#handleImportFileButton" opacity="0.82" prefHeight="42.0" prefWidth="135.0" style="-fx-background-color: FDAB9F;" text="Import File">
+               <font>
+                  <Font name="Californian FB" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="backButton" graphicTextGap="22.0" layoutX="487.0" layoutY="622.0" mnemonicParsing="false" onAction="#handleBackButton" opacity="0.82" prefHeight="42.0" prefWidth="135.0" style="-fx-background-color: FDAB9F;" text="Back">
+               <font>
+                  <Font name="Californian FB" size="18.0" />
+               </font>
+            </Button>
             </children>
         </AnchorPane>
-        <Label layoutX="375.0" layoutY="98.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="410.0" text="Add An Employee">
+        <Label layoutX="375.0" layoutY="61.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="410.0" text="Add An Employee">
             <font>
                 <Font name="Californian FB Bold" size="36.0" />
             </font>

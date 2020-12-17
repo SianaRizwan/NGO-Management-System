@@ -32,9 +32,9 @@
                             <font>
                                 <Font name="Californian FB" size="25.0" />
                             </font>
-                     <HBox.margin>
-                        <Insets right="80.0" />
-                     </HBox.margin>
+                            <HBox.margin>
+                                <Insets right="80.0" />
+                            </HBox.margin>
                         </Button>
                         <Button fx:id="updateButton" alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" onMouseClicked="#handleUpdate" prefHeight="55.0" prefWidth="330.0" style="-fx-background-color: FDAB9F;" text="Update Information">
                             <font>
@@ -56,21 +56,21 @@
                                 <TableColumn fx:id="colDoctorEmail" editable="false" maxWidth="300.0" minWidth="-Infinity" prefWidth="251.0" text="Email" />
                                 <TableColumn fx:id="colDoctorSpeciality" editable="false" maxWidth="300.0" minWidth="-Infinity" prefWidth="280.0" text="Speciality" />
                             </columns>
-                     <contextMenu>
-                        <ContextMenu>
-                          <items>
-                            <MenuItem mnemonicParsing="false" onAction="#handleRemoveDoctorOption" text="Remove" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu>
+                            <contextMenu>
+                                <ContextMenu>
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#handleRemoveDoctorOption" text="Remove" />
+                                    </items>
+                                </ContextMenu>
+                            </contextMenu>
                         </TableView>
                     </content>
                 </ScrollPane>
-            <JFXTextField fx:id="searchDoctorTextField" focusColor="#900f0f" labelFloat="true" layoutX="100.0" layoutY="287.0" prefHeight="31.0" prefWidth="265.0" promptText="Search" style="-fx-text-fill: BLACK; -jfx-focus-color: #8B0000; -fx-prompt-text-fill: #8B0000;" unFocusColor="#900f0f">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </JFXTextField>
+                <JFXTextField fx:id="searchDoctorTextField" focusColor="#900f0f" labelFloat="true" layoutX="100.0" layoutY="287.0" prefHeight="31.0" prefWidth="265.0" promptText="Search" style="-fx-text-fill: BLACK; -jfx-focus-color: #8B0000; -fx-prompt-text-fill: #8B0000;" unFocusColor="#900f0f">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </JFXTextField>
             </children>
         </Pane>
     </children>

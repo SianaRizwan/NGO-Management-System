@@ -16,6 +16,7 @@ public class EmployeeDetailsModel {
 
     OracleConnection oc = new OracleConnection();
 
+
     public void getDesignation(ObservableList<String> list) {
         String sql = "select designation_name from designation where type='Employee'";
         OracleConnection oc = new OracleConnection();

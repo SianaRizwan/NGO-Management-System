@@ -1,6 +1,5 @@
 package Person.EmployeeDet;
 
-import Login.LoginModel;
 import Person.EmployeeDet.ViewEmployeeInformation.ViewEmployeeInformationController;
 import Person.PersonalInformation;
 import Utilities.ShowAlertDialogue;
@@ -11,6 +10,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -56,11 +58,15 @@ public class EmployeeDetailsController implements Initializable {
         employeeDetailsPane.getChildren().setAll(pane);
     }
 
+
     @FXML
     private void handleAddNew() throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("AddEmployee/AddEmployee.fxml"));
         employeeDetailsPane.getChildren().setAll(pane);
+
+
     }
+
 
     private void viewDetails() {
         employeeTable.setRowFactory(tv -> {
@@ -141,7 +147,7 @@ public class EmployeeDetailsController implements Initializable {
     private void handleEmployeeRemoveOption() {
         Employee removeSelectedEmployee = employeeTable.getSelectionModel().getSelectedItem();
         if (removeSelectedEmployee == null) {
-            new ShowAlertDialogue().infoBox("no employee is selected", null, "Remove an Employee" );
+            new ShowAlertDialogue().infoBox("no employee is selected", null, "Remove an Employee");
             return;
         }
         int ans = new ShowAlertDialogue().confirmationBox("Do you want to remove this Employee?", null, "remove employee");
@@ -150,13 +156,13 @@ public class EmployeeDetailsController implements Initializable {
 
             employeeTable.getItems().removeAll(employeeTable.getSelectionModel().getSelectedItem());
             if (new EmployeeDetailsModel().isDeleteEmployeeSuccessful(employeeId)) {
-                new ShowAlertDialogue().infoBox("delete Successful!", null, "delete Employee" );
+                new ShowAlertDialogue().infoBox("delete Successful!", null, "delete Employee");
             } else {
-                new ShowAlertDialogue().infoBox("Delete Failed!", null, "delete Employee" );
+                new ShowAlertDialogue().infoBox("Delete Failed!", null, "delete Employee");
 
             }
         } else {
-            new ShowAlertDialogue().infoBox("cancel", null, "Remove an Employee" );
+            new ShowAlertDialogue().infoBox("cancel", null, "Remove an Employee");
 
         }
     }
