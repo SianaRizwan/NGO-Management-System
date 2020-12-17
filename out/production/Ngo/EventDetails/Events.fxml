@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -19,7 +20,7 @@
             <Font name="Californian FB" size="36.0" />
         </font>
     </Label>
-            <HBox alignment="CENTER" layoutX="88.0" layoutY="247.0" prefHeight="319.0" prefWidth="1300.0" spacing="180.0">
+            <HBox alignment="CENTER" layoutX="88.0" layoutY="375.0" prefHeight="319.0" prefWidth="1300.0" spacing="180.0">
                <children>
                   <AnchorPane prefHeight="293.0" prefWidth="434.0">
                      <children>
@@ -70,6 +71,31 @@
                <padding>
                   <Insets left="30.0" right="30.0" />
                </padding>
+            </HBox>
+            <HBox layoutX="88.0" layoutY="176.0" opacity="0.8" prefHeight="100.0" prefWidth="1300.0" spacing="20.0" style="-fx-background-color: #8B0000;">
+               <children>
+                  <Label text="Ongoing Event :" textFill="WHITE">
+                     <font>
+                        <Font name="Californian FB" size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField alignment="CENTER" labelFloat="true" prefHeight="39.0" prefWidth="301.0" promptText="Current event (if any)" />
+                  <Label layoutX="45.0" layoutY="45.0" text="Upcoming Event :" textFill="WHITE">
+                     <font>
+                        <Font name="Californian FB" size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="120.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField alignment="CENTER" labelFloat="true" layoutX="228.0" layoutY="45.0" prefHeight="39.0" prefWidth="301.0" promptText="Upcoming event (if any)" />
+               </children>
+               <padding>
+                  <Insets bottom="35.0" left="35.0" right="35.0" top="35.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
             </HBox>
     </children>
     </Pane>

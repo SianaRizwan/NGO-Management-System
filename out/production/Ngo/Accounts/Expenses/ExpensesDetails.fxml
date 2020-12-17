@@ -29,7 +29,7 @@
                             <columns>
                                 <TableColumn fx:id="colExpID" editable="false" maxWidth="300.0" minWidth="169.0" prefWidth="169.0" text="Expense ID" />
                                 <TableColumn fx:id="colExpType" editable="false" maxWidth="300.0" minWidth="-Infinity" prefWidth="246.0" text="Expense Type" />
-                                <TableColumn fx:id="colExpName" editable="false" minWidth="179.0" prefWidth="179.0" text="Expense Name" />
+                                <TableColumn fx:id="colExpName" editable="false" minWidth="179.0" prefWidth="179.0" text="Expense Title" />
                                 <TableColumn fx:id="colExpDescription" editable="false" maxWidth="337.0" minWidth="-Infinity" prefWidth="244.0" text="Description" />
                                 <TableColumn fx:id="colExpAmount" editable="false" maxWidth="429.0" minWidth="0.0" prefWidth="172.0" text="Amount" />
                         <TableColumn fx:id="colExpDate" editable="false" maxWidth="429.0" minWidth="0.0" prefWidth="143.0" text="Date" />
