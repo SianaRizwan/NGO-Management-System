@@ -61,7 +61,7 @@ private AnchorPane VolunteerAncPane;
         viewDetails();
         searchVolunteerTextField.getStyleClass().add("search-field");
 
-        searchFilterData(searchVolunteerTextField, VolunteerTable);
+        searchFilterData(searchVolunteerTextField);
     }
 
     private void viewDetails() {
@@ -87,7 +87,6 @@ private AnchorPane VolunteerAncPane;
         });
     }
 
-
     private void populateTableView() {
         colVolunteerID.setCellValueFactory(new PropertyValueFactory<>("id"));
         colVolunteerName.setCellValueFactory(new PropertyValueFactory<>("name"));
@@ -101,13 +100,13 @@ private AnchorPane VolunteerAncPane;
         }
     }
 
-    private void searchFilterData(TextField searchField, TableView<Volunteer> table) {
+    private void searchFilterData(TextField searchField) {
         try {
             FilteredList<Volunteer> filteredList = new FilteredList<>(VolunteerDetailsModel.getVolunteerTableRecords(), b -> true);
 
             searchField.textProperty().addListener((observable, oldValue, newValue) -> {
                 filteredList.setPredicate(volunteer -> VolunteerDetailsModel.isMatchSuccessful(newValue, volunteer));
-                sortFilteredData(filteredList, table);
+                sortFilteredData(filteredList);
             });
         } catch (SQLException throwables) {
             System.out.println("employeeDetailsController : search box");
@@ -115,7 +114,7 @@ private AnchorPane VolunteerAncPane;
         }
     }
 
-    private void sortFilteredData(FilteredList<Volunteer> filteredList, TableView<Volunteer> VolunteerTable) {
+    private void sortFilteredData(FilteredList<Volunteer> filteredList) {
         SortedList<Volunteer> sortedList = new SortedList<>(filteredList);
         sortedList.comparatorProperty().bind(VolunteerTable.comparatorProperty());
         VolunteerTable.setItems(sortedList);

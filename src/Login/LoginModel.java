@@ -12,7 +12,7 @@ public class LoginModel {
 
     protected boolean isLoginSuccessful(String username, String password) {
         try {
-            String sql = "select name,password,designation from employee where name=? and password=?";
+            String sql = "select e.name,e.password,d.designation_name from employee e,designation d where name=? and password=? and e.designation=d.id";
             PreparedStatement ps = oracleConnection.conn.prepareStatement(sql);
             ps.setString(1, username);
             ps.setString(2, password);

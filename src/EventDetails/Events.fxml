@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -12,66 +13,91 @@
 
 <AnchorPane style="-fx-background-color: #ffe0e3;" styleClass="supply-button" stylesheets="@../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EventDetails.EventsController">
     <children>
-        <Pane fx:id="eventDetailsPane" prefHeight="1275.0" prefWidth="1473.0">
-            <children>
-                <Label layoutX="73.0" layoutY="15.0" prefHeight="98.0" prefWidth="511.0" text="Events">
-                    <font>
-                        <Font name="Californian FB" size="36.0" />
-                    </font>
-                </Label>
-                <HBox alignment="CENTER" layoutX="88.0" layoutY="247.0" prefHeight="319.0" prefWidth="1300.0" spacing="180.0">
-                    <children>
-                        <AnchorPane prefHeight="293.0" prefWidth="434.0">
-                            <children>
-                                <Pane layoutX="-1.0" layoutY="244.0" prefHeight="65.0" prefWidth="434.0" style="-fx-background-color: #f3e4e4;">
-                                    <children>
-                                        <Label alignment="CENTER" layoutX="50.0" layoutY="11.0" onMouseClicked="#handleCreateEvent" prefHeight="58.0" prefWidth="331.0" text="Schedule an Event">
-                                            <font>
-                                                <Font name="Californian FB" size="25.0" />
-                                            </font>
-                                        </Label>
-                                    </children>
-                                </Pane>
-                                <JFXButton layoutX="48.0" layoutY="25.0" onAction="#handleCreateEvent" onMouseClicked="#handleCreateEvent" prefHeight="233.0" prefWidth="331.0" text=" ">
-                                    <graphic>
-                                        <ImageView fitHeight="160.0" fitWidth="242.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
-                                            <image>
-                                                <Image url="@../images/scheduleEvent.jpg" />
-                                            </image>
-                                        </ImageView>
-                                    </graphic>
-                                </JFXButton>
-
-                            </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="293.0" prefWidth="434.0">
-                            <children>
-                                <Pane layoutX="-1.0" layoutY="244.0" prefHeight="65.0" prefWidth="434.0" style="-fx-background-color: #f3e4e4;">
-                                    <children>
-                                        <Label alignment="CENTER" layoutX="50.0" layoutY="11.0" prefHeight="58.0" prefWidth="331.0" text="View Events History">
-                                            <font>
-                                                <Font name="Californian FB" size="25.0" />
-                                            </font>
-                                        </Label>
-                                    </children>
-                                </Pane>
-                                <JFXButton layoutX="48.0" layoutY="25.0" prefHeight="233.0" prefWidth="331.0" text=" ">
-                                    <graphic>
-                                        <ImageView fitHeight="160.0" fitWidth="187.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
-                                            <image>
-                                                <Image url="@../images/History.jpg" />
-                                            </image>
-                                        </ImageView>
-                                    </graphic>
-                                </JFXButton>
-                            </children>
-                        </AnchorPane>
-                    </children>
-                    <padding>
-                        <Insets left="30.0" right="30.0" />
-                    </padding>
-                </HBox>
-            </children>
-        </Pane>
+    <Pane fx:id="eventDetailsPane" prefHeight="1275.0" prefWidth="1473.0">
+    <children>
+    <Label layoutX="73.0" layoutY="15.0" prefHeight="98.0" prefWidth="511.0" text="Events">
+        <font>
+            <Font name="Californian FB" size="36.0" />
+        </font>
+    </Label>
+            <HBox alignment="CENTER" layoutX="88.0" layoutY="375.0" prefHeight="319.0" prefWidth="1300.0" spacing="180.0">
+               <children>
+                  <AnchorPane prefHeight="293.0" prefWidth="434.0">
+                     <children>
+                        <Pane layoutX="-1.0" layoutY="244.0" prefHeight="65.0" prefWidth="434.0" style="-fx-background-color: #f3e4e4;">
+                           <children>
+                              <Label alignment="CENTER" layoutX="50.0" layoutY="11.0" onMouseClicked="#handleCreateEvent" prefHeight="58.0" prefWidth="331.0" text="Schedule an Event">
+                                 <font>
+                                    <Font name="Californian FB" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <JFXButton layoutX="48.0" layoutY="25.0" onAction="#handleCreateEvent" onMouseClicked="#handleCreateEvent" prefHeight="233.0" prefWidth="331.0" text=" ">
+                         <graphic>
+                             <ImageView fitHeight="160.0" fitWidth="242.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                     <Image url="@../images/scheduleEvent.jpg" />
+                                 </image>
+                             </ImageView>
+                         </graphic>
+                        </JFXButton>
+                         
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="293.0" prefWidth="434.0">
+                     <children>
+                        <Pane layoutX="-1.0" layoutY="244.0" prefHeight="65.0" prefWidth="434.0" style="-fx-background-color: #f3e4e4;">
+                           <children>
+                              <Label alignment="CENTER" layoutX="50.0" layoutY="11.0" prefHeight="58.0" prefWidth="331.0" text="View Events History">
+                                 <font>
+                                    <Font name="Californian FB" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <JFXButton layoutX="48.0" layoutY="25.0" prefHeight="233.0" prefWidth="331.0" text=" ">
+                            <graphic>
+                                <ImageView fitHeight="160.0" fitWidth="187.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/History.jpg" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <padding>
+                  <Insets left="30.0" right="30.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="88.0" layoutY="176.0" opacity="0.8" prefHeight="100.0" prefWidth="1300.0" spacing="20.0" style="-fx-background-color: #8B0000;">
+               <children>
+                  <Label text="Ongoing Event :" textFill="WHITE">
+                     <font>
+                        <Font name="Californian FB" size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField alignment="CENTER" labelFloat="true" prefHeight="39.0" prefWidth="301.0" promptText="Current event (if any)" />
+                  <Label layoutX="45.0" layoutY="45.0" text="Upcoming Event :" textFill="WHITE">
+                     <font>
+                        <Font name="Californian FB" size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="120.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField alignment="CENTER" labelFloat="true" layoutX="228.0" layoutY="45.0" prefHeight="39.0" prefWidth="301.0" promptText="Upcoming event (if any)" />
+               </children>
+               <padding>
+                  <Insets bottom="35.0" left="35.0" right="35.0" top="35.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </HBox>
+    </children>
+    </Pane>
     </children>
 </AnchorPane>
