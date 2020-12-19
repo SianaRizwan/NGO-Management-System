@@ -357,7 +357,7 @@ BEFORE INSERT ON donation_history
 FOR EACH ROW
 BEGIN
 
-:NEW.ID := get_donor_id(:new.type);
+:NEW.ID := get_donation_id(:new.type);
 
 END;
 /
