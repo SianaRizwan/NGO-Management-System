@@ -1,5 +1,6 @@
 package EventDetails.ViewAssignees.Volunteers;
 
+import Utilities.ShowAlertDialogue;
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
@@ -106,7 +107,12 @@ public class AddVolunteersToEventController {
     void handleConfirmButton(ActionEvent event) {
         getSelectedVolunteers();
         System.out.println(selectedID);
-        //if(addVolunteersToEventModel.isAssignVolunteerSuccessful(selectedID,))
+        if(addVolunteersToEventModel.isAssignVolunteerSuccessful(selectedID,"F_Ev201210001")){
+            new ShowAlertDialogue().infoBox("Volunteers Assigned!",null,"Assign Volunteer");
+        }
+        else {
+            new ShowAlertDialogue().infoBox("Volunteers Assigning Failed!",null,"Assign Volunteer");
+        }
     }
 
     @FXML

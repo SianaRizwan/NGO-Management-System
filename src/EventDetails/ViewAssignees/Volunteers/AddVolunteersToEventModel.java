@@ -82,23 +82,15 @@ public class AddVolunteersToEventModel {
                 ps.setString(1, eventID);
                 ps.setString(2,id.get(i));
                 int x = ps.executeUpdate();
-                if(x>0)
-                    return true;
+                if(x<1)
+                    return false;
             }
-
         } catch (SQLException e) {
             System.out.println("isAssignVolunteerSuccessful\n\n");
             e.printStackTrace();
             return false;
         }
 
-        return false;
+        return true;
     }
-
-//    public static void main(String[] args) {
-//        ArrayList<String> names = new ArrayList<String>();
-//        names.add("ab");
-//        names.add("bc");
-//        isAssignVolunteerSuccessful(names);
-//    }
 }
