@@ -17,7 +17,7 @@ public class AddVolunteersToEventModel {
 
         try {
 
-            String sql = "select name from volunteer where volunteer_id like ? or name like ?";
+            String sql = "select volunteer_ID from volunteer where volunteer_id like ? or name like ?";
             OracleConnection oc = new OracleConnection();
             PreparedStatement ps = oc.conn.prepareStatement(sql);
             ps.setString(1, "%" + text + "%");
@@ -55,7 +55,7 @@ public class AddVolunteersToEventModel {
 
         try {
 
-            String sql = "select name from volunteer ";
+            String sql = "select volunteer_ID from volunteer ";
             OracleConnection oc = new OracleConnection();
             PreparedStatement ps = oc.conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();

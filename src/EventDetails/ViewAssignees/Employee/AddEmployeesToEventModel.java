@@ -14,7 +14,7 @@ public class AddEmployeesToEventModel {
 
         try {
 
-            String sql = "select name from EMPLOYEE where emp_id like ? or name like ?";
+            String sql = "select emp_id from EMPLOYEE where emp_id like ? or name like ?";
             OracleConnection oc = new OracleConnection();
             PreparedStatement ps = oc.conn.prepareStatement(sql);
             ps.setString(1, "%" + text + "%");
@@ -52,7 +52,7 @@ public class AddEmployeesToEventModel {
 
         try {
 
-            String sql = "select name from EMPLOYEE ";
+            String sql = "select emp_id from EMPLOYEE ";
             OracleConnection oc = new OracleConnection();
             PreparedStatement ps = oc.conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
