@@ -3,6 +3,7 @@ package EventDetails.ManageEvent;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -89,6 +90,16 @@ public class ManageEventController {
         eventDoctorName.setVisible(true);
         docIcon.setVisible(true);
         docList.setVisible(true);
+
+    }
+
+    @FXML
+    void handleConfirmEmpBtn(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handleConfirmVolBtn(ActionEvent event) {
 
     }
 }
