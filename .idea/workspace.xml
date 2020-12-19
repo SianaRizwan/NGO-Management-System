@@ -3,19 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ViewAssignees/AddVolunteersToEventController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ViewAssignees/AddVolunteersToEventController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ViewAssignees/AddVolunteersToEventModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ViewAssignees/AddVolunteersToEventModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ViewAssignees/addVolunteers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ViewAssignees/addVolunteers.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/VolunteerDetails/VolunteerDetailsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/VolunteerDetails/VolunteerDetailsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventDetails/Events.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/Events.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventDetails/EventsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/EventsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/EventDetails/ViewAssignees/AddVolunteersToEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/ViewAssignees/AddVolunteersToEventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/ViewAssignees/AddVolunteersToEventModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/ViewAssignees/AddVolunteersToEventModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/ViewAssignees/addVolunteers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/ViewAssignees/addVolunteers.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Registration/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registration/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SupplyDetails/AddHealthProducts/AddHealthProdController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SupplyDetails/AddHealthProducts/AddHealthProdController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SupplyDetails/supplyDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/SupplyDetails/supplyDetails.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

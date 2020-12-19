@@ -19,6 +19,12 @@ public class EventsController implements Initializable {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("CreateEvent/CreateEvent.fxml"));
         eventDetailsPane.getChildren().setAll(pane);
     }
+
+    @FXML
+    void handleManageEvent(ActionEvent event) {
+
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
