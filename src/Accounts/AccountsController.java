@@ -21,7 +21,9 @@ public class AccountsController {
         AccountsPane.getChildren().setAll(pane);
     }
 
-    public void handleAccountsEvent(ActionEvent actionEvent) {
+    public void handleAccountsSummary(ActionEvent actionEvent) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("Summary/summary.fxml"));
+        AccountsPane.getChildren().setAll(pane);
     }
 
     public void handleAccountsDonation(ActionEvent actionEvent) {

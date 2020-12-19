@@ -9,6 +9,7 @@ constraint desig_type check (type in ('Doctor','Employee'))
 
 
 
+
 ---- generate designation_id
 set serveroutput on;
 CREATE OR REPLACE FUNCTION GET_designation_id(dtype varchar2)
@@ -599,7 +600,6 @@ end if;
 return total;
 end;
 /
-
 
 
 
