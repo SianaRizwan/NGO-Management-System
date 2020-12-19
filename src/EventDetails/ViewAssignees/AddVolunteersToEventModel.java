@@ -4,7 +4,6 @@ import Utilities.OracleConnection;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -69,4 +68,17 @@ public class AddVolunteersToEventModel {
         }
         return null;
     }
+
+    public static boolean isAssignVolunteerSuccessful(ArrayList<String> names){
+        int arraySize = names.size();
+        System.out.println(arraySize);
+        return true;
+    }
+
+//    public static void main(String[] args) {
+//        ArrayList<String> names = new ArrayList<String>();
+//        names.add("ab");
+//        names.add("bc");
+//        isAssignVolunteerSuccessful(names);
+//    }
 }

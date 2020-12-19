@@ -11,6 +11,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class AddVolunteersToEventController {
     @FXML
@@ -30,6 +31,7 @@ public class AddVolunteersToEventController {
     AddVolunteersToEventModel addVolunteersToEventModel = new AddVolunteersToEventModel();
     JFXCheckBox[] checkBox = new JFXCheckBox[addVolunteersToEventModel.getTotalID()];
     String[] list = new String[addVolunteersToEventModel.getTotalID()];
+    ArrayList<String> names = new ArrayList<String>();
 
     private void setName() {
         String[] id = addVolunteersToEventModel.getVolunteerList(list);
@@ -57,8 +59,7 @@ public class AddVolunteersToEventController {
     private void getSelectedVolunteers(){
         for(int i=0; i<addVolunteersToEventModel.getTotalID(); i++){
             if(checkBox[i].isSelected()){
-                list[i]=checkBox[i].getText();
-                System.out.println(list[i]);
+                names.add(checkBox[i].getText());
             }
         }
     }
@@ -104,6 +105,7 @@ public class AddVolunteersToEventController {
     @FXML
     void handleConfirmButton(ActionEvent event) {
         getSelectedVolunteers();
+        System.out.println(names);
     }
 
     @FXML
