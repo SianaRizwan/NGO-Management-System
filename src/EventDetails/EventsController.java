@@ -21,8 +21,9 @@ public class EventsController implements Initializable {
     }
 
     @FXML
-    void handleManageEvent(ActionEvent event) {
-
+    void handleManageEvent(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("ManageEvent/ManageEvent.fxml"));
+        eventDetailsPane.getChildren().setAll(pane);
     }
 
     @Override

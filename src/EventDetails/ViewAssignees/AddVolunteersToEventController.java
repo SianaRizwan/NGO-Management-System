@@ -2,6 +2,7 @@ package EventDetails.ViewAssignees;
 
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXTextField;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
@@ -99,6 +100,12 @@ public class AddVolunteersToEventController {
         Stage stage = (Stage) viewDetails.getScene().getWindow();
         stage.close();
     }
+
+    @FXML
+    void handleConfirmButton(ActionEvent event) {
+        getSelectedVolunteers();
+    }
+
     @FXML
     public void handleSearch() {
         setSearchedName(searchOption.getText());
