@@ -768,7 +768,7 @@ if f_type=1 then types:='F_Ev';
 elsif f_type=2 then types:='H_Ev';
 end if;
 dbms_output.put_line(f_date);
-select substr(to_char(f_date,'YYYYMMDD'),5) into dd from dual;
+select substr(to_char(f_date,'YYYYMMDD'),3,4) into dd from dual;
 
  dbms_output.put_line(dd);
 
