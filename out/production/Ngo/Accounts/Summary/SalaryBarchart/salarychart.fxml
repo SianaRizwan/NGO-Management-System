@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.Pane?>
 
 
-<Pane fx:id="salaryBarchart" prefHeight="554.0" prefWidth="1328.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accounts.Summary.SalaryBarchart.SalarychartController">
+<Pane fx:id="salaryBarchart" prefHeight="554.0" prefWidth="1328.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accounts.Summary.SalaryBarchart.SalaryChartController">
    <children>
       <BarChart fx:id="SalaryChart" layoutX="76.0" layoutY="35.0" prefHeight="497.0" prefWidth="1173.0" title="Salary Expense">
         <xAxis>

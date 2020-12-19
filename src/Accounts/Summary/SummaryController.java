@@ -11,15 +11,13 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SummaryController implements Initializable {
+public class SummaryController {
     @FXML
     private Pane barChartpane;
-    public void handlesalaryChart(ActionEvent actionEvent) throws IOException {
+
+    public void handlesalaryChart() throws IOException {
         Pane pane = FXMLLoader.load(getClass().getResource("SalaryBarchart/salarychart.fxml"));
-        barChartpane.getChildren().setAll(pane); }
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
+        barChartpane.getChildren().setAll(pane);
     }
+
 }
