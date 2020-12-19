@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="viewDetails" prefHeight="661.0" prefWidth="949.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EventDetails.ViewAssignees.AddVolunteersToEventController">
+<AnchorPane fx:id="viewDetails" prefHeight="661.0" prefWidth="949.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EventDetails.ViewAssignees.Employee.AddEmployeesToEventController">
     <children>
         <Button graphicTextGap="22.0" layoutX="867.0" layoutY="613.0" mnemonicParsing="false" onAction="#handleBackButton" style="-fx-background-color: FDAB9F;" text="BACK">
             <font>
@@ -80,10 +80,10 @@
         </AnchorPane>
         <FontAwesomeIconView glyphName="SEARCH" layoutX="68.0" layoutY="49.0" />
         <JFXTextField fx:id="searchOption" labelFloat="true" layoutX="105.0" layoutY="28.0" onAction="#handleSearch" onInputMethodTextChanged="#handleSearch" />
-      <Button graphicTextGap="22.0" layoutX="763.0" layoutY="613.0" mnemonicParsing="false" onAction="#handleConfirmButton" style="-fx-background-color: FDAB9F;" text="Confirm">
-         <font>
-            <Font name="Californian FB" size="18.0" />
-         </font>
-      </Button>
+        <Button graphicTextGap="22.0" layoutX="763.0" layoutY="613.0" mnemonicParsing="false" onAction="#handleConfirmButton" style="-fx-background-color: FDAB9F;" text="Confirm">
+            <font>
+                <Font name="Californian FB" size="18.0" />
+            </font>
+        </Button>
     </children>
 </AnchorPane>

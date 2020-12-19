@@ -36,13 +36,14 @@ public class ManageEventController {
     private FontAwesomeIconView docList;
 
     @FXML
-    void handleAddEmp() {
-
+    void handleAddEmp() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../ViewAssignees/Employee/addEmployees.fxml"));
+        showList(loader, "Assign Employees");
     }
 
     @FXML
     void handleAddVol() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../ViewAssignees/addVolunteers.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../ViewAssignees/Volunteers/addVolunteers.fxml"));
         showList(loader, "Assign Volunteers");
     }
 
@@ -65,13 +66,13 @@ public class ManageEventController {
 
     @FXML
     void handleViewAssignedEmployees() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../ViewAssignees/viewAssignedEmployees.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../ViewAssignees/Employee/viewAssignedEmployees.fxml"));
         showList(loader, "Assigned Employees");
     }
 
     @FXML
     void handleViewAssignedVolunteers() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../ViewAssignees/viewAssignedVolunteers.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../ViewAssignees/Volunteers/viewAssignedVolunteers.fxml"));
         showList(loader, "Assigned Volunteers");
     }
 

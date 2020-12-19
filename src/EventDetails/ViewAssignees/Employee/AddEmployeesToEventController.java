@@ -1,4 +1,4 @@
-package EventDetails.ViewAssignees;
+package EventDetails.ViewAssignees.Employee;
 
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXTextField;
@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class AddVolunteersToEventController {
+public class AddEmployeesToEventController {
     @FXML
     private AnchorPane viewDetails;
     @FXML
@@ -28,16 +28,16 @@ public class AddVolunteersToEventController {
     @FXML
     private GridPane gridPane3;
 
-    AddVolunteersToEventModel addVolunteersToEventModel = new AddVolunteersToEventModel();
-    JFXCheckBox[] checkBox = new JFXCheckBox[addVolunteersToEventModel.getTotalID()];
-    String[] list = new String[addVolunteersToEventModel.getTotalID()];
+    AddEmployeesToEventModel addEmployeesToEventModel = new AddEmployeesToEventModel();
+    JFXCheckBox[] checkBox = new JFXCheckBox[addEmployeesToEventModel.getTotalID()];
+    String[] list = new String[addEmployeesToEventModel.getTotalID()];
     ArrayList<String> names = new ArrayList<String>();
 
     private void setName() {
-        String[] id = addVolunteersToEventModel.getVolunteerList(list);
+        String[] id = addEmployeesToEventModel.getEmployeeList(list);
         int k = 0, j = 0;
 
-        for (int i = 0; i < addVolunteersToEventModel.getTotalID(); i++) {
+        for (int i = 0; i < addEmployeesToEventModel.getTotalID(); i++) {
 
             checkBox[i] = new JFXCheckBox(id[i]);
             checkBox[i].setAlignment(Pos.CENTER_LEFT);
@@ -56,8 +56,8 @@ public class AddVolunteersToEventController {
 
     }
 
-    private void getSelectedVolunteers(){
-        for(int i=0; i<addVolunteersToEventModel.getTotalID(); i++){
+    private void getSelectedEmployees(){
+        for(int i = 0; i< addEmployeesToEventModel.getTotalID(); i++){
             if(checkBox[i].isSelected()){
                 names.add(checkBox[i].getText());
             }
@@ -66,7 +66,7 @@ public class AddVolunteersToEventController {
 
     private void setSearchedName(String text) {
 
-        String[] id = addVolunteersToEventModel.getSearchedList(list,text);
+        String[] id = addEmployeesToEventModel.getSearchedList(list,text);
         int k = 0, j = 0;
         gridPane1.getChildren().clear();
         gridPane2.getChildren().clear();
@@ -97,14 +97,14 @@ public class AddVolunteersToEventController {
 
     @FXML
     void handleBackButton() throws IOException {
-        FXMLLoader.load(getClass().getResource("../CreateEvent/CreateEvent.fxml"));
+        FXMLLoader.load(getClass().getResource("../../ManageEvent/ManageEvent.fxml"));
         Stage stage = (Stage) viewDetails.getScene().getWindow();
         stage.close();
     }
 
     @FXML
     void handleConfirmButton(ActionEvent event) {
-        getSelectedVolunteers();
+        getSelectedEmployees();
         System.out.println(names);
     }
 

@@ -1,4 +1,4 @@
-package EventDetails.ViewAssignees;
+package EventDetails.ViewAssignees.Volunteers;
 
 import Utilities.OracleConnection;
 
@@ -72,7 +72,7 @@ public class AddVolunteersToEventModel {
     }
 
     private void getSelectedVolID(ArrayList<String> names){
-        
+
     }
 
     public static boolean isAssignVolunteerSuccessful(ArrayList<String> names, String eventID){

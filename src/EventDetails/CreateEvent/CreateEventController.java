@@ -6,7 +6,6 @@ import com.jfoenix.controls.JFXTextField;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -65,13 +64,13 @@ public class CreateEventController  {
     }
     @FXML
     private void handleViewAssignedEmployees() throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../ViewAssignees/viewAssignedEmployees.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../ViewAssignees/Employee/viewAssignedEmployees.fxml"));
         showList(loader, "Assigned Employees");
     }
 
       @FXML
     private void handleViewAssignedVolunteers() throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../ViewAssignees/viewAssignedVolunteers.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../ViewAssignees/Volunteers/viewAssignedVolunteers.fxml"));
         showList(loader, "Assigned Volunteers");
     }
     public void initialize(){
@@ -96,7 +95,7 @@ public class CreateEventController  {
     }
 @FXML
     public void handleAddVol() throws IOException {
-    FXMLLoader loader = new FXMLLoader(getClass().getResource("../ViewAssignees/addVolunteers.fxml"));
+    FXMLLoader loader = new FXMLLoader(getClass().getResource("../ViewAssignees/Volunteers/addVolunteers.fxml"));
     showList(loader, "Assigned Volunteers");
 
 }
