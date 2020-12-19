@@ -4,11 +4,13 @@ import Utilities.OracleConnection;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class AddVolunteersToEventModel {
     public int count;
+    String[] selectedVolID = new String[1000];
 
     protected String[] getSearchedList(String[] info,String text){
         List<String> list = new ArrayList<>();
@@ -69,9 +71,27 @@ public class AddVolunteersToEventModel {
         return null;
     }
 
-    public static boolean isAssignVolunteerSuccessful(ArrayList<String> names){
+    private void getSelectedVolID(ArrayList<String> names){
+        
+    }
+
+    public static boolean isAssignVolunteerSuccessful(ArrayList<String> names, String eventID){
         int arraySize = names.size();
         System.out.println(arraySize);
+        //String sql = "insert into event_volunteer values(?,?)";
+        try {
+            String sql = "insert into event_volunteer values(?,?)";
+            OracleConnection oc = new OracleConnection();
+            for(int i=0; i<arraySize;i++){
+                PreparedStatement ps = oc.conn.prepareStatement(sql);
+                ps.setString(1, eventID);
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         return true;
     }
 
