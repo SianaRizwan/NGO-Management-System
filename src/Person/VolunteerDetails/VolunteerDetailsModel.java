@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class VolunteerDetailsModel {
-    protected static boolean isMatchSuccessful(String newValue, Volunteer Volunteer) {
+    public static boolean isMatchSuccessful(String newValue, Volunteer Volunteer) {
         if (newValue == null || newValue.isEmpty()) {
             return true;
         }
@@ -19,7 +19,7 @@ public class VolunteerDetailsModel {
             return true;
         } else return (Volunteer.getName()).contains(lowerCaseResult);
     }
-    protected static ObservableList<Volunteer> getVolunteerTableRecords() throws SQLException {
+    public static ObservableList<Volunteer> getVolunteerTableRecords() throws SQLException {
         String sql = "select Volunteer_id,name,email,phone from Volunteer order by Volunteer_id";
         ObservableList<Volunteer> VolunteerList = FXCollections.observableArrayList();
         try {

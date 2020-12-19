@@ -42,7 +42,7 @@ public class DoctorDetailsModel {
 
 
     protected static ObservableList<Doctor> getDoctorTableRecords() throws SQLException {
-        String sql = "select doctor_id,name,email,nvl(phone,'N/A') phone,speciality from doctor order by doctor_id";
+        String sql = "select doctor_id,name,email,nvl(phone,'N/A') phone,designation_name from doctor,designation where speciality=id order by doctor_id";
         ObservableList<Doctor> docList = FXCollections.observableArrayList();
         try {
             OracleConnection oc = new OracleConnection();
@@ -53,7 +53,7 @@ public class DoctorDetailsModel {
                 String name = rs.getString("name");
                 String email = rs.getString("email");
                 String phone = rs.getString("phone");
-                String speciality = rs.getString("speciality");
+                String speciality = rs.getString(5);
 
                 Doctor doctor = new Doctor(name, email, phone, speciality, id);
 

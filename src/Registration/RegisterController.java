@@ -1,15 +1,17 @@
 package Registration;
 
-import Person.PersonalInformation;
 import Person.Validation;
 import Utilities.ShowAlertDialogue;
-import com.jfoenix.controls.*;
+import com.jfoenix.controls.JFXComboBox;
+import com.jfoenix.controls.JFXDatePicker;
+import com.jfoenix.controls.JFXPasswordField;
+import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
@@ -94,7 +96,7 @@ public class RegisterController implements Initializable {
             Date dobDate = new SimpleDateFormat("MM/dd/yyyy").parse(employeeDOB.getEditor().getText());
 
             if (new Validation().checkEmailAndPhoneValidation(getEmailTextfield(), employeePhoneNumber.getText())) {
-                if (new Validation().checkPasswordValidation(getPasswordTextfield())) {
+//                if (new Validation().checkPasswordValidation(getPasswordTextfield())) {
                     if (getPasswordTextfield().equals(getRetypePasswordTextfield())) {
                         if (registerModel.isRegistrationSuccessful(getUserNameTextfield(), dobDate, employeeGender.getSelectionModel().getSelectedItem().toString(),
                                 employeeAddress.getText(), employeePhoneNumber.getText(), getEmailTextfield(), getPasswordTextfield())) {
@@ -106,8 +108,9 @@ public class RegisterController implements Initializable {
                     } else
                         showAlertDialogue.infoBox("pass doesn't mathch!", null, "Failed");
 
-                } else
-                    showAlertDialogue.infoBox("input valid email!", null, "Failed");
+//                }
+//            else
+//                    showAlertDialogue.infoBox("input valid email!", null, "Failed");
             } else
                 showAlertDialogue.infoBox("input valid email and contact number!", null, "Failed");
 

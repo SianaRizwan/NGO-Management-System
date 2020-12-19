@@ -14,9 +14,8 @@
                 <TableColumn fx:id="colName" prefWidth="151.0" style="-fx-background-color: #EEB1B1;" text="NAME" />
                 <TableColumn fx:id="colDesignation" prefWidth="149.0" style="-fx-background-color: #EEB1B1;" text="DESIGNATION" />
                 <TableColumn fx:id="colEmail" prefWidth="132.0" style="-fx-background-color: #EEB1B1;" text="EMAIL" />
-                <TableColumn fx:id="colContactNo" prefWidth="125.0" style="-fx-background-color: #EEB1B1;" text="CONTACT NO." />
-                <TableColumn fx:id="colDob" prefWidth="127.0" style="-fx-background-color: #EEB1B1;" text="DATE OF BIRTH" />
-                <TableColumn fx:id="colAddress" prefWidth="127.0" style="-fx-background-color: #EEB1B1;" text="ADDRESS" />
+                <TableColumn fx:id="colContactNo" prefWidth="162.0" style="-fx-background-color: #EEB1B1;" text="CONTACT NO." />
+                <TableColumn fx:id="colAddress" prefWidth="216.0" style="-fx-background-color: #EEB1B1;" text="ADDRESS" />
             </columns>
         </TableView>
         <Button graphicTextGap="22.0" layoutX="867.0" layoutY="507.0" mnemonicParsing="false" onAction="#handleBackButton" style="-fx-background-color: FDAB9F;" text="BACK">

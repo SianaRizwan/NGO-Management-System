@@ -48,7 +48,7 @@ public class UpdateEmployeeController implements Initializable {
 
     @FXML
     private void handleConfirmButton() throws  ParseException {
-        Date dobDate = new SimpleDateFormat("MM/dd/yyyy").parse(employeeDOB.getEditor().getText());
+        Date dobDate = new SimpleDateFormat("yyyy-dd-MM").parse(employeeDOB.getEditor().getText());
         if (new Validation().checkEmailAndPhoneValidation(employeeEmailID.getText(),employeePhoneNumber.getText())){
             if (updateEmployeeModel.isUpdateEmployeeSuccessful(dobDate, employeeGender.getSelectionModel().getSelectedItem().toString(),
                 employeeAddress.getText(), employeePhoneNumber.getText(), employeeDesignation.getSelectionModel().getSelectedItem().toString(),
@@ -85,11 +85,14 @@ public class UpdateEmployeeController implements Initializable {
 
     @FXML
     public void IDOnEnter() {
-        String[] list = new String[3];
+        String[] list = new String[6];
         String[] info = updateEmployeeModel.setEmployeeInformation(list, Integer.parseInt(employeeID.getText()));
         employeeName.setText(info[0]);
         employeeEmailID.setText(info[2]);
         employeePassword.setText(info[1]);
+        employeeDOB.getEditor().setText(info[3]);
+        employeeAddress.setText(info[4]);
+        employeePhoneNumber.setText(info[5]);
     }
 
 }
