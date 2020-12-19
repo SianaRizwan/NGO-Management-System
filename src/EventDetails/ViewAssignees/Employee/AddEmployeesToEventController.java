@@ -1,5 +1,6 @@
 package EventDetails.ViewAssignees.Employee;
 
+import Utilities.ShowAlertDialogue;
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
@@ -31,7 +32,7 @@ public class AddEmployeesToEventController {
     AddEmployeesToEventModel addEmployeesToEventModel = new AddEmployeesToEventModel();
     JFXCheckBox[] checkBox = new JFXCheckBox[addEmployeesToEventModel.getTotalID()];
     String[] list = new String[addEmployeesToEventModel.getTotalID()];
-    ArrayList<String> names = new ArrayList<String>();
+    ArrayList<String> selectedId = new ArrayList<String>();
 
     private void setName() {
         String[] id = addEmployeesToEventModel.getEmployeeList(list);
@@ -59,7 +60,7 @@ public class AddEmployeesToEventController {
     private void getSelectedEmployees(){
         for(int i = 0; i< addEmployeesToEventModel.getTotalID(); i++){
             if(checkBox[i].isSelected()){
-                names.add(checkBox[i].getText());
+                selectedId.add(checkBox[i].getText());
             }
         }
     }
@@ -105,7 +106,13 @@ public class AddEmployeesToEventController {
     @FXML
     void handleConfirmButton(ActionEvent event) {
         getSelectedEmployees();
-        System.out.println(names);
+        //System.out.println(names);
+        if(addEmployeesToEventModel.isAssignEmployeeSuccessful(selectedId,"F_Ev201210001")){
+            new ShowAlertDialogue().infoBox("Employees Assigned!",null,"Assign Employees");
+        }
+        else {
+            new ShowAlertDialogue().infoBox("Employees Assigning Failed!",null,"Assign Employees");
+        }
     }
 
     @FXML

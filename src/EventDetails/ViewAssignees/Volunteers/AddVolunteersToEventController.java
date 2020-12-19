@@ -106,7 +106,7 @@ public class AddVolunteersToEventController {
     @FXML
     void handleConfirmButton(ActionEvent event) {
         getSelectedVolunteers();
-        System.out.println(selectedID);
+        //System.out.println(selectedID);
         if(addVolunteersToEventModel.isAssignVolunteerSuccessful(selectedID,"F_Ev201210001")){
             new ShowAlertDialogue().infoBox("Volunteers Assigned!",null,"Assign Volunteer");
         }

@@ -73,7 +73,7 @@ public class AddVolunteersToEventModel {
 
     public boolean isAssignVolunteerSuccessful(ArrayList<String> id, String eventID){
         int arraySize = id.size();
-        System.out.println(arraySize);
+        //System.out.println(arraySize);
         try {
             String sql = "insert into event_volunteer values(?,?)";
             OracleConnection oc = new OracleConnection();

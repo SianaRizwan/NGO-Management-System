@@ -68,21 +68,25 @@ public class AddEmployeesToEventModel {
         return null;
     }
 
-    public static boolean isAssignEmployeeSuccessful(ArrayList<String> id, String eventID){
+    public boolean isAssignEmployeeSuccessful(ArrayList<String> id, String eventID){
         int arraySize = id.size();
-        System.out.println(arraySize);
-        //String sql = "insert into event_volunteer values(?,?)";
+        //System.out.println(arraySize);
         try {
             String sql = "insert into event_employee values(?,?)";
             OracleConnection oc = new OracleConnection();
             for(int i=0; i<arraySize;i++){
                 PreparedStatement ps = oc.conn.prepareStatement(sql);
                 ps.setString(1, eventID);
-
+                ps.setString(2,id.get(i));
+                int x = ps.executeUpdate();
+                if(x<1)
+                    return false;
             }
 
         } catch (SQLException e) {
+            System.out.println("isAssignEmployeeSuccessful\n\n");
             e.printStackTrace();
+            return false;
         }
 
         return true;
