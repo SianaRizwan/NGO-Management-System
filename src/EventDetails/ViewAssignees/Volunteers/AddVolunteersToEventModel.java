@@ -71,28 +71,28 @@ public class AddVolunteersToEventModel {
         return null;
     }
 
-    private void getSelectedVolID(ArrayList<String> names){
-
-    }
-
-    public static boolean isAssignVolunteerSuccessful(ArrayList<String> names, String eventID){
-        int arraySize = names.size();
+    public boolean isAssignVolunteerSuccessful(ArrayList<String> id, String eventID){
+        int arraySize = id.size();
         System.out.println(arraySize);
-        //String sql = "insert into event_volunteer values(?,?)";
         try {
             String sql = "insert into event_volunteer values(?,?)";
             OracleConnection oc = new OracleConnection();
             for(int i=0; i<arraySize;i++){
                 PreparedStatement ps = oc.conn.prepareStatement(sql);
                 ps.setString(1, eventID);
-
+                ps.setString(2,id.get(i));
+                int x = ps.executeUpdate();
+                if(x>0)
+                    return true;
             }
 
         } catch (SQLException e) {
+            System.out.println("isAssignVolunteerSuccessful\n\n");
             e.printStackTrace();
+            return false;
         }
 
-        return true;
+        return false;
     }
 
 //    public static void main(String[] args) {

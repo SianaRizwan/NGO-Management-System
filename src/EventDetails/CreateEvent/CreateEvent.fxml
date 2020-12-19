@@ -21,7 +21,7 @@
     </Label>
         <AnchorPane layoutX="375.0" layoutY="179.0" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="650.0" prefWidth="803.0" style="-fx-background-color: #8B0000;">
             <children>
-                <Button layoutX="220.0" layoutY="580.0" mnemonicParsing="false" style="-fx-background-color: FDAB9F;" stylesheets="@../../theme.css" text="Confirm">
+                <Button layoutX="220.0" layoutY="580.0" mnemonicParsing="false" onAction="#handleConfirmBtn" onMouseClicked="#handleConfirmBtn" style="-fx-background-color: FDAB9F;" stylesheets="@../../theme.css" text="Confirm">
                     <font>
                         <Font name="Californian FB" size="18.0" />
                     </font>
@@ -39,9 +39,6 @@
                 <FontAwesomeIconView glyphName="CALENDAR" layoutX="96.0" layoutY="288.0" size="25" />
                   <FontAwesomeIconView glyphName="STICKY_NOTE_ALT" layoutX="97.0" layoutY="59.0" size="25" />
                   <JFXComboBox fx:id="eventType" editable="true" labelFloat="true" layoutX="159.0" layoutY="29.0" onAction="#handleEventType" prefHeight="31.0" prefWidth="435.0" promptText="Choose type of event" />
-                  <JFXTextField fx:id="eventDoctorName" layoutX="160.0" layoutY="503.0" prefHeight="31.0" prefWidth="435.0" promptText="Enter Doctor Name or ID" stylesheets="@../../theme.css" visible="false" />
-                  <FontAwesomeIconView fx:id="docIcon" glyphName="USER_MD" layoutX="97.0" layoutY="531.0" size="25" visible="false" />
-                  <FontAwesomeIconView fx:id="docList" glyphName="EYE" layoutX="623.0" layoutY="535.0" onMouseClicked="#handleViewAssignedDoctor" size="30" visible="false" />
             </children>
         </AnchorPane>
     </children>

@@ -1,11 +1,13 @@
 package EventDetails.CreateEvent;
 
+import Utilities.ShowAlertDialogue;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -15,6 +17,9 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class CreateEventController  {
     @FXML
@@ -47,14 +52,27 @@ public class CreateEventController  {
     @FXML
     private FontAwesomeIconView docIcon;
 
-
-
+    CreateEventModel createEventModel = new CreateEventModel();
 
     private final ObservableList<String> eventTypeValue = FXCollections.observableArrayList("Food", "Health");
 
     @FXML
-    void handleViewAssignedDoctor() {
+    void handleConfirmBtn(ActionEvent event) throws ParseException {
+        Date event_date = new SimpleDateFormat("MM/dd/yyyy").parse(eventDate.getEditor().getText());
+        if(createEventModel.isScheduleEventSuccessful(eventName.getText(),event_date,eventType.getEditor().getText(),Integer.parseInt(estimatedBudget.getText()))){
+            new ShowAlertDialogue().infoBox("Event Successfully Scheduled!",null,"Schedule Event");
+            refreshTextField();
+        }
+        else {
+            new ShowAlertDialogue().infoBox("Event Scheduling Failed!",null,"Schedule Event");
+        }
+    }
 
+    private void refreshTextField() {
+        eventType.getEditor().setText("");
+        eventDate.getEditor().setText("");
+        eventName.setText("");
+        estimatedBudget.setText("");
     }
 
     @FXML
@@ -62,17 +80,7 @@ public class CreateEventController  {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("../Events.fxml"));
         createEventPane.getChildren().setAll(pane);
     }
-    @FXML
-    private void handleViewAssignedEmployees() throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../ViewAssignees/Employee/viewAssignedEmployees.fxml"));
-        showList(loader, "Assigned Employees");
-    }
 
-      @FXML
-    private void handleViewAssignedVolunteers() throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../ViewAssignees/Volunteers/viewAssignedVolunteers.fxml"));
-        showList(loader, "Assigned Volunteers");
-    }
     public void initialize(){
         eventType.setItems(eventTypeValue);
 //        setVisibility();
@@ -93,12 +101,7 @@ public class CreateEventController  {
         stage.setScene(new Scene(pane));
         stage.show();
     }
-@FXML
-    public void handleAddVol() throws IOException {
-    FXMLLoader loader = new FXMLLoader(getClass().getResource("../ViewAssignees/Volunteers/addVolunteers.fxml"));
-    showList(loader, "Assigned Volunteers");
 
-}
 
     public void handleEventType() {
         if(eventType.getSelectionModel().getSelectedItem().equals("Health")){

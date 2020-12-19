@@ -760,7 +760,7 @@ d_ID varchar2(20);
 id varchar2(20);
 vv number;
 dd varchar2(10);
-types varchar2(2);
+types varchar2(5);
 
 BEGIN
 SELECT  max(ID) INTO d_ID FROM event_details;

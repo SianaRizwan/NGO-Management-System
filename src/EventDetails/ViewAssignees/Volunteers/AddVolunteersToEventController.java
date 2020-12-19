@@ -31,7 +31,7 @@ public class AddVolunteersToEventController {
     AddVolunteersToEventModel addVolunteersToEventModel = new AddVolunteersToEventModel();
     JFXCheckBox[] checkBox = new JFXCheckBox[addVolunteersToEventModel.getTotalID()];
     String[] list = new String[addVolunteersToEventModel.getTotalID()];
-    ArrayList<String> names = new ArrayList<String>();
+    ArrayList<String> selectedID = new ArrayList<String>();
 
     private void setName() {
         String[] id = addVolunteersToEventModel.getVolunteerList(list);
@@ -59,7 +59,7 @@ public class AddVolunteersToEventController {
     private void getSelectedVolunteers(){
         for(int i=0; i<addVolunteersToEventModel.getTotalID(); i++){
             if(checkBox[i].isSelected()){
-                names.add(checkBox[i].getText());
+                selectedID.add(checkBox[i].getText());
             }
         }
     }
@@ -105,7 +105,8 @@ public class AddVolunteersToEventController {
     @FXML
     void handleConfirmButton(ActionEvent event) {
         getSelectedVolunteers();
-        System.out.println(names);
+        System.out.println(selectedID);
+        //if(addVolunteersToEventModel.isAssignVolunteerSuccessful(selectedID,))
     }
 
     @FXML
