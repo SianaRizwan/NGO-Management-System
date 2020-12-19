@@ -11,6 +11,29 @@ import java.util.List;
 public class AddVolunteersToEventModel {
     public int count;
 
+    protected String[] getSearchedList(String[] info,String text){
+        List<String> list = new ArrayList<>();
+
+        try {
+
+            String sql = "select name from volunteer where volunteer_id like ? or name like ?";
+            OracleConnection oc = new OracleConnection();
+            PreparedStatement ps = oc.conn.prepareStatement(sql);
+            ps.setString(1, "%" + text + "%");
+            ps.setString(2, "%" + text + "%");
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString(1));
+            }
+
+            info = list.toArray(info);
+            return info;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     protected int getTotalID() {
         try {
             String sql = "select count(volunteer_id) from volunteer ";
@@ -26,7 +49,7 @@ public class AddVolunteersToEventModel {
         return 0;
     }
 
-    protected String[] getID(String[] info) {
+    protected String[] getVolunteerList(String[] info) {
         List<String> list = new ArrayList<>();
 
         try {

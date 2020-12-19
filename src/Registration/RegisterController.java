@@ -106,7 +106,7 @@ public class RegisterController implements Initializable {
                         } else
                             showAlertDialogue.infoBox("registration unsuccessful!", null, "Failed");
                     } else
-                        showAlertDialogue.infoBox("pass doesn't match!", null, "Failed");
+                        showAlertDialogue.infoBox("pass doesn't mathch!", null, "Failed");
 
 //                }
 //            else

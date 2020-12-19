@@ -59,8 +59,8 @@ public class DashboardController implements Initializable {
 
     @FXML
     public void viewAccountsDetails() throws IOException {
-       AnchorPane pane=FXMLLoader.load(getClass().getResource("../Accounts/Accounts.fxml"));
-       employeeDetailsBorderPane.setCenter(pane);
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("../Accounts/Accounts.fxml"));
+        employeeDetailsBorderPane.setCenter(pane);
     }
     @FXML
     public void viewEventsDetails() throws IOException {
