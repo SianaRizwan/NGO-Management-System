@@ -1,16 +1,11 @@
 package EventDetails.ViewAssignees;
 
-import Person.VolunteerDetails.Volunteer;
-import Person.VolunteerDetails.VolunteerDetailsModel;
 import com.jfoenix.controls.JFXCheckBox;
-import javafx.collections.transformation.FilteredList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
-
-import java.sql.SQLException;
 
 public class AddVolunteersToEventController {
     @FXML
@@ -27,29 +22,39 @@ public class AddVolunteersToEventController {
     private GridPane gridPane3;
 
     AddVolunteersToEventModel addVolunteersToEventModel = new AddVolunteersToEventModel();
+    JFXCheckBox[] checkBox = new JFXCheckBox[addVolunteersToEventModel.getTotalID()];
+    String[] list = new String[addVolunteersToEventModel.getTotalID()];
 
     private void setID() {
-        String[] list = new String[25];
         String[] id = addVolunteersToEventModel.getID(list);
         int k = 0, j = 0;
 
         for (int i = 0; i < addVolunteersToEventModel.getTotalID(); i++) {
-
-            JFXCheckBox checkBox = new JFXCheckBox(id[i]);
-            checkBox.setAlignment(Pos.CENTER_LEFT);
+            checkBox[i] = new JFXCheckBox(id[i]);
+            checkBox[i].setAlignment(Pos.CENTER_LEFT);
             if (i < 9) {
-                gridPane1.addRow(i, checkBox);
+                gridPane1.addRow(i, checkBox[i]);
             }
             if (i > 8 && i < 18) {
-                gridPane2.addRow(k, checkBox);
+                gridPane2.addRow(k, checkBox[i]);
                 k++;
             }
             if (i > 17 && i < 27) {
-                gridPane3.addRow(j, checkBox);
+                gridPane3.addRow(j, checkBox[i]);
                 j++;
             }
         }
 
+    }
+
+    private void getSelectedVolunteers(){
+
+        for(int i=0; i<addVolunteersToEventModel.getTotalID(); i++){
+            if(checkBox[i].isSelected()){
+                list[i]=checkBox[i].getText();
+                System.out.println(list[i]);
+            }
+        }
     }
 
   /*  private void setSearchedID(FilteredList<Volunteer> filteredList) {
@@ -93,6 +98,11 @@ public class AddVolunteersToEventController {
 
     public void initialize() {
         setID();
+    }
+
+    @FXML
+    void handleConfirmButton(ActionEvent event) {
+        getSelectedVolunteers();
     }
 
     @FXML

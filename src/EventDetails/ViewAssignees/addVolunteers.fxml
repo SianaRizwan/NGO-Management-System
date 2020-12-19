@@ -80,5 +80,10 @@
       </AnchorPane>
       <FontAwesomeIconView glyphName="SEARCH" layoutX="68.0" layoutY="49.0" />
       <JFXTextField labelFloat="true" layoutX="105.0" layoutY="28.0" />
+      <Button graphicTextGap="22.0" layoutX="760.0" layoutY="613.0" mnemonicParsing="false" onAction="#handleConfirmButton" style="-fx-background-color: FDAB9F;" text="Confirm">
+         <font>
+            <Font name="Californian FB" size="18.0" />
+         </font>
+      </Button>
          </children>
 </AnchorPane>
