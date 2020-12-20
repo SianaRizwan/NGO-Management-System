@@ -6,11 +6,14 @@ import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
+import javafx.scene.*;
+import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
+import javafx.stage.*;
 import javafx.stage.StageStyle;
+import org.controlsfx.control.textfield.TextFields;
 
 import java.io.IOException;
 
@@ -27,8 +30,6 @@ public class ManageEventController {
     @FXML
     private JFXDatePicker eventDate;
 
-    @FXML
-    private JFXTextField eventDoctorName;
 
     @FXML
     private FontAwesomeIconView docIcon;
@@ -37,14 +38,19 @@ public class ManageEventController {
     private FontAwesomeIconView docList;
 
     @FXML
+    private Label eventDoctorName;
+
+    @FXML
+    private FontAwesomeIconView addDoctor;
+    @FXML
     void handleAddEmp() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../ViewAssignees/Employee/addEmployees.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewAssignees/Employee/addEmployees.fxml"));
         showList(loader, "Assign Employees");
     }
 
     @FXML
     void handleAddVol() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../ViewAssignees/Volunteers/addVolunteers.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewAssignees/Volunteers/addVolunteers.fxml"));
         showList(loader, "Assign Volunteers");
     }
 
@@ -67,13 +73,13 @@ public class ManageEventController {
 
     @FXML
     void handleViewAssignedEmployees() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../ViewAssignees/Employee/viewAssignedEmployees.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewAssignees/Employee/viewAssignedEmployees.fxml"));
         showList(loader, "Assigned Employees");
     }
 
     @FXML
     void handleViewAssignedVolunteers() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../ViewAssignees/Volunteers/viewAssignedVolunteers.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewAssignees/Volunteers/viewAssignedVolunteers.fxml"));
         showList(loader, "Assigned Volunteers");
     }
 
@@ -85,13 +91,18 @@ public class ManageEventController {
         stage.show();
     }
 
-    private void setVisibility() {
+    public void initialize() {
+        TextFields.bindAutoCompletion(eventName, new ManageEventModel().getItemNameList("select id from event_details"));
+    }
 
-        eventDoctorName.setVisible(true);
+    private void setVisibility() {
+eventDoctorName.setVisible(true);
         docIcon.setVisible(true);
         docList.setVisible(true);
+        addDoctor.setVisible(true);
 
     }
+
 
     @FXML
     void handleConfirmEmpBtn(ActionEvent event) {
@@ -101,5 +112,32 @@ public class ManageEventController {
     @FXML
     void handleConfirmVolBtn(ActionEvent event) {
 
+    }
+
+    private static String eventID;
+
+
+    public void handleEventID() {
+        setEventID(eventName.getText().trim());
+        makeDoctorVisible();
+    }
+
+    private void setEventID(String trim) {
+        eventID=trim;
+    }
+
+    public static String getEventID() {
+        return eventID;
+    }
+
+    private void makeDoctorVisible(){
+        if (eventID.contains("H")){
+            setVisibility();
+        }
+    }
+
+    public void handleAddDoctor() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewAssignees/Doctors/AddDoctorToEvent.fxml"));
+        showList(loader, "Assign Volunteers");
     }
 }
