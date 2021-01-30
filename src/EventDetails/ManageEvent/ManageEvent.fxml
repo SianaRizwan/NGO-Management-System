@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<AnchorPane style="-fx-background-color: #ffffff;" styleClass="supply-button" stylesheets="@../../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EventDetails.ManageEvent.ManageEventController">
+    <children>
+        <Pane fx:id="createEventPane" prefHeight="1275.0" prefWidth="1473.0">
+            <children>
+                <Label layoutX="73.0" layoutY="15.0" prefHeight="98.0" prefWidth="511.0" text="Events Scheduling">
+                    <font>
+                        <Font name="Californian FB" size="36.0" />
+                    </font>
+                </Label>
+                <AnchorPane layoutX="375.0" layoutY="179.0" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="650.0" prefWidth="803.0" style="-fx-background-color: #8B0000;">
+                    <children>
+                        <Button layoutX="220.0" layoutY="580.0" mnemonicParsing="false" onAction="#handleConfirmBtn" style="-fx-background-color: FDAB9F;" stylesheets="@../../theme.css" text="Confirm">
+                            <font>
+                                <Font name="Californian FB" size="18.0" />
+                            </font>
+                        </Button>
+                        <Button layoutX="453.0" layoutY="580.0" mnemonicParsing="false" onAction="#handleBackBtn" onMouseClicked="#handleBackBtn" prefHeight="34.0" prefWidth="86.0" style="-fx-background-color: FDAB9F;" stylesheets="@../../theme.css" text="Back">
+                            <font>
+                                <Font name="Californian FB" size="18.0" />
+                            </font>
+                        </Button>
+                        <JFXTextField fx:id="eventName" labelFloat="true" layoutX="159.0" layoutY="104.0" onAction="#handleEventID" onInputMethodTextChanged="#handleEventID" prefHeight="31.0" prefWidth="435.0" promptText="Enter Event ID" stylesheets="@../../theme.css" />
+                        <JFXTextField fx:id="estimatedBudget" labelFloat="true" layoutX="159.0" layoutY="180.0" prefHeight="31.0" prefWidth="435.0" promptText="Expense amount (if any)" stylesheets="@../../theme.css" />
+                        <JFXDatePicker fx:id="eventDate" defaultColor="#f3e4e4" layoutX="159.0" layoutY="425.0" overLay="true" prefHeight="31.0" prefWidth="435.0" promptText="Date of the event" stylesheets="@../../theme.css" />
+                        <FontAwesomeIconView glyphName="CALENDAR_ALT" layoutX="97.0" layoutY="134.0" size="25" />
+                        <FontAwesomeIconView glyphName="USERS" layoutX="97.0" layoutY="374.0" size="25" />
+                        <FontAwesomeIconView glyphName="USERS" layoutX="97.0" layoutY="288.0" size="25" />
+                        <FontAwesomeIconView glyphName="MONEY" layoutX="96.0" layoutY="208.0" size="25" />
+                        <FontAwesomeIconView glyphName="CALENDAR" layoutX="96.0" layoutY="453.0" size="25" />
+                        <FontAwesomeIconView fx:id="docIcon" glyphName="USER_MD" layoutX="97.0" layoutY="531.0" size="25" visible="false" />
+                        <FontAwesomeIconView glyphName="EYE" layoutX="408.0" layoutY="375.0" onMouseClicked="#handleViewAssignedVolunteers" size="30" />
+                        <FontAwesomeIconView glyphName="EYE" layoutX="408.0" layoutY="288.0" onMouseClicked="#handleViewAssignedEmployees" size="30" />
+                        <FontAwesomeIconView fx:id="docList" glyphName="EYE" layoutX="408.0" layoutY="534.0" onMouseClicked="#handleViewAssignedDoctor" size="30" visible="false" />
+                        <FontAwesomeIconView glyphName="PLUS" layoutX="329.0" layoutY="376.0" onMouseClicked="#handleAddVol" size="30" />
+                        <Label layoutX="158.0" layoutY="354.0" text="VOLUNTEER" textFill="#f3e4e4">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                  <FontAwesomeIconView glyphName="PLUS" layoutX="329.0" layoutY="288.0" onMouseClicked="#handleAddEmp" size="30" />
+                  <Label layoutX="158.0" layoutY="265.0" text="EMPLOYEES" textFill="#f3e4e4">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="eventDoctorName" layoutX="157.0" layoutY="510.0" text="DOCTOR" textFill="#f3e4e4" visible="false">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fx:id="addDoctor" glyphName="PLUS" layoutX="329.0" layoutY="534.0" onMouseClicked="#handleAddDoctor" size="30" visible="false" />
+                    </children>
+                </AnchorPane>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

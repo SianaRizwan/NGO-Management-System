@@ -11,11 +11,16 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1350.0" stylesheets="@../../../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Person.EmployeeDet.UpdateEmployee.UpdateEmployeeController">
+<Pane fx:id="updateEmployeePane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1350.0" stylesheets="@../../../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Person.EmployeeDet.UpdateEmployee.UpdateEmployeeController">
    <children>
       <AnchorPane layoutX="375.0" layoutY="121.0" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="751.0" prefWidth="690.0" style="-fx-background-color: #8B0000;">
          <children>
-            <Button fx:id="confirmUpdateBtn" graphicTextGap="22.0" layoutX="278.0" layoutY="680.0" mnemonicParsing="false" onMouseClicked="#handleConfirmButton" opacity="0.82" prefHeight="42.0" prefWidth="135.0" style="-fx-background-color: FDAB9F;" text="Confirm">
+            <Button fx:id="confirmUpdateBtn" graphicTextGap="22.0" layoutX="151.0" layoutY="680.0" mnemonicParsing="false" onMouseClicked="#handleConfirmButton" opacity="0.82" prefHeight="42.0" prefWidth="135.0" style="-fx-background-color: FDAB9F;" text="Confirm">
+               <font>
+                  <Font name="Californian FB" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="backButton" graphicTextGap="22.0" layoutX="444.0" layoutY="680.0" mnemonicParsing="false" onAction="#handleBackButton" opacity="0.82" prefHeight="42.0" prefWidth="135.0" style="-fx-background-color: FDAB9F;" text="Back">
                <font>
                   <Font name="Californian FB" size="18.0" />
                </font>

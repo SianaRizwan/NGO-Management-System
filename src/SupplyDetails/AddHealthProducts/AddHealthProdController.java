@@ -68,7 +68,6 @@ public class AddHealthProdController {
 
     public void initialize() {
         TextFields.bindAutoCompletion(healthProdName, new SupplyInformation().getItemNameList("select distinct name from HEALTH_PRODUCT"));
-        System.out.println("ll");
     }
 
     public void setType(int type) {

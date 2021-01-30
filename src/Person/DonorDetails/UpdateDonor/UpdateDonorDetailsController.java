@@ -5,9 +5,12 @@ import Person.PersonalInformation;
 import Person.Validation;
 import Utilities.ShowAlertDialogue;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import org.controlsfx.control.textfield.TextFields;
+
+import java.io.IOException;
 
 public class UpdateDonorDetailsController {
     @FXML
@@ -44,7 +47,11 @@ public class UpdateDonorDetailsController {
             new ShowAlertDialogue().infoBox("Insert Valid Email or Phone Number", null, "Update Donor" );
         }
     }
-
+    @FXML
+    public void handleBackButton() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("../donorDetails.fxml"));
+        updateDonorPane.getChildren().setAll(pane);
+    }
     private void refreshTextField() {
         DonorID.setText("");
         DonorName.setText("");

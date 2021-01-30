@@ -12,16 +12,16 @@ public class AccountsController {
     @FXML
     private Pane AccountsPane;
 
-    public void handleAccountsDesig(ActionEvent actionEvent) throws IOException {
+    public void handleAccountsDesig() throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("Designation/DesignationDetails.fxml"));
         AccountsPane.getChildren().setAll(pane); }
 
-    public void handleAccountsExpenses(ActionEvent actionEvent) throws IOException {
+    public void handleAccountsExpenses() throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("Expenses/ExpensesDetails.fxml"));
         AccountsPane.getChildren().setAll(pane);
     }
 
-    public void handleAccountsSummary(ActionEvent actionEvent) throws IOException {
+    public void handleAccountsSummary() throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("Summary/summary.fxml"));
         AccountsPane.getChildren().setAll(pane);
     }

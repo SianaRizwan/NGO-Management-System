@@ -21,6 +21,7 @@ public class OracleConnection {
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
             //      System.out.println("Creating statement...");
             stmt = conn.createStatement();
+            conn.setAutoCommit(true);
 
         } catch (SQLException se) {
             se.printStackTrace();

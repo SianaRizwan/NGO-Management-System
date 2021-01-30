@@ -7,11 +7,13 @@ import Utilities.ShowAlertDialogue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -65,7 +67,11 @@ public class AddDoctorController {
        }
 
     }
-
+    @FXML
+    void handleBackButton() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("../DoctorDetails.fxml"));
+        addDoctorPane.getChildren().setAll(pane);
+    }
     private void refreshTextField() {
         DoctorDOB.getEditor().setText("");
         DoctorAddress.setText("");

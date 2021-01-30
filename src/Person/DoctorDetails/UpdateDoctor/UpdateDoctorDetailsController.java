@@ -4,8 +4,12 @@ import Person.Validation;
 import Utilities.ShowAlertDialogue;
 import Person.PersonalInformation;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 import org.controlsfx.control.textfield.TextFields;
+
+import java.io.IOException;
 
 public class UpdateDoctorDetailsController {
     UpdateDoctorDetailsModel updateDoctorDetailsModel = new UpdateDoctorDetailsModel();
@@ -31,7 +35,8 @@ public class UpdateDoctorDetailsController {
     @FXML
     private TextField DoctorQualification;
 
-
+  @FXML
+  private AnchorPane updateDoctorPane;
     public void IDOnEnter() {
         String[] list = new String[6];
         String[] info = updateDoctorDetailsModel.setDoctorInformation(list, DoctorID.getText());
@@ -55,7 +60,11 @@ public class UpdateDoctorDetailsController {
             new ShowAlertDialogue().infoBox("Insert Valid Email or Phone Number", null, "Update Doctor" );
         }
     }
-
+    @FXML
+    void handleBackButton() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("../DoctorDetails.fxml"));
+        updateDoctorPane.getChildren().setAll(pane);
+    }
     private void refreshTextField() {
         DoctorAddress.setText("");
         DoctorPhoneNumber.setText("");

@@ -1,22 +1,20 @@
-package EventDetails.ViewAssignees;
+package EventDetails.ManageEvent.ViewAssignees.Employee;
 
 import Utilities.OracleConnection;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AddVolunteersToEventModel {
-    public int count;
-
+public class AddEmployeesToEventModel {
     protected String[] getSearchedList(String[] info,String text){
         List<String> list = new ArrayList<>();
 
         try {
 
-            String sql = "select name from volunteer where volunteer_id like ? or name like ?";
+            String sql = "select emp_id from EMPLOYEE where emp_id like ? or name like ?";
             OracleConnection oc = new OracleConnection();
             PreparedStatement ps = oc.conn.prepareStatement(sql);
             ps.setString(1, "%" + text + "%");
@@ -36,7 +34,7 @@ public class AddVolunteersToEventModel {
 
     protected int getTotalID() {
         try {
-            String sql = "select count(volunteer_id) from volunteer ";
+            String sql = "select count(emp_id) from EMPLOYEE ";
             OracleConnection oc = new OracleConnection();
             PreparedStatement ps = oc.conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
@@ -49,12 +47,12 @@ public class AddVolunteersToEventModel {
         return 0;
     }
 
-    protected String[] getVolunteerList(String[] info) {
+    protected String[] getEmployeeList(String[] info) {
         List<String> list = new ArrayList<>();
 
         try {
 
-            String sql = "select name from volunteer ";
+            String sql = "select emp_id from EMPLOYEE ";
             OracleConnection oc = new OracleConnection();
             PreparedStatement ps = oc.conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
@@ -68,5 +66,29 @@ public class AddVolunteersToEventModel {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public boolean isAssignEmployeeSuccessful(ArrayList<String> id, String eventID){
+        int arraySize = id.size();
+        //System.out.println(arraySize);
+        try {
+            String sql = "insert into event_employee values(?,?)";
+            OracleConnection oc = new OracleConnection();
+            for(int i=0; i<arraySize;i++){
+                PreparedStatement ps = oc.conn.prepareStatement(sql);
+                ps.setString(1, eventID);
+                ps.setString(2,id.get(i));
+                int x = ps.executeUpdate();
+                if(x<1)
+                    return false;
+            }
+
+        } catch (SQLException e) {
+            System.out.println("isAssignEmployeeSuccessful\n\n");
+            e.printStackTrace();
+            return false;
+        }
+
+        return true;
     }
 }
