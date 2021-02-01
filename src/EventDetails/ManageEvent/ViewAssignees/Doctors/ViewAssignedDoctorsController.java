@@ -1,4 +1,4 @@
-package EventDetails.ManageEvent.ViewAssignees.Employee;
+package EventDetails.ManageEvent.ViewAssignees.Doctors;
 
 import EventDetails.ManageEvent.ManageEventController;
 import javafx.fxml.FXML;
@@ -12,30 +12,30 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class ViewAssignedEmployeesController  {
-
+public class ViewAssignedDoctorsController {
     @FXML
     private AnchorPane viewDetails;
-    @FXML
-    private TableView<AssignedEmployeeOfAnEvent> informationTable;
 
     @FXML
-    private TableColumn<AssignedEmployeeOfAnEvent, Integer> colId;
+    private TableView<AssignedDoctorOfAnEvent> informationTable;
 
     @FXML
-    private TableColumn<AssignedEmployeeOfAnEvent, String> colName;
+    private TableColumn<AssignedDoctorOfAnEvent,String> colId;
 
     @FXML
-    private TableColumn<AssignedEmployeeOfAnEvent, String> colDesignation;
+    private TableColumn<AssignedDoctorOfAnEvent,String> colName;
 
     @FXML
-    private TableColumn<AssignedEmployeeOfAnEvent, String> colEmail;
+    private TableColumn<AssignedDoctorOfAnEvent,String> colSpeciality;
 
     @FXML
-    private TableColumn<AssignedEmployeeOfAnEvent, String> colContactNo;
+    private TableColumn<AssignedDoctorOfAnEvent,String> colEmail;
 
     @FXML
-    private TableColumn<AssignedEmployeeOfAnEvent, String> colAddress;
+    private TableColumn<AssignedDoctorOfAnEvent,String> colContactNo;
+
+    @FXML
+    private TableColumn<AssignedDoctorOfAnEvent,String> colQualification;
 
     @FXML
     void handleBackButton() throws IOException {
@@ -52,10 +52,10 @@ public class ViewAssignedEmployeesController  {
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
         colContactNo.setCellValueFactory(new PropertyValueFactory<>("phone"));
-        colDesignation.setCellValueFactory(new PropertyValueFactory<>("designation"));
-        colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
+        colQualification.setCellValueFactory(new PropertyValueFactory<>("qualification"));
+        colSpeciality.setCellValueFactory(new PropertyValueFactory<>("speciality"));
         try {
-            informationTable.setItems(new ViewAssignedEmployeesModel().getTableRecords(new ManageEventController().getEventID()));
+            informationTable.setItems(new ViewAssignedDoctorsModel().getTableRecords(new ManageEventController().getEventID()));
         } catch (SQLException throwables) {
             System.out.println("employeeDetailsController: initialize");
             throwables.printStackTrace();

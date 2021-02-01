@@ -12,6 +12,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
+import javax.swing.*;
+import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -93,13 +95,7 @@ public class AddDoctorToEventController {
     }
 
 
-    public void handleBackButton() throws IOException {
-        FXMLLoader.load(getClass().getResource("../../../ManageEvent/ManageEvent.fxml"));
-        Stage stage = (Stage) viewDetails.getScene().getWindow();
-        stage.close();
-    }
-
-    public void handleSearch() {
+      public void handleSearch() {
         setSearchedName(searchOption.getText());
     }
 
@@ -113,5 +109,12 @@ public class AddDoctorToEventController {
         } else {
             new ShowAlertDialogue().infoBox("Volunteers Assigning Failed!", null, "Assign Volunteer");
         }
+    }
+
+    @FXML
+     void handleBackButton() throws IOException {
+        FXMLLoader.load(getClass().getResource("../../../ManageEvent/ManageEvent.fxml"));
+        Stage stage = (Stage) viewDetails.getScene().getWindow();
+        stage.close();
     }
 }

@@ -807,26 +807,26 @@ drop table event_employee;
 create table event_employee(
 event_id varchar2(20) ,
 employee_id number,
-constraint event_employee_pk primary key(event_id,employee_id)
---,constraint event_id_event_employee foreign key(event_id) references event_details(id),
---constraint emp_event_employee foreign key(employee_id) references employee(emp_id)
+constraint event_employee_pk primary key(event_id,employee_id),
+constraint event_id_event_employee foreign key(event_id) references event_details(id),
+constraint emp_event_employee foreign key(employee_id) references employee(emp_id)
 );
 
 drop table event_volunteer;
 create table event_volunteer(
 event_id varchar2(20),
 volunteer_id varchar2(20),
-constraint event_person_pk primary key(event_id,volunteer_id)
---,constraint event_event_volunteer foreign key(event_id) references event_details(id),
---constraint vol_event_volunteer foreign key(volunteer_id) references volunteer(volunteer_id)
+constraint event_person_pk primary key(event_id,volunteer_id),
+constraint event_event_volunteer foreign key(event_id) references event_details(id),
+constraint vol_event_volunteer foreign key(volunteer_id) references volunteer(volunteer_id)
 );
 drop table event_doctor;
 create table event_doctor(
 event_id varchar2(20) ,
 doctor_id varchar2(20),
-constraint event_doctor_pk primary key(event_id,doctor_id)
---,constraint event_event_doctor foreign key(event_id) references event_details(id),
---constraint doc_event_doctor foreign key(doctor_id) references doctor(doctor_id)
+constraint event_doctor_pk primary key(event_id,doctor_id),
+constraint event_event_doctor foreign key(event_id) references event_details(id),
+constraint doc_event_doctor foreign key(doctor_id) references doctor(doctor_id)
 );
 
 
