@@ -72,9 +72,11 @@ public class ExpensesDetailsController implements Initializable
         if (setActionType()) {
             new ShowAlertDialogue().infoBox("Expense Added Successfully!", null, "Add Expense Details");
             populateTableView();
+            expTypeComboBox.setValue("");
             expNameTextField.setText("");
             expAmountTextField.setText("");
             expDescriptionTextField1.setText("");
+            expDate.getEditor().setText("");
         } else {
             new ShowAlertDialogue().infoBox("Expense Adding Failed!", null, "Add Expense Details");
         }
@@ -139,13 +141,13 @@ public class ExpensesDetailsController implements Initializable
 
     private void displayInformation(String id) {
 
-        String[] list = new String[4];
+        String[] list = new String[5];
         String[] info = expModel.showExpenseDetails(list, id);
-        expTypeComboBox.setValue(info[2]);
-        expNameTextField.setText(info[3]);
-        expDescriptionTextField1.setText(info[4]);
-        expAmountTextField.setText(info[5]);
-
+        expTypeComboBox.setValue(info[1]);
+        expNameTextField.setText(info[2]);
+        expDescriptionTextField1.setText(info[3]);
+        expAmountTextField.setText(info[4]);
+        expDate.getEditor().setText(info[5]);
     }
 
 

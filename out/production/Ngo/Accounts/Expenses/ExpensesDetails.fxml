@@ -46,7 +46,7 @@
                         <JFXTextField fx:id="expNameTextField" layoutX="112.0" layoutY="109.0" prefHeight="39.0" prefWidth="245.0" promptText="Title" />
                         <JFXTextField fx:id="expAmountTextField" layoutX="438.0" layoutY="109.0" prefHeight="39.0" prefWidth="245.0" promptText="Amount" />
                         <FontAwesomeIconView glyphName="SELLSY" layoutX="59.0" layoutY="136.0" size="20" text="" />
-                        <JFXButton fx:id="expConfirmBtn" graphicTextGap="22.0" layoutX="309.0" layoutY="296.0" onMouseClicked="#expConfirmBtn" onAction="#expConfirmBtn" prefHeight="31.0" prefWidth="82.0" styleClass="password-change" text="Add" />
+                        <JFXButton fx:id="expConfirmBtn" graphicTextGap="22.0" layoutX="193.0" layoutY="297.0" onAction="#expConfirmBtn" onMouseClicked="#expConfirmBtn" prefHeight="31.0" prefWidth="82.0" styleClass="password-change" text="Add" />
                         <JFXComboBox fx:id="expTypeComboBox" editable="true" labelFloat="true" layoutX="234.0" layoutY="35.0" prefHeight="39.0" prefWidth="245.0" promptText="Type" />
                         <FontAwesomeIconView glyphName="MONEY" layoutX="391.0" layoutY="135.0" size="20" />
                         <EmojiOneView glyphName="REGIONAL_INDICATOR_T" layoutX="181.0" layoutY="61.0" size="21" />
