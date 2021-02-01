@@ -2,14 +2,17 @@ package EventDetails;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 
+import java.net.URL;
 import java.sql.SQLException;
+import java.util.ResourceBundle;
 
-public class EventsEmployeeController {
+public class EventsEmployeeController implements Initializable {
     @FXML
     private Pane eventDetailsPane;
 
@@ -43,5 +46,10 @@ public class EventsEmployeeController {
     @FXML
     void handleRemoveDoctorOption(ActionEvent event) {
 
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        populateTableView();
     }
 }

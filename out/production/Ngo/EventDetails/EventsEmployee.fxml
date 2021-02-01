@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: #ffe0e3;" styleClass="supply-button" stylesheets="@../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EventDetails.EventsEmployeeController">
+    <children>
+        <Pane fx:id="eventDetailsPane" prefHeight="1275.0" prefWidth="1473.0">
+            <children>
+                <Label layoutX="73.0" layoutY="15.0" prefHeight="98.0" prefWidth="511.0" text="Events">
+                    <font>
+                        <Font name="Californian FB" size="36.0" />
+                    </font>
+                </Label>
+                <ScrollPane layoutX="200.0" layoutY="351.0" prefHeight="500.0" prefWidth="1000.0">
+                    <content>
+                        <TableView fx:id="eventTable" prefHeight="500.0" prefWidth="1000.0" style="-fx-prompt-text-fill: #8B0000; -fx-text-fill: BLACK; -jfx-focus-color: #8B0000;" styleClass="search-field" stylesheets="@../../theme.css">
+                            <columns>
+                                <TableColumn fx:id="colEventID" editable="false" maxWidth="300.0" minWidth="225.99996948242188" prefWidth="334.0" text="Event ID" />
+                                <TableColumn fx:id="colEventName" editable="false" minWidth="240.0" prefWidth="333.0" text="Event Name" />
+                                <TableColumn fx:id="colEventDate" editable="false" maxWidth="333.0" minWidth="-Infinity" prefWidth="333.0" text="Event Date" />
+                            </columns>
+                            <contextMenu>
+                                <ContextMenu>
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#handleRemoveDoctorOption" text="Remove" />
+                                    </items>
+                                </ContextMenu>
+                            </contextMenu>
+                        </TableView>
+                    </content>
+                </ScrollPane>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
