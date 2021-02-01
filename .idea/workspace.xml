@@ -32,9 +32,6 @@
       <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Medicine/MedicineController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Medicine/MedicineController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Vaccine/VaccineController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Vaccine/VaccineController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/supplyDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/supplyDetails.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/ManageEvent/ViewAssignees/Doctors/AddDoctorToEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/ManageEvent/ViewAssignees/Doctors/AddDoctorToEventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/ManageEvent/ViewAssignees/Doctors/AddDoctorToEventModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/ManageEvent/ViewAssignees/Doctors/AddDoctorToEventModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/ManageEvent/ViewAssignees/Employee/AddEmployeesToEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/ManageEvent/ViewAssignees/Employee/AddEmployeesToEventController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
