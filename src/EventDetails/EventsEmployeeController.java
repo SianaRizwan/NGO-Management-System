@@ -2,12 +2,16 @@ package EventDetails;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
@@ -51,5 +55,23 @@ public class EventsEmployeeController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         populateTableView();
+        manageEventUI();
+    }
+
+    private void manageEventUI(){
+        eventTable.setRowFactory(tv -> {
+            TableRow<Events> row = new TableRow<>();
+            row.setOnMouseClicked(event -> {
+                if(event.getClickCount()==2 && (!row.isEmpty())){
+                    try {
+                        AnchorPane pane = FXMLLoader.load(getClass().getResource("ManageEvent/ManageEventEmployees.fxml"));
+                        eventDetailsPane.getChildren().setAll(pane);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+            return row;
+        });
     }
 }
