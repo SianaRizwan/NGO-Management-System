@@ -1,6 +1,7 @@
 package EventDetails.ManageEvent.ViewAssignees.Volunteers;
 
 import EventDetails.ManageEvent.ManageEventController;
+import EventDetails.ManageEvent.ViewAssignees.Doctors.AddDoctorToEventController;
 import Utilities.ShowAlertDialogue;
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXTextField;
@@ -34,7 +35,7 @@ public class AddVolunteersToEventController {
     AddVolunteersToEventModel addVolunteersToEventModel = new AddVolunteersToEventModel();
     JFXCheckBox[] checkBox = new JFXCheckBox[addVolunteersToEventModel.getTotalID()];
     String[] list = new String[addVolunteersToEventModel.getTotalID()];
-    ArrayList<String> selectedID = new ArrayList<String>();
+    ArrayList<String> selectedID = new ArrayList<>();
 
     private void setName() {
         String[] id = addVolunteersToEventModel.getVolunteerList(list);
@@ -43,24 +44,7 @@ public class AddVolunteersToEventController {
     }
 
     private void setCheckBoxValues(String[] id) {
-        int k = 0, j = 0;
-
-        for (int i = 0; i < addVolunteersToEventModel.getTotalID(); i++) {
-
-            checkBox[i] = new JFXCheckBox(id[i]);
-            checkBox[i].setAlignment(Pos.CENTER_LEFT);
-            if (i < 9) {
-                gridPane1.addRow(i, checkBox[i]);
-            }
-            if (i > 8 && i < 18) {
-                gridPane2.addRow(k, checkBox[i]);
-                k++;
-            }
-            if (i > 17 && i < 27) {
-                gridPane3.addRow(j, checkBox[i]);
-                j++;
-            }
-        }
+        AddDoctorToEventController.checkBox(id, addVolunteersToEventModel.getTotalID(), checkBox, gridPane1, gridPane2, gridPane3);
     }
 
     private void getSelectedVolunteers() {
@@ -92,7 +76,7 @@ public class AddVolunteersToEventController {
 
     @FXML
     void handleBackButton() throws IOException {
-        FXMLLoader.load(getClass().getResource("../../ManageEvent/ManageEvent.fxml"));
+        FXMLLoader.load(getClass().getResource("../../../ManageEvent/ManageEvent.fxml"));
         Stage stage = (Stage) viewDetails.getScene().getWindow();
         stage.close();
     }
@@ -103,6 +87,8 @@ public class AddVolunteersToEventController {
         //System.out.println(selectedID);
         if (addVolunteersToEventModel.isAssignVolunteerSuccessful(selectedID, new ManageEventController().getEventID())) {
             new ShowAlertDialogue().infoBox("Volunteers Assigned!", null, "Assign Volunteer");
+            refreshGridPane();
+            setName();
         } else {
             new ShowAlertDialogue().infoBox("Volunteers Assigning Failed!", null, "Assign Volunteer");
         }
@@ -111,5 +97,6 @@ public class AddVolunteersToEventController {
     @FXML
     public void handleSearch() {
         setSearchedName(searchOption.getText());
+
     }
 }

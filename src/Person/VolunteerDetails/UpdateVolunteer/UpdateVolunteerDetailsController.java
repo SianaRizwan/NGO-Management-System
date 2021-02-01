@@ -4,9 +4,12 @@ import Person.PersonalInformation;
 import Person.Validation;
 import Utilities.ShowAlertDialogue;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import org.controlsfx.control.textfield.TextFields;
+
+import java.io.IOException;
 
 public class UpdateVolunteerDetailsController {
     @FXML
@@ -51,7 +54,9 @@ public class UpdateVolunteerDetailsController {
         VolunteerOccupation.setText("");
         VolunteerPhoneNumber.setText("");
     }
-
+    public void handleBackButton() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("../volunteerDetails.fxml"));
+        updateVolunteerPane.getChildren().setAll(pane);    }
     public void IDOnEnter() {
         String[] list = new String[4];
         String[] info = updateVolunteerModel.setVolunteerInformation(list, VolunteerID.getText());

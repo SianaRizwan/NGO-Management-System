@@ -1,21 +1,25 @@
 package EventDetails.ManageEvent;
 
+import Person.Validation;
+import Utilities.ShowAlertDialogue;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.*;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import javafx.stage.*;
+import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import org.controlsfx.control.textfield.TextFields;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class ManageEventController {
     @FXML
@@ -42,6 +46,7 @@ public class ManageEventController {
 
     @FXML
     private FontAwesomeIconView addDoctor;
+
     @FXML
     void handleAddEmp() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewAssignees/Employee/addEmployees.fxml"));
@@ -62,13 +67,28 @@ public class ManageEventController {
     }
 
     @FXML
-    void handleConfirmBtn() {
+    void handleConfirmBtn() throws ParseException {
+        Date dateOfTheEvent = new SimpleDateFormat("yyyy-dd-MM").parse(eventDate.getEditor().getText());
+        if (new ManageEventModel().saveEventInformation(eventName.getText().trim(),dateOfTheEvent, Integer.parseInt(estimatedBudget.getText())))
+            {
+                new ShowAlertDialogue().infoBox("Update Successful!", null, "Manage Event");
+                refresehFields();
+            }
+         else {
+            new ShowAlertDialogue().infoBox("Update Unsuccessful", null, "Manage Event");
+        }
+    }
 
+    private void refresehFields() {
+        eventName.setText("");
+        estimatedBudget.setText("");
+        eventDate.getEditor().setText("");
     }
 
     @FXML
-    void handleViewAssignedDoctor() {
-
+    void handleViewAssignedDoctor() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewAssignees/Doctors/viewAssignedDoctors.fxml"));
+        showList(loader, "Assigned Employees");
     }
 
     @FXML
@@ -96,7 +116,7 @@ public class ManageEventController {
     }
 
     private void setVisibility() {
-eventDoctorName.setVisible(true);
+        eventDoctorName.setVisible(true);
         docIcon.setVisible(true);
         docList.setVisible(true);
         addDoctor.setVisible(true);
@@ -104,34 +124,27 @@ eventDoctorName.setVisible(true);
     }
 
 
-    @FXML
-    void handleConfirmEmpBtn(ActionEvent event) {
 
-    }
-
-    @FXML
-    void handleConfirmVolBtn(ActionEvent event) {
-
-    }
 
     private static String eventID;
 
 
     public void handleEventID() {
         setEventID(eventName.getText().trim());
+        eventDate.getEditor().setText(new ManageEventModel().getEventDate(eventName.getText()));
         makeDoctorVisible();
     }
 
-    private void setEventID(String trim) {
-        eventID=trim;
+    private void setEventID(String id) {
+        eventID = id;
     }
 
     public static String getEventID() {
         return eventID;
     }
 
-    private void makeDoctorVisible(){
-        if (eventID.contains("H")){
+    private void makeDoctorVisible() {
+        if (eventID.contains("H")) {
             setVisibility();
         }
     }

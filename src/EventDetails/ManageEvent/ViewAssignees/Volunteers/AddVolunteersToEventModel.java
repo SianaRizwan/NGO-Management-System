@@ -23,7 +23,6 @@ public class AddVolunteersToEventModel {
     }
 
     protected String[] getVolunteerList(String[] info) {
-        List<String> list = new ArrayList<>();
         String sql = "select volunteer_ID from volunteer ";
 
         return ev.getList(info, sql);

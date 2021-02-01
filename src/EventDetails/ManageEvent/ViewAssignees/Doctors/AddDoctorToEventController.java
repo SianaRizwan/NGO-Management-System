@@ -12,6 +12,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
+import javax.swing.*;
+import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -43,9 +45,13 @@ public class AddDoctorToEventController {
     }
 
     private void setCheckBoxValues(String[] id) {
+        checkBox(id, addDoctorToEventModel.getTotalID(), checkBox, gridPane1, gridPane2, gridPane3);
+    }
+
+    public static void checkBox(String[] id, int totalID, JFXCheckBox[] checkBox, GridPane gridPane1, GridPane gridPane2, GridPane gridPane3) {
         int k = 0, j = 0;
 
-        for (int i = 0; i < addDoctorToEventModel.getTotalID(); i++) {
+        for (int i = 0; i < totalID; i++) {
 
             checkBox[i] = new JFXCheckBox(id[i]);
             checkBox[i].setAlignment(Pos.CENTER_LEFT);
@@ -89,13 +95,7 @@ public class AddDoctorToEventController {
     }
 
 
-    public void handleBackButton() throws IOException {
-        FXMLLoader.load(getClass().getResource("../../ManageEvent/ManageEvent.fxml"));
-        Stage stage = (Stage) viewDetails.getScene().getWindow();
-        stage.close();
-    }
-
-    public void handleSearch() {
+      public void handleSearch() {
         setSearchedName(searchOption.getText());
     }
 
@@ -104,8 +104,17 @@ public class AddDoctorToEventController {
         //System.out.println(selectedID);
         if (addDoctorToEventModel.isAssignVolunteerSuccessful(selectedID, new ManageEventController().getEventID())) {
             new ShowAlertDialogue().infoBox("Volunteers Assigned!", null, "Assign Volunteer");
+            refreshGridPane();
+            setName();
         } else {
             new ShowAlertDialogue().infoBox("Volunteers Assigning Failed!", null, "Assign Volunteer");
         }
+    }
+
+    @FXML
+     void handleBackButton() throws IOException {
+        FXMLLoader.load(getClass().getResource("../../../ManageEvent/ManageEvent.fxml"));
+        Stage stage = (Stage) viewDetails.getScene().getWindow();
+        stage.close();
     }
 }

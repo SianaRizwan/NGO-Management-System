@@ -1,6 +1,7 @@
 package EventDetails.ManageEvent.ViewAssignees;
 
 import Utilities.OracleConnection;
+import javafx.collections.ObservableList;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

@@ -23,12 +23,12 @@
     </Label>
             <HBox layoutX="88.0" layoutY="176.0" opacity="0.8" prefHeight="100.0" prefWidth="1300.0" spacing="20.0" style="-fx-background-color: #8B0000;">
                <children>
-                  <Label text="Ongoing Event :" textFill="WHITE">
+                  <Label text="Current Event :" textFill="WHITE">
                      <font>
                         <Font name="Californian FB" size="25.0" />
                      </font>
                   </Label>
-                  <JFXTextField alignment="CENTER" labelFloat="true" prefHeight="39.0" prefWidth="301.0" promptText="Current event (if any)" />
+                  <JFXTextField fx:id="currentEvent" alignment="CENTER" editable="false" labelFloat="true" prefHeight="39.0" prefWidth="301.0" />
                   <Label layoutX="45.0" layoutY="45.0" text="Upcoming Event :" textFill="WHITE">
                      <font>
                         <Font name="Californian FB" size="25.0" />
@@ -37,7 +37,7 @@
                         <Insets left="120.0" />
                      </HBox.margin>
                   </Label>
-                  <JFXTextField alignment="CENTER" labelFloat="true" layoutX="228.0" layoutY="45.0" prefHeight="39.0" prefWidth="301.0" promptText="Upcoming event (if any)" />
+                  <JFXTextField fx:id="upcomingEvent" alignment="CENTER" editable="false" labelFloat="true" layoutX="228.0" layoutY="45.0" prefHeight="39.0" prefWidth="301.0" />
                </children>
                <padding>
                   <Insets bottom="35.0" left="35.0" right="35.0" top="35.0" />
