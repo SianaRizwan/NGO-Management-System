@@ -37,7 +37,7 @@ public class addDonationController {
         addDonationPane.getChildren().setAll(pane);
     }
     @FXML
-    void handleConfirmBtn(ActionEvent event) throws ParseException {
+    private void handleConfirmBtn() throws ParseException {
         Date donation_date = new SimpleDateFormat("MM/dd/yyyy").parse(donationDate.getEditor().getText());
         if(donationModel.isDonationAddSuccessful(Integer.parseInt(donationAmount.getText()),donation_date,donorId.getText())){
             new ShowAlertDialogue().infoBox("Donation Added Successfully!",null,"Add Donation");
@@ -55,7 +55,7 @@ public class addDonationController {
         donationAmount.setText("");
     }
     public void initialize() {
-        TextFields.bindAutoCompletion(donorId, new addDonationModel().getItemNameList("select DOnor_id from DOnor"));
+        TextFields.bindAutoCompletion(donorId, new addDonationModel().getItemNameList("select DOnor_ID from DOnor"));
     }
     public void handleDonorID() {
         donorName.setText(new addDonationModel().getDonorName(donorId.getText()));

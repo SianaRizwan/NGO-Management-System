@@ -313,27 +313,21 @@ id varchar2(20) primary key,
 don_date date ,
 amount number,
 donor_id varchar2(15),
-type number,--1:regular,2: non regular
 constraint don_history_fk foreign key (donor_id) references donor(donor_id)
 );
 
 
 ---- generate donation_id
 set serveroutput on;
-CREATE OR REPLACE FUNCTION GET_donation_id(ftype number)
+CREATE OR REPLACE FUNCTION GET_donation_id
 RETURN varchar2
 IS
 d_ID varchar2(20);
 id number;
-dd varchar2(10);
+
 
 BEGIN
 SELECT  max(ID) INTO d_ID FROM donation_history;
-
-dbms_output.put_line(d_id);
-if ftype=1 then dd:='RE';
-elsif ftype=2 then dd:='NR';
-end if;
 
 IF d_ID IS NULL --- Does not exist
 THEN
@@ -346,7 +340,7 @@ select max(substr(id,2)) into id from donation_history ;
 
 END IF;
 
-RETURN NVL((dd||id),-1); --- -1 IS THE ERROR FLAG
+RETURN NVL((id),-1); --- -1 IS THE ERROR FLAG
 
 END;
 /
@@ -358,7 +352,7 @@ BEFORE INSERT ON donation_history
 FOR EACH ROW
 BEGIN
 
-:NEW.ID := get_donation_id(:new.type);
+:NEW.ID := get_donation_id();
 
 END;
 /

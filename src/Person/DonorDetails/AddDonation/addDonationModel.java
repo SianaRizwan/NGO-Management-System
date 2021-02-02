@@ -55,7 +55,7 @@ public class addDonationModel {
     protected String getDonorName(String donorID){
         try {
             OracleConnection oc=new OracleConnection();
-            String sql="select name from DOnor where DOnor_id=?";
+            String sql="select name from DOnor where DOnor_ID=?";
             PreparedStatement ps=oc.conn.prepareStatement(sql);
             ps.setString(1,donorID);
             ResultSet rs=ps.executeQuery();
