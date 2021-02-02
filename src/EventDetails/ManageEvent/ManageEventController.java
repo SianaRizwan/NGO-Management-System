@@ -1,11 +1,9 @@
 package EventDetails.ManageEvent;
 
-import Person.Validation;
 import Utilities.ShowAlertDialogue;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -72,14 +70,14 @@ public class ManageEventController {
         if (new ManageEventModel().saveEventInformation(eventName.getText().trim(),dateOfTheEvent, Integer.parseInt(estimatedBudget.getText())))
             {
                 new ShowAlertDialogue().infoBox("Update Successful!", null, "Manage Event");
-                refresehFields();
+                refreshFields();
             }
          else {
             new ShowAlertDialogue().infoBox("Update Unsuccessful", null, "Manage Event");
         }
     }
 
-    private void refresehFields() {
+    private void refreshFields() {
         eventName.setText("");
         estimatedBudget.setText("");
         eventDate.getEditor().setText("");
