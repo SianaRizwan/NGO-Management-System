@@ -27,7 +27,7 @@ public class AddDoctorToEventModel {
     }
 
 
-    public boolean isAssignDoctorSuccessful(ArrayList<String> id, String eventID) {
+    public boolean isAssignVolunteerSuccessful(ArrayList<String> id, String eventID) {
         String sql = "insert into event_doctor values(?,?)";
         return ev.isAssignSuccessful(id, eventID, sql);
     }

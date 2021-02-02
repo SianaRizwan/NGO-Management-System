@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat;
 public class ViewAssignedMedModel {
     protected ObservableList<Medicine> getTableRecords(String eventID) throws SQLException {
         String sql = "select v.ID,v.name,v.QTY,v.UNIT_PRICE,v.EXPIRE_DATE,v.MANUFACTURER from event_health ev,HEALTH_PRODUCT v where ev.health_id=v.ID and ev.event_id=?";
-        javafx.collections.ObservableList<SupplyDetails.Medicine.Medicine> medList = FXCollections.observableArrayList();
+        ObservableList<Medicine> medList = FXCollections.observableArrayList();
         try {
             OracleConnection oc = new OracleConnection();
             PreparedStatement ps = oc.conn.prepareStatement(sql);

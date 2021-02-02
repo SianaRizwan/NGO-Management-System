@@ -67,7 +67,7 @@ public class AddDoctorToEventController {
         }
     }
 
-    private void getSelectedDoctors() {
+    private void getSelectedVolunteers() {
         for (int i = 0; i < addDoctorToEventModel.getTotalID(); i++) {
             if (checkBox[i].isSelected()) {
                 selectedID.add(checkBox[i].getText());
@@ -98,9 +98,9 @@ public class AddDoctorToEventController {
     }
 
     public void handleConfirmButton() {
-        getSelectedDoctors();
+        getSelectedVolunteers();
         //System.out.println(selectedID);
-        if (addDoctorToEventModel.isAssignDoctorSuccessful(selectedID, new ManageEventController().getEventID())) {
+        if (addDoctorToEventModel.isAssignVolunteerSuccessful(selectedID, new ManageEventController().getEventID())) {
             new ShowAlertDialogue().infoBox("Volunteers Assigned!", null, "Assign Volunteer");
             refreshGridPane();
             setName();
@@ -111,7 +111,7 @@ public class AddDoctorToEventController {
 
     @FXML
      void handleBackButton() throws IOException {
-        FXMLLoader.load(getClass().getResource("../../../ManageEvent/ManageEvent.fxml"));
+        FXMLLoader.load(getClass().getResource("../../ManageEvent.fxml"));
         Stage stage = (Stage) viewDetails.getScene().getWindow();
         stage.close();
     }

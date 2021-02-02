@@ -54,6 +54,11 @@ public class donorDetailsController {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("AddDonor/addDonor.fxml"));
         DonorDetailsPane.getChildren().setAll(pane);
     }
+    @FXML
+    private void handleAddDonationAmount() throws IOException{
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("AddDonation/addDonation.fxml"));
+        DonorDetailsPane.getChildren().setAll(pane);
+    }
     public void initialize() {
                 populateTableView();
         viewDetails();

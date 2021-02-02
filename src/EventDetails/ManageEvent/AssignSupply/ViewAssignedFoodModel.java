@@ -12,7 +12,7 @@ import java.sql.SQLException;
 public class ViewAssignedFoodModel {
     protected ObservableList<Food> getTableRecords(String eventID) throws SQLException {
         String sql = "select v.ID,v.name,v.QTY,v.UNIT_PRICE,v.EXPIRE_DATE,v.SUPPLIER from event_food ev,FOOD v where ev.food_id=v.ID and ev.event_id=?";
-        javafx.collections.ObservableList<Food> foodList = FXCollections.observableArrayList();
+        ObservableList<Food> foodList = FXCollections.observableArrayList();
         try {
             OracleConnection oc = new OracleConnection();
             PreparedStatement ps = oc.conn.prepareStatement(sql);

@@ -43,6 +43,22 @@ public class ManageEventModel {
         return null;
 
     }
+    protected String getEventName(String eventID){
+        try {
+            OracleConnection oc=new OracleConnection();
+            String sql="select name from event_details where id=?";
+            PreparedStatement ps=oc.conn.prepareStatement(sql);
+            ps.setString(1,eventID);
+            ResultSet rs=ps.executeQuery();
+            while(rs.next()){
+                return rs.getString(1);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+
+    }
     protected boolean saveEventInformation(String eventID, Date eventDate, int budget){
         try {
             java.sql.Date sqlDate = new java.sql.Date(eventDate.getTime());

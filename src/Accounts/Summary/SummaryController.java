@@ -19,5 +19,8 @@ public class SummaryController {
         Pane pane = FXMLLoader.load(getClass().getResource("SalaryBarchart/salarychart.fxml"));
         barChartpane.getChildren().setAll(pane);
     }
-
+    public void handleExpensesChart() throws IOException {
+        Pane pane = FXMLLoader.load(getClass().getResource("ExpenseBarchart/expenseschart.fxml"));
+        barChartpane.getChildren().setAll(pane);
+    }
 }

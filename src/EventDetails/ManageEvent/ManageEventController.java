@@ -1,5 +1,8 @@
 package EventDetails.ManageEvent;
 
+import EventDetails.ManageEvent.ViewAssignees.Doctors.ViewAssignedDoctorsController;
+import EventDetails.ManageEvent.ViewAssignees.Employee.ViewAssignedEmployeesController;
+import EventDetails.ManageEvent.ViewAssignees.Volunteers.ViewAssignedVolunteersController;
 import Utilities.ShowAlertDialogue;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
@@ -24,10 +27,13 @@ public class ManageEventController {
     private Pane createEventPane;
 
     @FXML
-    private JFXTextField eventName;
+    private JFXTextField eventID;
 
     @FXML
     private JFXTextField estimatedBudget;
+    @FXML
+    private JFXTextField eventName;
+
 
     @FXML
     private JFXDatePicker eventDate;
@@ -67,38 +73,64 @@ public class ManageEventController {
     @FXML
     void handleConfirmBtn() throws ParseException {
         Date dateOfTheEvent = new SimpleDateFormat("yyyy-dd-MM").parse(eventDate.getEditor().getText());
-        if (new ManageEventModel().saveEventInformation(eventName.getText().trim(),dateOfTheEvent, Integer.parseInt(estimatedBudget.getText())))
+        if (new ManageEventModel().saveEventInformation(eventID.getText().trim(),dateOfTheEvent, Integer.parseInt(estimatedBudget.getText())))
             {
                 new ShowAlertDialogue().infoBox("Update Successful!", null, "Manage Event");
-                refreshFields();
+                refresehFields();
             }
          else {
             new ShowAlertDialogue().infoBox("Update Unsuccessful", null, "Manage Event");
         }
     }
 
-    private void refreshFields() {
-        eventName.setText("");
+    private void refresehFields() {
+        eventID.setText("");
         estimatedBudget.setText("");
         eventDate.getEditor().setText("");
+        eventName.setText("");
     }
 
     @FXML
     void handleViewAssignedDoctor() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewAssignees/Doctors/viewAssignedDoctors.fxml"));
-        showList(loader, "Assigned Employees");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewAssignees/Doctors/ViewAssignedDoctors.fxml"));
+        AnchorPane pane = loader.load();
+        ViewAssignedDoctorsController view = loader.getController();
+        view.populateTableView(eventID.getText());
+        Stage stage = new Stage(StageStyle.DECORATED);
+        stage.setTitle("Assigned Doctors");
+        stage.setScene(new Scene(pane));
+        stage.show();
+
     }
 
     @FXML
     void handleViewAssignedEmployees() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewAssignees/Employee/viewAssignedEmployees.fxml"));
-        showList(loader, "Assigned Employees");
+        AnchorPane pane = loader.load();
+        ViewAssignedEmployeesController view = loader.getController();
+        view.populateTableView(eventID.getText());
+        Stage stage = new Stage(StageStyle.DECORATED);
+        stage.setTitle("Assigned Employees");
+        stage.setScene(new Scene(pane));
+        stage.show();
+       /* FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewAssignees/Employee/viewAssignedEmployees.fxml"));
+        showList(loader, "Assigned Employees");*/
     }
 
     @FXML
     void handleViewAssignedVolunteers() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewAssignees/Volunteers/viewAssignedVolunteers.fxml"));
+        AnchorPane pane = loader.load();
+        ViewAssignedVolunteersController view = loader.getController();
+        view.populateTableView(eventID.getText());
+        Stage stage = new Stage(StageStyle.DECORATED);
+        stage.setTitle("Assigned Volunteers");
+        stage.setScene(new Scene(pane));
+        stage.show();
+/*
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewAssignees/Volunteers/viewAssignedVolunteers.fxml"));
         showList(loader, "Assigned Volunteers");
+*/
     }
 
     private void showList(FXMLLoader loader, String s) throws IOException {
@@ -110,7 +142,7 @@ public class ManageEventController {
     }
 
     public void initialize() {
-        TextFields.bindAutoCompletion(eventName, new ManageEventModel().getItemNameList("select id from event_details"));
+        TextFields.bindAutoCompletion(eventID, new ManageEventModel().getItemNameList("select id from event_details"));
     }
 
     private void setVisibility() {
@@ -124,25 +156,27 @@ public class ManageEventController {
 
 
 
-    private static String eventID;
+    private static String event_id;
 
 
     public void handleEventID() {
-        setEventID(eventName.getText().trim());
-        eventDate.getEditor().setText(new ManageEventModel().getEventDate(eventName.getText()));
+        setEventID(eventID.getText().trim());
+        eventDate.getEditor().setText(new ManageEventModel().getEventDate(eventID.getText()));
+        eventName.setText(new ManageEventModel().getEventName(eventID.getText()));
+
         makeDoctorVisible();
     }
 
     private void setEventID(String id) {
-        eventID = id;
+        event_id = id;
     }
 
     public static String getEventID() {
-        return eventID;
+        return event_id;
     }
 
     private void makeDoctorVisible() {
-        if (eventID.contains("H")) {
+        if (event_id.contains("H")) {
             setVisibility();
         }
     }

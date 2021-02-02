@@ -14,7 +14,7 @@ public class EventsModel {
     protected int setTotalCurrentEvent(){
         try {
             OracleConnection oc=new OracleConnection();
-            String  sql="select count(id) from event_details where EXTRACT(month FROM sysdate)=EXTRACT(month FROM event_date)";
+            String  sql="select count(id) from event_details where EXTRACT(month FROM sysdate)=EXTRACT(month FROM event_date) and EXTRACT(year FROM sysdate)=EXTRACT(year FROM event_date)";
             PreparedStatement ps=oc.conn.prepareStatement(sql);
             ResultSet rs=ps.executeQuery();
             while (rs.next()){
@@ -42,8 +42,7 @@ public class EventsModel {
         }
         return 0;
     }
-
-    public ObservableList<Events> getEventsTableRecords() throws SQLException{
+    public ObservableList<Events> getEventsTableRecords() throws SQLException {
         String sql = "select id,name,event_date from event_details where (EXTRACT(month FROM sysdate)<=EXTRACT(month FROM event_date) and EXTRACT(year FROM sysdate)=EXTRACT(year FROM event_date)) or (EXTRACT(year FROM sysdate)<EXTRACT(year FROM event_date))";
         ObservableList<Events> eventsList = FXCollections.observableArrayList();
         try {
@@ -68,4 +67,5 @@ public class EventsModel {
             throw e;
         }
     }
+
 }
