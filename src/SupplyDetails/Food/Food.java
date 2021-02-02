@@ -23,6 +23,15 @@ public class Food {
         this.quantity = quantity;
     }
 
+    public Food(int price, int quantity, Date edate, String name, String supplier, String id) {
+        this.price = price;
+        this.quantity = quantity;
+        this.edate = edate;
+        this.name = name;
+        this.supplier = supplier;
+        this.id = id;
+    }
+
     public Date getPdate() {
         return pdate;
     }

@@ -1,6 +1,6 @@
-package EventDetails.ManageEvent.AssignSupply.EventMed;
+package EventDetails.ManageEvent.AssignSupply;
 
-import SupplyDetails.Medicine.Medicine;
+import SupplyDetails.Food.Food;
 import Utilities.OracleConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -11,10 +11,10 @@ import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
-public class ViewAssignedMedModel {
-    protected ObservableList<Medicine> getTableRecords(String eventID) throws SQLException {
-        String sql = "select v.ID,v.name,v.QTY,v.UNIT_PRICE,v.EXPIRE_DATE,v.MANUFACTURER from event_health ev,HEALTH_PRODUCT v where ev.health_id=v.ID and ev.event_id=?";
-        javafx.collections.ObservableList<SupplyDetails.Medicine.Medicine> medList = FXCollections.observableArrayList();
+public class ViewAssignedFoodModel {
+    protected ObservableList<Food> getTableRecords(String eventID) throws SQLException {
+        String sql = "select v.ID,v.name,v.QTY,v.UNIT_PRICE,v.EXPIRE_DATE,v.SUPPLIER from event_food ev,FOOD v where ev.food_id=v.ID and ev.event_id=?";
+        javafx.collections.ObservableList<Food> foodList = FXCollections.observableArrayList();
         try {
             OracleConnection oc = new OracleConnection();
             PreparedStatement ps = oc.conn.prepareStatement(sql);
@@ -26,18 +26,18 @@ public class ViewAssignedMedModel {
                 int qty = rs.getInt(3);
                 int price = rs.getInt(4);
                 java.util.Date date = rs.getDate(5);
-                String manufacturer = rs.getString(6);
+                String supplier = rs.getString(6);
 
                 DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
                 String expDate = df.format(date);
 
-                Medicine medicine = new Medicine(price,qty,expDate,name,manufacturer,id);
+                Food food = new Food(price,qty,date,name,supplier,id);
 
-                medList.add(medicine);
+                foodList.add(food);
             }
-            return medList;
+            return foodList;
         } catch (Exception e) {
-            System.out.println("getTableRecords : MedModel");
+            System.out.println("getTableRecords : FoodModel");
             e.printStackTrace();
             throw e;
         }
