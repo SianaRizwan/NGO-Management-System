@@ -8,8 +8,6 @@ import javafx.collections.ObservableList;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 
 public class ViewAssignedFoodModel {
     protected ObservableList<Food> getTableRecords(String eventID) throws SQLException {
@@ -25,13 +23,10 @@ public class ViewAssignedFoodModel {
                 String name = rs.getString(2);
                 int qty = rs.getInt(3);
                 int price = rs.getInt(4);
-                java.util.Date date = rs.getDate(5);
+                java.util.Date expDate = rs.getDate(5);
                 String supplier = rs.getString(6);
 
-                DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
-                String expDate = df.format(date);
-
-                Food food = new Food(price,qty,date,name,supplier,id);
+                Food food = new Food(price,qty,expDate,name,supplier,id);
 
                 foodList.add(food);
             }
