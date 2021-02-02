@@ -903,3 +903,6 @@ DROP TABLE EMPLOYEE;
 DROP TABLE designation;
 insert into expenses(type,title,description,amount,expense_date) values ('Utility','Water','One month',3000,Date '2021-01-31');
 insert into expenses(type,title,description,amount,expense_date) values ('Utility','Gas cylinder','One month',3780,Date '2021-01-31');
+
+select dt.id,dt.don_date,TO_number(To_CHAR(dt.don_date,'MM')) As month,TO_number(To_CHAR(dt.don_date,'YY')) As year,dt.amount,dt.donor_id,d.name FROM donation_history dt,DOnor d where d.DOnor_id=dt.donor_id; 
+
