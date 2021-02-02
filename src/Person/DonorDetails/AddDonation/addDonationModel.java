@@ -28,11 +28,11 @@ public class addDonationModel {
     }
     OracleConnection oc = new OracleConnection();
     private String ID;
-    protected boolean isDonationAddSuccessful(int amount,Date donation_date) {
+    protected boolean isDonationAddSuccessful(int amount,Date donation_date,String donorId) {
 
         try {
             java.sql.Date sqlDate = new java.sql.Date(donation_date.getTime());
-
+            setDonorId(donorId);
             String sql = "insert into donation_history(don_date,amount,donor_id) values(?,?,?)";
             PreparedStatement ps = oc.conn.prepareStatement(sql);
 
@@ -55,7 +55,7 @@ public class addDonationModel {
     protected String getDonorName(String donorID){
         try {
             OracleConnection oc=new OracleConnection();
-            String sql="select name from DOnor where id=?";
+            String sql="select name from DOnor where DOnor_id=?";
             PreparedStatement ps=oc.conn.prepareStatement(sql);
             ps.setString(1,donorID);
             ResultSet rs=ps.executeQuery();

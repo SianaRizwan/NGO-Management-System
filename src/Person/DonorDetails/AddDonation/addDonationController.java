@@ -39,7 +39,7 @@ public class addDonationController {
     @FXML
     void handleConfirmBtn(ActionEvent event) throws ParseException {
         Date donation_date = new SimpleDateFormat("MM/dd/yyyy").parse(donationDate.getEditor().getText());
-        if(donationModel.isDonationAddSuccessful(Integer.parseInt(donationAmount.getText()),donation_date)){
+        if(donationModel.isDonationAddSuccessful(Integer.parseInt(donationAmount.getText()),donation_date,donorId.getText())){
             new ShowAlertDialogue().infoBox("Donation Added Successfully!",null,"Add Donation");
             refreshTextField();
         }
@@ -58,15 +58,7 @@ public class addDonationController {
         TextFields.bindAutoCompletion(donorId, new addDonationModel().getItemNameList("select DOnor_id from DOnor"));
     }
     public void handleDonorID() {
-        setDonorID(donorId.getText().trim());
         donorName.setText(new addDonationModel().getDonorName(donorId.getText()));
     }
-    private static String donorID;
-    private void setDonorID(String id) {
-        donorID = id;
-    }
 
-    public static String getEventID() {
-        return donorID;
-    }
 }
