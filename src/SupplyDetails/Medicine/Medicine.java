@@ -1,7 +1,5 @@
 package SupplyDetails.Medicine;
 
-import java.util.Date;
-
 public class Medicine {
     int price, quantity;
     String pdate, edate;
@@ -22,6 +20,15 @@ public class Medicine {
         this.price = price;
         this.quantity = quantity;
         this.name = name;
+    }
+
+    public Medicine(int price, int quantity, String edate, String name, String manufacturer, String id) {
+        this.price = price;
+        this.quantity = quantity;
+        this.edate = edate;
+        this.name = name;
+        this.manufacturer = manufacturer;
+        this.id = id;
     }
 
     public int getPrice() {

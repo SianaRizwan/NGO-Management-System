@@ -4,7 +4,6 @@ import EventDetails.ManageEvent.ManageEventEmployeesController;
 import Utilities.ShowAlertDialogue;
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXTextField;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
@@ -93,11 +92,6 @@ public class AddMedToEventController {
         String[] id = addMedToEventModel.getSearchedList(list, text);
         refreshGridPane();
         setCheckBoxValues(id);
-    }
-
-    @FXML
-    void handleBackButton(ActionEvent event) {
-
     }
 
     @FXML
