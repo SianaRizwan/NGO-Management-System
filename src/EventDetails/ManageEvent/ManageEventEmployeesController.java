@@ -8,7 +8,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -108,8 +107,15 @@ public class ManageEventEmployeesController {
     }
 
     @FXML
-    void handleViewAssignedSupply(MouseEvent event) {
-
+    void handleViewAssignedSupply() throws IOException {
+        if(eventID.contains("F")){
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("AssignSupply/viewAssignedFood.fxml"));
+            showList(loader, "View Assigned Food");
+        }
+        else {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("AssignSupply/EventMed/viewAssignedMed.fxml"));
+            showList(loader, "View Assigned Med");
+        }
     }
 
     @FXML
