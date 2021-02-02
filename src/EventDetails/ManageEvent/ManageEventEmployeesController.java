@@ -28,9 +28,6 @@ public class ManageEventEmployeesController {
     private JFXTextField estimatedBudget;
 
     @FXML
-    private FontAwesomeIconView docIcon;
-
-    @FXML
     private FontAwesomeIconView supplyList;
 
     @FXML
@@ -65,6 +62,22 @@ public class ManageEventEmployeesController {
     void handleViewAssignedVolunteers() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewAssignees/Volunteers/viewAssignedVolunteers.fxml"));
         showList(loader, "Assigned Volunteers");
+    }
+
+    private static String eventID;
+
+
+    public void handleEventID() {
+        setEventID(eventName.getText().trim());
+        eventDate.getEditor().setText(new ManageEventModel().getEventDate(eventName.getText()));
+    }
+
+    private void setEventID(String id) {
+        eventID = id;
+    }
+
+    public static String getEventID() {
+        return eventID;
     }
 
     @FXML
