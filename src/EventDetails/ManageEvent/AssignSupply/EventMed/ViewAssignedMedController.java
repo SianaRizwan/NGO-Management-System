@@ -1,38 +1,69 @@
 package EventDetails.ManageEvent.AssignSupply.EventMed;
 
-import javafx.event.ActionEvent;
+import EventDetails.ManageEvent.ManageEventController;
+import SupplyDetails.Medicine.Medicine;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.sql.SQLException;
 
 public class ViewAssignedMedController {
     @FXML
     private AnchorPane viewDetails;
 
     @FXML
-    private TableView<?> informationTable;
+    private TableView<Medicine> informationTable;
 
     @FXML
-    private TableColumn<?, ?> colId;
+    private TableColumn<Medicine, String> colId;
 
     @FXML
-    private TableColumn<?, ?> colName;
+    private TableColumn<Medicine, String> colName;
 
     @FXML
-    private TableColumn<?, ?> colQuantity;
+    private TableColumn<Medicine, Integer> colQuantity;
 
     @FXML
-    private TableColumn<?, ?> colPrice;
+    private TableColumn<Medicine, Integer> colPrice;
 
     @FXML
-    private TableColumn<?, ?> colExpDate;
+    private TableColumn<Medicine, String> colExpDate;
 
     @FXML
-    private TableColumn<?, ?> colManufacturer;
+    private TableColumn<Medicine, String> colManufacturer;
+
+    ViewAssignedMedModel viewAssignedMedModel = new ViewAssignedMedModel();
 
     @FXML
-    void handleBackButton(ActionEvent event) {
+    void handleBackButton() throws IOException {
+        FXMLLoader.load(getClass().getResource("../../../ManageEvent/ManageEventEmployees.fxml"));
+        Stage stage = (Stage) viewDetails.getScene().getWindow();
+        stage.close();
+    }
 
+    private void populateTableView(){
+        colId.setCellValueFactory(new PropertyValueFactory<>("id"));
+        colName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        colQuantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+        colPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
+        colExpDate.setCellValueFactory(new PropertyValueFactory<>("edate"));
+        colManufacturer.setCellValueFactory(new PropertyValueFactory<>("manufacturer"));
+
+        try {
+            informationTable.setItems(viewAssignedMedModel.getTableRecords(new ManageEventController().getEventID()));
+        } catch (SQLException e) {
+            System.out.println("viewMedController: initialize");
+            e.printStackTrace();
+        }
+    }
+
+    public void initialize() {
+        populateTableView();
     }
 }
