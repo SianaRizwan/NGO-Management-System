@@ -802,7 +802,7 @@ BEGIN
 END;
 /
 
-
+-----incomplete
 drop table supply_event;
 create table supply_event(
 event_id varchar2(20) primary key,
@@ -833,6 +833,22 @@ doctor_id varchar2(20),
 constraint event_doctor_pk primary key(event_id,doctor_id) ,
 constraint event_event_doctor foreign key(event_id) references event_details(id),
 constraint doc_event_doctor foreign key(doctor_id) references doctor(doctor_id)
+);
+
+create table event_food(
+event_id varchar2(20),
+food_id VARCHAR2(15),
+constraint event_food_pk primary key(event_id,food_id),
+constraint event_event_food foreign key(event_id) references event_details(id),
+constraint suply_event_food foreign key(food_id) references FOOD(ID)
+);
+
+create table event_health(
+event_id varchar2(20),
+health_id VARCHAR2(15),
+constraint event_health_pk primary key(event_id,health_id),
+constraint event_event_health foreign key(event_id) references event_details(id),
+constraint suply_event_health foreign key(health_id) references HEALTH_PRODUCT(ID)
 );
 
 ---------------------------------------------------------------------------(Accounts)Expenses table
