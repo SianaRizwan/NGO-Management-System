@@ -20,13 +20,13 @@ public class AddEmployeesToEventModel {
     }
 
 
-    protected String[] getVolunteerList(String[] info) {
+    protected String[] getEmployeeList(String[] info) {
         String sql = "select emp_id from EMPLOYEE ";
         return ev.getList(info, sql);
     }
 
 
-    public boolean isAssignDoctorSuccessful(ArrayList<String> id, String eventID) {
+    public boolean isAssignEmployeeSuccessful(ArrayList<String> id, String eventID) {
         String sql = "insert into event_employee values(?,?)";
         return ev.isAssignSuccessful(id, eventID, sql);
     }
