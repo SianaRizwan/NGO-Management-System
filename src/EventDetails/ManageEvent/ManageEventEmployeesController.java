@@ -118,5 +118,9 @@ public class ManageEventEmployeesController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("AssignSupply/AddFoodToEvent.fxml"));
             showList(loader, "Assign Food");
         }
+        else {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("AssignSupply/EventMed/AddMedToEvent.fxml"));
+            showList(loader, "Assign Med");
+        }
     }
 }
