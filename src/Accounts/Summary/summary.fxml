@@ -17,7 +17,7 @@
                 </Label>
             <JFXButton layoutX="124.0" layoutY="155.0" prefHeight="61.0" prefWidth="304.0" stylesheets="@../../theme.css" onAction="#handlesalaryChart" onMouseClicked="#handlesalaryChart" text="Salary Expense" />
             <JFXButton layoutX="919.0" layoutY="155.0" prefHeight="61.0" prefWidth="304.0" stylesheets="@../../theme.css" onAction="#handleExpensesChart" onMouseClicked="#handleExpensesChart" text="Expenses Summary" />
-                <JFXButton layoutX="510.0" layoutY="155.0" prefHeight="61.0" prefWidth="304.0" stylesheets="@../../theme.css" text="Donation History" />
+                <JFXButton layoutX="510.0" layoutY="155.0" prefHeight="61.0" prefWidth="304.0" stylesheets="@../../theme.css" onAction="#handleDonationSummary" onMouseClicked="#handleDonationSummary" text="Donation History" />
             <Pane fx:id="barChartpane" layoutX="73.0" layoutY="331.0" prefHeight="554.0" prefWidth="1328.0" />
             </children>
         </Pane>

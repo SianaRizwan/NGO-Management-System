@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.shape.Line?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+
+    <Pane fx:id="donSumPane" layoutX="60.0" layoutY="331.0" prefHeight="554.0" prefWidth="1328.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accounts.Summary.DonationSummary.donationSummaryController">
+        <children>
+            <Label layoutX="128.0" layoutY="14.0" text="for the last" />
+            <Label layoutX="247.0" layoutY="14.0" text="month(s)" />
+            <FontAwesomeIconView glyphName="SEARCH" layoutX="94.0" layoutY="30.0" />
+            <Line endX="126.0" layoutX="190.0" layoutY="40.0" startX="-100.0" />
+            <TextField fx:id="monthNumber" alignment="CENTER" promptText="6" layoutX="206.0" layoutY="9.0" prefHeight="31.0" prefWidth="39.0" />
+
+            <ScrollPane layoutX="76.0" layoutY="96.0" prefHeight="424.0" prefWidth="1006.0" />
+              <TableView fx:id="donationSummaryTable" layoutX="76.0" layoutY="96.0" prefHeight="424.0" prefWidth="1006.0">
+                  <columns>
+                      <TableColumn fx:id="colDonID" editable="false" maxWidth="300.0" minWidth="169.0" prefWidth="169.0" text="Donation ID" />
+                      <TableColumn fx:id="colDonorID" editable="false" maxWidth="300.0" minWidth="-Infinity" prefWidth="204.0" text="Donor ID" />
+                      <TableColumn fx:id="colDonorName" editable="false" minWidth="179.0" prefWidth="221.0" text="Donor Name" />
+                      <TableColumn fx:id="colDonDate" editable="false" maxWidth="337.0" minWidth="-Infinity" prefWidth="214.0" text="Donation Date" />
+                      <TableColumn fx:id="colDonAmount" editable="false" maxWidth="429.0" minWidth="0.0" prefWidth="202.0" text="Donation Amount" />
+                  </columns>
+              </TableView>
+            </children>
+    </Pane>
+   
