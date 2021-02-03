@@ -47,17 +47,17 @@
 .button {
     -fx-background-color: -fx-secondary;
     -fx-text-fill: -fx-buttonText;
-    -fx-background-radius: 10px;
+    -fx-background-radius: 15px;
 }
 .dashboard-button{
     -fx-background-color: -fx-secondary;
     -fx-text-fill: -fx-buttonText;
-    -fx-background-radius: 10px;
+    -fx-background-radius: 13px;
 }
 .logout-button{
     -fx-background-color: -fx-secondary;
     -fx-text-fill: -fx-buttonText;
-    -fx-background-radius: 10px;
+    -fx-background-radius: 15px;
 }
 
 
@@ -65,7 +65,7 @@
     -fx-background-color: -fx-secondary;
     -fx-text-fill: BlACK;
     -fx-font-weight: bold;
-    -fx-font-size: 20px;
+    -fx-font-size: 15px;
 }
 
 .supply-button {
@@ -77,11 +77,11 @@
 }
 
 .dashboard-button:hover {
-      -fx-font-size: 25px;
+      -fx-font-size: 23px;
 }
 
 .logout-button:hover{
-    -fx-font-size: 35px;
+    -fx-font-size: 33px;
     }
 
 .wrong-credentials {
@@ -111,5 +111,5 @@
 
 .password-change:hover {
     -fx-font-weight: bold;
--fx-font-size: 15px;
+-fx-font-size: 17px;
 }

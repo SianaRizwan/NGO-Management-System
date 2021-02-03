@@ -13,14 +13,13 @@ import java.util.Date;
 
 public class donationSummaryModel {
     protected ObservableList<Donation> getDonationTableRecords(int month, int year) throws SQLException {
-        String sql = "select dt.id,dt.don_date,TO_number(To_CHAR(dt.don_date,'MM')) As month=?,TO_number(To_CHAR(dt.don_date,'YY')) As year=?,dt.amount,dt.donor_id,d.name FROM donation_history dt,DOnor d where d.DOnor_id=dt.donor_id";
-                ;
+        String sql = "select dt.id,dt.don_date,dt.amount,dt.donor_id,d.name from donation_history dt,donor d where d.donor_id=dt.donor_id and extract(month from don_date)=? and extract(year from don_date)=?";
         ObservableList<Donation> donationList = FXCollections.observableArrayList();
         try {
             OracleConnection oc = new OracleConnection();
             PreparedStatement ps = oc.conn.prepareStatement(sql);
-            ps.setInt(3,month);
-            ps.setInt(4,year);
+            ps.setInt(1,month);
+            ps.setInt(2,year);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 String id = rs.getString(1);
