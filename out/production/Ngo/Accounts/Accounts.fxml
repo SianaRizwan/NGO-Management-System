@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane style="-fx-background-color: #ffe0e3;" styleClass="supply-button" stylesheets="@../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accounts.AccountsController">
@@ -15,16 +20,50 @@
                         <Font name="Californian FB" size="36.0" />
                     </font>
                 </Label>
-                <JFXButton buttonType="RAISED" layoutX="375.0" layoutY="202.0" onAction="#handleAccountsDesig"  prefHeight="198.0" prefWidth="209.0" styleClass="supply-button" text="Designation">
+                <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="395.0" layoutY="550.0" onAction="#handleAccountsDesig" prefHeight="219.0" prefWidth="209.0" styleClass="supply-button" text="Designation">
+               <font>
+                  <Font size="21.0" />
+               </font>
                 </JFXButton>
-                <JFXButton buttonType="RAISED" layoutX="758.0" layoutY="202.0" onAction="#handleAccountsExpenses"  prefHeight="198.0" prefWidth="209.0" styleClass="supply-button" text="Expenses">
+                <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="813.0" layoutY="550.0" onAction="#handleAccountsExpenses" onMouseClicked="#handleAccountsExpenses" prefHeight="219.0" prefWidth="209.0" styleClass="supply-button" text="Expenses">
+               <font>
+                  <Font size="21.0" />
+               </font>
                 </JFXButton>
-                <JFXButton buttonType="RAISED" layoutX="758.0" layoutY="544.0" onAction="#handleAccountsDonation" prefHeight="198.0" prefWidth="209.0" styleClass="supply-button" text=" ">
-
-                </JFXButton>
-                <JFXButton buttonType="RAISED" layoutX="378.0" layoutY="539.0" onAction="#handleAccountsSummary"  prefHeight="198.0" prefWidth="209.0" styleClass="supply-button" text="Summary ">
-
-                </JFXButton>
+                <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="604.0" layoutY="203.0" onAction="#handleAccountsSummary" prefHeight="219.0" prefWidth="209.0" styleClass="supply-button" text="Summary ">
+               <font>
+                  <Font name="Calibri" size="21.0" />
+               </font></JFXButton>
+            <Line endX="570.0" endY="8.0" layoutX="749.0" layoutY="455.0" startX="-570.0" startY="8.0" />
+            <Label graphicTextGap="22.0" layoutX="290.0" layoutY="156.0" prefHeight="22.0" prefWidth="172.0" text="Total Employees ">
+               <font>
+                  <Font name="Californian FB" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="totalEmpTextField" alignment="CENTER" layoutX="245.0" layoutY="188.0" style="-fx-background-color: #ffffff;" />
+            <Label layoutX="1022.0" layoutY="156.0" text="Total Doctors ">
+               <font>
+                  <Font name="Californian FB" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="totalDocTextField" alignment="CENTER" layoutX="983.0" layoutY="188.0" style="-fx-background-color: #ffffff;" />
+            <FontAwesomeIconView glyphName="USERS" layoutX="253.0" layoutY="172.0" size="25" />
+            <FontAwesomeIconView glyphName="USER_MD" layoutX="991.0" layoutY="172.0" size="25" />
+                  <ImageView fitHeight="173.0" fitWidth="186.0" layoutX="412.0" layoutY="563.0" onMouseClicked="#handleAccountsDesig" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                          <Image url="@../images/Desig.jpg" />
+                      </image>
+                  </ImageView>
+                  <ImageView fitHeight="173.0" fitWidth="186.0" layoutX="825.0" layoutY="563.0" onMouseClicked="#handleAccountsExpenses" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                          <Image url="@../images/Exp.jpg" />
+                      </image>
+                  </ImageView>
+                <ImageView fitHeight="173.0" fitWidth="186.0" layoutX="619.0" layoutY="215.0" onMouseClicked="#handleAccountsSummary" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/Summary.jpg" />
+                    </image>
+                </ImageView>
             </children>
         </Pane>
     </children>
