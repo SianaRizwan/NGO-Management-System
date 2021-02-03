@@ -308,6 +308,7 @@ END;
 /
 
 --------------Donation History
+drop table donation_history;
 create table donation_history(
 id varchar2(20) primary key,
 don_date date ,
@@ -331,16 +332,16 @@ SELECT  max(ID) INTO d_ID FROM donation_history;
 
 IF d_ID IS NULL --- Does not exist
 THEN
-	id := 10000001;
+	id := 101;
 
 ELSE
-select max(substr(id,2)) into id from donation_history ;
+select max(substr(id,3)) into id from donation_history ;
 
 	id := id+1;
 
 END IF;
 
-RETURN NVL((id),-1); --- -1 IS THE ERROR FLAG
+RETURN NVL(('DT'||id),-1); --- -1 IS THE ERROR FLAG
 
 END;
 /
@@ -904,5 +905,10 @@ DROP TABLE designation;
 insert into expenses(type,title,description,amount,expense_date) values ('Utility','Water','One month',3000,Date '2021-01-31');
 insert into expenses(type,title,description,amount,expense_date) values ('Utility','Gas cylinder','One month',3780,Date '2021-01-31');
 
-select dt.id,dt.don_date,TO_number(To_CHAR(dt.don_date,'MM')) As month,TO_number(To_CHAR(dt.don_date,'YY')) As year,dt.amount,dt.donor_id,d.name FROM donation_history dt,DOnor d where d.DOnor_id=dt.donor_id; 
+select sum(amount) from donation_history where (extract(month from sysdate)=extract(month from don_date)) and (extract(year from sysdate)=extract(year from don_date));
+
+select amount from donation_history where (extract(month from don_date)=2) and (extract(year from don_date)=2021);
+
+
+
 

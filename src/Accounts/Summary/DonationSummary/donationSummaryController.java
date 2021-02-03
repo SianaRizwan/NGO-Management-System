@@ -1,6 +1,8 @@
 package Accounts.Summary.DonationSummary;
 
 import SupplyDetails.Food.Food;
+import com.jfoenix.controls.JFXComboBox;
+import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
@@ -35,9 +37,10 @@ public class donationSummaryController {
 
     @FXML
     private TableColumn<Donation, Integer> colDonAmount;
-
+    @FXML
+    private JFXTextField totalDonationTextfield;
     donationSummaryModel model = new donationSummaryModel();
-    String donorId;
+
     public void displayInformation() {
 
         setTableViewValue();
@@ -57,13 +60,16 @@ public class donationSummaryController {
         colDonorName.setCellValueFactory(new PropertyValueFactory<>("donorName"));
     }
     public void IDOnEnter() {
+        totalDonation();
         setTableViewValue();
-
         try {
             donationSummaryTable.setItems(model.getDonationTableRecords(Integer.parseInt(monthNumber.getText()),Integer.parseInt(yearNumber.getText())));
-        } catch (SQLException throwables) {
+            } catch (SQLException throwables) {
             System.out.println("donationController: initialize");
             throwables.printStackTrace();
         }
+    }
+    public void totalDonation(){
+        totalDonationTextfield.setText(Integer.toString(model.getTotalDonation(Integer.parseInt(monthNumber.getText()),Integer.parseInt(yearNumber.getText()))));
     }
 }

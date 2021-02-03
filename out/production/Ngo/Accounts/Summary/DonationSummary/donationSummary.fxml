@@ -9,20 +9,23 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
 <Pane fx:id="donSumPane" prefHeight="554.0" prefWidth="1328.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accounts.Summary.DonationSummary.donationSummaryController">
     <children>
         <Label layoutX="128.0" layoutY="14.0" text="For the  " />
         <Label layoutX="247.0" layoutY="14.0" text=" month " />
         <FontAwesomeIconView glyphName="SEARCH" layoutX="94.0" layoutY="30.0" />
         <Line endX="126.0" layoutX="190.0" layoutY="40.0" startX="-100.0" />
-        <TextField fx:id="monthNumber" alignment="CENTER" layoutX="206.0" layoutY="9.0" prefHeight="31.0" prefWidth="39.0" promptText="6" />
+        <TextField fx:id="monthNumber" alignment="CENTER" layoutX="195.0" layoutY="9.0" prefHeight="31.0" prefWidth="39.0" promptText="6" />
 
         <Label layoutX="768.0" layoutY="14.0" text="For " />
         <Label layoutX="890.0" layoutY="14.0" text=" year" />
         <FontAwesomeIconView glyphName="SEARCH" layoutX="735.0" layoutY="30.0" />
         <Line endX="126.0" layoutX="835.0" layoutY="40.0" startX="-100.0" />
-        <TextField fx:id="yearNumber" alignment="CENTER" layoutX="795.0" layoutY="9.0" prefHeight="31.0" prefWidth="90.0" promptText="6" />
+        <TextField fx:id="yearNumber" alignment="CENTER" layoutX="795.0" layoutY="9.0" prefHeight="31.0" prefWidth="90.0" promptText="2021" />
 
         <ScrollPane layoutX="76.0" layoutY="96.0" prefHeight="424.0" prefWidth="1006.0" />
         <TableView fx:id="donationSummaryTable" layoutX="76.0" layoutY="96.0" prefHeight="424.0" prefWidth="1006.0">
@@ -35,5 +38,11 @@
             </columns>
         </TableView>
       <JFXButton fx:id="viewDonationDetails" graphicTextGap="22.0" layoutX="466.0" layoutY="55.0" onAction="#IDOnEnter" onMouseClicked="#IDOnEnter" stylesheets="@../../../theme.css" text="View Donation Details" />
+      <JFXTextField fx:id="totalDonationTextfield" onMouseClicked="#totalDonation" onAction="#totalDonation" editable="false" layoutX="1098.0" layoutY="246.0" prefHeight="31.0" prefWidth="166.0" />
+      <Label graphicTextGap="22.0" layoutX="1098.0" layoutY="208.0" prefHeight="21.0" prefWidth="166.0" text="Total Donation :">
+         <font>
+            <Font name="Californian FB" size="18.0" />
+         </font>
+      </Label>
     </children>
 </Pane>

@@ -1,7 +1,5 @@
 package Accounts.Summary.DonationSummary;
 
-import Person.DonorDetails.Donor;
-import SupplyDetails.Food.Food;
 import Utilities.OracleConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -38,4 +36,25 @@ public class donationSummaryModel {
             throw e;
         }
     }
+    protected int getTotalDonation(int month, int year){
+        try {
+            OracleConnection oc=new OracleConnection();
+            String sql = "select sum(amount) from donation_history where (extract(month from don_date)=?) and (extract(year from don_date)=?)";
+            PreparedStatement ps = oc.conn.prepareStatement(sql);
+            ps.setInt(1,month);
+            ps.setInt(2,year);
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                return rs.getInt(1);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
+
+    }
+
+
+
+
 }
