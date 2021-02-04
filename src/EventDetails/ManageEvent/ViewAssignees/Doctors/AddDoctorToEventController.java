@@ -111,7 +111,6 @@ public class AddDoctorToEventController {
 
     @FXML
      void handleBackButton() throws IOException {
-        FXMLLoader.load(getClass().getResource("../../ManageEvent.fxml"));
         Stage stage = (Stage) viewDetails.getScene().getWindow();
         stage.close();
     }

@@ -19,7 +19,7 @@
             <Font name="Californian FB" size="18.0" />
         </font>
     </Button>
-    <Button graphicTextGap="22.0" layoutX="849.0" layoutY="613.0" mnemonicParsing="false" onAction="#handleBackButton" style="-fx-background-color: FDAB9F;" text="BACK">
+    <Button graphicTextGap="22.0" layoutX="849.0" layoutY="613.0" mnemonicParsing="false" onAction="#handleBackButton" onMouseClicked="#handleBackButton" style="-fx-background-color: FDAB9F;" text="BACK">
         <font>
             <Font name="Californian FB" size="18.0" />
         </font>
