@@ -46,12 +46,18 @@ public class donationSummaryModel {
             ps.setInt(2,year);
             ResultSet rs = ps.executeQuery();
             while(rs.next()){
+
                 return rs.getInt(1);
+
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
         return 0;
+
     }
+
+
+
 
 }

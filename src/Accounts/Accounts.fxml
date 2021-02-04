@@ -59,11 +59,11 @@
                           <Image url="@../images/Exp.jpg" />
                       </image>
                   </ImageView>
-                <ImageView fitHeight="173.0" fitWidth="186.0" layoutX="619.0" layoutY="215.0" onMouseClicked="#handleAccountsSummary" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../images/Summary.jpg" />
-                    </image>
-                </ImageView>
+            <ImageView fitHeight="173.0" fitWidth="186.0" layoutX="619.0" layoutY="218.0" onMouseClicked="#handleAccountsSummary" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Summary.jpg" />
+               </image>
+            </ImageView>
             </children>
         </Pane>
     </children>

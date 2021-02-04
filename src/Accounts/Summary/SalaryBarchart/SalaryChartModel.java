@@ -23,4 +23,23 @@ public class SalaryChartModel {
         }
     }
 
+    protected int getTotalSalary(){
+        String sql = "select sum(amount) from designation";
+
+        try {
+            OracleConnection oc=new OracleConnection();
+            PreparedStatement ps = oc.conn.prepareStatement(sql);
+           ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+
+                return rs.getInt(1);
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
+
+    }
+
 }

@@ -1,6 +1,6 @@
 * {
     -fx-primary: #8B0000;
-    -fx-primaryText: #c98585;
+    -fx-primaryText: #f3e4e4;
     -fx-secondary: #FDAB9F;
     -fx-buttonText: #282525;
     -fx-wrongColor: #ea7979;
@@ -11,7 +11,7 @@
 }
 
 .glyph-icon {
-    -fx-fill: -fx-primaryText;
+    -fx-fill: -fx-wrongColor;
 
 }
 .combo-box{
@@ -36,6 +36,14 @@
     -jfx-label-float: true;
     -fx-font-size: 18px;
 }
+
+.second-text-field {
+    -fx-text-fill: -fx-primary;
+    -fx-prompt-text-fill: -fx-primary;
+    -jfx-focus-color: -fx-primary;
+    -jfx-label-float: true;
+    -fx-font-size: 18px;
+}
 .search-field{
     -fx-text-fill: BLACK;
     -fx-prompt-text-fill: -fx-primary;
@@ -47,17 +55,17 @@
 .button {
     -fx-background-color: -fx-secondary;
     -fx-text-fill: -fx-buttonText;
-    -fx-background-radius: 15px;
+    -fx-background-radius: 10px;
 }
 .dashboard-button{
     -fx-background-color: -fx-secondary;
     -fx-text-fill: -fx-buttonText;
-    -fx-background-radius: 13px;
+    -fx-background-radius: 10px;
 }
 .logout-button{
     -fx-background-color: -fx-secondary;
     -fx-text-fill: -fx-buttonText;
-    -fx-background-radius: 15px;
+    -fx-background-radius: 10px;
 }
 
 
@@ -65,7 +73,7 @@
     -fx-background-color: -fx-secondary;
     -fx-text-fill: BlACK;
     -fx-font-weight: bold;
-    -fx-font-size: 15px;
+    -fx-font-size: 17px;
 }
 
 .supply-button {
@@ -77,11 +85,11 @@
 }
 
 .dashboard-button:hover {
-      -fx-font-size: 23px;
+      -fx-font-size: 25px;
 }
 
 .logout-button:hover{
-    -fx-font-size: 33px;
+    -fx-font-size: 35px;
     }
 
 .wrong-credentials {
@@ -111,5 +119,27 @@
 
 .password-change:hover {
     -fx-font-weight: bold;
--fx-font-size: 17px;
+-fx-font-size: 15px;
+}
+
+.table-row-cell {
+    -fx-cell-size: 45px;
+}
+.second-button {
+    -fx-background-color: -fx-secondary;
+    -fx-text-fill: -fx-buttonText;
+    -fx-background-radius: 3px;
+}
+.second-button:hover {
+    -fx-font-weight: bold;
+}
+.chart-bar {
+    -fx-bar-fill: -fx-wrongColor;
+}
+th {
+    background-color: -fx-wrongColor;
+    position:fixed;
+}
+.summary-text-field{
+fx-text-fill: BLACK;
 }

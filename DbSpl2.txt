@@ -909,6 +909,6 @@ select sum(amount) from donation_history where (extract(month from sysdate)=extr
 
 select amount from donation_history where (extract(month from don_date)=2) and (extract(year from don_date)=2021);
 
+select type,sum(amount) from expenses where extract(month from expense_date)=2 and extract(year from expense_date)=2021 group by type;
 
-
-
+        

@@ -16,11 +16,13 @@ public class AccountsController {
     @FXML
     private JFXTextField totalEmpTextField;
     @FXML
-    private  JFXTextField totalDocTextField;
-   AccountsModel model = new AccountsModel();
+    private JFXTextField totalDocTextField;
+    AccountsModel model = new AccountsModel();
+
     public void handleAccountsDesig() throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("Designation/DesignationDetails.fxml"));
-        AccountsPane.getChildren().setAll(pane); }
+        AccountsPane.getChildren().setAll(pane);
+    }
 
     public void handleAccountsExpenses() throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("Expenses/ExpensesDetails.fxml"));
@@ -32,7 +34,11 @@ public class AccountsController {
         AccountsPane.getChildren().setAll(pane);
     }
 
-    public void initialize(){
+    public void initialize() {
+        totalDocTextField.getStyleClass().clear();
+        totalDocTextField.getStyleClass().add("second-text-field");
+        totalEmpTextField.getStyleClass().clear();
+        totalEmpTextField.getStyleClass().add("second-text-field");
         totalEmpTextField.setText(Integer.toString(model.getTotalEmployees()));
         totalDocTextField.setText(Integer.toString(model.getTotalDoctors()));
     }
