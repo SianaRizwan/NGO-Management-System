@@ -1,4 +1,4 @@
-package EventDetails.ManageEvent.AssignSupply.EventFood;
+package EventDetails.ManageEvent.AssignSupply.EventMed;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TableCell;
@@ -12,23 +12,21 @@ import javafx.util.Callback;
 
 import java.sql.SQLException;
 
-
-public class ViewEventFoodController {
+public class ViewEventMedController {
     @FXML
     private AnchorPane viewDetails;
 
     @FXML
-    private TableView<EventFood> informationTable;
+    private TableView<EventMed> informationTable;
 
     @FXML
-    private TableColumn<EventFood, String> colName;
+    private TableColumn<EventMed, String> colName;
 
     @FXML
-    private TableColumn<EventFood, Integer> colAvailableQty;
+    private TableColumn<EventMed, Integer> colAvailableQty;
 
     @FXML
-    private TableColumn<EventFood, String> colRequiredQty;
-
+    private TableColumn<EventMed, String> colRequiredQty;
 
 
 
@@ -41,14 +39,10 @@ public class ViewEventFoodController {
     public void populateTableView(String id) {
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colAvailableQty.setCellValueFactory(new PropertyValueFactory<>("availableQty"));
-       // colRequiredQty.setCellValueFactory(new PropertyValueFactory<>("reqQty"));
-
-
-        //problem
         {
-            Callback<TableColumn<EventFood, String>, TableCell<EventFood, String>> cellFactory1 = (param) -> {
+            Callback<TableColumn<EventMed, String>, TableCell<EventMed, String>> cellFactory1 = (param) -> {
 //tablecell button
-                final TableCell<EventFood, String> cell = new TableCell<EventFood, String>() {
+                final TableCell<EventMed, String> cell = new TableCell<EventMed, String>() {
                     @Override
                     public void updateItem(String item, boolean empty) {
                         super.updateItem(item, empty);
@@ -57,54 +51,39 @@ public class ViewEventFoodController {
                             setGraphic(null);
                         } else {
                             final TextField details = new TextField();
-                            ViewEventFoodModel view=new ViewEventFoodModel();
+                            ViewEventMedModel view=new ViewEventMedModel();
                             details.getStyleClass().clear();
                             details.getStyleClass().add("second-text-field");
-                            System.out.println(new ViewEventFoodModel().getRequiredAmount());
+                            System.out.println(new ViewEventMedModel().getRequiredAmount());
                             view.setId(id);
 
-                            details.setText(new ViewEventFoodModel().getRequiredAmount());
+                            details.setText(new ViewEventMedModel().getRequiredAmount());
 
                             details.setOnAction(event -> {
-                                EventFood h = getTableView().getItems().get(getIndex());
+                                EventMed h = getTableView().getItems().get(getIndex());
                                 //write code
                                 details.setEditable(true);
                                 details.setText(details.getText());
-                               view.isAmountAddSuccessful(Integer.parseInt(details.getText()), id, h.getName());
+                                view.isAmountAddSuccessful(Integer.parseInt(details.getText()), id, h.getName());
                             });
                             setGraphic(details);
 
                         }
                         setText(null);
                     }
-
-
                 };
 
                 return cell;
             };
             colRequiredQty.setCellFactory(cellFactory1);
 
-      /* colRequiredQty.setCellFactory(TextFieldTableCell.forTableColumn());
-       colRequiredQty.setOnEditCommit(
-               new EventHandler<TableColumn.CellEditEvent<EventFood, String>>() {
-                   @Override
-                   public void handle(TableColumn.CellEditEvent<EventFood, String> event) {
-                       ((EventFood) event.getTableView().getItems().get(event.getTablePosition().getRow())).setReqQty(Integer.parseInt(event.getNewValue()));
-                   }
-    });
-       informationTable.setEditable(true);*/
-
         }
 
-
         try {
-            informationTable.setItems(new ViewEventFoodModel().getTableRecords(id));
+            informationTable.setItems(new ViewEventMedModel().getTableRecords(id));
         } catch (SQLException throwables) {
-            System.out.println("ViewEventFoodController: initialize");
+            System.out.println("ViewEventMedController: initialize");
             throwables.printStackTrace();
         }
     }
-
-
 }

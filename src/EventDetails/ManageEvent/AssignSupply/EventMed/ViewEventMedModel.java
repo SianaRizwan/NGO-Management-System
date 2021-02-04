@@ -1,4 +1,4 @@
-package EventDetails.ManageEvent.AssignSupply.EventFood;
+package EventDetails.ManageEvent.AssignSupply.EventMed;
 
 import Utilities.OracleConnection;
 import javafx.collections.FXCollections;
@@ -8,7 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class ViewEventFoodModel {
+public class ViewEventMedModel {
     private String id;
     private String name;
 
@@ -29,9 +29,9 @@ public class ViewEventFoodModel {
         this.id = id;
     }
 
-    protected ObservableList<EventFood> getTableRecords(String id) throws SQLException {
-        String sql = "select distinct f.name,f.total_qty,ev.amount from event_food ev,food f where ev.food_name=f.name and ev.event_id=?";
-        ObservableList<EventFood> foodlist = FXCollections.observableArrayList();
+    protected ObservableList<EventMed> getTableRecords(String id) throws SQLException {
+        String sql = "select distinct h.name,h.total_qty,ev.amount from event_health ev,food h where ev.health_name=h.name and ev.event_id=?";
+        ObservableList<EventMed> medlist = FXCollections.observableArrayList();
         try {
             OracleConnection oc = new OracleConnection();
             PreparedStatement ps = oc.conn.prepareStatement(sql);
@@ -42,13 +42,13 @@ public class ViewEventFoodModel {
                 int availableQty = rs.getInt(2);
                 int reqQty = rs.getInt(3);
 
-                EventFood history = new EventFood(availableQty, reqQty, name);
+                EventMed history = new EventMed(availableQty, reqQty, name);
 
-                foodlist.add(history);
+                medlist.add(history);
             }
-            return foodlist;
+            return medlist;
         } catch (Exception e) {
-            System.out.println("getTableRecords : EmployeeModel");
+            System.out.println("getTableRecords : HealthHistoryModel");
             e.printStackTrace();
             throw e;
         }
@@ -56,35 +56,35 @@ public class ViewEventFoodModel {
     protected String getRequiredAmount(){
         try {
             System.out.println("p "+getId()+" lpl  "+getName());
-            String sql = "select ev.amount from event_food ev where ev.food_name=? and ev.event_id=?";
+            String sql = "select ev.amount from event_health ev where ev.health_name=? and ev.event_id=?";
             OracleConnection oc = new OracleConnection();
             PreparedStatement ps = oc.conn.prepareStatement(sql);
             ps.setString(1,name);
             ps.setString(2, getId());
-           ResultSet rs=ps.executeQuery();
-           while (rs.next()){
+            ResultSet rs=ps.executeQuery();
+            while (rs.next()){
 
-               return String.valueOf(rs.getInt(1));
+                return String.valueOf(rs.getInt(1));
 
-           }
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
     }
 
-    protected void isAmountAddSuccessful(int amt, String eventID, String foodName) {
+    protected void isAmountAddSuccessful(int amt, String eventID, String medName) {
         try {
-            String sql = "update event_food set amount=amount+? where event_id=? and food_name=?";
+            String sql = "update event_health set amount=amount+? where event_id=? and health_name=?";
             OracleConnection oc = new OracleConnection();
             PreparedStatement ps = oc.conn.prepareStatement(sql);
             ps.setInt(1, amt);
             ps.setString(2, eventID);
-            ps.setString(3, foodName);
+            ps.setString(3, medName);
             int x = ps.executeUpdate();
             if (x > 0) {
-                if (isAmountUpdateSuccessful(amt,foodName)) {
-                    System.out.println(amt+"   "+eventID+"   "+foodName);
+                if (isAmountUpdateSuccessful(amt,medName)) {
+                    System.out.println(amt+"   "+eventID+"   "+medName);
                     System.out.println("p");
                 }
 
@@ -94,13 +94,13 @@ public class ViewEventFoodModel {
         }
     }
 
-    private boolean isAmountUpdateSuccessful(int amt, String foodName) {
+    private boolean isAmountUpdateSuccessful(int amt, String medName) {
         try {
-            String sql = "update food set total_qty=total_qty-? where name=?";
+            String sql = "update HEALTH_PRODUCT set total_qty=total_qty-? where name=?";
             OracleConnection oc = new OracleConnection();
             PreparedStatement ps = oc.conn.prepareStatement(sql);
             ps.setInt(1, amt);
-            ps.setString(2, foodName);
+            ps.setString(2, medName);
             int x = ps.executeUpdate();
             if (x > 0) {
                 return true;

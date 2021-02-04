@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="545.0" prefWidth="669.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EventDetails.ManageEvent.AssignSupply.EventFood.ViewEventFoodController">
+<AnchorPane fx:id="viewDetails" prefHeight="545.0" prefWidth="669.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EventDetails.ManageEvent.AssignSupply.EventFood.ViewEventFoodController">
    <children>
       <TableView fx:id="informationTable" layoutX="8.0" layoutY="8.0" prefHeight="484.0" prefWidth="649.0" style="-fx-background-color: #F7E9E9;">
          <columns>
@@ -15,7 +15,7 @@
             <TableColumn fx:id="colRequiredQty" prefWidth="227.0" style="-fx-background-color: #EEB1B1;" text="REQUIRED QTY" />
          </columns>
       </TableView>
-      <Button graphicTextGap="22.0" layoutX="596.0" layoutY="503.0" mnemonicParsing="false" onAction="#handleBackButton" style="-fx-background-color: FDAB9F;" text="BACK">
+      <Button graphicTextGap="22.0" layoutX="596.0" layoutY="503.0" mnemonicParsing="false" onAction="#handleBackButton" onMouseClicked="#handleBackButton" style="-fx-background-color: FDAB9F;" text="BACK">
          <font>
             <Font name="Californian FB Bold" size="15.0" />
          </font>

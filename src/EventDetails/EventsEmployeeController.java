@@ -1,20 +1,16 @@
 package EventDetails;
 
 import EventDetails.ManageEvent.ManageEventEmployeesController;
-import EventDetails.ManageEvent.ViewAssignees.Volunteers.ViewAssignedVolunteersController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -59,6 +55,7 @@ public class EventsEmployeeController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        eventTable.getStyleClass().add("table-view");
         populateTableView();
         manageEventUI();
     }

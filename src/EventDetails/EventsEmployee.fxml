@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.String?>
-<?import javafx.scene.control.ContextMenu?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -12,7 +10,7 @@
 
 <AnchorPane style="-fx-background-color: #ffe0e3;" styleClass="supply-button" stylesheets="@../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EventDetails.EventsEmployeeController">
     <children>
-        <Pane fx:id="eventDetailsPane" prefHeight="1275.0" prefWidth="1473.0">
+        <Pane fx:id="eventDetailsPane" prefHeight="1275.0" prefWidth="1473.0" stylesheets="@../theme.css">
             <children>
                 <Label layoutX="73.0" layoutY="15.0" prefHeight="98.0" prefWidth="511.0" text="Events">
                     <font>
@@ -25,16 +23,10 @@
                           <TableColumn fx:id="colEventName" editable="false" minWidth="240.0" prefWidth="392.0" text="Event Name" />
                           <TableColumn fx:id="colEventDate" editable="false" maxWidth="367.0" minWidth="-Infinity" prefWidth="308.0" text="Event Date" />
                       </columns>
-                      <contextMenu>
-                          <ContextMenu>
-                              <items>
-                                  <MenuItem mnemonicParsing="false" onAction="#handleRemoveDoctorOption" text="Remove" />
-                              </items>
-                          </ContextMenu>
-                      </contextMenu>
                <styleClass>
                   <String fx:value="search-field" />
-                  <String fx:value="th" />
+                  <String fx:value="table-row-cell" />
+                  <String fx:value="table-view" />
                </styleClass>
                   </TableView>
             </children>

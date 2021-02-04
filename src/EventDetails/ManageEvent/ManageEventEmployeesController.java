@@ -1,8 +1,8 @@
 package EventDetails.ManageEvent;
 
-import EventDetails.EventHistory.EventSupply.Food.ViewAssignedFoodController;
-import EventDetails.EventHistory.EventSupply.Health.ViewAssignedMedController;
 import EventDetails.ManageEvent.AssignSupply.EventFood.ViewEventFoodController;
+import EventDetails.ManageEvent.AssignSupply.EventMed.ViewEventMedController;
+import EventDetails.ManageEvent.ViewAssignees.Volunteers.AddVolunteersToEventController;
 import EventDetails.ManageEvent.ViewAssignees.Volunteers.ViewAssignedVolunteersController;
 import Utilities.ShowAlertDialogue;
 import com.jfoenix.controls.JFXDatePicker;
@@ -59,7 +59,13 @@ public class ManageEventEmployeesController {
     @FXML
     void handleAddVol() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewAssignees/Volunteers/addVolunteers.fxml"));
-        showList(loader, "Assign Volunteers");
+        AnchorPane pane = loader.load();
+        AddVolunteersToEventController view = loader.getController();
+        view.event_id=getEventID();
+        Stage stage = new Stage(StageStyle.DECORATED);
+        stage.setTitle("Assign Volunteers");
+        stage.setScene(new Scene(pane));
+        stage.show();
     }
 
     @FXML
@@ -136,9 +142,9 @@ public class ManageEventEmployeesController {
             stage.show();
         }
         else {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../EventHistory/EventSupply/Health/viewAssignedMed.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("AssignSupply/EventMed/ViewEventMed.fxml"));
             AnchorPane pane = loader.load();
-            ViewAssignedMedController view = loader.getController();
+            ViewEventMedController view = loader.getController();
             view.populateTableView(eventName.getText());
             Stage stage = new Stage(StageStyle.DECORATED);
             stage.setTitle("View Assigned Medicine");
