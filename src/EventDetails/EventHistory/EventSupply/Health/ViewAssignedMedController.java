@@ -1,6 +1,5 @@
-package EventDetails.ManageEvent.AssignSupply.EventMed;
+package EventDetails.EventHistory.EventSupply.Health;
 
-import EventDetails.ManageEvent.ManageEventController;
 import SupplyDetails.Medicine.Medicine;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -47,7 +46,7 @@ public class ViewAssignedMedController {
         stage.close();
     }
 
-    private void populateTableView(){
+    public void populateTableView(String id){
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colQuantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
@@ -56,14 +55,11 @@ public class ViewAssignedMedController {
         colManufacturer.setCellValueFactory(new PropertyValueFactory<>("manufacturer"));
 
         try {
-            informationTable.setItems(viewAssignedMedModel.getTableRecords(new ManageEventController().getEventID()));
+            informationTable.setItems(viewAssignedMedModel.getTableRecords(id));
         } catch (SQLException e) {
             System.out.println("viewMedController: initialize");
             e.printStackTrace();
         }
     }
 
-    public void initialize() {
-        populateTableView();
-    }
 }

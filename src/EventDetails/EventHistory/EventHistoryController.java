@@ -1,5 +1,7 @@
 package EventDetails.EventHistory;
 
+import EventDetails.EventHistory.EventSupply.Food.ViewAssignedFoodController;
+import EventDetails.EventHistory.EventSupply.Health.ViewAssignedMedController;
 import EventDetails.ManageEvent.ViewAssignees.Doctors.ViewAssignedDoctorsController;
 import EventDetails.ManageEvent.ViewAssignees.Employee.ViewAssignedEmployeesController;
 import EventDetails.ManageEvent.ViewAssignees.Volunteers.ViewAssignedVolunteersController;
@@ -229,15 +231,26 @@ public class EventHistoryController {
                         details.setOnAction(event -> {
                             History h = getTableView().getItems().get(getIndex());
                             //write code
-                            FXMLLoader loader = new FXMLLoader(getClass().getResource("EventEmployee/EventEmployeeList.fxml"));
                             AnchorPane pane = null;
-                            try {
-                                pane = loader.load();
-                            } catch (IOException e) {
-                                e.printStackTrace();
+                            if (h.getId().contains("F")) {
+                                FXMLLoader loader = new FXMLLoader(getClass().getResource("EventSupply/Food/viewAssignedFood.fxml"));
+                                try {
+                                    pane = loader.load();
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                                ViewAssignedFoodController view = loader.getController();
+                                view.populateTableView(h.getId());
+                            } else if (h.getId().contains("H")) {
+                                FXMLLoader loader = new FXMLLoader(getClass().getResource("EventSupply/Health/viewAssignedMed.fxml"));
+                                try {
+                                    pane = loader.load();
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                                ViewAssignedMedController view = loader.getController();
+                                view.populateTableView(h.getId());
                             }
-                            //   EventEmployeeListController view = loader.getController();
-                            // view.populateTableView(h.getId());
                             Stage stage = new Stage(StageStyle.DECORATED);
                             stage.setTitle("Upcoming Event Details");
                             stage.setScene(new Scene(pane));

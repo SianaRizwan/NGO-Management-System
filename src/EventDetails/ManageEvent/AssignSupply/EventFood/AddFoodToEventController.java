@@ -1,4 +1,4 @@
-package EventDetails.ManageEvent.AssignSupply;
+package EventDetails.ManageEvent.AssignSupply.EventFood;
 
 import EventDetails.ManageEvent.ManageEventEmployeesController;
 import Utilities.ShowAlertDialogue;
@@ -96,7 +96,7 @@ public class AddFoodToEventController {
 
     @FXML
     void handleBackButton() throws IOException {
-        FXMLLoader.load(getClass().getResource("../../../ManageEvent/ManageEventEmployees.fxml"));
+        FXMLLoader.load(getClass().getResource("../../ManageEvent/ManageEventEmployees.fxml"));
         Stage stage = (Stage) viewDetails.getScene().getWindow();
         stage.close();
     }

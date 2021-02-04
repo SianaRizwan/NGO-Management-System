@@ -1,6 +1,5 @@
-package EventDetails.ManageEvent.AssignSupply;
+package EventDetails.EventHistory.EventSupply.Food;
 
-import EventDetails.ManageEvent.ManageEventController;
 import SupplyDetails.Food.Food;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -46,7 +45,7 @@ public class ViewAssignedFoodController {
         stage.close();
     }
 
-    private void populateTableView(){
+    public void populateTableView(String id){
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colQuantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
@@ -55,14 +54,11 @@ public class ViewAssignedFoodController {
         colSupplier.setCellValueFactory(new PropertyValueFactory<>("supplier"));
 
         try {
-            informationTable.setItems(new ViewAssignedFoodModel().getTableRecords(new ManageEventController().getEventID()));
+            informationTable.setItems(new ViewAssignedFoodModel().getTableRecords(id));
         } catch (SQLException e) {
             System.out.println("viewFoodController: initialize");
             e.printStackTrace();
         }
     }
 
-    public void initialize() {
-        populateTableView();
-    }
 }

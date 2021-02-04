@@ -1,4 +1,4 @@
-package EventDetails.ManageEvent.AssignSupply;
+package EventDetails.ManageEvent.AssignSupply.EventFood;
 
 import EventDetails.ManageEvent.GetInformationForEvent;
 
@@ -8,26 +8,26 @@ public class AddFoodToEventModel {
     GetInformationForEvent ev = new GetInformationForEvent();
 
     protected String[] getSearchedList(String[] info, String text) {
-        String sql = "select ID from FOOD where ID like ? or name like ?";
+        String sql = "select distinct name from FOOD where name like ? or name like ?";
 
         return ev.getSearchedListForEvent(info, text, sql);
     }
 
 
     protected int getTotalID() {
-        String sql = "select count(ID) from FOOD ";
+        String sql = "select count(distinct name) from FOOD ";
         return ev.getTotalNumberOfIDs(sql);
     }
 
 
     protected String[] getFoodList(String[] info) {
-        String sql = "select ID from FOOD ";
+        String sql = "select distinct name from FOOD ";
         return ev.getList(info, sql);
     }
 
 
     public boolean isAssignFoodSuccessful(ArrayList<String> id, String eventID) {
-        String sql = "insert into event_food values(?,?)";
+        String sql = "insert into event_food(event_id,food_name) values(?,?)";
         return ev.isAssignSuccessful(id, eventID, sql);
     }
 }

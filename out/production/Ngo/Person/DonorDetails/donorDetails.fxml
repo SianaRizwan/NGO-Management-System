@@ -25,7 +25,7 @@
                 </Label>
                 <HBox alignment="CENTER" layoutY="169.0" prefHeight="98.0" prefWidth="1426.0">
                     <padding>
-                        <Insets left="100.0" />
+                        <Insets left="100.0" right="70.0" />
                     </padding>
                     <children>
                         <Button fx:id="addNewDonorBtn" alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" onMouseClicked="#handleAddNew" prefHeight="55.0" prefWidth="330.0" style="-fx-background-color: FDAB9F;" text="Add New Donor">
@@ -33,7 +33,7 @@
                                 <Font name="Californian FB" size="25.0" />
                             </font>
                         </Button>
-                        <Button fx:id="updateButton" alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" onMouseClicked="#handleUpdate" prefHeight="55.0" prefWidth="330.0" style="-fx-background-color: FDAB9F;" text="Update Information">
+                        <Button fx:id="updateButton" alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleUpdate" onMouseClicked="#handleUpdate" prefHeight="55.0" prefWidth="330.0" style="-fx-background-color: FDAB9F;" text="Update Information">
                             <font>
                                 <Font name="Californian FB" size="25.0" />
                             </font>
@@ -41,6 +41,14 @@
                                 <Insets left="100.0" />
                             </HBox.margin>
                         </Button>
+                  <Button fx:id="addDonAmount" alignment="BASELINE_CENTER" graphicTextGap="22.0" layoutX="823.0" layoutY="32.0" mnemonicParsing="false" onMouseClicked="#handleAddDonationAmount" prefHeight="55.0" prefWidth="330.0" style="-fx-background-color: FDAB9F;" text="Add Donation Amount">
+                     <font>
+                        <Font name="Californian FB" size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </Button>
                     </children>
                 </HBox>
                 <ScrollPane layoutX="100.0" layoutY="377.0" prefHeight="500.0" prefWidth="1200.0">

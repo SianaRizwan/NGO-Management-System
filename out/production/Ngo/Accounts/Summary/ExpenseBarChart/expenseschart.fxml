@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane fx:id="expensesBarchart" prefHeight="554.0" prefWidth="1328.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accounts.Summary.ExpenseBarChart.ExpensesChartController">
+    <children>
+        <BarChart fx:id="ExpensesChart" layoutX="76.0" layoutY="35.0" prefHeight="497.0" prefWidth="1173.0" title="Expenses Summary">
+            <xAxis>
+                <CategoryAxis label="Expenses type" side="BOTTOM" fx:id="x" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="y" label="Total Expenses" side="LEFT" />
+            </yAxis>
+        </BarChart>
+    </children>
+</Pane>

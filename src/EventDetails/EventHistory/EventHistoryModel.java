@@ -10,7 +10,7 @@ import java.sql.SQLException;
 
 public class EventHistoryModel {
     protected ObservableList<History> getTableRecords() throws SQLException {
-        String sql = "select id,name,event_date,actual_budget,est_budget from event_details where event_date<sysdate order by event_date";
+        String sql = "select id,name,event_date,actual_budget,est_budget from event_details ";
         ObservableList<History> histories = FXCollections.observableArrayList();
         try {
             OracleConnection oc = new OracleConnection();

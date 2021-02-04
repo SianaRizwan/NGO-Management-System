@@ -1,4 +1,4 @@
-package EventDetails.ManageEvent.AssignSupply;
+package EventDetails.EventHistory.EventSupply.Food;
 
 import SupplyDetails.Food.Food;
 import Utilities.OracleConnection;
@@ -11,7 +11,7 @@ import java.sql.SQLException;
 
 public class ViewAssignedFoodModel {
     protected ObservableList<Food> getTableRecords(String eventID) throws SQLException {
-        String sql = "select v.ID,v.name,v.QTY,v.UNIT_PRICE,v.EXPIRE_DATE,v.SUPPLIER from event_food ev,FOOD v where ev.food_id=v.ID and ev.event_id=?";
+        String sql = "select v.ID,v.name,ev.amount,v.UNIT_PRICE*ev.amount,v.EXPIRE_DATE,v.SUPPLIER from event_food ev,FOOD v where ev.food_id=v.ID and ev.event_id=?";
         ObservableList<Food> foodList = FXCollections.observableArrayList();
         try {
             OracleConnection oc = new OracleConnection();

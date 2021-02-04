@@ -17,6 +17,8 @@ public class Food {
         this.supplier = supplier;
     }
 
+
+
     public Food(String name, int quantity, int price) {
         this.price = price;
         this.name = name;

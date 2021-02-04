@@ -1,5 +1,9 @@
 package EventDetails.ManageEvent;
 
+import EventDetails.EventHistory.EventSupply.Food.ViewAssignedFoodController;
+import EventDetails.EventHistory.EventSupply.Health.ViewAssignedMedController;
+import EventDetails.ManageEvent.AssignSupply.EventFood.ViewEventFoodController;
+import EventDetails.ManageEvent.ViewAssignees.Volunteers.ViewAssignedVolunteersController;
 import Utilities.ShowAlertDialogue;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
@@ -58,7 +62,14 @@ public class ManageEventEmployeesController {
     @FXML
     void handleViewAssignedVolunteers() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewAssignees/Volunteers/viewAssignedVolunteers.fxml"));
-        showList(loader, "Assigned Volunteers");
+        AnchorPane pane = loader.load();
+        ViewAssignedVolunteersController view = loader.getController();
+        view.populateTableView(eventName.getText());
+        Stage stage = new Stage(StageStyle.DECORATED);
+        stage.setTitle("View Assigned Food");
+        stage.setScene(new Scene(pane));
+        stage.show();
+
     }
 
     private static String eventID;
@@ -109,19 +120,33 @@ public class ManageEventEmployeesController {
     @FXML
     void handleViewAssignedSupply() throws IOException {
         if(eventID.contains("F")){
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("AssignSupply/viewAssignedFood.fxml"));
-            showList(loader, "View Assigned Food");
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("AssignSupply/EventFood/ViewEventFood.fxml"));
+
+            AnchorPane pane = loader.load();
+            ViewEventFoodController view = loader.getController();
+            view.populateTableView(eventName.getText());
+            Stage stage = new Stage(StageStyle.DECORATED);
+            stage.setTitle("View Assigned Food");
+            stage.setScene(new Scene(pane));
+            stage.show();
         }
         else {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("AssignSupply/EventMed/viewAssignedMed.fxml"));
-            showList(loader, "View Assigned Med");
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../EventHistory/EventSupply/Health/viewAssignedMed.fxml"));
+            AnchorPane pane = loader.load();
+            ViewAssignedMedController view = loader.getController();
+            view.populateTableView(eventName.getText());
+            Stage stage = new Stage(StageStyle.DECORATED);
+            stage.setTitle("View Assigned Medicine");
+            stage.setScene(new Scene(pane));
+            stage.show();
+
         }
     }
 
     @FXML
     void handleAddSupply() throws IOException {
         if(eventID.contains("F")){
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("AssignSupply/AddFoodToEvent.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("AssignSupply/EventFood/AddFoodToEvent.fxml"));
             showList(loader, "Assign Food");
         }
         else {

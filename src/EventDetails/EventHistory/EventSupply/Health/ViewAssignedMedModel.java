@@ -1,4 +1,4 @@
-package EventDetails.ManageEvent.AssignSupply.EventMed;
+package EventDetails.EventHistory.EventSupply.Health;
 
 import SupplyDetails.Medicine.Medicine;
 import Utilities.OracleConnection;
@@ -13,7 +13,7 @@ import java.text.SimpleDateFormat;
 
 public class ViewAssignedMedModel {
     protected ObservableList<Medicine> getTableRecords(String eventID) throws SQLException {
-        String sql = "select v.ID,v.name,v.QTY,v.UNIT_PRICE,v.EXPIRE_DATE,v.MANUFACTURER from event_health ev,HEALTH_PRODUCT v where ev.health_id=v.ID and ev.event_id=?";
+        String sql = "select v.ID,v.name,ev.amount,v.UNIT_PRICE*ev.amount,v.EXPIRE_DATE,v.MANUFACTURER from event_health ev,HEALTH_PRODUCT v where ev.health_id=v.ID and ev.event_id=?";
         ObservableList<Medicine> medList = FXCollections.observableArrayList();
         try {
             OracleConnection oc = new OracleConnection();
