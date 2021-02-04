@@ -6,7 +6,6 @@ import Utilities.ShowAlertDialogue;
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
@@ -102,8 +101,8 @@ public class AddDoctorToEventController {
         //System.out.println(selectedID);
         if (addDoctorToEventModel.isAssignVolunteerSuccessful(selectedID, new ManageEventController().getEventID())) {
             new ShowAlertDialogue().infoBox("Volunteers Assigned!", null, "Assign Volunteer");
-            refreshGridPane();
-            setName();
+            Stage stage = (Stage) viewDetails.getScene().getWindow();
+            stage.close();
         } else {
             new ShowAlertDialogue().infoBox("Volunteers Assigning Failed!", null, "Assign Volunteer");
         }

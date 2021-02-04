@@ -118,7 +118,7 @@
                               </ImageView>
                            </children>
                         </AnchorPane>
-                        <Label contentDisplay="CENTER" prefWidth="220.0" text="View History" textAlignment="CENTER">
+                        <Label contentDisplay="CENTER" prefWidth="220.0" text="View Details" textAlignment="CENTER">
                            <VBox.margin>
                               <Insets left="10.0" top="10.0" />
                            </VBox.margin>

@@ -79,8 +79,8 @@ public class AddEmployeesToEventController {
         //System.out.println(names);
         if(addEmployeesToEventModel.isAssignEmployeeSuccessful(selectedId,new ManageEventController().getEventID())){
             new ShowAlertDialogue().infoBox("Employees Assigned!",null,"Assign Employees");
-            refreshGridPane();
-            setName();
+            Stage stage = (Stage) viewDetails.getScene().getWindow();
+            stage.close();
         }
         else {
             new ShowAlertDialogue().infoBox("Employees Assigning Failed!",null,"Assign Employees");

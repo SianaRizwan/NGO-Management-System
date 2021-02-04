@@ -3,29 +3,32 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Accounts/Summary/DonationSummary/donationSummary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Summary/DonationSummary/donationSummary.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Accounts/Summary/DonationSummary/donationSummaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Summary/DonationSummary/donationSummaryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Accounts/Summary/ExpenseBarChart/ExpensesChartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Summary/ExpenseBarChart/ExpensesChartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Accounts/Summary/ExpenseBarChart/ExpensesChartModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Summary/ExpenseBarChart/ExpensesChartModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Accounts/Summary/ExpenseBarChart/expenseschart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Summary/ExpenseBarChart/expenseschart.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Accounts/Summary/SalaryBarchart/SalaryChartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Summary/SalaryBarchart/SalaryChartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Accounts/Summary/SalaryBarchart/SalaryChartModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Summary/SalaryBarchart/SalaryChartModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Accounts/Summary/SalaryBarchart/salarychart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Summary/SalaryBarchart/salarychart.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/EventHistory/EventSupply/Food/ViewAssignedFoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/EventHistory/EventSupply/Food/ViewAssignedFoodController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/EventHistory/EventSupply/Food/ViewAssignedFoodModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/EventHistory/EventSupply/Food/ViewAssignedFoodModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/EventHistory/EventSupply/Food/viewAssignedFood.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/EventHistory/EventSupply/Food/viewAssignedFood.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/EventHistory/EventSupply/Health/ViewAssignedMedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/EventHistory/EventSupply/Health/ViewAssignedMedController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/EventHistory/EventSupply/Health/ViewAssignedMedModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/EventHistory/EventSupply/Health/ViewAssignedMedModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/EventHistory/EventSupply/Health/viewAssignedMed.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/EventHistory/EventSupply/Health/viewAssignedMed.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/Events.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/Events.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/EventsEmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/EventsEmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/ManageEvent/AssignSupply/EventMed/EventMed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/ManageEvent/AssignSupply/EventMed/EventMed.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/ManageEvent/AssignSupply/EventMed/ViewEventMed.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/ManageEvent/AssignSupply/EventMed/ViewEventMed.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/ManageEvent/AssignSupply/EventMed/ViewEventMedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/ManageEvent/AssignSupply/EventMed/ViewEventMedController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/ManageEvent/AssignSupply/EventMed/ViewEventMedModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/ManageEvent/AssignSupply/EventMed/ViewEventMedModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SupplyDetails/Food/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SupplyDetails/Food/Food.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SupplyDetails/Medicine/Medicine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SupplyDetails/Medicine/Medicine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Expenses/ExpensesDetailsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Expenses/ExpensesDetailsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/ExpenseBarChart/ExpensesChartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/ExpenseBarChart/ExpensesChartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/ExpenseBarChart/ExpensesChartModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/ExpenseBarChart/ExpensesChartModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/ExpenseBarChart/expenseschart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/ExpenseBarChart/expenseschart.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/SalaryBarchart/SalaryChartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/SalaryBarchart/SalaryChartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/SalaryBarchart/salarychart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/SalaryBarchart/salarychart.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventHistoryController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventHistoryController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventHistoryController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventHistoryController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventHistoryController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventHistoryController$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventHistoryController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventHistoryController$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventHistoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventHistoryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/Events.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/Events.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventsEmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventsEmployeeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/DoctorDetails/DoctorDetailsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/DoctorDetails/DoctorDetailsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/DonorDetails/donorDetailsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/DonorDetails/donorDetailsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/EmployeeDet/EmployeeDetailsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/EmployeeDet/EmployeeDetailsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/VolunteerDetails/VolunteerDetailsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/VolunteerDetails/VolunteerDetailsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Emergency/EmergencySupplyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Emergency/EmergencySupplyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Food/FoodController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Food/FoodController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Medicine/MedicineController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Medicine/MedicineController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Vaccine/VaccineController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Vaccine/VaccineController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventDetails/ManageEvent/AssignSupply/EventFood/AddFoodToEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/ManageEvent/AssignSupply/EventFood/AddFoodToEventController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventDetails/ManageEvent/AssignSupply/EventMed/AddMedToEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/ManageEvent/AssignSupply/EventMed/AddMedToEventController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventDetails/ManageEvent/ViewAssignees/Doctors/AddDoctorToEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/ManageEvent/ViewAssignees/Doctors/AddDoctorToEventController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventDetails/ManageEvent/ViewAssignees/Employee/AddEmployeesToEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/ManageEvent/ViewAssignees/Employee/AddEmployeesToEventController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventDetails/ManageEvent/ViewAssignees/Volunteers/AddVolunteersToEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/ManageEvent/ViewAssignees/Volunteers/AddVolunteersToEventController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,26 +291,26 @@
     </state>
     <state x="457" y="139" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1606396653325" />
     <state x="548" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1612277848286" />
-    <state width="1493" height="131" key="GridCell.Tab.0.bottom" timestamp="1612449615139">
+    <state width="1493" height="131" key="GridCell.Tab.0.bottom" timestamp="1612451487386">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1237" height="153" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1606403303046" />
-    <state width="1493" height="131" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612449615139" />
-    <state width="1493" height="131" key="GridCell.Tab.0.center" timestamp="1612449615138">
+    <state width="1493" height="131" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612451487386" />
+    <state width="1493" height="131" key="GridCell.Tab.0.center" timestamp="1612451487386">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1237" height="153" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1606403303046" />
-    <state width="1493" height="131" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1612449615138" />
-    <state width="1493" height="131" key="GridCell.Tab.0.left" timestamp="1612449615138">
+    <state width="1493" height="131" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1612451487386" />
+    <state width="1493" height="131" key="GridCell.Tab.0.left" timestamp="1612451487386">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1237" height="153" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1606403303045" />
-    <state width="1493" height="131" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1612449615138" />
-    <state width="1493" height="131" key="GridCell.Tab.0.right" timestamp="1612449615138">
+    <state width="1493" height="131" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1612451487386" />
+    <state width="1493" height="131" key="GridCell.Tab.0.right" timestamp="1612451487386">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1237" height="153" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1606403303046" />
-    <state width="1493" height="131" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1612449615138" />
+    <state width="1493" height="131" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1612451487386" />
     <state x="277" y="0" key="SettingsEditor" timestamp="1612427964977">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

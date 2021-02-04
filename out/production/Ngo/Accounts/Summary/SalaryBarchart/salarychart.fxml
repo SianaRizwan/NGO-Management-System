@@ -5,9 +5,16 @@
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.layout.Pane?>
 
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.shape.Line?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.JFXTextField?>
 <Pane fx:id="salaryBarchart" prefHeight="554.0" prefWidth="1328.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accounts.Summary.SalaryBarchart.SalaryChartController">
    <children>
-      <BarChart fx:id="SalaryChart" categoryGap="14.0" layoutX="230.0" layoutY="18.0" prefHeight="497.0" prefWidth="912.0" stylesheets="@../../../theme.css" title="Salary Expense">
+       <BarChart fx:id="SalaryChart" categoryGap="14.0" layoutX="230.0" layoutY="18.0" prefHeight="497.0" prefWidth="912.0" stylesheets="@../../../theme.css" title="Salary Expense">
         <xAxis>
           <CategoryAxis label="Designation Name" side="BOTTOM" fx:id="x" />
         </xAxis>
@@ -15,5 +22,11 @@
           <NumberAxis fx:id="y" label="Total Salary given" side="LEFT" />
         </yAxis>
       </BarChart>
+       <JFXTextField fx:id="totalSalaryTextfield" editable="false" layoutX="1049.0" layoutY="498.0" prefHeight="31.0" prefWidth="166.0" style="-fx-background-color: #ffffff;" styleClass="summary-text-field" stylesheets="@../../../theme.css" />
+       <Label graphicTextGap="22.0" layoutX="913.0" layoutY="503.0" prefHeight="22.0" prefWidth="128.0" text="Total Salary :">
+           <font>
+               <Font name="Californian FB" size="18.0" />
+           </font>
+       </Label>
    </children>
 </Pane>
