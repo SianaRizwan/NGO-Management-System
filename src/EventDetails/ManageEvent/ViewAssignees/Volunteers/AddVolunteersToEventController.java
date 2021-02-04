@@ -1,6 +1,5 @@
 package EventDetails.ManageEvent.ViewAssignees.Volunteers;
 
-import EventDetails.ManageEvent.ManageEventController;
 import EventDetails.ManageEvent.ViewAssignees.Doctors.AddDoctorToEventController;
 import Utilities.ShowAlertDialogue;
 import com.jfoenix.controls.JFXCheckBox;
@@ -80,11 +79,13 @@ public class AddVolunteersToEventController {
         stage.close();
     }
 
+    public String event_id;
+
     @FXML
     void handleConfirmButton(ActionEvent event) {
         getSelectedVolunteers();
         //System.out.println(selectedID);
-        if (addVolunteersToEventModel.isAssignVolunteerSuccessful(selectedID, new ManageEventController().getEventID())) {
+        if (addVolunteersToEventModel.isAssignVolunteerSuccessful(selectedID, event_id)) {
             new ShowAlertDialogue().infoBox("Volunteers Assigned!", null, "Assign Volunteer");
             refreshGridPane();
             setName();
