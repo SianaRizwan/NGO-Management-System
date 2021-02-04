@@ -12,7 +12,7 @@ public class ViewDoctorInformationModel {
         try {
             List<String> list = new ArrayList<>();
             String sql = "select d.doctor_id,d.name,d.email,d.dob,d.gender,d.address,d.phone,d.speciality," +
-                    "d.available_hr,d.qualification,show_Doctor_Salary(?) from doctor d where d.doctor_id=?";
+                            "d.available_hr,d.qualification,show_Doctor_Salary(?) from doctor d where d.doctor_id=?";
             OracleConnection oc = new OracleConnection();
             PreparedStatement ps = oc.conn.prepareStatement(sql);
             ps.setString(1, doc_id);

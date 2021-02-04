@@ -13,6 +13,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class DashboardController implements Initializable {
+    String eventDetails = "../EventDetails/Events.fxml";
     @FXML
     private BorderPane employeeDetailsBorderPane;
 
@@ -36,6 +37,7 @@ public class DashboardController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         if (!(new LoginModel().getDesignation().contains("Admin"))){
             dashboardAccounts.setVisible(false);
+            eventDetails="../EventDetails/EventsEmployee.fxml";
         }
     }
 
@@ -64,7 +66,7 @@ public class DashboardController implements Initializable {
     }
     @FXML
     public void viewEventsDetails() throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("../EventDetails/Events.fxml"));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource(eventDetails));
         employeeDetailsBorderPane.setCenter(pane);
     }
 }

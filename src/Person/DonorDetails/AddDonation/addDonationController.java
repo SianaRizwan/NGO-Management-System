@@ -1,7 +1,5 @@
 package Person.DonorDetails.AddDonation;
 
-import EventDetails.CreateEvent.CreateEventModel;
-import EventDetails.ManageEvent.ManageEventModel;
 import Utilities.ShowAlertDialogue;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;

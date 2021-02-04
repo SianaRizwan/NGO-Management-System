@@ -1,0 +1,110 @@
+package EventDetails.ManageEvent.AssignSupply.EventFood;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.TableCell;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import javafx.util.Callback;
+
+import java.sql.SQLException;
+
+
+public class ViewEventFoodController {
+    @FXML
+    private AnchorPane viewDetails;
+
+    @FXML
+    private TableView<EventFood> informationTable;
+
+    @FXML
+    private TableColumn<EventFood, String> colName;
+
+    @FXML
+    private TableColumn<EventFood, Integer> colAvailableQty;
+
+    @FXML
+    private TableColumn<EventFood, String> colRequiredQty;
+
+
+
+
+    @FXML
+    void handleBackButton() {
+        Stage stage = (Stage) viewDetails.getScene().getWindow();
+        stage.close();
+    }
+
+    public void populateTableView(String id) {
+        colName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        colAvailableQty.setCellValueFactory(new PropertyValueFactory<>("availableQty"));
+       // colRequiredQty.setCellValueFactory(new PropertyValueFactory<>("reqQty"));
+
+
+        //problem
+        {
+            Callback<TableColumn<EventFood, String>, TableCell<EventFood, String>> cellFactory1 = (param) -> {
+//tablecell button
+                final TableCell<EventFood, String> cell = new TableCell<EventFood, String>() {
+                    @Override
+                    public void updateItem(String item, boolean empty) {
+                        super.updateItem(item, empty);
+                        //cell is created only on non-empty rows
+                        if (empty) {
+                            setGraphic(null);
+                        } else {
+                            final TextField details = new TextField();
+                            ViewEventFoodModel view=new ViewEventFoodModel();
+                            details.getStyleClass().clear();
+                            details.getStyleClass().add("second-text-field");
+                            System.out.println(new ViewEventFoodModel().getRequiredAmount());
+                            view.setId(id);
+
+                            details.setText(new ViewEventFoodModel().getRequiredAmount());
+
+                            details.setOnAction(event -> {
+                                EventFood h = getTableView().getItems().get(getIndex());
+                                //write code
+                                details.setEditable(true);
+                                details.setText(details.getText());
+                               view.isAmountAddSuccessful(Integer.parseInt(details.getText()), id, h.getName());
+                            });
+                            setGraphic(details);
+
+                        }
+                        setText(null);
+                    }
+
+
+                };
+
+                return cell;
+            };
+            colRequiredQty.setCellFactory(cellFactory1);
+
+      /* colRequiredQty.setCellFactory(TextFieldTableCell.forTableColumn());
+       colRequiredQty.setOnEditCommit(
+               new EventHandler<TableColumn.CellEditEvent<EventFood, String>>() {
+                   @Override
+                   public void handle(TableColumn.CellEditEvent<EventFood, String> event) {
+                       ((EventFood) event.getTableView().getItems().get(event.getTablePosition().getRow())).setReqQty(Integer.parseInt(event.getNewValue()));
+                   }
+    });
+       informationTable.setEditable(true);*/
+
+        }
+
+
+        try {
+            informationTable.setItems(new ViewEventFoodModel().getTableRecords(id));
+        } catch (SQLException throwables) {
+            System.out.println("ViewEventFoodController: initialize");
+            throwables.printStackTrace();
+        }
+    }
+
+
+}

@@ -1,7 +1,5 @@
 package EventDetails.CurrentAndUpcomingEvent;
 
-import EventDetails.EventsController;
-import EventDetails.ManageEvent.ManageEventController;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;

@@ -1,6 +1,5 @@
 package EventDetails.ManageEvent.ViewAssignees.Volunteers;
 
-import EventDetails.ManageEvent.ManageEventController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TableColumn;
@@ -38,24 +37,24 @@ public class ViewAssignedVolunteersController {
 
     @FXML
     void handleBackButton() throws IOException {
-        FXMLLoader.load(getClass().getResource("../../../ManageEvent/ManageEvent.fxml"));
+        FXMLLoader.load(getClass().getResource("../../ManageEvent.fxml"));
         Stage stage = (Stage) viewDetails.getScene().getWindow();
         stage.close();
     }
 
-    public void initialize() {
-        populateTableView();
-    }
 
-    private void populateTableView() {
+    public void populateTableView(String id) {
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
         colContactNo.setCellValueFactory(new PropertyValueFactory<>("phone"));
         colQualification.setCellValueFactory(new PropertyValueFactory<>("designation"));
         colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
+
+
+
         try {
-            informationTable.setItems(new ViewAssignedVolunteersModel().getTableRecords(new ManageEventController().getEventID()));
+            informationTable.setItems(new ViewAssignedVolunteersModel().getTableRecords(id));
         } catch (SQLException throwables) {
             System.out.println("employeeDetailsController: initialize");
             throwables.printStackTrace();

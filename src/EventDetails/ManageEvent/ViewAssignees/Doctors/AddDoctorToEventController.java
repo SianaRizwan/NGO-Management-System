@@ -12,8 +12,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-import javax.swing.*;
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -95,7 +93,7 @@ public class AddDoctorToEventController {
     }
 
 
-      public void handleSearch() {
+    public void handleSearch() {
         setSearchedName(searchOption.getText());
     }
 
@@ -112,8 +110,7 @@ public class AddDoctorToEventController {
     }
 
     @FXML
-     void handleBackButton() throws IOException {
-        FXMLLoader.load(getClass().getResource("../../../ManageEvent/ManageEvent.fxml"));
+    void handleBackButton() throws IOException {
         Stage stage = (Stage) viewDetails.getScene().getWindow();
         stage.close();
     }

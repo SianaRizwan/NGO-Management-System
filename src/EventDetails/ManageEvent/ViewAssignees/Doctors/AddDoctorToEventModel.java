@@ -1,12 +1,12 @@
 package EventDetails.ManageEvent.ViewAssignees.Doctors;
 
-import EventDetails.ManageEvent.ViewAssignees.GetPersonnelInformationForEvent;
+import EventDetails.ManageEvent.GetInformationForEvent;
 
 import java.util.ArrayList;
 
 
 public class AddDoctorToEventModel {
-    GetPersonnelInformationForEvent ev = new GetPersonnelInformationForEvent();
+    GetInformationForEvent ev = new GetInformationForEvent();
 
     protected String[] getSearchedList(String[] info, String text) {
         String sql = "select doctor_ID from doctor where doctor_id like ? or name like ?";

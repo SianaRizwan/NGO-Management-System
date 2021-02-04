@@ -43,24 +43,24 @@ public class UpdateEmployeeController implements Initializable {
     @FXML
     public TextField employeeAddress;
     @FXML
-        private Pane updateEmployeePane;
+    private Pane updateEmployeePane;
     UpdateEmployeeModel updateEmployeeModel = new UpdateEmployeeModel();
 
     private final ObservableList<String> gender = FXCollections.observableArrayList("Male", "Female", "Others");
-   private final ObservableList<String> designation = FXCollections.observableArrayList();
+    private final ObservableList<String> designation = FXCollections.observableArrayList();
 
     @FXML
-    private void handleConfirmButton() throws  ParseException {
+    private void handleConfirmButton() throws ParseException {
         Date dobDate = new SimpleDateFormat("yyyy-dd-MM").parse(employeeDOB.getEditor().getText());
-        if (new Validation().checkEmailAndPhoneValidation(employeeEmailID.getText(),employeePhoneNumber.getText())){
+        if (new Validation().checkEmailAndPhoneValidation(employeeEmailID.getText(), employeePhoneNumber.getText())) {
             if (updateEmployeeModel.isUpdateEmployeeSuccessful(dobDate, employeeGender.getSelectionModel().getSelectedItem().toString(),
-                employeeAddress.getText(), employeePhoneNumber.getText(), employeeDesignation.getSelectionModel().getSelectedItem().toString(),
-                employeeEmailID.getText(), employeePassword.getText(), Integer.parseInt(employeeID.getText()))) {
-            new ShowAlertDialogue().infoBox("update Successful!", null, "update Employee");
-            refreshTextField();
-        }
-        }else {
-            new ShowAlertDialogue().infoBox("Insert Valid Email or Phone Number", null, "Update Employee" );
+                    employeeAddress.getText(), employeePhoneNumber.getText(), employeeDesignation.getSelectionModel().getSelectedItem().toString(),
+                    employeeEmailID.getText(), employeePassword.getText(), Integer.parseInt(employeeID.getText()))) {
+                new ShowAlertDialogue().infoBox("update Successful!", null, "update Employee");
+                refreshTextField();
+            }
+        } else {
+            new ShowAlertDialogue().infoBox("Insert Valid Email or Phone Number", null, "Update Employee");
         }
     }
 
@@ -85,6 +85,7 @@ public class UpdateEmployeeController implements Initializable {
 
 
     }
+
     @FXML
     void handleBackButton() throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("../employeeDetails.fxml"));

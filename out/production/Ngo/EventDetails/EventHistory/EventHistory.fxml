@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="viewDetails" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EventDetails.EventHistory.EventHistoryController">
+    <children>
+        <Pane fx:id="eventDetailsPane" prefHeight="1275.0" prefWidth="1473.0">
+            <children>
+            <TableView fx:id="informationTable" layoutX="129.0" layoutY="245.0" prefHeight="537.0" prefWidth="1175.0" style="-fx-background-color: #F7E9E9;" styleClass="table-row-cell">
+               <columns>
+                  <TableColumn fx:id="colID" prefWidth="151.0" style="-fx-background-color: #EEB1B1;" text="EVENT ID" />
+                  <TableColumn fx:id="colName" prefWidth="149.0" style="-fx-background-color: #EEB1B1;" text="EVENT NAME" />
+                  <TableColumn fx:id="colDate" prefWidth="132.0" style="-fx-background-color: #EEB1B1;" text="EVENT DATE" />
+                  <TableColumn fx:id="colActualBudget" prefWidth="148.0" style="-fx-background-color: #EEB1B1;" text="ACTUAL BUDGET" />
+                  <TableColumn fx:id="colEstBudget" prefWidth="146.0" style="-fx-background-color: #EEB1B1;" text="EST. BUDGET" />
+                  <TableColumn fx:id="colEmployee" prefWidth="112.0" style="-fx-background-color: #EEB1B1;" text="EMPLOYEE" />
+                  <TableColumn fx:id="colDoctor" prefWidth="112.0" style="-fx-background-color: #EEB1B1;" text="DOCTOR" />
+                  <TableColumn fx:id="colvolunteer" prefWidth="114.0" style="-fx-background-color: #EEB1B1;" text="VOLUNTEER" />
+                  <TableColumn fx:id="colSupplies" prefWidth="112.0" style="-fx-background-color: #EEB1B1;" text="SUPPLIES" />
+               </columns>
+            </TableView>
+                <Label layoutX="73.0" layoutY="15.0" prefHeight="98.0" prefWidth="511.0" text="EVENT HISTORY">
+                    <font>
+                        <Font name="Californian FB" size="36.0" />
+                    </font>
+                </Label>
+            <Label layoutX="167.0" layoutY="149.0" text="for the last">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="312.0" layoutY="149.0" text="month(s)">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fx:id="searchIcon" glyphName="SEARCH" layoutX="133.0" layoutY="167.0" />
+            <Line endX="174.0" layoutX="229.0" layoutY="183.0" startX="-100.0" />
+            <TextField fx:id="monthNumber" alignment="CENTER" layoutX="263.0" layoutY="145.0" onAction="#IDOnEnter" prefHeight="31.0" prefWidth="39.0" promptText="0" />
+            <Button graphicTextGap="22.0" layoutX="1209.0" layoutY="813.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="48.0" prefWidth="95.0" style="-fx-background-color: FDAB9F;" text="BACK">
+               <font>
+                  <Font name="Californian FB Bold" size="15.0" />
+               </font>
+            </Button>
+            </children>
+        </Pane>
+    </children>
+
+</AnchorPane>

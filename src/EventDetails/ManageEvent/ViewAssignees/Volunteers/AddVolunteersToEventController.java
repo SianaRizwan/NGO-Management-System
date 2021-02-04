@@ -1,14 +1,11 @@
 package EventDetails.ManageEvent.ViewAssignees.Volunteers;
 
-import EventDetails.ManageEvent.ManageEventController;
 import EventDetails.ManageEvent.ViewAssignees.Doctors.AddDoctorToEventController;
 import Utilities.ShowAlertDialogue;
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.geometry.Pos;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -76,16 +73,18 @@ public class AddVolunteersToEventController {
 
     @FXML
     void handleBackButton() throws IOException {
-        FXMLLoader.load(getClass().getResource("../../../ManageEvent/ManageEvent.fxml"));
+        //FXMLLoader.load(getClass().getResource("../../ManageEvent.fxml"));
         Stage stage = (Stage) viewDetails.getScene().getWindow();
         stage.close();
     }
+
+    public String event_id;
 
     @FXML
     void handleConfirmButton(ActionEvent event) {
         getSelectedVolunteers();
         //System.out.println(selectedID);
-        if (addVolunteersToEventModel.isAssignVolunteerSuccessful(selectedID, new ManageEventController().getEventID())) {
+        if (addVolunteersToEventModel.isAssignVolunteerSuccessful(selectedID, event_id)) {
             new ShowAlertDialogue().infoBox("Volunteers Assigned!", null, "Assign Volunteer");
             refreshGridPane();
             setName();

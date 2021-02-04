@@ -17,10 +17,19 @@ public class Food {
         this.supplier = supplier;
     }
 
+
+
     public Food(String name, int quantity, int price) {
         this.price = price;
         this.name = name;
         this.quantity = quantity;
+    }
+
+    public Food(int price, int quantity,  String name, String supplier) {
+        this.price = price;
+        this.quantity = quantity;
+        this.name = name;
+        this.supplier = supplier;
     }
 
     public Date getPdate() {

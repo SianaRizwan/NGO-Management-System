@@ -1,10 +1,7 @@
 package EventDetails;
 
 import EventDetails.CurrentAndUpcomingEvent.CurrentAndUpcomingEventController;
-import EventDetails.CurrentAndUpcomingEvent.CurrentAndUpcomingEvents;
-import Person.EmployeeDet.ViewEmployeeInformation.ViewEmployeeInformationController;
 import com.jfoenix.controls.JFXTextField;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -23,6 +20,13 @@ public class EventsController {
 
     @FXML
     private JFXTextField upcomingEvent;
+
+    @FXML
+    void handleViewHistory() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("EventHistory/EventHistory.fxml"));
+        eventDetailsPane.getChildren().setAll(pane);
+    }
+
 
     @FXML
     private void handleCreateEvent() throws IOException {

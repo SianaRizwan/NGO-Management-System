@@ -1,7 +1,6 @@
-package EventDetails.ManageEvent.ViewAssignees;
+package EventDetails.ManageEvent;
 
 import Utilities.OracleConnection;
-import javafx.collections.ObservableList;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -9,7 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GetPersonnelInformationForEvent {
+public class GetInformationForEvent {
     public String[] getSearchedListForEvent(String[] info, String text, String sql) {
         List<String> list = new ArrayList<>();
 

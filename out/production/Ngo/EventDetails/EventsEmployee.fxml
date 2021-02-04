@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: #ffe0e3;" styleClass="supply-button" stylesheets="@../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EventDetails.EventsEmployeeController">
+    <children>
+        <Pane fx:id="eventDetailsPane" prefHeight="1275.0" prefWidth="1473.0" stylesheets="@../theme.css">
+            <children>
+                <Label layoutX="73.0" layoutY="15.0" prefHeight="98.0" prefWidth="511.0" text="Events">
+                    <font>
+                        <Font name="Californian FB" size="36.0" />
+                    </font>
+                </Label>
+                  <TableView fx:id="eventTable" layoutX="142.0" layoutY="138.0" prefHeight="623.0" prefWidth="1000.0" style="-fx-prompt-text-fill: #8B0000; -fx-text-fill: BLACK; -jfx-focus-color: #8B0000; -fx-background-color: #F7E9E9; -fx-cell-size: 45px;" stylesheets="@../theme.css">
+                      <columns>
+                          <TableColumn fx:id="colEventID" editable="false" maxWidth="300.0" minWidth="225.99996948242188" prefWidth="334.0" text="Event ID" />
+                          <TableColumn fx:id="colEventName" editable="false" minWidth="240.0" prefWidth="392.0" text="Event Name" />
+                          <TableColumn fx:id="colEventDate" editable="false" maxWidth="367.0" minWidth="-Infinity" prefWidth="308.0" text="Event Date" />
+                      </columns>
+               <styleClass>
+                  <String fx:value="search-field" />
+                  <String fx:value="table-row-cell" />
+                  <String fx:value="table-view" />
+               </styleClass>
+                  </TableView>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

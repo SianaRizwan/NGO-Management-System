@@ -110,15 +110,15 @@
                               <Insets left="4.0" right="4.0" />
                            </VBox.margin>
                            <children>
-                              <Button layoutY="1.0" mnemonicParsing="false" prefHeight="166.0" prefWidth="241.0" />
-                              <ImageView fitHeight="140.0" fitWidth="217.0" layoutX="13.0" layoutY="16.0" pickOnBounds="true">
+                              <Button layoutY="1.0" mnemonicParsing="false" onAction="#handleViewHistory" prefHeight="166.0" prefWidth="241.0" />
+                              <ImageView fitHeight="140.0" fitWidth="217.0" layoutX="13.0" layoutY="16.0" onMouseClicked="#handleViewHistory" pickOnBounds="true">
                                  <image>
                                     <Image url="@../images/History.jpg" />
                                  </image>
                               </ImageView>
                            </children>
                         </AnchorPane>
-                        <Label contentDisplay="CENTER" prefWidth="220.0" text="View History" textAlignment="CENTER">
+                        <Label contentDisplay="CENTER" prefWidth="220.0" text="View Details" textAlignment="CENTER">
                            <VBox.margin>
                               <Insets left="10.0" top="10.0" />
                            </VBox.margin>
