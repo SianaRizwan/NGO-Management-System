@@ -30,7 +30,7 @@ public class ViewEventMedModel {
     }
 
     protected ObservableList<EventMed> getTableRecords(String id) throws SQLException {
-        String sql = "select distinct h.name,h.total_qty,ev.amount from event_health ev,food h where ev.health_name=h.name and ev.event_id=?";
+        String sql = "select distinct h.name,h.total_qty,ev.amount from event_health ev,HEALTH_PRODUCT h where ev.health_name=h.name and ev.event_id=?";
         ObservableList<EventMed> medlist = FXCollections.observableArrayList();
         try {
             OracleConnection oc = new OracleConnection();
