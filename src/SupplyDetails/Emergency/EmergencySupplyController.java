@@ -1,6 +1,6 @@
 package SupplyDetails.Emergency;
 
-import SupplyDetails.AddHealthProducts.AddHealthProdController;
+import SupplyDetails.HealthProduct.AddHealthProducts.AddHealthProdController;
 import SupplyDetails.Emergency.ViewEmergencySupplyDetails.ViewEmergencySupplyDetailsController;
 import Utilities.ShowAlertDialogue;
 import javafx.collections.transformation.FilteredList;
@@ -72,7 +72,7 @@ public class EmergencySupplyController {
     }
 
     public void handleAddOption() throws IOException {
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("../AddHealthProducts/addHealthProd.fxml"));
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("../HealthProduct/AddHealthProducts/addHealthProd.fxml"));
         AnchorPane pane = loader.load();
         AddHealthProdController prod=loader.getController();
         prod.setType(3);

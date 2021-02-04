@@ -31,13 +31,13 @@ public class SupplyDetailsController implements Initializable {
 
     @FXML
     public void handleSupplyMedicine(ActionEvent event) throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("Medicine/medicine.fxml"));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("HealthProduct/Medicine/medicine.fxml"));
         supplyDetailsPane.getChildren().setAll(pane);
     }
 
     @FXML
     private void handleSupplyVaccine(ActionEvent event) throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("Vaccine/vaccine.fxml"));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("HealthProduct/Vaccine/vaccine.fxml"));
         supplyDetailsPane.getChildren().setAll(pane);
     }
 
