@@ -10,7 +10,7 @@ import java.sql.SQLException;
 
 public class ViewEventFoodModel {
     protected ObservableList<EventFood> getTableRecords(String id) throws SQLException {
-        String sql = "select f.name,f.total_qty,ev.amount from event_food ev,food f where ev.food_name=f.name and ev.event_id=?";
+        String sql = "select f.name,f.total_qty,nvl(ev.amount,0) from event_food ev,food f where ev.food_name=f.name and ev.event_id=?";
         ObservableList<EventFood> foodlist = FXCollections.observableArrayList();
         try {
             OracleConnection oc = new OracleConnection();
@@ -34,7 +34,7 @@ public class ViewEventFoodModel {
         }
     }
 
-    protected boolean isAmountAddSuccessful(int amt, String eventID, String foodName) {
+    protected void isAmountAddSuccessful(int amt, String eventID, String foodName) {
         try {
             String sql = "update event_food set amount=amount+? where event_id=? and food_name=?";
             OracleConnection oc = new OracleConnection();
@@ -45,15 +45,13 @@ public class ViewEventFoodModel {
             int x = ps.executeUpdate();
             if (x > 0) {
                 if (isAmountUpdateSuccessful(amt,foodName)) {
-                    return true;
+                    System.out.println("p");
                 }
 
             }
         } catch (Exception e) {
             e.printStackTrace();
-            return false;
         }
-        return false;
     }
 
     private boolean isAmountUpdateSuccessful(int amt, String foodName) {

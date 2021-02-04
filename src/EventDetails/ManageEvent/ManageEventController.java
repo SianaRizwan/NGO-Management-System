@@ -2,7 +2,6 @@ package EventDetails.ManageEvent;
 
 import EventDetails.ManageEvent.ViewAssignees.Doctors.ViewAssignedDoctorsController;
 import EventDetails.ManageEvent.ViewAssignees.Employee.ViewAssignedEmployeesController;
-import EventDetails.ManageEvent.ViewAssignees.Volunteers.AddVolunteersToEventController;
 import EventDetails.ManageEvent.ViewAssignees.Volunteers.ViewAssignedVolunteersController;
 import Utilities.ShowAlertDialogue;
 import com.jfoenix.controls.JFXDatePicker;
@@ -61,13 +60,7 @@ public class ManageEventController {
     @FXML
     void handleAddVol() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewAssignees/Volunteers/addVolunteers.fxml"));
-        AnchorPane pane = loader.load();
-        AddVolunteersToEventController view = loader.getController();
-        view.event_id=getEventID();
-        Stage stage = new Stage(StageStyle.DECORATED);
-        stage.setTitle("Assign Volunteers");
-        stage.setScene(new Scene(pane));
-        stage.show();
+        showList(loader, "Assign Volunteers");
     }
 
     @FXML

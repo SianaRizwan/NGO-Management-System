@@ -93,7 +93,7 @@ public class AddDoctorToEventController {
     }
 
 
-      public void handleSearch() {
+    public void handleSearch() {
         setSearchedName(searchOption.getText());
     }
 
@@ -110,7 +110,7 @@ public class AddDoctorToEventController {
     }
 
     @FXML
-     void handleBackButton() throws IOException {
+    void handleBackButton() throws IOException {
         Stage stage = (Stage) viewDetails.getScene().getWindow();
         stage.close();
     }

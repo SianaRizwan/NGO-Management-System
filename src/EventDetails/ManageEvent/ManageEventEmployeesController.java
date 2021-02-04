@@ -1,8 +1,8 @@
 package EventDetails.ManageEvent;
 
+import EventDetails.EventHistory.EventSupply.Food.ViewAssignedFoodController;
 import EventDetails.EventHistory.EventSupply.Health.ViewAssignedMedController;
 import EventDetails.ManageEvent.AssignSupply.EventFood.ViewEventFoodController;
-import EventDetails.ManageEvent.ViewAssignees.Volunteers.AddVolunteersToEventController;
 import EventDetails.ManageEvent.ViewAssignees.Volunteers.ViewAssignedVolunteersController;
 import Utilities.ShowAlertDialogue;
 import com.jfoenix.controls.JFXDatePicker;
@@ -45,6 +45,9 @@ public class ManageEventEmployeesController {
     @FXML
     private JFXDatePicker eventDate;
 
+    @FXML
+    private JFXTextField eventName1;
+
     private void showList(FXMLLoader loader, String s) throws IOException {
         AnchorPane pane = loader.load();
         Stage stage = new Stage(StageStyle.DECORATED);
@@ -56,13 +59,7 @@ public class ManageEventEmployeesController {
     @FXML
     void handleAddVol() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewAssignees/Volunteers/addVolunteers.fxml"));
-        AnchorPane pane = loader.load();
-        AddVolunteersToEventController view = loader.getController();
-        view.event_id=getEventID();
-        Stage stage = new Stage(StageStyle.DECORATED);
-        stage.setTitle("Assign Volunteers");
-        stage.setScene(new Scene(pane));
-        stage.show();
+        showList(loader, "Assign Volunteers");
     }
 
     @FXML
@@ -84,6 +81,8 @@ public class ManageEventEmployeesController {
     public void handleEventID() {
         setEventID(eventName.getText().trim());
         eventDate.getEditor().setText(new ManageEventModel().getEventDate(eventName.getText()));
+        eventName1.setText(new ManageEventModel().getEventName(eventName.getText()));
+
     }
 
     private void setEventID(String id) {
@@ -125,7 +124,7 @@ public class ManageEventEmployeesController {
 
     @FXML
     void handleViewAssignedSupply() throws IOException {
-        if(eventID.contains("F")){
+        if(eventName.getText().contains("F")){
             FXMLLoader loader = new FXMLLoader(getClass().getResource("AssignSupply/EventFood/ViewEventFood.fxml"));
 
             AnchorPane pane = loader.load();
@@ -151,7 +150,7 @@ public class ManageEventEmployeesController {
 
     @FXML
     void handleAddSupply() throws IOException {
-        if(eventID.contains("F")){
+        if(eventName.getText().contains("F")){
             FXMLLoader loader = new FXMLLoader(getClass().getResource("AssignSupply/EventFood/AddFoodToEvent.fxml"));
             showList(loader, "Assign Food");
         }
@@ -159,5 +158,11 @@ public class ManageEventEmployeesController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("AssignSupply/EventMed/AddMedToEvent.fxml"));
             showList(loader, "Assign Med");
         }
+    }
+
+
+
+    public void setEventName(String id) {
+        eventName.setText(id);
     }
 }
