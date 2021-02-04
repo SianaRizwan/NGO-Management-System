@@ -20,10 +20,7 @@ public class ViewAssignedFoodController {
     @FXML
     private TableView<Food> informationTable;
 
-    @FXML
-    private TableColumn<Food, String> colId;
-
-    @FXML
+       @FXML
     private TableColumn<Food, String> colName;
 
     @FXML
@@ -32,8 +29,8 @@ public class ViewAssignedFoodController {
     @FXML
     private TableColumn<Food, Integer> colPrice;
 
-    @FXML
-    private TableColumn<Food, Date> colExpDate;
+
+
 
     @FXML
     private TableColumn<Food, String> colSupplier;
@@ -46,11 +43,9 @@ public class ViewAssignedFoodController {
     }
 
     public void populateTableView(String id){
-        colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colQuantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         colPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
-        colExpDate.setCellValueFactory(new PropertyValueFactory<>("edate"));
         colSupplier.setCellValueFactory(new PropertyValueFactory<>("supplier"));
 
         try {

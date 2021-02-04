@@ -19,8 +19,7 @@ public class ViewAssignedMedController {
     @FXML
     private TableView<Medicine> informationTable;
 
-    @FXML
-    private TableColumn<Medicine, String> colId;
+
 
     @FXML
     private TableColumn<Medicine, String> colName;
@@ -47,7 +46,6 @@ public class ViewAssignedMedController {
     }
 
     public void populateTableView(String id){
-        colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colQuantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         colPrice.setCellValueFactory(new PropertyValueFactory<>("price"));

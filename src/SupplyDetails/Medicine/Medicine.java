@@ -16,11 +16,6 @@ public class Medicine {
         this.id = id;
     }
 
-    public Medicine(int quantity, String name, String id) {
-        this.quantity = quantity;
-        this.name = name;
-        this.id = id;
-    }
 
     public Medicine(int price, int quantity, String name) {
         this.price = price;
@@ -28,13 +23,12 @@ public class Medicine {
         this.name = name;
     }
 
-    public Medicine(int price, int quantity, String edate, String name, String manufacturer, String id) {
+    public Medicine(int price, int quantity, String edate, String name, String manufacturer) {
         this.price = price;
         this.quantity = quantity;
         this.edate = edate;
         this.name = name;
         this.manufacturer = manufacturer;
-        this.id = id;
     }
 
     public int getPrice() {

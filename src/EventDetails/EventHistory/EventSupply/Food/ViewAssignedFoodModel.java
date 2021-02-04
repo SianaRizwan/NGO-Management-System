@@ -11,7 +11,9 @@ import java.sql.SQLException;
 
 public class ViewAssignedFoodModel {
     protected ObservableList<Food> getTableRecords(String eventID) throws SQLException {
-        String sql = "select v.ID,v.name,ev.amount,v.UNIT_PRICE*ev.amount,v.EXPIRE_DATE,v.SUPPLIER from event_food ev,FOOD v where ev.food_id=v.ID and ev.event_id=?";
+        String sql = "select distinct v.name,ev.amount,max(v.UNIT_PRICE)*ev.amount ,max(v.SUPPLIER)" +
+                    " from event_food ev,FOOD v where ev.food_name=v.name and ev.event_id=? " +
+                    "group by v.name,ev.amount order by v.name";
         ObservableList<Food> foodList = FXCollections.observableArrayList();
         try {
             OracleConnection oc = new OracleConnection();
@@ -19,14 +21,12 @@ public class ViewAssignedFoodModel {
             ps.setString(1, eventID);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                String id = rs.getString(1);
-                String name = rs.getString(2);
-                int qty = rs.getInt(3);
-                int price = rs.getInt(4);
-                java.util.Date expDate = rs.getDate(5);
-                String supplier = rs.getString(6);
+                String name = rs.getString(1);
+                int qty = rs.getInt(2);
+                int price = rs.getInt(3);
+                String supplier = rs.getString(4);
 
-                Food food = new Food(price,qty,expDate,name,supplier,id);
+                Food food = new Food(price,qty,name,supplier);
 
                 foodList.add(food);
             }

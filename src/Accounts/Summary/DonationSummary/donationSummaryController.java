@@ -50,7 +50,7 @@ public class donationSummaryController {
         setTableViewValue();
 
         try {
-            donationSummaryTable.setItems(model.getDonationTableRecords(6, 2021));
+            donationSummaryTable.setItems(model.getDonationTableRecords(2, 2021));
         } catch (SQLException throwables) {
             System.out.println("DonationSummaryController: initialize");
             throwables.printStackTrace();

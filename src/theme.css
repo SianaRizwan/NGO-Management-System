@@ -11,7 +11,7 @@
 }
 
 .glyph-icon {
-    -fx-fill: -fx-primaryText;
+    -fx-fill: -fx-wrongColor;
 
 }
 .combo-box{
@@ -33,6 +33,14 @@
     -fx-text-fill: -fx-primaryText;
     -fx-prompt-text-fill: -fx-primaryText;
     -jfx-focus-color: -fx-primaryText;
+    -jfx-label-float: true;
+    -fx-font-size: 18px;
+}
+
+.second-text-field {
+    -fx-text-fill: -fx-primary;
+    -fx-prompt-text-fill: -fx-primary;
+    -jfx-focus-color: -fx-primary;
     -jfx-label-float: true;
     -fx-font-size: 18px;
 }
@@ -65,7 +73,7 @@
     -fx-background-color: -fx-secondary;
     -fx-text-fill: BlACK;
     -fx-font-weight: bold;
-    -fx-font-size: 20px;
+    -fx-font-size: 17px;
 }
 
 .supply-button {
@@ -112,4 +120,26 @@
 .password-change:hover {
     -fx-font-weight: bold;
 -fx-font-size: 15px;
+}
+
+.table-row-cell {
+    -fx-cell-size: 45px;
+}
+.second-button {
+    -fx-background-color: -fx-secondary;
+    -fx-text-fill: -fx-buttonText;
+    -fx-background-radius: 3px;
+}
+.second-button:hover {
+    -fx-font-weight: bold;
+}
+.chart-bar {
+    -fx-bar-fill: -fx-wrongColor;
+}
+th {
+    background-color: -fx-wrongColor;
+    position:fixed;
+}
+.summary-text-field{
+fx-text-fill: BLACK;
 }

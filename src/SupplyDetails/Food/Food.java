@@ -25,13 +25,11 @@ public class Food {
         this.quantity = quantity;
     }
 
-    public Food(int price, int quantity, Date edate, String name, String supplier, String id) {
+    public Food(int price, int quantity,  String name, String supplier) {
         this.price = price;
         this.quantity = quantity;
-        this.edate = edate;
         this.name = name;
         this.supplier = supplier;
-        this.id = id;
     }
 
     public Date getPdate() {
