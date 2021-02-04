@@ -1,10 +1,10 @@
-package EventDetails.ManageEvent.AssignSupply.EventMed;
+package EventDetails.ManageEvent.AssignSupply;
 
-public class EventMed {
+public class EventSupply {
     int availableQty,reqQty;
     String name;
 
-    public EventMed(int availableQty, int reqQty, String name) {
+    public EventSupply(int availableQty, int reqQty, String name) {
         this.availableQty = availableQty;
         this.reqQty = reqQty;
         this.name = name;

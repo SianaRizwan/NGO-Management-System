@@ -1,5 +1,6 @@
 package EventDetails.ManageEvent.AssignSupply.EventFood;
 
+import EventDetails.ManageEvent.AssignSupply.EventSupply;
 import Utilities.OracleConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -29,9 +30,9 @@ public class ViewEventFoodModel {
         this.id = id;
     }
 
-    protected ObservableList<EventFood> getTableRecords(String id) throws SQLException {
+    protected ObservableList<EventSupply> getTableRecords(String id) throws SQLException {
         String sql = "select distinct f.name,f.total_qty,ev.amount from event_food ev,food f where ev.food_name=f.name and ev.event_id=?";
-        ObservableList<EventFood> foodlist = FXCollections.observableArrayList();
+        ObservableList<EventSupply> foodlist = FXCollections.observableArrayList();
         try {
             OracleConnection oc = new OracleConnection();
             PreparedStatement ps = oc.conn.prepareStatement(sql);
@@ -42,7 +43,7 @@ public class ViewEventFoodModel {
                 int availableQty = rs.getInt(2);
                 int reqQty = rs.getInt(3);
 
-                EventFood history = new EventFood(availableQty, reqQty, name);
+                EventSupply history = new EventSupply(availableQty, reqQty, name);
 
                 foodlist.add(history);
             }

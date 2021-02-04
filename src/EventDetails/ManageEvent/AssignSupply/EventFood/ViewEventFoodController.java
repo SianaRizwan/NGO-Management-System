@@ -1,5 +1,6 @@
 package EventDetails.ManageEvent.AssignSupply.EventFood;
 
+import EventDetails.ManageEvent.AssignSupply.EventSupply;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
@@ -18,16 +19,16 @@ public class ViewEventFoodController {
     private AnchorPane viewDetails;
 
     @FXML
-    private TableView<EventFood> informationTable;
+    private TableView<EventSupply> informationTable;
 
     @FXML
-    private TableColumn<EventFood, String> colName;
+    private TableColumn<EventSupply, String> colName;
 
     @FXML
-    private TableColumn<EventFood, Integer> colAvailableQty;
+    private TableColumn<EventSupply, Integer> colAvailableQty;
 
     @FXML
-    private TableColumn<EventFood, String> colRequiredQty;
+    private TableColumn<EventSupply, String> colRequiredQty;
 
 
 
@@ -46,9 +47,9 @@ public class ViewEventFoodController {
 
         //problem
         {
-            Callback<TableColumn<EventFood, String>, TableCell<EventFood, String>> cellFactory1 = (param) -> {
+            Callback<TableColumn<EventSupply, String>, TableCell<EventSupply, String>> cellFactory1 = (param) -> {
 //tablecell button
-                final TableCell<EventFood, String> cell = new TableCell<EventFood, String>() {
+                final TableCell<EventSupply, String> cell = new TableCell<EventSupply, String>() {
                     @Override
                     public void updateItem(String item, boolean empty) {
                         super.updateItem(item, empty);
@@ -66,7 +67,7 @@ public class ViewEventFoodController {
                             details.setText(new ViewEventFoodModel().getRequiredAmount());
 
                             details.setOnAction(event -> {
-                                EventFood h = getTableView().getItems().get(getIndex());
+                                EventSupply h = getTableView().getItems().get(getIndex());
                                 //write code
                                 details.setEditable(true);
                                 details.setText(details.getText());
