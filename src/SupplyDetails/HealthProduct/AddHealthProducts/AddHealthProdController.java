@@ -82,11 +82,11 @@ public class AddHealthProdController {
     private void handleBackHealth() throws IOException {
         AnchorPane pane = null;
         if (getType() == 1) {
-            pane = FXMLLoader.load(getClass().getResource("../HealthProduct/Medicine/medicine.fxml"));
+            pane = FXMLLoader.load(getClass().getResource("../../HealthProduct/Medicine/medicine.fxml"));
         } else if (getType() == 2) {
-            pane = FXMLLoader.load(getClass().getResource("../HealthProduct/Vaccine/vaccine.fxml"));
+            pane = FXMLLoader.load(getClass().getResource("../../HealthProduct/Vaccine/vaccine.fxml"));
         } else if (getType() == 3) {
-            pane = FXMLLoader.load(getClass().getResource("../Emergency/EmergencySupply.fxml"));
+            pane = FXMLLoader.load(getClass().getResource("../../Emergency/EmergencySupply.fxml"));
         }
 
         addNewHealthProdPane.getChildren().setAll(pane);
