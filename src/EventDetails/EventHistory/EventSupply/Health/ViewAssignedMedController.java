@@ -1,6 +1,6 @@
 package EventDetails.EventHistory.EventSupply.Health;
 
-import SupplyDetails.Medicine.Medicine;
+import SupplyDetails.HealthProduct.Medicine.Medicine;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TableColumn;

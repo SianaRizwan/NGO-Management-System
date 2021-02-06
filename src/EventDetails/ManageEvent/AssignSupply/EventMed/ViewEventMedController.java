@@ -1,5 +1,6 @@
 package EventDetails.ManageEvent.AssignSupply.EventMed;
 
+import EventDetails.ManageEvent.AssignSupply.EventSupply;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
@@ -17,16 +18,16 @@ public class ViewEventMedController {
     private AnchorPane viewDetails;
 
     @FXML
-    private TableView<EventMed> informationTable;
+    private TableView<EventSupply> informationTable;
 
     @FXML
-    private TableColumn<EventMed, String> colName;
+    private TableColumn<EventSupply, String> colName;
 
     @FXML
-    private TableColumn<EventMed, Integer> colAvailableQty;
+    private TableColumn<EventSupply, Integer> colAvailableQty;
 
     @FXML
-    private TableColumn<EventMed, String> colRequiredQty;
+    private TableColumn<EventSupply, String> colRequiredQty;
 
 
 
@@ -40,9 +41,9 @@ public class ViewEventMedController {
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colAvailableQty.setCellValueFactory(new PropertyValueFactory<>("availableQty"));
         {
-            Callback<TableColumn<EventMed, String>, TableCell<EventMed, String>> cellFactory1 = (param) -> {
+            Callback<TableColumn<EventSupply, String>, TableCell<EventSupply, String>> cellFactory1 = (param) -> {
 //tablecell button
-                final TableCell<EventMed, String> cell = new TableCell<EventMed, String>() {
+                final TableCell<EventSupply, String> cell = new TableCell<EventSupply, String>() {
                     @Override
                     public void updateItem(String item, boolean empty) {
                         super.updateItem(item, empty);
@@ -60,7 +61,7 @@ public class ViewEventMedController {
                             details.setText(new ViewEventMedModel().getRequiredAmount());
 
                             details.setOnAction(event -> {
-                                EventMed h = getTableView().getItems().get(getIndex());
+                                EventSupply h = getTableView().getItems().get(getIndex());
                                 //write code
                                 details.setEditable(true);
                                 details.setText(details.getText());

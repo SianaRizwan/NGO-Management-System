@@ -86,8 +86,8 @@ public class AddVolunteersToEventController {
         //System.out.println(selectedID);
         if (addVolunteersToEventModel.isAssignVolunteerSuccessful(selectedID, event_id)) {
             new ShowAlertDialogue().infoBox("Volunteers Assigned!", null, "Assign Volunteer");
-            refreshGridPane();
-            setName();
+            Stage stage = (Stage) viewDetails.getScene().getWindow();
+            stage.close();
         } else {
             new ShowAlertDialogue().infoBox("Volunteers Assigning Failed!", null, "Assign Volunteer");
         }

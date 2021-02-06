@@ -5,7 +5,6 @@ import Utilities.ShowAlertDialogue;
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
@@ -108,8 +107,8 @@ public class AddFoodToEventController {
         getSelectedFoods();
         if (addFoodToEventModel.isAssignFoodSuccessful(selectedID, new ManageEventEmployeesController().getEventID())) {
             new ShowAlertDialogue().infoBox("Foods Selected!", null, "Assign Food");
-            refreshGridPane();
-            setName();
+            Stage stage = (Stage) viewDetails.getScene().getWindow();
+            stage.close();
         } else {
             new ShowAlertDialogue().infoBox("Foods Selection Failed!", null, "Assign Food");
         }

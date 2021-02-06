@@ -107,8 +107,10 @@ public class AddMedToEventController {
         getSelectedFoods();
         if (addMedToEventModel.isAssignMedSuccessful(selectedID, new ManageEventEmployeesController().getEventID())) {
             new ShowAlertDialogue().infoBox("Meds Selected!", null, "Assign Meds");
-            refreshGridPane();
-            setName();
+//            refreshGridPane();
+//            setName();
+            Stage stage = (Stage) viewDetails.getScene().getWindow();
+            stage.close();
         } else {
             new ShowAlertDialogue().infoBox("Meds Selection Failed!", null, "Assign Meds");
         }

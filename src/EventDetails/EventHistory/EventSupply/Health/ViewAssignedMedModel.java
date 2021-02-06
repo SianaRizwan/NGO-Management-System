@@ -1,6 +1,6 @@
 package EventDetails.EventHistory.EventSupply.Health;
 
-import SupplyDetails.Medicine.Medicine;
+import SupplyDetails.HealthProduct.Medicine.Medicine;
 import Utilities.OracleConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
