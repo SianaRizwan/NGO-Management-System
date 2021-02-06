@@ -4,9 +4,14 @@ import Login.LoginModel;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.effect.DropShadow;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Circle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -19,7 +24,8 @@ public class DashboardController implements Initializable {
 
     @FXML
     private  AnchorPane mainPane;
-
+    @FXML
+    private Circle Logo;
     @FXML
     private HBox dashboardAccounts;
 
@@ -35,6 +41,10 @@ public class DashboardController implements Initializable {
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        Logo.setStroke(Color.FLORALWHITE);
+        Image image = new Image("images/Peace.jpg",false);
+        Logo.setFill(new ImagePattern(image));
+        Logo.setEffect(new DropShadow(+20d,0d,2d,Color.CRIMSON));
         if (!(new LoginModel().getDesignation().contains("Admin"))){
             dashboardAccounts.setVisible(false);
             eventDetails="../EventDetails/EventsEmployee.fxml";
