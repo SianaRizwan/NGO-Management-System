@@ -40,8 +40,7 @@ public class donationSummaryController {
     private TableColumn<Donation, Integer> colDonAmount;
     @FXML
     private JFXTextField totalDonationTextfield;
-    @FXML
-    private JFXButton viewDonationDetails;
+
 
     donationSummaryModel model = new donationSummaryModel();
 
@@ -81,8 +80,6 @@ public class donationSummaryController {
     }
 
     public void initialize() {
-        viewDonationDetails.getStyleClass().clear();
-        viewDonationDetails.getStyleClass().add("second-button");
         monthNumber.getStyleClass().clear();
         yearNumber.getStyleClass().clear();
         totalDonationTextfield.getStyleClass().clear();

@@ -27,9 +27,17 @@ public class ImportPersonnelFile {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+        removeFile();
         return false;
     }
 
+    private void removeFile() {
+        try {
+            Files.delete(to);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     private String getFileDirectory() {
         String fileName = null;
@@ -56,8 +64,9 @@ public class ImportPersonnelFile {
 
     private void configureFileChooser(FileChooser fileChooser) {
         fileChooser.setTitle("Add Employee");
-        fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("TEXT", "*.txt"),
-                new FileChooser.ExtensionFilter("All file", "*.*")
+        fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("All file", "*.*"),
+                new FileChooser.ExtensionFilter("TEXT", "*.txt"),
+                new FileChooser.ExtensionFilter("CSV", "*.csv")
         );
     }
 }

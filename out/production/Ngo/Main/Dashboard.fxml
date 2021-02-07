@@ -2,12 +2,15 @@
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -19,25 +22,40 @@
             <Image url="@../images/background.jpg" />
          </image>
       </ImageView>
-      <BorderPane fx:id="employeeDetailsBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.983" prefHeight="1285.0" prefWidth="2000.0" style="-fx-background-color: #ffe0e3;">
+      <BorderPane fx:id="employeeDetailsBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.983" prefHeight="1285.0" prefWidth="2000.0" style="-fx-background-color: ffe4e1;">
          <left>
-            <VBox prefWidth="350.0" style="-fx-background-color: #8B0000;" BorderPane.alignment="CENTER">
+            <VBox prefWidth="350.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
                <children>
                   <HBox alignment="CENTER" prefHeight="112.0" prefWidth="350.0">
                      <VBox.margin>
                         <Insets top="50.0" />
                      </VBox.margin>
                      <children>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Astha">
-                           <font>
-                              <Font name="Californian FB" size="48.0" />
-                           </font>
-                        </Text>
+                        <Circle fx:id="Logo" fill="WHITE" radius="63.0" stroke="#e86868" strokeType="INSIDE" strokeWidth="2.0" />
                      </children>
                   </HBox>
+                  <Text fill="WHITE" strokeMiterLimit="20.0" strokeType="INSIDE" strokeWidth="0.0" text="Astha" wrappingWidth="128.328125">
+                     <font>
+                        <Font name="Californian FB Bold" size="48.0" />
+                     </font>
+                     <stroke>
+                        <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="0.13592233009708743" startX="0.4854368932038835" startY="0.9368932038834952">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <VBox.margin>
+                        <Insets left="115.0" right="110.0" top="20.0" />
+                     </VBox.margin>
+                  </Text>
                   <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0" styleClass="tab_dashboard">
                      <VBox.margin>
-                        <Insets top="50.0" />
+                        <Insets top="15.0" />
                      </VBox.margin>
                      <children>
                         <FontAwesomeIconView glyphName="USER" size="20">
@@ -175,11 +193,11 @@
                      </children>
                   </HBox>
                </children>
+               <effect>
+                  <DropShadow radius="11.555" spread="0.06" width="27.22" />
+               </effect>
             </VBox>
          </left>
-         <center>
-            <Circle fx:id="Logo" fill="WHITE" radius="104.0" stroke="#e86868" strokeType="INSIDE" strokeWidth="2.0" BorderPane.alignment="TOP_CENTER" />
-         </center>
       </BorderPane>
    </children>
 </AnchorPane>

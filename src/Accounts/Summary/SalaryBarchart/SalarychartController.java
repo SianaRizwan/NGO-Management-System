@@ -26,6 +26,8 @@ public class SalaryChartController {
         }
 
         public void totalSalary(){
+            totalSalaryTextfield.getStyleClass().clear();
+            totalSalaryTextfield.getStyleClass().add("second-text-field");
             totalSalaryTextfield.setText(Integer.toString(new SalaryChartModel().getTotalSalary()));
         }
 }

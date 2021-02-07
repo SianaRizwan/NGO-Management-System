@@ -8,6 +8,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -20,7 +21,7 @@
             <Image url="@../images/background.jpg" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="562.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="1271.0" prefWidth="689.0" style="-fx-background-color: #8B0000;" stylesheets="@../theme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="590.0" AnchorPane.rightAnchor="590.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutX="562.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1271.0" prefWidth="689.0" style="-fx-background-color: #000000;" styleClass="bg" stylesheets="@../theme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="590.0" AnchorPane.rightAnchor="590.0" AnchorPane.topAnchor="0.0">
          <children>
             <Label alignment="CENTER" layoutX="233.0" layoutY="40.0" prefHeight="66.0" prefWidth="291.0" text="Register Here !!" textFill="#fffbfb">
                <font>
@@ -35,14 +36,20 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Button fx:id="confirmButton" graphicTextGap="22.0" layoutX="282.0" layoutY="750.0" mnemonicParsing="false" onAction="#confirmRegistration" onMouseClicked="#confirmRegistration" opacity="0.82" prefHeight="47.0" prefWidth="193.0" text="Confirm">
+            <Button fx:id="confirmButton" graphicTextGap="22.0" layoutX="282.0" layoutY="750.0" mnemonicParsing="false" onAction="#confirmRegistration" onMouseClicked="#confirmRegistration" opacity="0.9" prefHeight="47.0" prefWidth="193.0" text="Confirm">
                <font>
                   <Font name="Calibri" size="24.0" />
-               </font></Button>
-            <Button fx:id="backToLoginPageButton" layoutX="233.0" layoutY="831.0" mnemonicParsing="false" onAction="#handleBackToLoginPage" onMouseClicked="#handleBackToLoginPage" opacity="0.82" prefHeight="47.0" prefWidth="291.0" text="Back To LoginPage">
+               </font>
+               <effect>
+                  <DropShadow color="#fbf9f9" />
+               </effect></Button>
+            <Button fx:id="backToLoginPageButton" layoutX="233.0" layoutY="831.0" mnemonicParsing="false" onAction="#handleBackToLoginPage" onMouseClicked="#handleBackToLoginPage" opacity="0.9" prefHeight="47.0" prefWidth="291.0" text="Back To LoginPage">
                <font>
                   <Font name="Calibri" size="24.0" />
-               </font></Button>
+               </font>
+               <effect>
+                  <DropShadow color="#fbf9f9" />
+               </effect></Button>
             <JFXTextField fx:id="userNameTextfield" labelFloat="true" layoutX="187.0" layoutY="179.0" prefHeight="44.0" prefWidth="434.0" promptText="Name" />
             <JFXTextField fx:id="emailTextfield" labelFloat="true" layoutX="187.0" layoutY="245.0" prefHeight="44.0" prefWidth="434.0" promptText="Email ID" />
             <FontAwesomeIconView glyphName="USER_CIRCLE_ALT" layoutX="136.0" layoutY="212.0" size="25" />
@@ -65,6 +72,9 @@
                </font>
             </Label>
          </children>
+         <effect>
+            <DropShadow color="#d08d8d" offsetX="2.0" offsetY="3.0" radius="22.5" spread="0.17" width="71.0" />
+         </effect>
       </AnchorPane>
    </children>
 </AnchorPane>

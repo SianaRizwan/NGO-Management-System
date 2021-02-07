@@ -47,15 +47,16 @@
                         <JFXTextField fx:id="expAmountTextField" layoutX="438.0" layoutY="109.0" prefHeight="39.0" prefWidth="245.0" promptText="Amount" />
                         <FontAwesomeIconView glyphName="SELLSY" layoutX="59.0" layoutY="136.0" size="20" text="" />
                         <JFXButton fx:id="expConfirmBtn" graphicTextGap="22.0" layoutX="315.0" layoutY="298.0" onAction="#expConfirmBtn" onMouseClicked="#expConfirmBtn" prefHeight="31.0" prefWidth="82.0" styleClass="password-change" text="Add" />
-                        <JFXComboBox fx:id="expTypeComboBox" editable="true" labelFloat="true" layoutX="234.0" layoutY="35.0" prefHeight="39.0" prefWidth="245.0" promptText="Type" />
+                        <JFXComboBox fx:id="expTypeComboBox" editable="true" labelFloat="true" layoutX="234.0" layoutY="35.0" onAction="#handleType" prefHeight="39.0" prefWidth="245.0" promptText="Type" unFocusColor="#eb8d8d" />
                         <FontAwesomeIconView glyphName="MONEY" layoutX="391.0" layoutY="135.0" size="20" />
                         <EmojiOneView glyphName="REGIONAL_INDICATOR_T" layoutX="181.0" layoutY="61.0" size="21" />
                   <JFXTextField fx:id="expDescriptionTextField1" layoutX="112.0" layoutY="199.0" prefHeight="39.0" prefWidth="245.0" promptText="Description" />
                   <FontAwesomeIconView glyphName="STICKY_NOTE" layoutX="61.0" layoutY="226.0" size="20" />
                   <FontAwesomeIconView glyphName="CALENDAR" layoutX="393.0" layoutY="225.0" size="20" />
-                  <JFXDatePicker fx:id="expDate" layoutX="438.0" layoutY="202.0" promptText="Date" stylesheets="@../../theme.css" />
+                  <JFXDatePicker fx:id="expDate" defaultColor="#eb8d8d" layoutX="438.0" layoutY="202.0" promptText="Date" stylesheets="@../../theme.css" />
                     </children>
                 </AnchorPane>
+            <FontAwesomeIconView fx:id="backButton" glyphName="ARROW_LEFT" layoutX="1331.0" layoutY="64.0" onMouseClicked="#handleBackButton" size="32.0" styleClass="glyph-icon-back" />
             </children>
         </Pane>
     </children>

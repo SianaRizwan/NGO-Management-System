@@ -2,7 +2,87 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Accounts/Summary/EventSummary/Event.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Accounts/Summary/EventSummary/EventSummary.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Accounts/Summary/EventSummary/EventSummaryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Accounts/Summary/EventSummary/EventSummaryModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Accounts/Summary/ExpenseBarChart/Expense.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Designation/DesignationDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Designation/DesignationDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Designation/DesignationDetailsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Designation/DesignationDetailsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Expenses/ExpensesDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Expenses/ExpensesDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Expenses/ExpensesDetailsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Expenses/ExpensesDetailsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Expenses/ExpensesModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Expenses/ExpensesModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/DonationSummary/donationSummary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/DonationSummary/donationSummary.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/DonationSummary/donationSummaryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/DonationSummary/donationSummaryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/ExpenseBarChart/ExpensesChartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/ExpenseBarChart/ExpensesChartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/ExpenseBarChart/ExpensesChartModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/ExpenseBarChart/ExpensesChartModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/ExpenseBarChart/expenseschart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/ExpenseBarChart/expenseschart.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/SalaryBarchart/SalaryChartModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/SalaryBarchart/SalaryChartModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/SalaryBarchart/SalarychartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/SalaryBarchart/SalarychartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/SalaryBarchart/salarychart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/SalaryBarchart/salarychart.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/SummaryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/SummaryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/summary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/summary.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Login/ChangePassword/ChangePassword.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Login/ChangePassword/ChangePassword.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Login/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Login/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Main/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Main/Dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/DoctorDetails/AddDoctor/AddDoctor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/DoctorDetails/AddDoctor/AddDoctor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/DoctorDetails/DoctorDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/DoctorDetails/DoctorDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/DoctorDetails/UpdateDoctor/UpdateDoctorDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/DoctorDetails/UpdateDoctor/UpdateDoctorDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/DoctorDetails/ViewDoctorInformation/ViewDoctorInformation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/DoctorDetails/ViewDoctorInformation/ViewDoctorInformation.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/DonorDetails/AddDonation/addDonation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/DonorDetails/AddDonation/addDonation.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/DonorDetails/AddDonor/addDonor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/DonorDetails/AddDonor/addDonor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/DonorDetails/UpdateDonor/updateDonorDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/DonorDetails/UpdateDonor/updateDonorDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/DonorDetails/ViewDonorInformation/ViewDonorInformation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/DonorDetails/ViewDonorInformation/ViewDonorInformation.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/DonorDetails/donorDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/DonorDetails/donorDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/EmployeeDet/AddEmployee/AddEmployee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/EmployeeDet/AddEmployee/AddEmployee.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/EmployeeDet/UpdateEmployee/updateEmployee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/EmployeeDet/UpdateEmployee/updateEmployee.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/EmployeeDet/ViewEmployeeInformation/ViewEmployeeInformation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/EmployeeDet/ViewEmployeeInformation/ViewEmployeeInformation.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/EmployeeDet/employeeDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/EmployeeDet/employeeDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/VolunteerDetails/AddVolunteer/addVolunteer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/VolunteerDetails/AddVolunteer/addVolunteer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/VolunteerDetails/UpdateVolunteer/updateVolunteerDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/VolunteerDetails/UpdateVolunteer/updateVolunteerDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/VolunteerDetails/ViewVolunteerInformation/ViewVolunteerInformation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/VolunteerDetails/ViewVolunteerInformation/ViewVolunteerInformation.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/VolunteerDetails/volunteerDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/VolunteerDetails/volunteerDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Registration/register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Registration/register.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Accounts/Designation/DesignationDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Designation/DesignationDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Accounts/Designation/DesignationDetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Designation/DesignationDetailsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Accounts/Expenses/ExpensesDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Expenses/ExpensesDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Accounts/Expenses/ExpensesDetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Expenses/ExpensesDetailsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Accounts/Expenses/ExpensesModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Expenses/ExpensesModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Accounts/Summary/DonationSummary/donationSummary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Summary/DonationSummary/donationSummary.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Accounts/Summary/DonationSummary/donationSummaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Summary/DonationSummary/donationSummaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Accounts/Summary/ExpenseBarChart/ExpensesChartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Summary/ExpenseBarChart/ExpensesChartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Accounts/Summary/ExpenseBarChart/ExpensesChartModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Summary/ExpenseBarChart/ExpensesChartModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Accounts/Summary/ExpenseBarChart/expenseschart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Summary/ExpenseBarChart/expenseschart.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Accounts/Summary/SalaryBarchart/SalaryChartModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Summary/SalaryBarchart/SalaryChartModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Accounts/Summary/SalaryBarchart/SalarychartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Summary/SalaryBarchart/SalarychartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Accounts/Summary/SalaryBarchart/salarychart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Summary/SalaryBarchart/salarychart.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Accounts/Summary/SummaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Summary/SummaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Accounts/Summary/summary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Summary/summary.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Login/ChangePassword/ChangePassword.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/ChangePassword/ChangePassword.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Login/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/DoctorDetails/AddDoctor/AddDoctor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/DoctorDetails/AddDoctor/AddDoctor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/DoctorDetails/DoctorDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/DoctorDetails/DoctorDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/DoctorDetails/UpdateDoctor/UpdateDoctorDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/DoctorDetails/UpdateDoctor/UpdateDoctorDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/DoctorDetails/ViewDoctorInformation/ViewDoctorInformation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/DoctorDetails/ViewDoctorInformation/ViewDoctorInformation.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/DonorDetails/AddDonation/addDonation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/DonorDetails/AddDonation/addDonation.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/DonorDetails/AddDonor/addDonor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/DonorDetails/AddDonor/addDonor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/DonorDetails/UpdateDonor/updateDonorDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/DonorDetails/UpdateDonor/updateDonorDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/DonorDetails/ViewDonorInformation/ViewDonorInformation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/DonorDetails/ViewDonorInformation/ViewDonorInformation.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/DonorDetails/donorDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/DonorDetails/donorDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/EmployeeDet/AddEmployee/AddEmployee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/EmployeeDet/AddEmployee/AddEmployee.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/EmployeeDet/UpdateEmployee/updateEmployee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/EmployeeDet/UpdateEmployee/updateEmployee.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/EmployeeDet/ViewEmployeeInformation/ViewEmployeeInformation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/EmployeeDet/ViewEmployeeInformation/ViewEmployeeInformation.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/EmployeeDet/employeeDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/EmployeeDet/employeeDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/ImportPersonnelFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/ImportPersonnelFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/VolunteerDetails/AddVolunteer/addVolunteer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/VolunteerDetails/AddVolunteer/addVolunteer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/VolunteerDetails/UpdateVolunteer/updateVolunteerDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/VolunteerDetails/UpdateVolunteer/updateVolunteerDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/VolunteerDetails/ViewVolunteerInformation/ViewVolunteerInformation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/VolunteerDetails/ViewVolunteerInformation/ViewVolunteerInformation.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/VolunteerDetails/volunteerDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/VolunteerDetails/volunteerDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Registration/register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registration/register.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,30 +310,30 @@
       <screen x="0" y="0" width="1920" height="1030" />
     </state>
     <state x="686" y="211" key="FileChooserDialogImpl/0.0.1920.1030@0.0.1920.1030" timestamp="1612635512315" />
-    <state width="1864" height="257" key="GridCell.Tab.0.bottom" timestamp="1612640522339">
+    <state width="1864" height="257" key="GridCell.Tab.0.bottom" timestamp="1612720982156">
       <screen x="0" y="0" width="1920" height="1030" />
     </state>
-    <state width="1864" height="257" key="GridCell.Tab.0.bottom/0.0.1920.1030@0.0.1920.1030" timestamp="1612640522339" />
-    <state width="1864" height="257" key="GridCell.Tab.0.center" timestamp="1612640522338">
+    <state width="1864" height="257" key="GridCell.Tab.0.bottom/0.0.1920.1030@0.0.1920.1030" timestamp="1612720982156" />
+    <state width="1864" height="257" key="GridCell.Tab.0.center" timestamp="1612720982155">
       <screen x="0" y="0" width="1920" height="1030" />
     </state>
-    <state width="1864" height="257" key="GridCell.Tab.0.center/0.0.1920.1030@0.0.1920.1030" timestamp="1612640522338" />
-    <state width="1864" height="257" key="GridCell.Tab.0.left" timestamp="1612640522338">
+    <state width="1864" height="257" key="GridCell.Tab.0.center/0.0.1920.1030@0.0.1920.1030" timestamp="1612720982155" />
+    <state width="1864" height="257" key="GridCell.Tab.0.left" timestamp="1612720982155">
       <screen x="0" y="0" width="1920" height="1030" />
     </state>
-    <state width="1864" height="257" key="GridCell.Tab.0.left/0.0.1920.1030@0.0.1920.1030" timestamp="1612640522338" />
-    <state width="1864" height="257" key="GridCell.Tab.0.right" timestamp="1612640522339">
+    <state width="1864" height="257" key="GridCell.Tab.0.left/0.0.1920.1030@0.0.1920.1030" timestamp="1612720982155" />
+    <state width="1864" height="257" key="GridCell.Tab.0.right" timestamp="1612720982155">
       <screen x="0" y="0" width="1920" height="1030" />
     </state>
-    <state width="1864" height="257" key="GridCell.Tab.0.right/0.0.1920.1030@0.0.1920.1030" timestamp="1612640522339" />
+    <state width="1864" height="257" key="GridCell.Tab.0.right/0.0.1920.1030@0.0.1920.1030" timestamp="1612720982155" />
     <state x="347" y="0" key="SettingsEditor" timestamp="1606794385478">
       <screen x="0" y="0" width="1920" height="1030" />
     </state>
     <state x="347" y="0" key="SettingsEditor/0.0.1920.1030@0.0.1920.1030" timestamp="1606794385478" />
-    <state x="594" y="298" key="com.intellij.ide.util.TipDialog" timestamp="1612622693878">
+    <state x="594" y="298" key="com.intellij.ide.util.TipDialog" timestamp="1612720148496">
       <screen x="0" y="0" width="1920" height="1030" />
     </state>
-    <state x="594" y="298" key="com.intellij.ide.util.TipDialog/0.0.1920.1030@0.0.1920.1030" timestamp="1612622693878" />
+    <state x="594" y="298" key="com.intellij.ide.util.TipDialog/0.0.1920.1030@0.0.1920.1030" timestamp="1612720148496" />
     <state x="263" y="40" key="new project wizard" timestamp="1604156380425">
       <screen x="0" y="0" width="1920" height="1030" />
     </state>

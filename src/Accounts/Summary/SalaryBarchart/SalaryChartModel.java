@@ -24,7 +24,7 @@ public class SalaryChartModel {
     }
 
     protected int getTotalSalary(){
-        String sql = "select sum(amount) from designation";
+        String sql = "select sum(num_of_employee(designation_name,id)*amount) from designation";
 
         try {
             OracleConnection oc=new OracleConnection();
