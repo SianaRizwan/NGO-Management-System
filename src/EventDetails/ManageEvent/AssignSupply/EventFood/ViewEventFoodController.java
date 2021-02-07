@@ -61,10 +61,10 @@ public class ViewEventFoodController {
                             ViewEventFoodModel view=new ViewEventFoodModel();
                             details.getStyleClass().clear();
                             details.getStyleClass().add("second-text-field");
-                            System.out.println(new ViewEventFoodModel().getRequiredAmount());
+                         //   System.out.println(new ViewEventFoodModel().getRequiredAmount());
                             view.setId(id);
 
-                            details.setText(new ViewEventFoodModel().getRequiredAmount());
+//                            details.setText(new ViewEventFoodModel().getRequiredAmount());
 
                             details.setOnAction(event -> {
                                 EventSupply h = getTableView().getItems().get(getIndex());

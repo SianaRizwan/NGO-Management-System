@@ -22,10 +22,10 @@ public class ViewEventFoodModel {
         String sql = "select distinct f.name,f.total_qty,ev.amount from event_food ev,food f where ev.food_name=f.name and ev.event_id=?";
         return getViewSupplyInfo.getTableRecords(id,sql);
     }
-    protected String getRequiredAmount(){
+ /*   protected String getRequiredAmount(){
         String sql = "select ev.amount from event_food ev where ev.food_name=? and ev.event_id=?";
         return getViewSupplyInfo.getRequiredAmount(sql);
-    }
+    }*/
 
     protected void isAmountAddSuccessful(int amt, String eventID, String foodName) {
         String sql = "update event_food set amount=amount+? where event_id=? and food_name=?";

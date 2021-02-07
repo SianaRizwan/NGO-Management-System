@@ -2,25 +2,27 @@
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1050.0" prefWidth="1800.0" stylesheets="@../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.DashboardController">
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1285.0" prefWidth="1800.0" stylesheets="@../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.DashboardController">
    <children>
-      <ImageView fitHeight="1050.0" fitWidth="1658.0" layoutX="348.0" pickOnBounds="true">
+      <ImageView fitHeight="1286.0" fitWidth="1658.0" layoutX="348.0" pickOnBounds="true">
          <image>
             <Image url="@../images/background.jpg" />
          </image>
       </ImageView>
-      <BorderPane fx:id="employeeDetailsBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.983" prefHeight="1050.0" prefWidth="2000.0" style="-fx-background-color: #ffe0e3;">
+      <BorderPane fx:id="employeeDetailsBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.983" prefHeight="1285.0" prefWidth="2000.0" style="-fx-background-color: #ffe0e3;">
          <left>
-            <VBox prefWidth="350.0" style="-fx-background-color: #1b1b21;" BorderPane.alignment="CENTER">
+            <VBox prefWidth="350.0" style="-fx-background-color: #8B0000;" BorderPane.alignment="CENTER">
                <children>
                   <HBox alignment="CENTER" prefHeight="112.0" prefWidth="350.0">
                      <VBox.margin>
@@ -176,6 +178,23 @@
                </children>
             </VBox>
          </left>
+         <center>
+            <Circle fx:id="Logo" fill="WHITE" radius="104.0" stroke="#e86868" strokeWidth="2.0" BorderPane.alignment="TOP_LEFT">
+               <BorderPane.margin>
+                  <Insets left="640.0" top="50.0" />
+               </BorderPane.margin>
+            </Circle>
+         </center>
       </BorderPane>
+      <Label fx:id="label1" layoutX="565.0" layoutY="392.0" text="“Peace begins with a smile.”" textFill="#9a1d1d">
+         <font>
+            <Font name="Arial Narrow Bold Italic" size="96.0" />
+         </font>
+      </Label>
+      <Label fx:id="label2" layoutX="1276.0" layoutY="510.0" text=" —Mother Teresa" textFill="#9a1d1d">
+         <font>
+            <Font name="Arial Narrow Italic" size="64.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

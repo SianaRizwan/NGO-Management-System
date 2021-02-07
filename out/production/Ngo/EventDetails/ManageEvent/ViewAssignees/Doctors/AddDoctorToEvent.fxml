@@ -75,12 +75,12 @@
       </AnchorPane>
       <FontAwesomeIconView glyphName="SEARCH" layoutX="54.0" layoutY="43.0" />
       <JFXTextField fx:id="searchOption" labelFloat="true" layoutX="91.0" layoutY="22.0" onAction="#handleSearch" onInputMethodTextChanged="#handleSearch" />
-      <Button graphicTextGap="22.0" layoutX="749.0" layoutY="613.0" mnemonicParsing="false" onAction="#handleConfirmButton" style="-fx-background-color: FDAB9F;" text="Confirm">
+      <Button graphicTextGap="22.0" layoutX="749.0" layoutY="613.0" mnemonicParsing="false" onAction="#handleConfirmButton" onMouseClicked="#handleConfirmButton" style="-fx-background-color: FDAB9F;" text="Confirm">
          <font>
             <Font name="Californian FB" size="18.0" />
          </font>
       </Button>
-      <Button graphicTextGap="22.0" layoutX="849.0" layoutY="613.0" mnemonicParsing="false" onAction="#handleBackButton" style="-fx-background-color: FDAB9F;" text="BACK">
+      <Button graphicTextGap="22.0" layoutX="852.0" layoutY="613.0" mnemonicParsing="false" onAction="#handleBackButton" onMouseClicked="#handleBackButton" style="-fx-background-color: FDAB9F;" text="BACK">
          <font>
             <Font name="Californian FB" size="18.0" />
          </font>
