@@ -103,9 +103,10 @@ public class DesignationDetailsController implements Initializable {
     }
 
     public String getDesignationID() throws InvocationTargetException {
-        try{return designationTable.getSelectionModel().getSelectedItem().getDesigID();
-    } catch (Exception e) {
-            System.out.println("pp");        }
+        try {
+            return designationTable.getSelectionModel().getSelectedItem().getDesigID();
+        } catch (Exception e) {
+        }
         return "0";
     }
 
@@ -147,6 +148,12 @@ public class DesignationDetailsController implements Initializable {
 
     }
 
+    @FXML
+    void handleBackButton() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("../Accounts.fxml"));
+        designationDetailsPane.getChildren().setAll(pane);
+
+    }
 
 }
 

@@ -6,7 +6,9 @@ import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
@@ -16,11 +18,14 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.sql.SQLException;
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.ResourceBundle;
 
@@ -112,13 +117,20 @@ public class ExpensesDetailsController implements Initializable
     }
 
     public boolean setActionType() throws InvocationTargetException, ParseException {
-        Date eDate = new SimpleDateFormat("MM/dd/yyyy").parse(expDate.getEditor().getText());
         if (getExpID().equalsIgnoreCase("0")) {
+            Date eDate = new SimpleDateFormat("MM/dd/yyyy").parse(expDate.getEditor().getText());
+
             return expModel.isExpensesAddedSuccessful(String.valueOf(expTypeComboBox.getValue()),
                     expNameTextField.getText(), expDescriptionTextField1.getText(), Integer.parseInt(expAmountTextField.getText()),eDate);
-        } else return expModel.isExpenseUpdateSuccessful( getExpID(),String.valueOf(expTypeComboBox.getValue()),
-                expNameTextField.getText(), expDescriptionTextField1.getText(), Integer.parseInt(expAmountTextField.getText()),eDate);
-    }
+        } else{
+            DateFormat originalFormat = new SimpleDateFormat("yyyy-MM-dd");
+            DateFormat targetFormat = new SimpleDateFormat("MM/dd/yyyy");
+            Date date = originalFormat.parse(expDate.getEditor().getText());
+            String formattedDate = targetFormat.format(date);
+
+            return expModel.isExpenseUpdateSuccessful( getExpID(),String.valueOf(expTypeComboBox.getValue()),
+                expNameTextField.getText(), expDescriptionTextField1.getText(), Integer.parseInt(expAmountTextField.getText()),formattedDate);
+    }}
 
     private void viewDetails() {
         expensesTable.setRowFactory(tv -> {
@@ -149,6 +161,17 @@ public class ExpensesDetailsController implements Initializable
         expAmountTextField.setText(info[4]);
         expDate.getEditor().setText(info[5]);
     }
+    @FXML
+    void handleBackButton() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("../Accounts.fxml"));
+        expensesDetailsPane.getChildren().setAll(pane);
 
+    }
 
+    public void handleType() {
+        if(expTypeComboBox.getEditor().getText().equalsIgnoreCase("Salary")){
+            expAmountTextField.setText(String.valueOf(expModel.getSalary()));
+            expAmountTextField.setEditable(false);
+        }
+    }
 }

@@ -29,7 +29,7 @@ public class ViewEventMedModel {
     }
 
     protected void isAmountAddSuccessful(int amt, String eventID, String medName) {
-        String sql = "update event_health set amount=amount+? where event_id=? and health_name=?";
+        String sql = "update event_health set amount=nvl(amount,0)+? where event_id=? and health_name=?";
         getViewSupplyInfo.isAmountAddSuccessful(amt,eventID,medName,sql);
     }
 

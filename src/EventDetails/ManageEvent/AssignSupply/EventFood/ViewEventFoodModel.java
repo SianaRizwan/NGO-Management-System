@@ -28,7 +28,7 @@ public class ViewEventFoodModel {
     }*/
 
     protected void isAmountAddSuccessful(int amt, String eventID, String foodName) {
-        String sql = "update event_food set amount=amount+? where event_id=? and food_name=?";
+        String sql = "update event_food set amount=nvl(amount,0)+? where event_id=? and food_name=?";
         getViewSupplyInfo.isAmountAddSuccessful(amt,eventID,foodName,sql);
     }
 }

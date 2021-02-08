@@ -29,16 +29,11 @@ public class DashboardController implements Initializable {
     private Circle Logo;
     @FXML
     private HBox dashboardAccounts;
-    @FXML
-    private Label label1;
 
-    @FXML
-    private Label label2;
 
     @FXML
     private void viewEmployeeDetails() throws IOException{
-        label1.setVisible(false);
-        label2.setVisible(false);
+
         AnchorPane pane  = FXMLLoader.load(getClass().getResource("../Person/EmployeeDet/employeeDetails.fxml"));
         employeeDetailsBorderPane.setCenter(pane);
     }
@@ -60,42 +55,36 @@ public class DashboardController implements Initializable {
     }
 
     public void viewDoctorDetails() throws IOException {
-        label1.setVisible(false);
-        label2.setVisible(false);
+
         AnchorPane pane  = FXMLLoader.load(getClass().getResource("../Person/DoctorDetails/DoctorDetails.fxml"));
         employeeDetailsBorderPane.setCenter(pane);
     }
     public void viewDonorDetails() throws IOException {
-        label1.setVisible(false);
-        label2.setVisible(false);
+
         AnchorPane pane  = FXMLLoader.load(getClass().getResource("../Person/DonorDetails/donorDetails.fxml"));
         employeeDetailsBorderPane.setCenter(pane);
     }
     public void viewVolunteerDetails() throws IOException {
-        label1.setVisible(false);
-        label2.setVisible(false);
+
         AnchorPane pane  = FXMLLoader.load(getClass().getResource("../Person/VolunteerDetails/volunteerDetails.fxml"));
         employeeDetailsBorderPane.setCenter(pane);
     }
 
     public void viewSupplyDetails() throws IOException {
-        label1.setVisible(false);
-        label2.setVisible(false);
+
         AnchorPane pane = FXMLLoader.load(getClass().getResource("../SupplyDetails/supplyDetails.fxml"));
         employeeDetailsBorderPane.setCenter(pane);
     }
 
     @FXML
     public void viewAccountsDetails() throws IOException {
-        label1.setVisible(false);
-        label2.setVisible(false);
+
         AnchorPane pane=FXMLLoader.load(getClass().getResource("../Accounts/Accounts.fxml"));
         employeeDetailsBorderPane.setCenter(pane);
     }
     @FXML
     public void viewEventsDetails() throws IOException {
-        label1.setVisible(false);
-        label2.setVisible(false);
+
         AnchorPane pane = FXMLLoader.load(getClass().getResource(eventDetails));
         employeeDetailsBorderPane.setCenter(pane);
     }

@@ -100,11 +100,11 @@ public class AddDoctorToEventController {
         getSelectedVolunteers();
         //System.out.println(selectedID);
         if (addDoctorToEventModel.isAssignVolunteerSuccessful(selectedID, new ManageEventController().getEventID())) {
-            new ShowAlertDialogue().infoBox("Doctors Assigned!", null, "Assign Doctor");
+            new ShowAlertDialogue().infoBox("Docotr Assigned!", null, "Assign Docotr");
             Stage stage = (Stage) viewDetails.getScene().getWindow();
             stage.close();
         } else {
-            new ShowAlertDialogue().infoBox("Doctors Assigning Failed!", null, "Assign Doctor");
+            new ShowAlertDialogue().infoBox("Docotr Assigning Failed!", null, "Assign Docotr");
         }
     }
 

@@ -7,7 +7,7 @@ import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 
-class SalaryChartController {
+public class SalaryChartController {
 
         @FXML
         private BarChart<String, Double> SalaryChart;
@@ -26,6 +26,8 @@ class SalaryChartController {
         }
 
         public void totalSalary(){
+            totalSalaryTextfield.getStyleClass().clear();
+            totalSalaryTextfield.getStyleClass().add("second-text-field");
             totalSalaryTextfield.setText(Integer.toString(new SalaryChartModel().getTotalSalary()));
         }
 }

@@ -3,6 +3,7 @@ package Person.EmployeeDet.AddEmployee;
 import Person.ImportPersonnelFile;
 import Person.PersonalInformation;
 import Utilities.OracleConnection;
+import Utilities.ShowAlertDialogue;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -41,8 +42,9 @@ public class AddEmployeeModel {
                 return true;
             }
         } catch (Exception e) {
-            System.out.println("isAddEmployeeSuccessful\n\n");
-            e.printStackTrace();
+            new ShowAlertDialogue().infoBox("Email or Contact number is already inserted", null, "Add Employee");
+
+//            e.printStackTrace();
             return false;
         }
 

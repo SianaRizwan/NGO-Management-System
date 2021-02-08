@@ -72,6 +72,7 @@ public class ViewEventFoodController {
                                 details.setEditable(true);
                                 details.setText(details.getText());
                                view.isAmountAddSuccessful(Integer.parseInt(details.getText()), id, h.getName());
+                                System.out.println("ppp");
                             });
                             setGraphic(details);
 

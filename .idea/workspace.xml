@@ -3,64 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Expenses/ExpensesDetailsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Expenses/ExpensesDetailsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/ExpenseBarChart/expenseschart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/ExpenseBarChart/expenseschart.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/SalaryBarchart/SalaryChartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/SalaryBarchart/SalaryChartController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/SalaryBarchart/salarychart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/SalaryBarchart/salarychart.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventHistoryController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventHistoryController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventHistoryController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventHistoryController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventHistoryController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventHistoryController$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventHistoryController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventHistoryController$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventHistoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventHistoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/Events.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/Events.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventsEmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventsEmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ManageEvent/AssignSupply/EventFood/ViewEventFoodController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ManageEvent/AssignSupply/EventFood/ViewEventFoodController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ManageEvent/AssignSupply/EventFood/ViewEventFoodController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ManageEvent/AssignSupply/EventFood/ViewEventFoodController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ManageEvent/AssignSupply/EventFood/ViewEventFoodModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ManageEvent/AssignSupply/EventFood/ViewEventFoodModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ManageEvent/AssignSupply/EventMed/ViewEventMedController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ManageEvent/AssignSupply/EventMed/ViewEventMedController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ManageEvent/AssignSupply/EventMed/ViewEventMedController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ManageEvent/AssignSupply/EventMed/ViewEventMedController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ManageEvent/AssignSupply/GetViewSupplyInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ManageEvent/AssignSupply/GetViewSupplyInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ManageEvent/ManageEventEmployeesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ManageEvent/ManageEventEmployeesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ManageEvent/ManageEventModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ManageEvent/ManageEventModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ManageEvent/ViewAssignees/Doctors/AddDoctorToEvent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ManageEvent/ViewAssignees/Doctors/AddDoctorToEvent.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ManageEvent/ViewAssignees/Doctors/AddDoctorToEventController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ManageEvent/ViewAssignees/Doctors/AddDoctorToEventController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Main/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Main/Dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Main/DashboardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Main/DashboardController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/DoctorDetails/DoctorDetailsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/DoctorDetails/DoctorDetailsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/DonorDetails/donorDetailsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/DonorDetails/donorDetailsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/EmployeeDet/EmployeeDetailsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/EmployeeDet/EmployeeDetailsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/ImportPersonnelFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/ImportPersonnelFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/VolunteerDetails/VolunteerDetailsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/VolunteerDetails/VolunteerDetailsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Emergency/EmergencySupplyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Emergency/EmergencySupplyController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Food/FoodController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Food/FoodController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/HealthProduct/AddHealthProducts/AddHealthProdController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/HealthProduct/AddHealthProducts/AddHealthProdController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/HealthProduct/AddHealthProducts/addHealthProd.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/HealthProduct/AddHealthProducts/addHealthProd.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/HealthProduct/Medicine/MedicineController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/HealthProduct/Medicine/MedicineController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/HealthProduct/Vaccine/VaccineController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/HealthProduct/Vaccine/VaccineController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/images/History.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/images/scheduleEvent.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/images/scheduleEvent.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Accounts/Summary/ExpenseBarChart/expenseschart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Summary/ExpenseBarChart/expenseschart.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Accounts/Summary/SalaryBarchart/SalaryChartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Summary/SalaryBarchart/SalaryChartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Accounts/Summary/SalaryBarchart/salarychart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Summary/SalaryBarchart/salarychart.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/Events.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/Events.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/ManageEvent/AssignSupply/EventFood/ViewEventFoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/ManageEvent/AssignSupply/EventFood/ViewEventFoodController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/ManageEvent/AssignSupply/EventFood/ViewEventFoodModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/ManageEvent/AssignSupply/EventFood/ViewEventFoodModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/ManageEvent/AssignSupply/EventMed/AddMedToEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/ManageEvent/AssignSupply/EventMed/AddMedToEventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/ManageEvent/AssignSupply/EventSupply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/ManageEvent/AssignSupply/EventSupply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/ManageEvent/AssignSupply/GetViewSupplyInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/ManageEvent/AssignSupply/GetViewSupplyInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/ManageEvent/ManageEventEmployeesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/ManageEvent/ManageEventEmployeesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/ManageEvent/ManageEventModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/ManageEvent/ManageEventModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/ManageEvent/ViewAssignees/Doctors/AddDoctorToEvent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/ManageEvent/ViewAssignees/Doctors/AddDoctorToEvent.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/ManageEvent/ViewAssignees/Doctors/AddDoctorToEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/ManageEvent/ViewAssignees/Doctors/AddDoctorToEventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Person/ImportPersonnelFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/ImportPersonnelFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SupplyDetails/HealthProduct/AddHealthProducts/AddHealthProdController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SupplyDetails/HealthProduct/AddHealthProducts/AddHealthProdController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SupplyDetails/HealthProduct/AddHealthProducts/addHealthProd.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/SupplyDetails/HealthProduct/AddHealthProducts/addHealthProd.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/History.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/scheduleEvent.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/scheduleEvent.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -327,36 +269,36 @@
     </state>
     <state x="457" y="139" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1606396653325" />
     <state x="548" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1612277848286" />
-    <state width="1493" height="131" key="GridCell.Tab.0.bottom" timestamp="1612679426158">
+    <state width="1493" height="131" key="GridCell.Tab.0.bottom" timestamp="1612681580391">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1237" height="153" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1606403303046" />
-    <state width="1493" height="131" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612679426158" />
-    <state width="1493" height="131" key="GridCell.Tab.0.center" timestamp="1612679426158">
+    <state width="1493" height="131" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612681580391" />
+    <state width="1493" height="131" key="GridCell.Tab.0.center" timestamp="1612681580391">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1237" height="153" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1606403303046" />
-    <state width="1493" height="131" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1612679426158" />
-    <state width="1493" height="131" key="GridCell.Tab.0.left" timestamp="1612679426158">
+    <state width="1493" height="131" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1612681580391" />
+    <state width="1493" height="131" key="GridCell.Tab.0.left" timestamp="1612681580391">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1237" height="153" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1606403303045" />
-    <state width="1493" height="131" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1612679426158" />
-    <state width="1493" height="131" key="GridCell.Tab.0.right" timestamp="1612679426158">
+    <state width="1493" height="131" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1612681580391" />
+    <state width="1493" height="131" key="GridCell.Tab.0.right" timestamp="1612681580391">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1237" height="153" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1606403303046" />
-    <state width="1493" height="131" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1612679426158" />
+    <state width="1493" height="131" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1612681580391" />
     <state x="277" y="0" key="SettingsEditor" timestamp="1612427964977">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="231" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1606454321109" />
     <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1612427964977" />
-    <state x="475" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1612677871290">
+    <state x="475" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1612778686745">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="396" y="197" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1606454143493" />
-    <state x="475" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1612677871290" />
+    <state x="475" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1612778686745" />
     <state x="511" y="48" key="refactoring.ChangeSignatureDialog" timestamp="1606477751824">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
