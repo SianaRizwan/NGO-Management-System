@@ -17,7 +17,7 @@
 
 <AnchorPane fx:id="loginPane" prefHeight="900.0" prefWidth="1800.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Login.LoginController">
    <children>
-      <ImageView fitHeight="1244.0" fitWidth="1868.0" layoutX="-20.0" layoutY="-142.0" opacity="0.16" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <ImageView fitHeight="1244.0" fitWidth="1868.0" layoutX="-20.0" layoutY="-142.0" opacity="0.05" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
             <Image url="@../images/background.jpg" />
          </image>

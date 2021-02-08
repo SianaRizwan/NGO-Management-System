@@ -19,7 +19,7 @@
     <children>
         <Pane fx:id="designationDetailsPane" prefHeight="1275.0" prefWidth="1473.0">
             <children>
-                <Label layoutX="69.0" layoutY="7.0" prefHeight="98.0" prefWidth="511.0" text="Designation Details">
+                <Label layoutX="172.0" layoutY="7.0" prefHeight="98.0" prefWidth="511.0" text="Designation Details">
                     <font>
                         <Font name="Californian FB Bold" size="36.0" />
                     </font>
@@ -48,7 +48,7 @@
                         <FontAwesomeIconView glyphName="USER_PLUS" layoutX="136.0" layoutY="127.0" size="20" />
                         <JFXButton graphicTextGap="22.0" layoutX="309.0" layoutY="226.0" onAction="#desigConfirmBtn" onMouseClicked="#desigConfirmBtn" prefHeight="31.0" prefWidth="82.0" styleClass="password-change" text="Add">
                      <effect>
-                        <InnerShadow choke="0.26" />
+                        <InnerShadow choke="0.5" />
                      </effect></JFXButton>
                         <JFXComboBox fx:id="desigTypeComboBox" editable="true" labelFloat="true" layoutX="181.0" layoutY="33.0" prefHeight="30.0" prefWidth="350.0" promptText="Category" />
                   <FontAwesomeIconView glyphName="MONEY" layoutX="135.0" layoutY="190.0" size="20" />
@@ -58,7 +58,7 @@
                   <DropShadow color="#f88989" offsetY="3.0" radius="22.5" spread="0.17" width="71.0" />
                </effect>
                 </AnchorPane>
-            <FontAwesomeIconView fx:id="backButton" glyphName="ARROW_LEFT" layoutX="1337.0" layoutY="67.0" onMouseClicked="#handleBackButton" size="32.0" styleClass="glyph-icon-back" />
+            <FontAwesomeIconView fx:id="backButton" glyphName="ARROW_LEFT" layoutX="117.0" layoutY="67.0" onMouseClicked="#handleBackButton" size="32.0" styleClass="glyph-icon-back" />
             </children>
         </Pane>
     </children>

@@ -57,14 +57,14 @@
                   <InnerShadow />
                </effect>
             </Button>
-             <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="55.0" prefWidth="1482.0" style="-fx-background-color: #000000;">
+             <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="55.0" prefWidth="1482.0" style="-fx-background-color: #ffe4e1;">
                  <children>
-                     <Label layoutX="153.0" layoutY="22.0" prefHeight="67.0" prefWidth="425.0" text="Food Supply Details" textFill="WHITE">
+                     <Label layoutX="153.0" layoutY="22.0" prefHeight="67.0" prefWidth="425.0" text="Food Supply Details">
                          <font>
                              <Font name="Californian FB Bold" size="36.0" />
                          </font>
                      </Label>
-                     <FontAwesomeIconView glyphName="ARROW_LEFT" layoutX="35.0" layoutY="65.0" onMouseClicked="#handleBackButton" size="28.0" wrappingWidth="30.755958557128906" />
+                     <FontAwesomeIconView glyphName="ARROW_LEFT" layoutX="64.0" layoutY="66.0" onMouseClicked="#handleBackButton" size="28.0" wrappingWidth="30.755958557128906" />
                  </children>
              </AnchorPane>
          </children>

@@ -10,6 +10,8 @@
 <?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
@@ -17,15 +19,23 @@
     <children>
         <Pane fx:id="SummaryPane" prefHeight="1275.0" prefWidth="1473.0" style="-fx-background-color: ffe4e1;">
             <children>
-                <Label layoutX="73.0" layoutY="15.0" prefHeight="98.0" prefWidth="511.0" text="Summary ~ Report">
+                <Label layoutX="181.0" layoutY="14.0" prefHeight="98.0" prefWidth="511.0" text="Summary ~ Report">
                     <font>
-                        <Font name="Californian FB" size="36.0" />
+                        <Font name="Californian FB Bold" size="36.0" />
                     </font>
                 </Label>
             <JFXButton buttonType="RAISED" graphicTextGap="22.0" layoutX="124.0" layoutY="155.0" onAction="#handlesalaryChart" onMouseClicked="#handlesalaryChart" prefHeight="61.0" prefWidth="232.0" stylesheets="@../../theme.css" text="Salary Expense">
                <effect>
                   <InnerShadow choke="0.1" />
-               </effect></JFXButton>
+               </effect>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" startX="1.0" startY="0.4271844660194174">
+                     <stops>
+                        <Stop color="#f78b94" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill></JFXButton>
             <JFXButton buttonType="RAISED" graphicTextGap="22.0" layoutX="733.0" layoutY="155.0" onAction="#handleExpensesChart" onMouseClicked="#handleExpensesChart" prefHeight="61.0" prefWidth="232.0" stylesheets="@../../theme.css" text="Expenses Summary">
                <effect>
                   <InnerShadow choke="0.1" />
@@ -89,7 +99,7 @@
                         <Reflection fraction="0.3" />
                      </effect>
                   </JFXTextField>
-                  <Label graphicTextGap="22.0" layoutX="740.0" layoutY="120.0" prefHeight="27.0" prefWidth="158.0" text="Total Expense :">
+                  <Label graphicTextGap="22.0" layoutX="760.0" layoutY="120.0" prefHeight="27.0" prefWidth="158.0" text="Total Expense :">
                      <font>
                         <Font name="Californian FB" size="22.0" />
                      </font>
@@ -123,7 +133,7 @@
                      </font>
                   </Label>
                </children></Pane>
-            <FontAwesomeIconView fx:id="backButton" fill="#ea7979" glyphName="ARROW_LEFT" layoutX="1341.0" layoutY="74.0" onMouseClicked="#handleBackButton" size="32.0" styleClass="glyph-icon-back" />
+            <FontAwesomeIconView fx:id="backButton" fill="#ea7979" glyphName="ARROW_LEFT" layoutX="110.0" layoutY="74.0" onMouseClicked="#handleBackButton" size="32.0" styleClass="glyph-icon-back" />
             <JFXButton buttonType="RAISED" layoutX="1036.0" layoutY="155.0" onAction="#handleEventSummary" prefHeight="61.0" prefWidth="232.0" stylesheets="@../../theme.css" text="Event Summary">
                <effect>
                   <InnerShadow choke="0.1" />

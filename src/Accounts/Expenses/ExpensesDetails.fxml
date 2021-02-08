@@ -19,7 +19,7 @@
     <children>
         <Pane fx:id="expensesDetailsPane" prefHeight="1275.0" prefWidth="1473.0">
             <children>
-                <Label layoutX="69.0" layoutY="7.0" prefHeight="98.0" prefWidth="511.0" text="Expenses Details">
+                <Label layoutX="169.0" layoutY="4.0" prefHeight="98.0" prefWidth="511.0" text="Expenses Details">
                     <font>
                         <Font name="Californian FB Bold" size="36.0" />
                     </font>
@@ -60,7 +60,7 @@
                   <DropShadow color="#f88989" offsetY="3.0" radius="22.5" spread="0.17" width="71.0" />
                </effect>
                 </AnchorPane>
-            <FontAwesomeIconView fx:id="backButton" glyphName="ARROW_LEFT" layoutX="1331.0" layoutY="64.0" onMouseClicked="#handleBackButton" size="32.0" styleClass="glyph-icon-back" />
+            <FontAwesomeIconView fx:id="backButton" glyphName="ARROW_LEFT" layoutX="108.0" layoutY="64.0" onMouseClicked="#handleBackButton" size="32.0" styleClass="glyph-icon-back" />
             </children>
         </Pane>
     </children>
