@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1285.0" prefWidth="1800.0" style="-fx-background-color: #212121;" stylesheets="@../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.SplashController">
+   <children>
+      <Label layoutX="743.0" layoutY="264.0" prefHeight="157.0" prefWidth="328.0" styleClass="splash_welcome" stylesheets="@../theme.css" text="Welcome" textFill="#ffe4e2">
+         <font>
+            <Font name="Broadway" size="64.0" />
+         </font>
+      </Label>
+      <Circle fill="#e08d8d" layoutX="1113.0" layoutY="342.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#d37575" layoutX="1200.0" layoutY="342.0" radius="23.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#d07474" layoutX="1303.0" layoutY="342.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#e16b6b" layoutX="1414.0" layoutY="342.0" radius="40.0" stroke="BLACK" strokeType="INSIDE" />
+   </children>
+</AnchorPane>

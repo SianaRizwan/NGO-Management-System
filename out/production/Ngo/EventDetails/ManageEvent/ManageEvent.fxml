@@ -20,7 +20,7 @@
                           <Font name="Californian FB Bold" size="36.0" />
                       </font>
                   </Label>
-                  <FontAwesomeIconView glyphName="ARROW_LEFT" layoutX="54.0" layoutY="68.0" onMouseClicked="#handleBackBtn" size="28.0" wrappingWidth="30.755958557128906" />
+                  <FontAwesomeIconView glyphName="ARROW_LEFT" layoutX="54.0" layoutY="68.0" onMouseClicked="#handleBackBtn" size="28.0" styleClass="glyph-icon-back" wrappingWidth="30.755958557128906" />
                 <AnchorPane layoutX="375.0" layoutY="179.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="803.0" style="-fx-background-color: #000000;">
                     <children>
                         <Button graphicTextGap="22.0" layoutX="358.0" layoutY="581.0" mnemonicParsing="false" onAction="#handleConfirmBtn" style="-fx-background-color: FDAB9F;" stylesheets="@../../theme.css" text="Confirm">

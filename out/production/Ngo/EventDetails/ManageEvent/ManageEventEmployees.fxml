@@ -15,7 +15,7 @@
     <children>
         <Pane fx:id="createEventPane" prefHeight="1275.0" prefWidth="1600.0" style="-fx-background-color: ffe4e1;">
             <children>
-                  <FontAwesomeIconView glyphName="ARROW_LEFT" layoutX="81.0" layoutY="65.0" onMouseClicked="#handleBackBtn" size="28.0" wrappingWidth="30.755958557128906" />
+                  <FontAwesomeIconView glyphName="ARROW_LEFT" layoutX="81.0" layoutY="65.0" onMouseClicked="#handleBackBtn" size="28.0" styleClass="glyph-icon-back" wrappingWidth="30.755958557128906" />
                   <Label graphicTextGap="22.0" layoutX="154.0" layoutY="21.0" prefHeight="67.0" prefWidth="290.0" text="Manage Event">
                       <font>
                           <Font name="Californian FB Bold" size="36.0" />

@@ -16,12 +16,12 @@
 
 <AnchorPane fx:id="registerPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Registration.RegisterController">
    <children>
-      <ImageView opacity="0.05" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <ImageView opacity="0.04" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
             <Image url="@../images/background.jpg" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="562.0" layoutY="-4.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1392.0" prefWidth="689.0" style="-fx-background-color: #000000;" styleClass="bg" stylesheets="@../theme.css" AnchorPane.bottomAnchor="412.0" AnchorPane.leftAnchor="590.0" AnchorPane.rightAnchor="590.0" AnchorPane.topAnchor="-4.0">
+      <AnchorPane layoutX="562.0" layoutY="-4.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1392.0" prefWidth="689.0" style="-fx-background-color: #212121;" styleClass="bg" stylesheets="@../theme.css" AnchorPane.bottomAnchor="412.0" AnchorPane.leftAnchor="590.0" AnchorPane.rightAnchor="590.0" AnchorPane.topAnchor="-4.0">
          <children>
             <Label alignment="CENTER" layoutX="233.0" layoutY="40.0" prefHeight="66.0" prefWidth="291.0" text="Register Here !!" textFill="#fffbfb">
                <font>

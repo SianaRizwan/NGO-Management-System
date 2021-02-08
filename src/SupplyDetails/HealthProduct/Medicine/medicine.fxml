@@ -64,7 +64,7 @@
                              <Font name="Californian FB Bold" size="36.0" />
                          </font>
                      </Label>
-                     <FontAwesomeIconView glyphName="ARROW_LEFT" layoutX="73.0" layoutY="66.0" onMouseClicked="#handleBackButton" size="28.0" wrappingWidth="30.755958557128906" />
+                     <FontAwesomeIconView glyphName="ARROW_LEFT" layoutX="73.0" layoutY="66.0" onMouseClicked="#handleBackButton" styleClass="glyph-icon-back" size="28.0" wrappingWidth="30.755958557128906" />
                  </children>
              </AnchorPane>
          </children>
