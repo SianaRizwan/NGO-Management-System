@@ -75,6 +75,13 @@ public class VaccineController implements Initializable {
         }
     }
 
+    @FXML
+    void handleBackButton() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("../SupplyDetails.fxml"));
+        vaccineDetailsPane.getChildren().setAll(pane);
+
+    }
+
     private String getVaccineName(){
         return vaccineTable.getSelectionModel().getSelectedItem().getName();
     }

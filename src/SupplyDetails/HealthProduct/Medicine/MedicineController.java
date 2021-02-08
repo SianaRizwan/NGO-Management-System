@@ -75,6 +75,13 @@ public class MedicineController implements Initializable {
         }
     }
 
+    @FXML
+    void handleBackButton() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("../SupplyDetails.fxml"));
+        medicineDetailsPane.getChildren().setAll(pane);
+
+    }
+
     private String getMedName(){
         return medicineTable.getSelectionModel().getSelectedItem().getName();
     }

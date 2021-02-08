@@ -15,14 +15,8 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SupplyDetails.Emergency.EmergencySupplyController">
     <children>
-        <Pane fx:id="EmergencySupplyDetailsPane" layoutX="1.0" prefHeight="1275.0" prefWidth="1473.0">
+        <Pane fx:id="EmergencySupplyDetailsPane" layoutX="1.0" prefHeight="1275.0" prefWidth="1473.0" stylesheets="@../../theme.css">
             <children>
-                <Label layoutX="63.0" layoutY="52.0" prefHeight="98.0" prefWidth="511.0" text="Emergency Supply Details">
-                    <font>
-                        <Font name="Californian FB Bold" size="36.0" />
-                    </font>
-                </Label>
-
                 <ScrollPane layoutX="100.0" layoutY="377.0" prefHeight="500.0" prefWidth="1200.0">
                     <content>
                         <TableView fx:id="emergencySupplyTable" prefHeight="500.0" prefWidth="1200.0">
@@ -55,7 +49,16 @@
                         <Font name="Californian FB" size="24.0" />
                     </font>
                 </Button>
-            <FontAwesomeIconView fx:id="backButton" fill="#ea7979" glyphName="ARROW_LEFT" layoutX="1274.0" layoutY="116.0" onMouseClicked="#handleBackButton" size="32.0" />
+                <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="105.0" prefWidth="1482.0" style="-fx-background-color: #000000;">
+                    <children>
+                        <Label layoutX="153.0" layoutY="22.0" prefHeight="67.0" prefWidth="425.0" text="Emergency Supply Details" textFill="WHITE">
+                            <font>
+                                <Font name="Californian FB" size="36.0" />
+                            </font>
+                        </Label>
+                        <FontAwesomeIconView glyphName="ARROW_LEFT" layoutX="35.0" layoutY="65.0" onMouseClicked="#handleBackButton" size="28.0" wrappingWidth="30.755958557128906" />
+                    </children>
+                </AnchorPane>
             </children>
         </Pane>
     </children>

@@ -10,13 +10,8 @@
 
 <AnchorPane style="-fx-background-color: #ffe0e3;" styleClass="supply-button" stylesheets="@../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SupplyDetails.SupplyDetailsController">
    <children>
-      <Pane fx:id="supplyDetailsPane" prefHeight="1275.0" prefWidth="1473.0">
+      <Pane fx:id="supplyDetailsPane" prefHeight="1275.0" prefWidth="1473.0" stylesheets="@../theme.css">
          <children>
-            <Label layoutX="73.0" layoutY="15.0" prefHeight="98.0" prefWidth="511.0" text="Supply Details">
-               <font>
-                  <Font name="Californian FB" size="36.0" />
-               </font>
-            </Label>
             <JFXButton buttonType="RAISED" layoutX="375.0" layoutY="202.0" onAction="#handleSupplyFood" prefHeight="198.0" prefWidth="209.0" styleClass="supply-button" text=" ">
                <graphic>
                   <ImageView fitHeight="173.0" fitWidth="186.0" pickOnBounds="true" preserveRatio="true">
@@ -53,6 +48,15 @@
                   </ImageView>
                </graphic>
             </JFXButton>
+            <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="105.0" prefWidth="1482.0" style="-fx-background-color: #000000;">
+               <children>
+                  <Label layoutX="62.0" layoutY="22.0" prefHeight="67.0" prefWidth="290.0" text="Supply Details" textFill="WHITE">
+                     <font>
+                        <Font name="Californian FB" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
          </children>
       </Pane>
    </children>
