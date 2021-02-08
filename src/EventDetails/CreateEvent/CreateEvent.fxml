@@ -14,7 +14,7 @@
 
 <AnchorPane style="-fx-background-color: #ffffff;" styleClass="supply-button" stylesheets="@../../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EventDetails.CreateEvent.CreateEventController">
     <children>
-        <Pane fx:id="createEventPane" prefHeight="1275.0" prefWidth="1600.0" style="-fx-background-color: #ffe4e1;">
+        <Pane fx:id="createEventPane" prefHeight="1275.0" prefWidth="1473.0" style="-fx-background-color: #ffe4e1;">
             <children>
                 <Label layoutX="127.0" layoutY="14.0" prefHeight="98.0" prefWidth="511.0" text="Events Scheduling">
                     <font>
