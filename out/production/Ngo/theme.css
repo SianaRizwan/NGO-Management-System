@@ -147,3 +147,22 @@ th {
 .summary-text-field{
 fx-text-fill: BLACK;
 }
+
+.table-view {
+-fx-background-color: #ebdddd;
+-fx-color: #ffffff;
+-fx-background-radius: 25;
+}
+
+.table-view .column-header {
+-fx-background-color: #1b1b1b;
+-fx-border-radius: 30;
+}
+
+.table-view .column-header .label {
+-fx-text-fill: White;
+}
+
+.scroll-pane {
+-fx-background-radius: 25;
+}
