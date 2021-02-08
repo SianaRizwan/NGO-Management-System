@@ -42,9 +42,9 @@ public class AddEmployeeModel {
                 return true;
             }
         } catch (Exception e) {
-            new ShowAlertDialogue().infoBox("Email or Contact number is already inserted", null, "Add Employee");
-
-//            e.printStackTrace();
+            System.out.println("isAddEmployeeSuccessful\n\n");
+            new ShowAlertDialogue().infoBox("Email or Contact number is already inserted",null,"Add Employee");
+            //e.printStackTrace();
             return false;
         }
 

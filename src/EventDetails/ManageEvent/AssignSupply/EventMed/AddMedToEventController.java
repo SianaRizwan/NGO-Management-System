@@ -16,8 +16,6 @@ import java.util.Arrays;
 
 public class AddMedToEventController {
     @FXML
-    private AnchorPane viewDetails;
-    @FXML
     private AnchorPane viewIDs;
 
     @FXML
@@ -95,7 +93,7 @@ public class AddMedToEventController {
 
     @FXML
     void handleBackButton() throws IOException {
-        Stage stage = (Stage) viewDetails.getScene().getWindow();
+        Stage stage = (Stage) viewIDs.getScene().getWindow();
         stage.close();
     }
 
@@ -109,7 +107,7 @@ public class AddMedToEventController {
             new ShowAlertDialogue().infoBox("Meds Selected!", null, "Assign Meds");
 //            refreshGridPane();
 //            setName();
-            Stage stage = (Stage) viewDetails.getScene().getWindow();
+            Stage stage = (Stage) viewIDs.getScene().getWindow();
             stage.close();
         } else {
             new ShowAlertDialogue().infoBox("Meds Selection Failed!", null, "Assign Meds");

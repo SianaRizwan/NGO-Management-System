@@ -9,20 +9,26 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="employeeDetailsAnchorPane" style="-fx-background-color: #ffe0e3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Person.EmployeeDet.EmployeeDetailsController">
+<?import javafx.scene.effect.Reflection?>
+<AnchorPane fx:id="employeeDetailsAnchorPane" style="-fx-background-color: #ffe4e1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Person.EmployeeDet.EmployeeDetailsController">
    <children>
       <Pane fx:id="employeeDetailsPane" prefHeight="1275.0" prefWidth="1473.0">
          <children>
-            <Label layoutX="63.0" layoutY="52.0" prefHeight="98.0" prefWidth="511.0" text="Employee Details">
-               <font>
-                  <Font name="Californian FB Bold" size="36.0" />
-               </font>
-            </Label>
+            <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="44.0" prefWidth="1482.0" style="-fx-background-color: #000000;">
+               <children>
+                  <Label layoutX="62.0" layoutY="22.0" prefHeight="67.0" prefWidth="290.0" text="Employee Details" textFill="WHITE">
+                     <font>
+                        <Font name="Californian FB Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
             <HBox alignment="CENTER" layoutY="169.0" prefHeight="98.0" prefWidth="1426.0">
                <padding>
                   <Insets left="100.0" />
@@ -32,6 +38,9 @@
                      <font>
                         <Font name="Californian FB" size="25.0" />
                      </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
                   </Button>
                   <Button fx:id="updateButton" alignment="BASELINE_CENTER" graphicTextGap="22.0" mnemonicParsing="false" onMouseClicked="#handleUpdate" prefHeight="55.0" prefWidth="330.0" style="-fx-background-color: FDAB9F;" text="Update Information">
                      <font>
@@ -40,6 +49,9 @@
                      <HBox.margin>
                         <Insets left="100.0" />
                      </HBox.margin>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
                   </Button>
                </children>
             </HBox>

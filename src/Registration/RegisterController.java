@@ -14,10 +14,6 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 import java.net.URL;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.security.NoSuchProviderException;
-import java.security.SecureRandom;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ResourceBundle;
@@ -76,9 +72,7 @@ public class RegisterController implements Initializable {
 
     public String getPasswordTextfield() {
         return passwordTextfield.getText();
-
-         }
-
+    }
 
     public String getRetypePasswordTextfield() {
         return retypePasswordTextfield.getText();
@@ -113,7 +107,7 @@ public class RegisterController implements Initializable {
                         showAlertDialogue.infoBox("pass doesn't mathch!", null, "Failed");
 
                 } else
-                    showAlertDialogue.infoBox("input valid password!", null, "Failed");
+                    showAlertDialogue.infoBox("input valid email!", null, "Failed");
             } else
                 showAlertDialogue.infoBox("input valid email and contact number!", null, "Failed");
 

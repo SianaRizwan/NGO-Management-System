@@ -4,13 +4,14 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane style="-fx-background-color: #ffe0e3;" styleClass="supply-button" stylesheets="@../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EventDetails.EventsEmployeeController">
     <children>
-        <Pane fx:id="eventDetailsPane" prefHeight="1275.0" prefWidth="1600.0" stylesheets="@../theme.css">
+        <Pane fx:id="eventDetailsPane" prefHeight="1275.0" prefWidth="1600.0" style="-fx-background-color: #ffe4e1;" stylesheets="@../theme.css">
             <children>
                   <TableView fx:id="eventTable" layoutX="142.0" layoutY="138.0" prefHeight="623.0" prefWidth="1000.0" style="-fx-prompt-text-fill: #8B0000; -fx-text-fill: BLACK; -jfx-focus-color: #8B0000; -fx-background-color: #F7E9E9; -fx-cell-size: 45px;" stylesheets="@../theme.css">
                       <columns>
@@ -24,11 +25,11 @@
                   <String fx:value="table-view" />
                </styleClass>
                   </TableView>
-                <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="105.0" prefWidth="1602.0" style="-fx-background-color: #000000;">
+                <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="64.0" prefWidth="1602.0" style="-fx-background-color: #000000;">
                     <children>
                         <Label layoutX="62.0" layoutY="22.0" prefHeight="67.0" prefWidth="290.0" text="Events" textFill="WHITE">
                             <font>
-                                <Font name="Californian FB" size="36.0" />
+                                <Font name="Californian FB Bold" size="36.0" />
                             </font>
                         </Label>
                     </children>

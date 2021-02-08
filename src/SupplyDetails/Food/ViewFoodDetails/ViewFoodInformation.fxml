@@ -32,6 +32,6 @@
       <Label layoutX="247.0" layoutY="14.0" text="month(s)" />
       <FontAwesomeIconView glyphName="SEARCH" layoutX="94.0" layoutY="30.0" />
       <Line endX="126.0" layoutX="190.0" layoutY="40.0" startX="-100.0" />
-      <TextField fx:id="monthNumber" alignment="CENTER" promptText="6" layoutX="206.0" layoutY="9.0" onAction="#IDOnEnter" prefHeight="31.0" prefWidth="39.0" />
+      <TextField fx:id="monthNumber" alignment="CENTER" layoutX="206.0" layoutY="9.0" onAction="#IDOnEnter" prefHeight="31.0" prefWidth="39.0" />
    </children>
 </AnchorPane>

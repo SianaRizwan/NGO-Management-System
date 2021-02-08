@@ -7,7 +7,7 @@ import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 
-public class SalaryChartController {
+class SalaryChartController {
 
         @FXML
         private BarChart<String, Double> SalaryChart;

@@ -1,5 +1,5 @@
 * {
-    -fx-primary: #8B0000;
+    -fx-primary: #000000;
     -fx-primaryText: #f3e4e4;
     -fx-secondary: #FDAB9F;
     -fx-buttonText: #282525;
@@ -12,9 +12,7 @@
 
 .glyph-icon {
     -fx-fill: -fx-wrongColor;
-}
-.glyph-icon:hover {
-    -fx-fill: -fx-primary;
+
 }
 .combo-box{
     -fx-text-fill: -fx-primaryText;
@@ -41,22 +39,18 @@
 
 .second-text-field {
     -fx-text-fill: -fx-primary;
-    -fx-prompt-text-fill: #fccec8;
+    -fx-prompt-text-fill: -fx-primary;
     -jfx-focus-color: -fx-primary;
     -jfx-label-float: true;
     -fx-font-size: 18px;
 }
-
 .search-field{
     -fx-text-fill: BLACK;
     -fx-prompt-text-fill: -fx-primary;
     -jfx-focus-color: -fx-primary;
-    -fx-font-size: 18px;}
-
-.event-text-Field:hover{
--fx-underline: true;
-    -fx-font-weight: bold;
+    -fx-font-size: 18px;
 }
+
 
 .button {
     -fx-background-color: -fx-secondary;
@@ -79,6 +73,7 @@
     -fx-background-color: -fx-secondary;
     -fx-text-fill: BlACK;
     -fx-font-weight: bold;
+    -fx-font-size: 17px;
 }
 
 .supply-button {
@@ -114,7 +109,7 @@
 }
 
 .tab_dashboard:hover {
-    -fx-background-color: #751919;
+    -fx-background-color: #373742;
     -fx-cursor: hand;
 }
 

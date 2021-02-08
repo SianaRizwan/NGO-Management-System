@@ -10,22 +10,23 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="expensesBarchart" prefHeight="554.0" prefWidth="1328.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accounts.Summary.ExpenseBarChart.ExpensesChartController">
+<Pane fx:id="expensesBarchart" prefHeight="554.0" prefWidth="1328.0" style="-fx-background-color: #ffe4e1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accounts.Summary.ExpenseBarChart.ExpensesChartController">
     <children>
         <Label layoutX="538.0" layoutY="19.0" text="For Month" />
         <Label layoutX="657.0" layoutY="19.0" text="and Year" />
         <FontAwesomeIconView glyphName="SEARCH" layoutX="504.0" layoutY="35.0" />
         <Line endX="227.0" layoutX="600.0" layoutY="45.0" startX="-100.0" />
-        <TextField fx:id="monthNumber" alignment="CENTER" layoutX="613.0" layoutY="14.0" prefHeight="31.0" prefWidth="39.0" promptText="1" stylesheets="@../../../theme.css">
+        <TextField fx:id="monthNumber" alignment="CENTER" layoutX="613.0" layoutY="14.0" prefHeight="31.0" prefWidth="39.0" stylesheets="@../../../theme.css">
          <styleClass>
             <String fx:value="summary-text-field" />
             <String fx:value="second-text-field" />
          </styleClass></TextField>
-        <TextField fx:id="yearNumber" alignment="CENTER" layoutX="722.0" layoutY="14.0" onAction="#monthOnEnter" prefHeight="31.0" prefWidth="90.0" promptText="2021" stylesheets="@../../../theme.css">
+        <TextField fx:id="yearNumber" alignment="CENTER" layoutX="722.0" layoutY="14.0" onAction="#monthOnEnter" prefHeight="31.0" prefWidth="90.0" stylesheets="@../../../theme.css">
          <styleClass>
             <String fx:value="summary-text-field" />
             <String fx:value="second-text-field" />
@@ -39,14 +40,17 @@
                 <NumberAxis fx:id="y" label="Total Expenses(tk)" side="LEFT" />
             </yAxis>
         </BarChart>
-        <JFXTextField fx:id="totalExpensesTextfield" editable="false" layoutX="1197.0" layoutY="493.0" prefHeight="39.0" prefWidth="128.0" style="-fx-background-color: #ffffff;" stylesheets="@../../../theme.css">
+        <JFXTextField fx:id="totalExpensesTextfield" editable="false" layoutX="1148.0" layoutY="494.0" prefHeight="39.0" prefWidth="159.0" style="-fx-background-color: #ffffff;" stylesheets="@../../../theme.css">
          <styleClass>
             <String fx:value="summary-text-field" />
             <String fx:value="second-text-field" />
-         </styleClass></JFXTextField>
-        <Label graphicTextGap="22.0" layoutX="1073.0" layoutY="503.0" prefHeight="22.0" prefWidth="128.0" text="Total Expense :">
+         </styleClass>
+         <effect>
+            <Reflection fraction="0.3" />
+         </effect></JFXTextField>
+        <Label graphicTextGap="22.0" layoutX="1010.0" layoutY="502.0" prefHeight="22.0" prefWidth="141.0" text="Total Expense :">
             <font>
-                <Font name="Californian FB" size="18.0" />
+                <Font name="Californian FB Bold" size="20.0" />
             </font>
         </Label>
       <TableView fx:id="ExpenseSummaryTable" layoutX="675.0" layoutY="66.0" prefHeight="397.0" prefWidth="650.0" styleClass="ta">

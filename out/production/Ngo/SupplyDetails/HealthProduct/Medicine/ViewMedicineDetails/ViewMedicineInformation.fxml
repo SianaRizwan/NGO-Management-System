@@ -33,6 +33,6 @@
       <Label layoutX="278.0" layoutY="24.0" text="month(s)" />
       <FontAwesomeIconView glyphName="SEARCH" layoutX="123.0" layoutY="40.0" />
       <Line endX="126.0" layoutX="219.0" layoutY="50.0" startX="-100.0" />
-      <TextField fx:id="monthNumber" alignment="CENTER" promptText="6" layoutX="233.0" layoutY="19.0" onAction="#IDOnEnter" prefHeight="31.0" prefWidth="41.0" />
+      <TextField fx:id="monthNumber" alignment="CENTER" layoutX="233.0" layoutY="19.0" onAction="#IDOnEnter" prefHeight="31.0" prefWidth="41.0" />
     </children>
 </AnchorPane>

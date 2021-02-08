@@ -4,7 +4,6 @@ import Login.LoginModel;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
@@ -30,10 +29,8 @@ public class DashboardController implements Initializable {
     @FXML
     private HBox dashboardAccounts;
 
-
     @FXML
     private void viewEmployeeDetails() throws IOException{
-
         AnchorPane pane  = FXMLLoader.load(getClass().getResource("../Person/EmployeeDet/employeeDetails.fxml"));
         employeeDetailsBorderPane.setCenter(pane);
     }
@@ -55,36 +52,30 @@ public class DashboardController implements Initializable {
     }
 
     public void viewDoctorDetails() throws IOException {
-
         AnchorPane pane  = FXMLLoader.load(getClass().getResource("../Person/DoctorDetails/DoctorDetails.fxml"));
         employeeDetailsBorderPane.setCenter(pane);
     }
     public void viewDonorDetails() throws IOException {
-
         AnchorPane pane  = FXMLLoader.load(getClass().getResource("../Person/DonorDetails/donorDetails.fxml"));
         employeeDetailsBorderPane.setCenter(pane);
     }
     public void viewVolunteerDetails() throws IOException {
-
         AnchorPane pane  = FXMLLoader.load(getClass().getResource("../Person/VolunteerDetails/volunteerDetails.fxml"));
         employeeDetailsBorderPane.setCenter(pane);
     }
 
     public void viewSupplyDetails() throws IOException {
-
         AnchorPane pane = FXMLLoader.load(getClass().getResource("../SupplyDetails/supplyDetails.fxml"));
         employeeDetailsBorderPane.setCenter(pane);
     }
 
     @FXML
     public void viewAccountsDetails() throws IOException {
-
         AnchorPane pane=FXMLLoader.load(getClass().getResource("../Accounts/Accounts.fxml"));
         employeeDetailsBorderPane.setCenter(pane);
     }
     @FXML
     public void viewEventsDetails() throws IOException {
-
         AnchorPane pane = FXMLLoader.load(getClass().getResource(eventDetails));
         employeeDetailsBorderPane.setCenter(pane);
     }
