@@ -29,7 +29,7 @@
                         </Label>
                     </children>
                     <effect>
-                        <Reflection fraction="0.11" topOpacity="0.8" />
+                        <Reflection fraction="0.2" topOpacity="0.2" />
                     </effect>
                 </AnchorPane>
                 <HBox alignment="CENTER" layoutY="169.0" prefHeight="98.0" prefWidth="1426.0">

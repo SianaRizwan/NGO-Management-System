@@ -71,7 +71,7 @@
                   </Label>
                </children>
                <effect>
-                  <Reflection fraction="0.1" topOpacity="0.4" />
+                  <Reflection fraction="0.2" topOpacity="0.2" />
                </effect>
             </AnchorPane>
          </children>

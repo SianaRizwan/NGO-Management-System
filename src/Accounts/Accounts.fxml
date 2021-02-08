@@ -26,7 +26,7 @@
                         </Label>
                     </children>
                     <effect>
-                        <Reflection fraction="0.11" topOpacity="0.8" />
+                        <Reflection fraction="0.2" topOpacity="0.2" />
                     </effect>
                 </AnchorPane>
                 <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="395.0" layoutY="550.0" onAction="#handleAccountsDesig" prefHeight="219.0" prefWidth="209.0" styleClass="supply-button" text="Designation">

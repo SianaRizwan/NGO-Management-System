@@ -54,7 +54,7 @@
              </Label>
           </children>
                <effect>
-                  <Reflection fraction="0.11" topOpacity="0.8" />
+                  <Reflection fraction="0.2" topOpacity="0.2" />
                </effect>
        </AnchorPane>
             <AnchorPane layoutX="306.0" layoutY="612.0" prefHeight="169.0" prefWidth="206.0">
