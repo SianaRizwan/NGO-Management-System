@@ -33,9 +33,6 @@
                             </font>
                         </Label>
                     </children>
-               <effect>
-                  <Reflection fraction="0.2" topOpacity="0.2" />
-               </effect>
                 </AnchorPane>
             </children>
         </Pane>

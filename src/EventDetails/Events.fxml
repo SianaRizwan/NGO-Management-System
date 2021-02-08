@@ -53,16 +53,10 @@
                 </font>
              </Label>
           </children>
-               <effect>
-                  <Reflection fraction="0.2" topOpacity="0.2" />
-               </effect>
        </AnchorPane>
             <AnchorPane layoutX="306.0" layoutY="612.0" prefHeight="169.0" prefWidth="206.0">
                <children>
                   <Button graphicTextGap="22.0" layoutX="18.0" layoutY="2.0" mnemonicParsing="false" onAction="#handleCreateEvent" onMouseClicked="#handleCreateEvent" prefHeight="166.0" prefWidth="206.0" text="Button">
-                     <effect>
-                        <DropShadow />
-                     </effect>
                   </Button>
                   <ImageView fitHeight="146.0" fitWidth="182.0" layoutX="30.0" layoutY="12.0" onMouseClicked="#handleCreateEvent" pickOnBounds="true">
                      <image>
@@ -74,9 +68,6 @@
             <AnchorPane layoutX="913.0" layoutY="612.0" prefHeight="169.0" prefWidth="206.0">
                <children>
                   <Button layoutX="14.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleManageEvent" onMouseClicked="#handleManageEvent" prefHeight="166.0" prefWidth="220.0" text="Button">
-                     <effect>
-                        <DropShadow />
-                     </effect>
                   </Button>
                   <ImageView fitHeight="146.0" fitWidth="189.0" layoutX="31.0" layoutY="11.0" onMouseClicked="#handleManageEvent" pickOnBounds="true">
                      <image>
@@ -112,9 +103,6 @@
             <AnchorPane layoutX="631.0" layoutY="159.0" prefHeight="169.0" prefWidth="206.0">
                <children>
                   <Button layoutX="13.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleViewHistory" prefHeight="166.0" prefWidth="206.0">
-                     <effect>
-                        <DropShadow />
-                     </effect>
                   </Button>
                   <ImageView fitHeight="146.0" fitWidth="182.0" layoutX="24.0" layoutY="11.0" onMouseClicked="#handleViewHistory" pickOnBounds="true">
                      <image>

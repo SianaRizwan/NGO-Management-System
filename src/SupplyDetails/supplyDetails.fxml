@@ -23,9 +23,6 @@
                      </image>
                   </ImageView>
                </graphic>
-               <effect>
-                  <DropShadow color="#0a0a0a" />
-               </effect>
             </JFXButton>
             <JFXButton buttonType="RAISED" layoutX="378.0" layoutY="566.0" onAction="#handleSupplyMedicine" prefHeight="198.0" prefWidth="209.0" styleClass="supply-button" text=" ">
                <graphic>
@@ -35,9 +32,6 @@
                      </image>
                   </ImageView>
                </graphic>
-               <effect>
-                  <DropShadow color="#0a0a0a" />
-               </effect>
             </JFXButton>
             <JFXButton buttonType="RAISED" layoutX="784.0" layoutY="202.0" onAction="#handleSupplyEmergency" prefHeight="198.0" prefWidth="209.0" styleClass="supply-button" text=" ">
                <graphic>
@@ -47,9 +41,6 @@
                      </image>
                   </ImageView>
                </graphic>
-               <effect>
-                  <DropShadow color="#0a0a0a" />
-               </effect>
             </JFXButton>
             <JFXButton buttonType="RAISED" layoutX="784.0" layoutY="566.0" onAction="#handleSupplyVaccine" prefHeight="198.0" prefWidth="209.0" styleClass="supply-button" text=" ">
                <graphic>
@@ -59,9 +50,6 @@
                      </image>
                   </ImageView>
                </graphic>
-               <effect>
-                  <DropShadow color="#0a0a0a" />
-               </effect>
             </JFXButton>
             <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="67.0" prefWidth="1482.0" style="-fx-background-color: #000000;">
                <children>
@@ -71,9 +59,6 @@
                      </font>
                   </Label>
                </children>
-               <effect>
-                  <Reflection fraction="0.2" topOpacity="0.2" />
-               </effect>
             </AnchorPane>
             <Label graphicTextGap="22.0" layoutX="365.0" layoutY="144.0" text="Food Items">
                <font>
