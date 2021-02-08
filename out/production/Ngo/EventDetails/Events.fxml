@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane style="-fx-background-color: #ffe0e3;" styleClass="supply-button" stylesheets="@../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EventDetails.EventsController">
+<AnchorPane style="-fx-background-color: #ffe4e1;" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="supply-button" stylesheets="@../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EventDetails.EventsController">
     <children>
     <Pane fx:id="eventDetailsPane" prefHeight="1275.0" prefWidth="1473.0" style="-fx-background-color: #ffe4e1;">
     <children>
@@ -45,7 +45,7 @@
                   <DropShadow />
                </effect>
             </HBox>
-       <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="44.0" prefWidth="1482.0" style="-fx-background-color: #000000;">
+       <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="44.0" prefWidth="1800.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #000000;">
           <children>
              <Label layoutX="62.0" layoutY="22.0" prefHeight="67.0" prefWidth="290.0" text="Events" textFill="WHITE">
                 <font>
