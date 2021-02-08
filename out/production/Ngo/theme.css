@@ -14,6 +14,10 @@
     -fx-fill: -fx-wrongColor;
 
 }
+
+.glyph-icon-back {
+    -fx-fill: #000000;
+}
 .combo-box{
     -fx-text-fill: -fx-primaryText;
     -fx-prompt-text-fill: -fx-primaryText;

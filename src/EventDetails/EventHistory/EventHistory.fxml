@@ -32,7 +32,7 @@
                         <Font name="Californian FB Bold" size="36.0" />
                     </font>
                 </Label>
-                <FontAwesomeIconView glyphName="ARROW_LEFT" layoutX="35.0" layoutY="65.0" onMouseClicked="#handleBackButton" size="28.0" wrappingWidth="30.755958557128906" />
+                <FontAwesomeIconView glyphName="ARROW_LEFT" layoutX="35.0" layoutY="65.0" onMouseClicked="#handleBackButton" size="28.0" styleClass="glyph-icon-back" wrappingWidth="30.755958557128906" />
                 <Label layoutX="167.0" layoutY="149.0" text="for the last">
                     <font>
                         <Font size="18.0" />
