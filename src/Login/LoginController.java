@@ -1,31 +1,26 @@
 package Login;
 
+import Main.Main;
 import Utilities.ShowAlertDialogue;
+import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.effect.DropShadow;
-import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.paint.Color;
-import javafx.scene.paint.ImagePattern;
-import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class LoginController {
+public class LoginController implements Initializable {
     @FXML
     private AnchorPane loginPane;
-    @FXML
-    private Circle Logo;
     @FXML
     private TextField usernameTextfield, passwordTextfield;
 
@@ -44,12 +39,7 @@ public class LoginController {
 
     ShowAlertDialogue alert = new ShowAlertDialogue();
 
-    public void initialize(){
-        Logo.setStroke(Color.FLORALWHITE);
-        Image image = new Image("images/Peace.jpg",false);
-        Logo.setFill(new ImagePattern(image));
-        Logo.setEffect(new DropShadow(+20d,0d,2d,Color.CRIMSON));
-    }
+
     @FXML
     public void handleLogin() throws IOException {
 
@@ -85,5 +75,43 @@ public class LoginController {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("../Registration/register.fxml"));
         loginPane.getChildren().setAll(pane);
 
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        if(!Main.isSplashLoaded) {
+            try {
+                loadSplash();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    void loadSplash() throws IOException {
+        try {
+            Main.isSplashLoaded=true;
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("../Main/Splash.fxml"));
+            loginPane.getChildren().setAll(pane);
+
+            FadeTransition fade = new FadeTransition(Duration.seconds(2.5),pane);
+            fade.setFromValue(1);
+            fade.setToValue(0.2);
+            fade.setCycleCount(1);
+
+            fade.play();
+            fade.setOnFinished(event -> {
+                try {
+                    AnchorPane lPane = FXMLLoader.load(getClass().getResource("../Login/login.fxml"));
+                    loginPane.getChildren().setAll(lPane);
+                } catch (IOException e) {
+                    System.out.println("Splash Screen to login");
+                    e.printStackTrace();
+                }
+            });
+        } catch (IOException e) {
+            System.out.println("Splash Screen");
+            e.printStackTrace();
+        }
     }
 }
