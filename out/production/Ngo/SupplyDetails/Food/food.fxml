@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ContextMenu?>
 <?import javafx.scene.control.Label?>
@@ -54,6 +55,7 @@
                   <Font name="Californian FB" size="24.0" />
                </font>
             </Button>
+            <FontAwesomeIconView fx:id="backButton" fill="#ea7979" glyphName="ARROW_LEFT" layoutX="1270.0" layoutY="107.0" onMouseClicked="#handleBackButton" size="32.0" />
 
          </children>
       </Pane>

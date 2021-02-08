@@ -12,11 +12,6 @@
     <children>
         <Pane fx:id="eventDetailsPane" prefHeight="1275.0" prefWidth="1473.0" stylesheets="@../theme.css">
             <children>
-                <Label layoutX="73.0" layoutY="15.0" prefHeight="98.0" prefWidth="511.0" text="Events">
-                    <font>
-                        <Font name="Californian FB" size="36.0" />
-                    </font>
-                </Label>
                   <TableView fx:id="eventTable" layoutX="142.0" layoutY="138.0" prefHeight="623.0" prefWidth="1000.0" style="-fx-prompt-text-fill: #8B0000; -fx-text-fill: BLACK; -jfx-focus-color: #8B0000; -fx-background-color: #F7E9E9; -fx-cell-size: 45px;" stylesheets="@../theme.css">
                       <columns>
                           <TableColumn fx:id="colEventID" editable="false" maxWidth="300.0" minWidth="225.99996948242188" prefWidth="334.0" text="Event ID" />
@@ -29,6 +24,15 @@
                   <String fx:value="table-view" />
                </styleClass>
                   </TableView>
+                <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="110.0" prefWidth="1482.0" style="-fx-background-color: #000000;">
+                    <children>
+                        <Label layoutX="62.0" layoutY="22.0" prefHeight="67.0" prefWidth="290.0" text="Events" textFill="WHITE">
+                            <font>
+                                <Font name="Californian FB" size="36.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
             </children>
         </Pane>
     </children>
