@@ -7,7 +7,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.effect.DropShadow;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -19,6 +24,8 @@ import java.util.ResourceBundle;
 public class LoginController {
     @FXML
     private AnchorPane loginPane;
+    @FXML
+    private Circle Logo;
     @FXML
     private TextField usernameTextfield, passwordTextfield;
 
@@ -37,7 +44,12 @@ public class LoginController {
 
     ShowAlertDialogue alert = new ShowAlertDialogue();
 
-
+    public void initialize(){
+        Logo.setStroke(Color.FLORALWHITE);
+        Image image = new Image("images/Peace.jpg",false);
+        Logo.setFill(new ImagePattern(image));
+        Logo.setEffect(new DropShadow(+20d,0d,2d,Color.CRIMSON));
+    }
     @FXML
     public void handleLogin() throws IOException {
 
