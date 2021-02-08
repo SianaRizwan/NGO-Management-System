@@ -17,12 +17,12 @@
 
 <AnchorPane fx:id="loginPane" prefHeight="900.0" prefWidth="1800.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Login.LoginController">
    <children>
-      <ImageView fitHeight="1244.0" fitWidth="1868.0" layoutX="-20.0" layoutY="-142.0" opacity="0.07" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <ImageView fitHeight="1244.0" fitWidth="1868.0" layoutX="-20.0" layoutY="-142.0" opacity="0.02" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
             <Image url="@../images/background.jpg" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="580.0" layoutY="110.0" prefHeight="733.0" prefWidth="750.0" styleClass="bg">
+      <AnchorPane layoutX="580.0" layoutY="110.0" prefHeight="733.0" prefWidth="750.0" style="-fx-background-color: #212121;" styleClass="bg">
          <children>
             <Button fx:id="loginButton" layoutX="275.0" layoutY="454.0" mnemonicParsing="false" onAction="#handleLogin" onMouseClicked="#handleLogin" opacity="0.82" prefHeight="50.0" prefWidth="200.0" text="Login" textAlignment="CENTER">
                <textFill>

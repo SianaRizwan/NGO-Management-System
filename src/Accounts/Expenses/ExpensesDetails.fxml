@@ -42,7 +42,7 @@
                         <Font size="18.0" />
                     </font>
                 </JFXTextField>
-                <AnchorPane layoutX="346.0" layoutY="91.0" prefHeight="350.0" prefWidth="712.0" style="-fx-background-color: #000000;">
+                <AnchorPane layoutX="346.0" layoutY="91.0" prefHeight="350.0" prefWidth="712.0" style="-fx-background-color: #212121;">
                     <children>
                         <JFXTextField fx:id="expNameTextField" layoutX="112.0" layoutY="109.0" prefHeight="39.0" prefWidth="245.0" promptText="Title" />
                         <JFXTextField fx:id="expAmountTextField" layoutX="438.0" layoutY="109.0" prefHeight="39.0" prefWidth="245.0" promptText="Amount" />

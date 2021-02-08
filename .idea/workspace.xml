@@ -2,71 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Main/Splash.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/SplashController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/em1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/food1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/food2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/food3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/ic_designation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/ic_emergency.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/ic_expense.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/ic_food.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/ic_medicine.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/ic_summary.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/ic_vaccine.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/med1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/vac1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/vac2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Accounts.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Accounts.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/SalaryBarchart/SalarychartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/SalaryBarchart/SalarychartController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/CreateEvent/CreateEvent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/CreateEvent/CreateEvent.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventHistory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventHistory.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ManageEvent/ManageEvent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ManageEvent/ManageEvent.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ManageEvent/ManageEventEmployees.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ManageEvent/ManageEventEmployees.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Login/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Login/LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Ngo/Login/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Login/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Main/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Main/Dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Main/Splash.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Main/Splash.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/DoctorDetails/DoctorDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/DoctorDetails/DoctorDetails.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/EmployeeDet/employeeDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/EmployeeDet/employeeDetails.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Emergency/EmergencySupply.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Emergency/EmergencySupply.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Food/food.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Food/food.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/HealthProduct/Medicine/medicine.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/HealthProduct/Medicine/medicine.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/HealthProduct/Vaccine/vaccine.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/HealthProduct/Vaccine/vaccine.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/VolunteerDetails/volunteerDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/VolunteerDetails/volunteerDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Registration/register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Registration/register.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/supplyDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/supplyDetails.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/images/Desig.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/images/Exp.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/images/Summary.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/images/back.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/images/emergency.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/images/food.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/images/medicine.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ngo/images/vaccine.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Ngo/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/theme.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Accounts/Accounts.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Accounts.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Accounts/Summary/SalaryBarchart/SalarychartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Summary/SalaryBarchart/SalarychartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Accounts/Designation/DesignationDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Designation/DesignationDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Accounts/Expenses/ExpensesDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Expenses/ExpensesDetails.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/EventDetails/CreateEvent/CreateEvent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/CreateEvent/CreateEvent.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventDetails/EventHistory/EventHistory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/EventHistory/EventHistory.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventDetails/Events.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/Events.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventDetails/EventsEmployee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/EventsEmployee.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/EventDetails/ManageEvent/ManageEvent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/ManageEvent/ManageEvent.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/EventDetails/ManageEvent/ManageEventEmployees.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventDetails/ManageEvent/ManageEventEmployees.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Login/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/DoctorDetails/AddDoctor/AddDoctor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/DoctorDetails/AddDoctor/AddDoctor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/DoctorDetails/DoctorDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/DoctorDetails/DoctorDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/DoctorDetails/UpdateDoctor/UpdateDoctorDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/DoctorDetails/UpdateDoctor/UpdateDoctorDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/DonorDetails/AddDonation/addDonation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/DonorDetails/AddDonation/addDonation.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/DonorDetails/AddDonor/addDonor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/DonorDetails/AddDonor/addDonor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/DonorDetails/UpdateDonor/updateDonorDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/DonorDetails/UpdateDonor/updateDonorDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/DonorDetails/donorDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/DonorDetails/donorDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/EmployeeDet/AddEmployee/AddEmployee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/EmployeeDet/AddEmployee/AddEmployee.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/EmployeeDet/UpdateEmployee/updateEmployee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/EmployeeDet/UpdateEmployee/updateEmployee.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Person/EmployeeDet/employeeDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/EmployeeDet/employeeDetails.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SupplyDetails/Emergency/EmergencySupply.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/SupplyDetails/Emergency/EmergencySupply.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SupplyDetails/Food/food.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/SupplyDetails/Food/food.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SupplyDetails/HealthProduct/Medicine/medicine.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/SupplyDetails/HealthProduct/Medicine/medicine.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SupplyDetails/HealthProduct/Vaccine/vaccine.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/SupplyDetails/HealthProduct/Vaccine/vaccine.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/VolunteerDetails/AddVolunteer/addVolunteer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/VolunteerDetails/AddVolunteer/addVolunteer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/VolunteerDetails/UpdateVolunteer/updateVolunteerDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/VolunteerDetails/UpdateVolunteer/updateVolunteerDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person/VolunteerDetails/volunteerDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person/VolunteerDetails/volunteerDetails.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SupplyDetails/supplyDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/SupplyDetails/supplyDetails.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/Desig.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/Exp.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/Summary.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/back.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/emergency.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/food.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/medicine.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/vaccine.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,22 +265,22 @@
       <screen x="0" y="0" width="1920" height="1030" />
     </state>
     <state x="686" y="211" key="FileChooserDialogImpl/0.0.1920.1030@0.0.1920.1030" timestamp="1612635512315" />
-    <state width="1864" height="122" key="GridCell.Tab.0.bottom" timestamp="1612819343211">
+    <state width="1864" height="122" key="GridCell.Tab.0.bottom" timestamp="1612823573026">
       <screen x="0" y="0" width="1920" height="1030" />
     </state>
-    <state width="1864" height="122" key="GridCell.Tab.0.bottom/0.0.1920.1030@0.0.1920.1030" timestamp="1612819343211" />
-    <state width="1864" height="122" key="GridCell.Tab.0.center" timestamp="1612819343210">
+    <state width="1864" height="122" key="GridCell.Tab.0.bottom/0.0.1920.1030@0.0.1920.1030" timestamp="1612823573026" />
+    <state width="1864" height="122" key="GridCell.Tab.0.center" timestamp="1612823573026">
       <screen x="0" y="0" width="1920" height="1030" />
     </state>
-    <state width="1864" height="122" key="GridCell.Tab.0.center/0.0.1920.1030@0.0.1920.1030" timestamp="1612819343210" />
-    <state width="1864" height="122" key="GridCell.Tab.0.left" timestamp="1612819343210">
+    <state width="1864" height="122" key="GridCell.Tab.0.center/0.0.1920.1030@0.0.1920.1030" timestamp="1612823573026" />
+    <state width="1864" height="122" key="GridCell.Tab.0.left" timestamp="1612823573025">
       <screen x="0" y="0" width="1920" height="1030" />
     </state>
-    <state width="1864" height="122" key="GridCell.Tab.0.left/0.0.1920.1030@0.0.1920.1030" timestamp="1612819343210" />
-    <state width="1864" height="122" key="GridCell.Tab.0.right" timestamp="1612819343211">
+    <state width="1864" height="122" key="GridCell.Tab.0.left/0.0.1920.1030@0.0.1920.1030" timestamp="1612823573025" />
+    <state width="1864" height="122" key="GridCell.Tab.0.right" timestamp="1612823573026">
       <screen x="0" y="0" width="1920" height="1030" />
     </state>
-    <state width="1864" height="122" key="GridCell.Tab.0.right/0.0.1920.1030@0.0.1920.1030" timestamp="1612819343211" />
+    <state width="1864" height="122" key="GridCell.Tab.0.right/0.0.1920.1030@0.0.1920.1030" timestamp="1612823573026" />
     <state x="347" y="0" key="SettingsEditor" timestamp="1606794385478">
       <screen x="0" y="0" width="1920" height="1030" />
     </state>

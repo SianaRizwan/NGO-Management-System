@@ -16,7 +16,7 @@
     <children>
         <Pane fx:id="AccountsPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1275.0" prefWidth="1473.0" style="-fx-background-color: #ffe4e1;">
             <children>
-                <AnchorPane layoutX="-1.0" layoutY="-1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="44.0" prefWidth="1800.0" style="-fx-background-color: #000000;">
+                <AnchorPane layoutX="-1.0" layoutY="-1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="44.0" prefWidth="1800.0" style="-fx-background-color: #212121;">
                     <children>
                         <Label layoutX="62.0" layoutY="22.0" prefHeight="67.0" prefWidth="290.0" text="Account Details" textFill="WHITE">
                             <font>

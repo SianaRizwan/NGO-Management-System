@@ -21,7 +21,7 @@
                           <Font name="Californian FB Bold" size="36.0" />
                       </font>
                   </Label>
-                <AnchorPane layoutX="375.0" layoutY="179.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="803.0" style="-fx-background-color: #000000;">
+                <AnchorPane layoutX="375.0" layoutY="179.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="803.0" style="-fx-background-color: #212121;">
                     <children>
                         <Button graphicTextGap="22.0" layoutX="363.0" layoutY="577.0" mnemonicParsing="false" onAction="#handleConfirmBtn" style="-fx-background-color: FDAB9F;" stylesheets="@../../theme.css" text="Confirm">
                             <font>
