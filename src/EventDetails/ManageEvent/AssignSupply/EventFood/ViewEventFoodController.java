@@ -61,10 +61,10 @@ public class ViewEventFoodController {
                             ViewEventFoodModel view=new ViewEventFoodModel();
                             details.getStyleClass().clear();
                             details.getStyleClass().add("second-text-field");
-                            System.out.println(new ViewEventFoodModel().getRequiredAmount());
+                         //   System.out.println(new ViewEventFoodModel().getRequiredAmount());
                             view.setId(id);
 
-                            details.setText(new ViewEventFoodModel().getRequiredAmount());
+//                            details.setText(new ViewEventFoodModel().getRequiredAmount());
 
                             details.setOnAction(event -> {
                                 EventSupply h = getTableView().getItems().get(getIndex());
@@ -72,6 +72,7 @@ public class ViewEventFoodController {
                                 details.setEditable(true);
                                 details.setText(details.getText());
                                view.isAmountAddSuccessful(Integer.parseInt(details.getText()), id, h.getName());
+                                System.out.println("ppp");
                             });
                             setGraphic(details);
 

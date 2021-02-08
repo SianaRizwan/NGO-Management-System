@@ -41,7 +41,6 @@ public class donationSummaryController {
     @FXML
     private JFXTextField totalDonationTextfield;
 
-
     donationSummaryModel model = new donationSummaryModel();
 
     public void displayInformation() {
@@ -80,7 +79,7 @@ public class donationSummaryController {
     }
 
     public void initialize() {
-        monthNumber.getStyleClass().clear();
+         monthNumber.getStyleClass().clear();
         yearNumber.getStyleClass().clear();
         totalDonationTextfield.getStyleClass().clear();
     }

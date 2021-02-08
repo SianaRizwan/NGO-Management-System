@@ -9,6 +9,8 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
@@ -39,16 +41,22 @@
                         <Font size="18.0" />
                     </font>
                 </JFXTextField>
-                <AnchorPane layoutX="345.0" layoutY="119.0" opacity="0.8" prefHeight="279.0" prefWidth="712.0" style="-fx-background-color: #8B0000;">
+                <AnchorPane layoutX="345.0" layoutY="119.0" prefHeight="279.0" prefWidth="712.0" style="-fx-background-color: #000000;">
                     <children>
                         <JFXTextField fx:id="desigNameTextField" layoutX="181.0" layoutY="100.0" prefHeight="31.0" prefWidth="350.0" promptText="Designation" />
                         <JFXTextField fx:id="desigSalaryTextField" layoutX="181.0" layoutY="164.0" prefHeight="30.0" prefWidth="350.0" promptText="Salary" />
                         <FontAwesomeIconView glyphName="USER_PLUS" layoutX="136.0" layoutY="127.0" size="20" />
-                        <JFXButton layoutX="309.0" layoutY="226.0" onAction="#desigConfirmBtn" onMouseClicked="#desigConfirmBtn" prefHeight="31.0" prefWidth="82.0" styleClass="password-change" text="Add" />
+                        <JFXButton graphicTextGap="22.0" layoutX="309.0" layoutY="226.0" onAction="#desigConfirmBtn" onMouseClicked="#desigConfirmBtn" prefHeight="31.0" prefWidth="82.0" styleClass="password-change" text="Add">
+                     <effect>
+                        <InnerShadow choke="0.26" />
+                     </effect></JFXButton>
                         <JFXComboBox fx:id="desigTypeComboBox" editable="true" labelFloat="true" layoutX="181.0" layoutY="33.0" prefHeight="30.0" prefWidth="350.0" promptText="Category" />
                   <FontAwesomeIconView glyphName="MONEY" layoutX="135.0" layoutY="190.0" size="20" />
                   <EmojiOneView glyphName="REGIONAL_INDICATOR_C" layoutX="135.0" layoutY="62.0" size="21" />
                     </children>
+               <effect>
+                  <DropShadow color="#f88989" offsetY="3.0" radius="22.5" spread="0.17" width="71.0" />
+               </effect>
                 </AnchorPane>
             <FontAwesomeIconView fx:id="backButton" glyphName="ARROW_LEFT" layoutX="1337.0" layoutY="67.0" onMouseClicked="#handleBackButton" size="32.0" styleClass="glyph-icon-back" />
             </children>

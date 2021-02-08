@@ -9,18 +9,19 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="575.0" prefWidth="1127.0" stylesheets="@../../../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accounts.Summary.EventSummary.EventSummaryController">
+<AnchorPane prefHeight="575.0" prefWidth="1127.0" style="-fx-background-color: #ffe4e1;" stylesheets="@../../../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accounts.Summary.EventSummary.EventSummaryController">
    <children>
       <Label layoutX="438.0" layoutY="19.0" text="For Month" />
       <Label layoutX="557.0" layoutY="19.0" text="and Year" />
       <FontAwesomeIconView glyphName="SEARCH" layoutX="404.0" layoutY="35.0" />
       <Line endX="227.0" layoutX="500.0" layoutY="45.0" startX="-100.0" />
-      <TextField fx:id="monthNumber" alignment="CENTER" layoutX="513.0" layoutY="14.0" prefHeight="31.0" prefWidth="39.0" promptText="1" styleClass="second-text-field" />
-      <TextField fx:id="yearNumber" alignment="CENTER" layoutX="622.0" layoutY="14.0" onAction="#handleEvent" prefHeight="31.0" prefWidth="90.0" promptText="2021" styleClass="second-text-field" />
+      <TextField fx:id="monthNumber" alignment="CENTER" layoutX="513.0" layoutY="14.0" prefHeight="31.0" prefWidth="39.0" styleClass="second-text-field" />
+      <TextField fx:id="yearNumber" alignment="CENTER" layoutX="622.0" layoutY="14.0" onAction="#handleEvent" prefHeight="31.0" prefWidth="90.0" styleClass="second-text-field" />
       <TableView fx:id="EventSummaryTable" layoutX="541.0" layoutY="76.0" prefHeight="397.0" prefWidth="584.0" styleClass="ta">
          <columns>
             <TableColumn fx:id="colID" editable="false" maxWidth="300.0" minWidth="120.0" prefWidth="152.0" text="Event ID" />
@@ -29,15 +30,18 @@
             <TableColumn fx:id="colBudget" editable="false" maxWidth="390.0" minWidth="-Infinity" prefWidth="121.0" text="Budget" />
          </columns>
       </TableView>
-      <JFXTextField fx:id="totalDonationTextfield" editable="false" layoutX="1001.0" layoutY="507.0" prefHeight="39.0" prefWidth="125.0" style="-fx-background-color: #ffffff;" styleClass="second-text-field" />
-      <Label graphicTextGap="22.0" layoutX="863.0" layoutY="515.0" prefHeight="21.0" prefWidth="166.0" text="Total Event Cost :">
+      <JFXTextField fx:id="totalDonationTextfield" editable="false" layoutX="935.0" layoutY="507.0" prefHeight="39.0" prefWidth="166.0" style="-fx-background-color: #ffffff;" styleClass="second-text-field">
+         <effect>
+            <Reflection fraction="0.3" />
+         </effect></JFXTextField>
+      <Label graphicTextGap="22.0" layoutX="764.0" layoutY="515.0" prefHeight="21.0" prefWidth="166.0" text="Total Event Cost :">
          <font>
-            <Font name="Californian FB" size="18.0" />
+            <Font name="Californian FB Bold" size="20.0" />
          </font>
       </Label>
       <BarChart fx:id="EventChart" categoryGap="15.0" layoutX="4.0" layoutY="68.0" prefHeight="443.0" prefWidth="505.0" style="-fx-bar-fill: #123456;" stylesheets="@../../../theme.css" title="Event Details">
          <xAxis>
-            <CategoryAxis label="EVent Type (category)" side="BOTTOM" fx:id="x" />
+            <CategoryAxis label="Event Type (category)" side="BOTTOM" fx:id="x" />
          </xAxis>
          <yAxis>
             <NumberAxis fx:id="y" label="Total Event Cost(tk)" side="LEFT" />

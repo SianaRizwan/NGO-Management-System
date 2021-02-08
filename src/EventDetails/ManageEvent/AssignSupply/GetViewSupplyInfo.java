@@ -66,6 +66,7 @@ public class GetViewSupplyInfo {
 
     public void isAmountAddSuccessful(int amt, String eventID, String medName, String sql) {
         try {
+            String budget;
             String sql2;
             if(eventID.contains("F")){
                 sql2= "update food set total_qty=total_qty-? where name=?";
@@ -81,8 +82,8 @@ public class GetViewSupplyInfo {
             int x = ps.executeUpdate();
             if (x > 0) {
                 if (isAmountUpdateSuccessful(amt,medName,sql2)) {
-                    System.out.println(amt+"   "+eventID+"   "+medName);
-                    System.out.println("p");
+                    updateEventActualBudget(amt,eventID,medName);
+
                 }
             }
         } catch (Exception e) {
@@ -105,5 +106,21 @@ public class GetViewSupplyInfo {
             return false;
         }
         return false;
+    }
+    private void updateEventActualBudget(int amt, String eventID, String medName){
+        try {
+            String sql="update event_details set actual_budget=nvl(actual_budget,0)+GET_actual_budget(?,?,?) where id=?";
+            OracleConnection oc = new OracleConnection();
+            PreparedStatement ps = oc.conn.prepareStatement(sql);
+            ps.setInt(3, amt);
+            ps.setString(2, medName);
+            ps.setString(1, eventID);
+            ps.setString(4, eventID);
+
+           ps.executeUpdate();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

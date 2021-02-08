@@ -52,17 +52,17 @@ public class SummaryController {
     @FXML
     private JFXTextField totalSupplyCost;
 
-    //SummaryModel sm=new SummaryModel();
+    SummaryModel sm=new SummaryModel();
     public void initialize() {
         monthNumber.requestFocus();
     }
-    //public void handleSummary() {
-      //  totalDonation.setText(String.valueOf(sm.getTotalDonation(Integer.parseInt(monthNumber.getText()), Integer.parseInt(yearNumber.getText()))));
-      //  totalEventCost.setText(String.valueOf(sm.getTotalEventCost(Integer.parseInt(monthNumber.getText()), Integer.parseInt(yearNumber.getText()))));
-      //  totalExpenses.setText(String.valueOf(sm.getTotalExpense(Integer.parseInt(monthNumber.getText()), Integer.parseInt(yearNumber.getText()))));
-      //  totalSupplyCost.setText(String.valueOf(sm.getTotalSupplyCost(Integer.parseInt(monthNumber.getText()), Integer.parseInt(yearNumber.getText()))));
-      //  netTotal.setText(String.valueOf(sm.getNetTotal(Integer.parseInt(monthNumber.getText()), Integer.parseInt(yearNumber.getText()))));
-    //}
+    public void handleSummary() {
+        totalDonation.setText(String.valueOf(sm.getTotalDonation(Integer.parseInt(monthNumber.getText()), Integer.parseInt(yearNumber.getText()))));
+        totalEventCost.setText(String.valueOf(sm.getTotalEventCost(Integer.parseInt(monthNumber.getText()), Integer.parseInt(yearNumber.getText()))));
+        totalExpenses.setText(String.valueOf(sm.getTotalExpense(Integer.parseInt(monthNumber.getText()), Integer.parseInt(yearNumber.getText()))));
+        totalSupplyCost.setText(String.valueOf(sm.getTotalSupplyCost(Integer.parseInt(monthNumber.getText()), Integer.parseInt(yearNumber.getText()))));
+        netTotal.setText(String.valueOf(sm.getNetTotal(Integer.parseInt(monthNumber.getText()), Integer.parseInt(yearNumber.getText()))));
+    }
 
     @FXML
     void handleBackButton() throws IOException {

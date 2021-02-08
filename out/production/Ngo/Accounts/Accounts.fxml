@@ -4,6 +4,7 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -11,42 +12,57 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane style="-fx-background-color: #ffe0e3;" styleClass="supply-button" stylesheets="@../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accounts.AccountsController">
+<AnchorPane style="-fx-background-color: #ffe4e1;" styleClass="supply-button" stylesheets="@../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accounts.AccountsController">
     <children>
-        <Pane fx:id="AccountsPane" prefHeight="1275.0" prefWidth="1473.0">
+        <Pane fx:id="AccountsPane" prefHeight="1275.0" prefWidth="1473.0" style="-fx-background-color: #ffe4e1;">
             <children>
                 <Label layoutX="73.0" layoutY="15.0" prefHeight="98.0" prefWidth="511.0" text="Accounts Details">
                     <font>
-                        <Font name="Californian FB" size="36.0" />
+                        <Font name="Californian FB Bold" size="36.0" />
                     </font>
                 </Label>
                 <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="395.0" layoutY="550.0" onAction="#handleAccountsDesig" prefHeight="219.0" prefWidth="209.0" styleClass="supply-button" text="Designation">
                <font>
                   <Font size="21.0" />
                </font>
+               <effect>
+                  <DropShadow color="#0a0a0a" offsetY="2.0" />
+               </effect>
                 </JFXButton>
                 <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="813.0" layoutY="550.0" onAction="#handleAccountsExpenses" onMouseClicked="#handleAccountsExpenses" prefHeight="219.0" prefWidth="209.0" styleClass="supply-button" text="Expenses">
                <font>
                   <Font size="21.0" />
                </font>
+               <effect>
+                  <DropShadow color="#0a0a0a" offsetY="2.0" />
+               </effect>
                 </JFXButton>
-                <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="604.0" layoutY="203.0" onAction="#handleAccountsSummary" prefHeight="219.0" prefWidth="209.0" styleClass="supply-button" text="Summary ">
+                <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" graphicTextGap="22.0" layoutX="604.0" layoutY="203.0" onAction="#handleAccountsSummary" prefHeight="219.0" prefWidth="209.0" styleClass="supply-button" text="Summary ">
                <font>
                   <Font name="Calibri" size="21.0" />
-               </font></JFXButton>
+               </font>
+               <effect>
+                  <DropShadow color="#0a0a0a" offsetY="2.0" />
+               </effect></JFXButton>
             <Line endX="570.0" endY="8.0" layoutX="749.0" layoutY="455.0" startX="-570.0" startY="8.0" />
             <Label graphicTextGap="22.0" layoutX="290.0" layoutY="156.0" prefHeight="22.0" prefWidth="172.0" text="Total Employees ">
                <font>
                   <Font name="Californian FB" size="18.0" />
                </font>
             </Label>
-            <JFXTextField fx:id="totalEmpTextField" alignment="CENTER" layoutX="245.0" layoutY="188.0" style="-fx-background-color: #ffffff;" />
+            <JFXTextField fx:id="totalEmpTextField" alignment="CENTER" layoutX="245.0" layoutY="188.0" style="-fx-background-color: #ffffff;">
+               <effect>
+                  <DropShadow radius="4.75" width="0.0" />
+               </effect></JFXTextField>
             <Label layoutX="1022.0" layoutY="156.0" text="Total Doctors ">
                <font>
                   <Font name="Californian FB" size="18.0" />
                </font>
             </Label>
-            <JFXTextField fx:id="totalDocTextField" alignment="CENTER" layoutX="983.0" layoutY="188.0" style="-fx-background-color: #ffffff;" />
+            <JFXTextField fx:id="totalDocTextField" alignment="CENTER" layoutX="983.0" layoutY="188.0" style="-fx-background-color: #ffffff;">
+               <effect>
+                  <DropShadow radius="4.75" width="0.0" />
+               </effect></JFXTextField>
             <FontAwesomeIconView glyphName="USERS" layoutX="253.0" layoutY="172.0" size="25" />
             <FontAwesomeIconView glyphName="USER_MD" layoutX="991.0" layoutY="172.0" size="25" />
                   <ImageView fitHeight="173.0" fitWidth="186.0" layoutX="412.0" layoutY="563.0" onMouseClicked="#handleAccountsDesig" pickOnBounds="true" preserveRatio="true">

@@ -125,6 +125,7 @@ public class ManageEventEmployeesController {
     }
 
     public void initialize() {
+        eventName.requestFocus();
         TextFields.bindAutoCompletion(eventName, new ManageEventModel().getItemNameList("select id from event_details"));
     }
 

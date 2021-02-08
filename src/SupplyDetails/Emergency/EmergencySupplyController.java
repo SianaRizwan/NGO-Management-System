@@ -47,6 +47,12 @@ public class EmergencySupplyController {
         searchFilterData(searchSupplyTextField, emergencySupplyTable);
         viewDetails();
     }
+    @FXML
+    void handleBackButton() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("../SupplyDetails.fxml"));
+        EmergencySupplyDetailsPane.getChildren().setAll(pane);
+
+    }
 
     private void viewDetails() {
         emergencySupplyTable.setRowFactory(tv -> {

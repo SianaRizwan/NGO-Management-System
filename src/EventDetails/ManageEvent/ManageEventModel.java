@@ -59,12 +59,13 @@ public class ManageEventModel {
         return null;
 
     }
+
     protected boolean saveEventInformation(String eventID, Date eventDate, int budget){
         try {
             java.sql.Date sqlDate = new java.sql.Date(eventDate.getTime());
 
             OracleConnection oc=new OracleConnection();
-            String sql="update event_details set event_date=?, est_budget=est_budget+? where id=?";
+            String sql="update event_details set event_date=?, actual_budget=nvl(actual_budget,0)+? where id=?";
             PreparedStatement ps=oc.conn.prepareStatement(sql);
             ps.setDate(1,sqlDate);
             ps.setInt(2,budget);

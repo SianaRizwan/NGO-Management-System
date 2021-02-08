@@ -2,6 +2,8 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -10,13 +12,8 @@
 
 <AnchorPane style="-fx-background-color: #ffe0e3;" styleClass="supply-button" stylesheets="@../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SupplyDetails.SupplyDetailsController">
    <children>
-      <Pane fx:id="supplyDetailsPane" prefHeight="1275.0" prefWidth="1473.0">
+      <Pane fx:id="supplyDetailsPane" prefHeight="1275.0" prefWidth="1473.0" style="-fx-background-color: #ffe4e1;" stylesheets="@../theme.css">
          <children>
-            <Label layoutX="73.0" layoutY="15.0" prefHeight="98.0" prefWidth="511.0" text="Supply Details">
-               <font>
-                  <Font name="Californian FB" size="36.0" />
-               </font>
-            </Label>
             <JFXButton buttonType="RAISED" layoutX="375.0" layoutY="202.0" onAction="#handleSupplyFood" prefHeight="198.0" prefWidth="209.0" styleClass="supply-button" text=" ">
                <graphic>
                   <ImageView fitHeight="173.0" fitWidth="186.0" pickOnBounds="true" preserveRatio="true">
@@ -25,6 +22,9 @@
                      </image>
                   </ImageView>
                </graphic>
+               <effect>
+                  <DropShadow color="#0a0a0a" />
+               </effect>
             </JFXButton>
             <JFXButton buttonType="RAISED" layoutX="758.0" layoutY="202.0" onAction="#handleSupplyMedicine" prefHeight="198.0" prefWidth="209.0" styleClass="supply-button" text=" ">
                <graphic>
@@ -34,6 +34,9 @@
                      </image>
                   </ImageView>
                </graphic>
+               <effect>
+                  <DropShadow color="#0a0a0a" />
+               </effect>
             </JFXButton>
             <JFXButton buttonType="RAISED" layoutX="758.0" layoutY="544.0" onAction="#handleSupplyEmergency" prefHeight="198.0" prefWidth="209.0" styleClass="supply-button" text=" ">
                <graphic>
@@ -43,6 +46,9 @@
                      </image>
                   </ImageView>
                </graphic>
+               <effect>
+                  <DropShadow color="#0a0a0a" />
+               </effect>
             </JFXButton>
             <JFXButton buttonType="RAISED" layoutX="378.0" layoutY="539.0" onAction="#handleSupplyVaccine" prefHeight="198.0" prefWidth="209.0" styleClass="supply-button" text=" ">
                <graphic>
@@ -52,7 +58,22 @@
                      </image>
                   </ImageView>
                </graphic>
+               <effect>
+                  <DropShadow color="#0a0a0a" />
+               </effect>
             </JFXButton>
+            <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="67.0" prefWidth="1482.0" style="-fx-background-color: #000000;">
+               <children>
+                  <Label graphicTextGap="22.0" layoutX="62.0" layoutY="22.0" prefHeight="67.0" prefWidth="290.0" text="Supply Details" textFill="WHITE">
+                     <font>
+                        <Font name="Californian FB Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <Reflection fraction="0.1" topOpacity="0.4" />
+               </effect>
+            </AnchorPane>
          </children>
       </Pane>
    </children>

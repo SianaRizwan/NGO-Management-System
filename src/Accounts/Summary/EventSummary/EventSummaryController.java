@@ -51,7 +51,7 @@ public class EventSummaryController {
 
     public void initialize() {
         XYChart.Series<String, Double> set1 = new XYChart.Series<>();
-        model.setTheBarChart(set1);
+       model.setTheBarChart(set1);
         EventChart.getData().add(set1);
     }
 

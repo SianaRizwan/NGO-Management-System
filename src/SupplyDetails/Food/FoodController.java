@@ -50,6 +50,12 @@ public class FoodController implements Initializable {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("AddFood/addFoodSupply.fxml"));
         foodDetailsPane.getChildren().setAll(pane);
     }
+    @FXML
+    void handleBackButton() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("../SupplyDetails.fxml"));
+        foodDetailsPane.getChildren().setAll(pane);
+
+    }
 
     @FXML
     private void handleDeleteFood() {
