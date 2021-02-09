@@ -60,13 +60,19 @@
     -fx-background-color: -fx-secondary;
     -fx-text-fill: -fx-buttonText;
     -fx-background-radius: 10px;
-    -fx-font: Arial;
 }
 .dashboard-button{
     -fx-background-color: -fx-secondary;
     -fx-text-fill: -fx-buttonText;
     -fx-background-radius: 10px;
 }
+
+.dashboard_circle_button {
+    -fx-background-color: -fx-primary;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 5em;
+}
+
 .logout-button{
     -fx-background-color: -fx-secondary;
     -fx-text-fill: -fx-buttonText;
