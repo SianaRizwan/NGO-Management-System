@@ -192,9 +192,9 @@
             </VBox>
          </left>
          <center>
-            <AnchorPane prefHeight="1285.0" prefWidth="1645.0" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="1285.0" prefWidth="1576.0" BorderPane.alignment="CENTER">
                <children>
-                  <AnchorPane layoutX="12.0" layoutY="80.0" prefHeight="167.0" prefWidth="1616.0">
+                  <AnchorPane layoutX="7.0" layoutY="63.0" prefHeight="167.0" prefWidth="1616.0">
                      <children>
                         <Circle fx:id="Logo12" fill="#ffffff00" layoutX="574.0" layoutY="92.0" radius="73.0" stroke="#1b1b1b" strokeType="INSIDE" strokeWidth="3.0" />
                         <Button fx:id="totalDoctor" layoutX="586.0" layoutY="3.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="53.0" styleClass="dashboard_circle_button" text="100" />
@@ -224,10 +224,12 @@
                               <Font name="Arial Bold" size="18.0" />
                            </font>
                         </Label>
+                        <Line endX="-11.66668701171875" endY="83.0" layoutX="391.0" layoutY="84.0" startX="-11.66668701171875" startY="-84.00001525878906" />
+                        <Line endX="-11.66668701171875" endY="83.0" layoutX="774.0" layoutY="84.0" startX="-11.66668701171875" startY="-84.00001525878906" />
+                        <Line endX="-11.66668701171875" endY="83.0" layoutX="1157.0" layoutY="84.0" startX="-11.66668701171875" startY="-84.00001525878906" />
                      </children>
                   </AnchorPane>
-                  <Line endX="1389.6666259765625" layoutX="138.0" layoutY="990.0" startX="-100.0" />
-                  <HBox layoutX="10.0" layoutY="386.0" prefHeight="270.0" prefWidth="1627.0">
+                  <HBox layoutX="10.0" layoutY="360.0" prefHeight="270.0" prefWidth="1627.0">
                      <children>
                         <AnchorPane prefHeight="200.0" prefWidth="385.0">
                            <HBox.margin>
@@ -254,7 +256,7 @@
                            <children>
                               <ImageView fitHeight="267.0" fitWidth="385.0" pickOnBounds="true">
                                  <image>
-                                    <Image url="@../images/foodDash.jpg" />
+                                    <Image url="@../images/medDash.jpg" />
                                  </image>
                               </ImageView>
                               <AnchorPane layoutX="-1.0" prefHeight="268.0" prefWidth="385.0" styleClass="dash_event-M">
@@ -272,7 +274,7 @@
                            <children>
                               <ImageView fitHeight="267.0" fitWidth="385.0" pickOnBounds="true">
                                  <image>
-                                    <Image url="@../images/foodDash.jpg" />
+                                    <Image url="@../images/vacDash.jpg" />
                                  </image>
                               </ImageView>
                               <AnchorPane layoutX="-1.0" prefHeight="268.0" prefWidth="385.0" styleClass="dash_event-V">
@@ -290,7 +292,7 @@
                            <children>
                               <ImageView fitHeight="267.0" fitWidth="385.0" pickOnBounds="true">
                                  <image>
-                                    <Image url="@../images/foodDash.jpg" />
+                                    <Image url="@../images/emVac.jpg" />
                                  </image>
                               </ImageView>
                               <AnchorPane layoutX="-1.0" prefHeight="268.0" prefWidth="385.0" styleClass="dash_event-FE">
@@ -306,7 +308,42 @@
                         </AnchorPane>
                      </children>
                   </HBox>
-                  <AnchorPane layoutX="8.0" layoutY="717.0" prefHeight="237.0" prefWidth="1568.0" />
+                  <AnchorPane layoutX="8.0" layoutY="700.0" prefHeight="237.0" prefWidth="1568.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="CHECK_CIRCLE" layoutX="200.0" layoutY="50.0" size="32.0" styleClass="glyph-icon-back" />
+                        <FontAwesomeIconView glyphName="CHECK_CIRCLE" layoutX="200.0" layoutY="125.0" size="32.0" styleClass="glyph-icon-back" />
+                        <FontAwesomeIconView glyphName="CHECK_CIRCLE" layoutX="200.0" layoutY="200.0" size="32.0" styleClass="glyph-icon-back" />
+                        <Label layoutX="260.0" layoutY="25.0" text="Label" textFill="#5e0707">
+                           <font>
+                              <Font name="Arial Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="260.0" layoutY="100.0" text="Label" textFill="#5e0707">
+                           <font>
+                              <Font name="Arial Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="260.0" layoutY="175.0" text="Label" textFill="#5e0707">
+                           <font>
+                              <Font name="Arial Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="350.0" layoutY="25.0" text="donation raised this month" textFill="#2c2a2a">
+                           <font>
+                              <Font name="Arial" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="350.0" layoutY="100.0" text="expenses" textFill="#2c2a2a">
+                           <font>
+                              <Font name="Arial" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="350.0" layoutY="175.0" text="upcoming events" textFill="#2c2a2a">
+                           <font>
+                              <Font name="Arial" size="20.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
                </children>
             </AnchorPane>
          </center>
