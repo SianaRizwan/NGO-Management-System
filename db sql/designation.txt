@@ -81,7 +81,7 @@ return number
 is 
 salary number;
 begin
-select amount into salary from doctor,designation where speciality=designation_name and doctor_id=doc_id;
+select amount into salary from doctor,designation where speciality=id and doctor_id=doc_id;
 
 return salary;
 end;
