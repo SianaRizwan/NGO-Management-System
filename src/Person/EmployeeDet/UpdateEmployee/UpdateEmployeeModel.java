@@ -45,7 +45,7 @@ public class UpdateEmployeeModel {
             OracleConnection oc = new OracleConnection();
             String sql = "select id from designation where designation_name=?";
             PreparedStatement ps = oc.conn.prepareStatement(sql);
-            ps.setString(1,designation);
+            ps.setString(1, designation);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
                 des = rs.getString(1);
@@ -73,6 +73,7 @@ public class UpdateEmployeeModel {
                 list.add(rs.getString(3));
                 list.add(rs.getString(4));
                 list.add(String.valueOf(rs.getDate(5)));
+                list.add(rs.getString(6));
                 list.add(rs.getString(7));
                 list.add(rs.getString(8));
             }

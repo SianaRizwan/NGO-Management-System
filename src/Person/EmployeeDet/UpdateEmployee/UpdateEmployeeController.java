@@ -94,14 +94,15 @@ public class UpdateEmployeeController implements Initializable {
 
     @FXML
     public void IDOnEnter() {
-        String[] list = new String[6];
+        String[] list = new String[7];
         String[] info = updateEmployeeModel.setEmployeeInformation(list, Integer.parseInt(employeeID.getText()));
         employeeName.setText(info[0]);
         employeeEmailID.setText(info[2]);
         employeePassword.setText(info[1]);
         employeeDOB.getEditor().setText(info[3]);
-        employeeAddress.setText(info[4]);
-        employeePhoneNumber.setText(info[5]);
+        employeeGender.getEditor().setText(info[4]);
+        employeeAddress.setText(info[5]);
+        employeePhoneNumber.setText(info[6]);
     }
 
 }

@@ -80,7 +80,7 @@ public class ManageEventController {
     @FXML
     void handleConfirmBtn() throws ParseException {
         Date dateOfTheEvent = new SimpleDateFormat("yyyy-dd-MM").parse(eventDate.getEditor().getText());
-        if (new ManageEventModel().saveEventInformation(eventID.getText().trim(),dateOfTheEvent, Integer.parseInt(estimatedBudget.getText())))
+        if (new ManageEventModel().saveEventInformationFromAdminPart(eventID.getText().trim(),dateOfTheEvent, Integer.parseInt(estimatedBudget.getText())))
             {
                 new ShowAlertDialogue().infoBox("Update Successful!", null, "Manage Event");
                 refresehFields();
