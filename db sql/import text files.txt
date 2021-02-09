@@ -1,5 +1,5 @@
 -----------------------import from txt file
-create or replace directory dir as 'E:\csv';
+create or replace directory dir as 'D:\csv';
 
 --------------------------------------------------------import file for employee add
 set serveroutput on;

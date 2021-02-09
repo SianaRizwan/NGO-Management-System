@@ -23,6 +23,7 @@ public class LoginModel {
             }
         } catch (Exception e) {
             System.out.println(e + " isLoginSuccessful");
+            e.printStackTrace();
         }
         return false;
 

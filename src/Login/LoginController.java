@@ -36,6 +36,7 @@ public class LoginController {
     }
 
     public String getPasswordTextfield() {
+        System.out.println(registerController.encryptPassword(passwordTextfield.getText()));
         return registerController.encryptPassword(passwordTextfield.getText());
     }
 
