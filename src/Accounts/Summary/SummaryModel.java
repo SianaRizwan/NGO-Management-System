@@ -111,6 +111,6 @@ public class SummaryModel {
     }
 
     protected int getNetTotal(int month, int year){
-        return getTotalSupplyCost(month, year)+getTotalEventCost(month, year)+getTotalDonation(month, year)+getTotalExpense(month, year);
+        return getTotalDonation(month, year)-getTotalExpense(month, year)-getTotalSupplyCost(month, year);
     }
 }
