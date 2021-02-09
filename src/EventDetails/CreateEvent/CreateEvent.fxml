@@ -22,7 +22,7 @@
                     </font>
                 </Label>
                 <FontAwesomeIconView glyphName="ARROW_LEFT" layoutX="35.0" layoutY="65.0" onMouseClicked="#handleBackBtn" size="28.0" styleClass="glyph-icon-back" wrappingWidth="30.755958557128906" />
-                <AnchorPane layoutX="375.0" layoutY="179.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="803.0" style="-fx-background-color: #000000;">
+                <AnchorPane layoutX="375.0" layoutY="179.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="803.0" style="-fx-background-color: #212121;">
                     <children>
                         <Button graphicTextGap="22.0" layoutX="359.0" layoutY="523.0" mnemonicParsing="false" onAction="#handleConfirmBtn" onMouseClicked="#handleConfirmBtn" style="-fx-background-color: FDAB9F;" stylesheets="@../../theme.css" text="Confirm">
                             <font>

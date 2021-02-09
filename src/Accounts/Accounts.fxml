@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Label?>
@@ -16,7 +15,7 @@
     <children>
         <Pane fx:id="AccountsPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1275.0" prefWidth="1473.0" style="-fx-background-color: #ffe4e1;">
             <children>
-                <AnchorPane layoutX="-1.0" layoutY="-1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="44.0" prefWidth="1800.0" style="-fx-background-color: #000000;">
+                <AnchorPane layoutX="-1.0" layoutY="-1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="44.0" prefWidth="1800.0" style="-fx-background-color: #212121;">
                     <children>
                         <Label layoutX="62.0" layoutY="22.0" prefHeight="67.0" prefWidth="290.0" text="Account Details" textFill="WHITE">
                             <font>
@@ -25,29 +24,6 @@
                         </Label>
                     </children>
                 </AnchorPane>
-                <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="395.0" layoutY="550.0" onAction="#handleAccountsDesig" prefHeight="219.0" prefWidth="209.0" styleClass="supply-button" text="Designation">
-                    <font>
-                        <Font size="21.0" />
-                    </font>
-                    <effect>
-                        <DropShadow color="#0a0a0a" offsetY="2.0" />
-                    </effect>
-                </JFXButton>
-                <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="813.0" layoutY="550.0" onAction="#handleAccountsExpenses" onMouseClicked="#handleAccountsExpenses" prefHeight="219.0" prefWidth="209.0" styleClass="supply-button" text="Expenses">
-                    <font>
-                        <Font size="21.0" />
-                    </font>
-                    <effect>
-                        <DropShadow color="#0a0a0a" offsetY="2.0" />
-                    </effect>
-                </JFXButton>
-                <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" graphicTextGap="22.0" layoutX="604.0" layoutY="203.0" onAction="#handleAccountsSummary" prefHeight="219.0" prefWidth="209.0" styleClass="supply-button" text="Summary ">
-                    <font>
-                        <Font name="Calibri" size="21.0" />
-                    </font>
-                    <effect>
-                        <DropShadow color="#0a0a0a" offsetY="2.0" />
-                    </effect></JFXButton>
                 <Line endX="570.0" endY="8.0" layoutX="749.0" layoutY="455.0" startX="-570.0" startY="8.0" />
                 <Label graphicTextGap="22.0" layoutX="290.0" layoutY="156.0" prefHeight="22.0" prefWidth="172.0" text="Total Employees ">
                     <font>
@@ -69,21 +45,36 @@
                     </effect></JFXTextField>
                 <FontAwesomeIconView glyphName="USERS" layoutX="253.0" layoutY="172.0" size="25" />
                 <FontAwesomeIconView glyphName="USER_MD" layoutX="991.0" layoutY="172.0" size="25" />
-                <ImageView fitHeight="173.0" fitWidth="186.0" layoutX="412.0" layoutY="563.0" onMouseClicked="#handleAccountsDesig" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="173.0" fitWidth="186.0" layoutX="376.0" layoutY="547.0" onMouseClicked="#handleAccountsDesig" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../images/Desig.jpg" />
+                        <Image url="@../images/ic_designation.png" />
                     </image>
                 </ImageView>
-                <ImageView fitHeight="173.0" fitWidth="186.0" layoutX="825.0" layoutY="563.0" onMouseClicked="#handleAccountsExpenses" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="173.0" fitWidth="186.0" layoutX="828.0" layoutY="551.0" onMouseClicked="#handleAccountsExpenses" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../images/Exp.jpg" />
+                        <Image url="@../images/ic_expense.png" />
                     </image>
                 </ImageView>
-                <ImageView fitHeight="173.0" fitWidth="186.0" layoutX="619.0" layoutY="218.0" onMouseClicked="#handleAccountsSummary" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="173.0" fitWidth="186.0" layoutX="605.0" layoutY="242.0" onMouseClicked="#handleAccountsSummary" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../images/Summary.jpg" />
+                        <Image url="@../images/ic_summary.png" />
                     </image>
                 </ImageView>
+            <Label layoutX="629.0" layoutY="424.0" text="Summary">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="408.0" layoutY="740.0" text="Designation">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="867.0" layoutY="741.0" text="Expenses">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
             </children>
         </Pane>
     </children>

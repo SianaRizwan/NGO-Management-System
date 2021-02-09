@@ -11,7 +11,7 @@
 
 <AnchorPane fx:id="updateDoctorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1350.0" stylesheets="@../../../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Person.DoctorDetails.UpdateDoctor.UpdateDoctorDetailsController">
     <children>
-        <AnchorPane layoutX="375.0" layoutY="160.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="690.0" style="-fx-background-color: #000000;">
+        <AnchorPane layoutX="375.0" layoutY="160.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="690.0" style="-fx-background-color: #212121;">
             <children>
                 <Button fx:id="confirmUpdateBtn" graphicTextGap="22.0" layoutX="171.0" layoutY="587.0" mnemonicParsing="false" onMouseClicked="#handleConfirmButton" opacity="0.82" prefHeight="42.0" prefWidth="135.0" style="-fx-background-color: FDAB9F;" text="Confirm">
                     <font>

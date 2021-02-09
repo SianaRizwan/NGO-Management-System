@@ -1,15 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1285.0" prefWidth="1800.0" style="-fx-background-color: #000000;" stylesheets="@../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.SplashController">
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1285.0" prefWidth="1800.0" stylesheets="@../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.SplashController">
    <children>
-      <Label layoutX="820.0" layoutY="256.0" prefHeight="157.0" prefWidth="233.0" styleClass="splash_welcome" stylesheets="@../theme.css" text="Welcome" textFill="#43b960">
-         <font>
-            <Font name="Arial" size="48.0" />
-         </font>
-      </Label>
+      <ImageView fitHeight="1346.0" fitWidth="2058.0" layoutX="-2.0" layoutY="-7.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/background.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutY="-1.0" opacity="0.94" prefHeight="1290.0" prefWidth="2058.0" style="-fx-background-color: #000000;">
+         <children>
+            <Circle fx:id="Logo" fill="WHITE" layoutX="971.0" layoutY="481.0" radius="77.0" stroke="#e86868" strokeType="INSIDE" strokeWidth="2.0" />
+            <Text fill="WHITE" layoutX="866.0" layoutY="606.0" strokeMiterLimit="20.0" strokeType="INSIDE" strokeWidth="0.0" text="Help 4 U" textAlignment="CENTER" wrappingWidth="214.328125">
+               <font>
+                  <Font name="Californian FB Bold" size="45.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#f29c95" offsetY="3.0" />
+               </effect>
+            </Text>
+            <Text fill="WHITE" layoutX="886.0" layoutY="361.0" strokeMiterLimit="20.0" strokeType="INSIDE" strokeWidth="0.0" text="Welcome" textAlignment="CENTER" wrappingWidth="184.328125">
+               <font>
+                  <Font name="Californian FB Bold" size="32.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#f29c95" offsetY="3.0" />
+               </effect>
+            </Text>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
