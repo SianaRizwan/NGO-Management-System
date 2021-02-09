@@ -18,25 +18,25 @@ public class SupplyDetailsController implements Initializable {
     private Pane supplyDetailsPane;
 
     @FXML
-    public void handleSupplyEmergency(ActionEvent event) throws IOException {
+    public void handleSupplyEmergency() throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("Emergency/EmergencySupply.fxml"));
         supplyDetailsPane.getChildren().setAll(pane);
     }
 
     @FXML
-    private void handleSupplyFood(ActionEvent event) throws IOException {
+    private void handleSupplyFood() throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("Food/food.fxml"));
         supplyDetailsPane.getChildren().setAll(pane);
     }
 
     @FXML
-    public void handleSupplyMedicine(ActionEvent event) throws IOException {
+    public void handleSupplyMedicine() throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("HealthProduct/Medicine/medicine.fxml"));
         supplyDetailsPane.getChildren().setAll(pane);
     }
 
     @FXML
-    private void handleSupplyVaccine(ActionEvent event) throws IOException {
+    private void handleSupplyVaccine() throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("HealthProduct/Vaccine/vaccine.fxml"));
         supplyDetailsPane.getChildren().setAll(pane);
     }
