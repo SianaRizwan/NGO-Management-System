@@ -1,0 +1,15 @@
+Drop table expenses;
+DROP TABLE event_employee;
+DROP TABLE event_volunteer;
+DROP TABLE event_doctor;
+DROP TABLE event_food;
+DROP TABLE event_health;
+DROP TABLE event_details;
+DROP TABLE HEALTH_PRODUCT;
+DROP TABLE FOOD;
+DROP TABLE volunteer;
+DROP TABLE donation_history;
+DROP TABLE DOnor;
+DROP TABLE DOCTOR;
+DROP TABLE EMPLOYEE;
+DROP TABLE designation;
