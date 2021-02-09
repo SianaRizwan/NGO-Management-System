@@ -3,7 +3,7 @@ drop table employee;
 create TABLE EMPLOYEE(
 emp_id number ,
 name varchar2(100) not null,
-password  varchar2(100) not null,
+password  varchar2(200) not null,
 email varchar2(50) not null,
 dob date ,
 gender varchar2(10) ,
@@ -12,7 +12,9 @@ phone varchar2(20),
 DESIGNATION varchar2(50) ,
 constraint emp_desig foreign key(DESIGNATION) references designation(id),
 constraint emp_gender check (gender in ('Male','Female','Others')),
-CONSTRAINT EMP_ID_PK PRIMARY KEY(EMP_ID)
+CONSTRAINT EMP_ID_PK PRIMARY KEY(EMP_ID),
+CONSTRAINT email_unique_employee UNIQUE (email),
+CONSTRAINT phone_unique_employee UNIQUE (phone)
 );
 
 

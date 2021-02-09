@@ -62,3 +62,26 @@ BEGIN
 END;
 /
 
+---------------------------------------
+----------------------------------------GET_actual_budget
+CREATE OR REPLACE FUNCTION GET_actual_budget(f_eventID varchar2,f_prod_name varchar2,f_amt number)
+RETURN number
+IS
+
+total_price number;
+amt number;
+types number;
+price number;
+
+BEGIN
+if substr(f_eventID,1,1)='F' then
+select max(unit_price) into price from food where name=f_prod_name;
+elsif substr(f_eventID,1,1)='H' then
+select max(unit_price) into price from health_product where name=f_prod_name;
+end if;
+
+total_price:=f_amt*price;
+RETURN NVL( total_price , -1); --- -1 IS THE ERROR FLAG
+
+END;
+/

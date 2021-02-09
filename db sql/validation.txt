@@ -25,7 +25,7 @@ is
 pass_isValid boolean;
 
 begin
-pass_isValid := REGEXP_LIKE(pass_f, '^.*[0-9]') and REGEXP_LIKE(pass_f, '^.*[A-Z]') AND REGEXP_LIKE(pass_f, '^[a-zA-Z0-9][a-zA-Z0-9 ._%+-]{7,}$');
+pass_isValid := REGEXP_LIKE(pass_f, '^.*[0-9]')  AND REGEXP_LIKE(pass_f, '^[a-zA-Z0-9][a-zA-Z0-9 ._%+-]{7,}$');
 
 IF pass_isValid
      then  return 'TRUE';

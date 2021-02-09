@@ -12,9 +12,11 @@ phone varchar2(20) not null,
 speciality varchar2(50) NOT NULL,
 Available_hr varchar2(20),
 QUALIFICATION VARCHAR2(100) not null,
-password varchar2(20),
+password varchar2(200),
 constraint doc_desig foreign key(speciality) references designation(id),
-constraint doctor_gender check (gender in ('Male','Female','Others'))
+constraint doctor_gender check (gender in ('Male','Female','Others')),
+CONSTRAINT email_unique_doctor UNIQUE (email),
+CONSTRAINT phone_unique_doctor UNIQUE (phone)
 );
 
 

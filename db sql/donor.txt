@@ -8,7 +8,9 @@ gender varchar2(10) not null,
 address varchar2(200) ,
 phone varchar2(20) not null,
 occupation varchar2(20),
-constraint donor_gender check (gender in ('Male','Female','Others'))
+constraint donor_gender check (gender in ('Male','Female','Others')),
+CONSTRAINT email_unique_donor UNIQUE (email),
+CONSTRAINT phone_unique_donor UNIQUE (phone)
 );
 
 
