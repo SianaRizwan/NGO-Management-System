@@ -12,13 +12,9 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root;
-        if (new RegisterModel().checkEmployeeNumber()==0){
-            root = FXMLLoader.load(getClass().getResource("../Registration/register.fxml"));
 
-        }
-        else{
-            root = FXMLLoader.load(getClass().getResource("../Login/login.fxml"));
-        }
+        root = FXMLLoader.load(getClass().getResource("../Login/login.fxml"));
+
         primaryStage.setTitle("NGO Management System");
         //primaryStage.setMaximized(true);
         primaryStage.setScene(new Scene(root,1800,900));

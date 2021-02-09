@@ -27,7 +27,7 @@ public class ImportPersonnelFile {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        removeFile();
+  //      removeFile();
         return false;
     }
 
@@ -54,10 +54,11 @@ public class ImportPersonnelFile {
 
     private void copyFileToDiffDirectory(String fileName, File file) {
         Path from = Paths.get(file.toURI());
-        to = Paths.get("E:\\csv\\" + fileName);
+        to = Paths.get("D:\\csv\\" + fileName);
         try {
             Files.copy(from, to);
         } catch (IOException e) {
+            e.printStackTrace();
             new ShowAlertDialogue().infoBox("The selected file is already added\nPlease choose another file", null, "Add a File");
         }
     }

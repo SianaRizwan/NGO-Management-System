@@ -14,6 +14,10 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 import java.net.URL;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
+import java.security.SecureRandom;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ResourceBundle;
@@ -71,11 +75,58 @@ public class RegisterController implements Initializable {
     }
 
     public String getPasswordTextfield() {
-        return passwordTextfield.getText();
+        String passwordToHash = passwordTextfield.getText();
+        String securePassword = encryptPassword(passwordToHash);
+        return securePassword;
+    }
+
+    private static byte[] getSalt() throws NoSuchAlgorithmException, NoSuchProviderException {
+        //Always use a SecureRandom generator
+        SecureRandom sr = SecureRandom.getInstance("SHA512PRNG", "SUN");
+        //Create array for salt
+        byte[] salt = new byte[16];
+        //Get a random salt
+        sr.nextBytes(salt);
+        //return salt
+        return salt;
+    }
+
+    private static String get_SHA_512_SecurePassword(String passwordToHash, byte[] salt) {
+        String generatedPassword = null;
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-512");
+            md.update(salt);
+            byte[] bytes = md.digest(passwordToHash.getBytes());
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < bytes.length; i++) {
+                sb.append(Integer.toString((bytes[i] & 0xff) + 0x100, 16).substring(1));
+            }
+            generatedPassword = sb.toString();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        return generatedPassword;
     }
 
     public String getRetypePasswordTextfield() {
-        return retypePasswordTextfield.getText();
+        String passwordToHash = retypePasswordTextfield.getText();
+        String securePassword = encryptPassword(passwordToHash);
+        return securePassword;
+    }
+
+    public String encryptPassword(String passwordToHash) {
+        byte[] salt = new byte[0];
+        try {
+            salt = getSalt();
+        } catch (NoSuchAlgorithmException e) {
+         //   e.printStackTrace();
+        } catch (NoSuchProviderException e) {
+           // e.printStackTrace();
+        }
+
+        String securePassword = get_SHA_512_SecurePassword(passwordToHash, salt);
+        System.out.println(securePassword);
+        return securePassword;
     }
 
     private ObservableList<String> gender = FXCollections.observableArrayList("Male", "Female", "Others");

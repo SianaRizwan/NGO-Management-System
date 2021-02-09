@@ -30,8 +30,6 @@ public class ManageEventEmployeesController {
     @FXML
     private JFXTextField eventName;
 
-    @FXML
-    private JFXTextField estimatedBudget;
 
     @FXML
     private FontAwesomeIconView supplyList;
@@ -108,7 +106,8 @@ public class ManageEventEmployeesController {
     @FXML
     void handleConfirmBtn() throws ParseException {
         Date dateOfTheEvent = new SimpleDateFormat("yyyy-dd-MM").parse(eventDate.getEditor().getText());
-        if (new ManageEventModel().saveEventInformation(eventName.getText().trim(),dateOfTheEvent, Integer.parseInt(estimatedBudget.getText())))
+
+        if (new ManageEventModel().saveEventInformation(eventName.getText().trim(),dateOfTheEvent))
         {
             new ShowAlertDialogue().infoBox("Update Successful!", null, "Manage Event");
             refreshFields();
@@ -120,7 +119,7 @@ public class ManageEventEmployeesController {
 
     private void refreshFields() {
         eventName.setText("");
-        estimatedBudget.setText("");
+        eventName1.setText("");
         eventDate.getEditor().setText("");
     }
 

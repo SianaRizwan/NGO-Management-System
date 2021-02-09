@@ -12,12 +12,12 @@ import java.util.List;
 public class UpdateEmployeeModel {
     private String des;
 
-    public boolean isUpdateEmployeeSuccessful(Date dob, String gender, String address, String phone, String designation, String email, String password, int emp_id) {
+    public boolean isUpdateEmployeeSuccessful(Date dob, String gender, String address, String phone, String designation, String email, int emp_id) {
         OracleConnection oc = new OracleConnection();
         try {
             java.sql.Date sqlDate = new java.sql.Date(dob.getTime());
             setDesignation(designation);
-            String sql = "update Employee set dob=?,gender=?,address=?,phone=?,designation=?,email=?,password=? where emp_id=? ";
+            String sql = "update Employee set dob=?,gender=?,address=?,phone=?,designation=?,email=? where emp_id=? ";
             PreparedStatement ps = oc.conn.prepareStatement(sql);
             ps.setDate(1, sqlDate);
             ps.setString(2, gender);
@@ -25,8 +25,7 @@ public class UpdateEmployeeModel {
             ps.setString(4, phone);
             ps.setString(5, getDesignation());
             ps.setString(6, email);
-            ps.setString(7, password);
-            ps.setInt(8, emp_id);
+            ps.setInt(7, emp_id);
             int x = ps.executeUpdate();
             if (x > 0) {
                 return true;
@@ -45,7 +44,7 @@ public class UpdateEmployeeModel {
             OracleConnection oc = new OracleConnection();
             String sql = "select id from designation where designation_name=?";
             PreparedStatement ps = oc.conn.prepareStatement(sql);
-            ps.setString(1,designation);
+            ps.setString(1, designation);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
                 des = rs.getString(1);
@@ -70,9 +69,9 @@ public class UpdateEmployeeModel {
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 list.add(rs.getString(2));
-                list.add(rs.getString(3));
                 list.add(rs.getString(4));
                 list.add(String.valueOf(rs.getDate(5)));
+                list.add(rs.getString(6));
                 list.add(rs.getString(7));
                 list.add(rs.getString(8));
             }

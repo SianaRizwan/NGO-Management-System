@@ -229,7 +229,7 @@
                         <Line endX="-11.66668701171875" endY="83.0" layoutX="1157.0" layoutY="84.0" startX="-11.66668701171875" startY="-84.00001525878906" />
                      </children>
                   </AnchorPane>
-                  <HBox layoutX="10.0" layoutY="360.0" prefHeight="270.0" prefWidth="1627.0">
+                  <HBox layoutX="12.0" layoutY="360.0" prefHeight="270.0" prefWidth="1625.0">
                      <children>
                         <AnchorPane prefHeight="200.0" prefWidth="385.0">
                            <HBox.margin>
@@ -241,11 +241,11 @@
                                     <Image url="@../images/foodDash.jpg" />
                                  </image>
                               </ImageView>
-                              <AnchorPane layoutX="-1.0" prefHeight="268.0" prefWidth="385.0" styleClass="dash_event-FE">
+                              <AnchorPane layoutX="-5.0" prefHeight="268.0" prefWidth="390.0" styleClass="dash_event-FE">
                                  <children>
-                                    <Label layoutX="84.0" layoutY="92.0" text="Food Distribution" textFill="WHITE">
+                                    <Label layoutX="84.0" layoutY="110.0" text="Food Distribution" textFill="WHITE">
                                        <font>
-                                          <Font name="System Bold" size="24.0" />
+                                          <Font name="Calibri Bold" size="32.0" />
                                        </font>
                                     </Label>
                                  </children>
@@ -261,9 +261,9 @@
                               </ImageView>
                               <AnchorPane layoutX="-1.0" prefHeight="268.0" prefWidth="385.0" styleClass="dash_event-M">
                                  <children>
-                                    <Label layoutX="84.0" layoutY="92.0" text="Medical Camp" textFill="WHITE">
+                                    <Label layoutX="84.0" layoutY="110.0" text="Medical Camp" textFill="WHITE">
                                        <font>
-                                          <Font name="System Bold" size="24.0" />
+                                          <Font name="Calibri Bold" size="32.0" />
                                        </font>
                                     </Label>
                                  </children>
@@ -279,9 +279,9 @@
                               </ImageView>
                               <AnchorPane layoutX="-1.0" prefHeight="268.0" prefWidth="385.0" styleClass="dash_event-V">
                                  <children>
-                                    <Label layoutX="84.0" layoutY="92.0" text="Vaccine for All" textFill="WHITE">
+                                    <Label layoutX="90.0" layoutY="110.0" text="Vaccine for All" textFill="WHITE">
                                        <font>
-                                          <Font name="System Bold" size="24.0" />
+                                          <Font name="Calibri Bold" size="32.0" />
                                        </font>
                                     </Label>
                                  </children>
@@ -295,11 +295,11 @@
                                     <Image url="@../images/emVac.jpg" />
                                  </image>
                               </ImageView>
-                              <AnchorPane layoutX="-1.0" prefHeight="268.0" prefWidth="385.0" styleClass="dash_event-FE">
+                              <AnchorPane layoutX="-1.0" prefHeight="268.0" prefWidth="395.0" styleClass="dash_event-E">
                                  <children>
-                                    <Label layoutX="84.0" layoutY="92.0" text="Emergency" textFill="WHITE">
+                                    <Label layoutX="110.0" layoutY="110.0" text="Emergency" textFill="WHITE">
                                        <font>
-                                          <Font name="System Bold" size="24.0" />
+                                          <Font name="Calibri Bold" size="32.0" />
                                        </font>
                                     </Label>
                                  </children>
@@ -308,39 +308,39 @@
                         </AnchorPane>
                      </children>
                   </HBox>
-                  <AnchorPane layoutX="8.0" layoutY="700.0" prefHeight="237.0" prefWidth="1568.0">
+                  <AnchorPane layoutX="8.0" layoutY="682.0" prefHeight="255.0" prefWidth="1568.0">
                      <children>
                         <FontAwesomeIconView glyphName="CHECK_CIRCLE" layoutX="200.0" layoutY="50.0" size="32.0" styleClass="glyph-icon-back" />
                         <FontAwesomeIconView glyphName="CHECK_CIRCLE" layoutX="200.0" layoutY="125.0" size="32.0" styleClass="glyph-icon-back" />
                         <FontAwesomeIconView glyphName="CHECK_CIRCLE" layoutX="200.0" layoutY="200.0" size="32.0" styleClass="glyph-icon-back" />
-                        <Label fx:id="donationMoney" layoutX="260.0" layoutY="25.0" text="Label" textFill="#5e0707">
+                        <Label fx:id="donationMoney" layoutX="260.0" layoutY="25.0" text="1000000 bdt" textFill="#5e0707">
                            <font>
                               <Font name="Arial Bold" size="24.0" />
                            </font>
                         </Label>
-                        <Label fx:id="expenseMoney" layoutX="260.0" layoutY="100.0" text="Label" textFill="#5e0707">
+                        <Label fx:id="expenseMoney" layoutX="260.0" layoutY="100.0" text="1000000 bdt" textFill="#5e0707">
                            <font>
                               <Font name="Arial Bold" size="24.0" />
                            </font>
                         </Label>
-                        <Label fx:id="eventCount" layoutX="260.0" layoutY="175.0" text="Label" textFill="#5e0707">
+                        <Label fx:id="eventCount" layoutX="260.0" layoutY="175.0" text="20" textFill="#5e0707">
                            <font>
                               <Font name="Arial Bold" size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="350.0" layoutY="25.0" text="donation raised this month" textFill="#2c2a2a">
+                        <Label layoutX="400.0" layoutY="27.0" text="donation raised this month" textFill="#2c2a2a">
                            <font>
-                              <Font name="Arial" size="20.0" />
+                              <Font name="Arial Bold" size="20.0" />
                            </font>
                         </Label>
-                        <Label layoutX="350.0" layoutY="100.0" text="expenses" textFill="#2c2a2a">
+                        <Label layoutX="400.0" layoutY="102.0" text="expenses" textFill="#2c2a2a">
                            <font>
-                              <Font name="Arial" size="20.0" />
+                              <Font name="Arial Bold" size="20.0" />
                            </font>
                         </Label>
-                        <Label layoutX="350.0" layoutY="175.0" text="upcoming events" textFill="#2c2a2a">
+                        <Label layoutX="300.0" layoutY="175.0" text="upcoming events" textFill="#2c2a2a">
                            <font>
-                              <Font name="Arial" size="20.0" />
+                              <Font name="Arial Bold" size="20.0" />
                            </font>
                         </Label>
                      </children></AnchorPane>

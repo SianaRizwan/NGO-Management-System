@@ -80,8 +80,8 @@ public class DashboardController implements Initializable {
         totalDoctor.setText(String.valueOf(model.getTotalDoctor()));
         totalDonor.setText(String.valueOf(model.getTotalDonor()));
         totalVolunteer.setText(String.valueOf(model.getTotalVolunteer()));
-        donationMoney.setText(String.valueOf(model.getTotalDonation()));
-        expenseMoney.setText(String.valueOf(model.getTotalExpense()));
+        donationMoney.setText(String.valueOf(model.getTotalDonation())+" bdt");
+        expenseMoney.setText(String.valueOf(model.getTotalExpense())+" bdt");
         eventCount.setText(String.valueOf(model.getTotalEvent()));
     }
     @Override

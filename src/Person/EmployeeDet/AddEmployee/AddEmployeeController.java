@@ -4,6 +4,7 @@ import Person.EmployeeDet.EmployeeDetailsModel;
 import Person.ImportPersonnelFile;
 import Person.PersonalInformation;
 import Person.Validation;
+import Registration.RegisterController;
 import Utilities.ShowAlertDialogue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -49,6 +50,11 @@ public class AddEmployeeController {
 
     private ObservableList<String> gender = FXCollections.observableArrayList("Male", "Female", "Others");
     private ObservableList<String> designation = FXCollections.observableArrayList();
+    RegisterController registerController = new RegisterController();
+    public String getPasswordTextfield() {
+        System.out.println(registerController.encryptPassword(employeePassword.getText()));
+        return registerController.encryptPassword(employeePassword.getText());
+    }
 
     @FXML
     void handleConfirmButton() throws ParseException {
@@ -56,7 +62,7 @@ public class AddEmployeeController {
         if (new Validation().checkEmailAndPhoneValidation(employeeEmailID.getText(), employeePhoneNumber.getText())) {
             if (new AddEmployeeModel().isAddEmployeeSuccessful(employeeName.getText(), dobDate, employeeGender.getSelectionModel().getSelectedItem().toString(),
                     employeeAddress.getText(), employeePhoneNumber.getText(), employeeDesignation.getSelectionModel().getSelectedItem().toString(),
-                    employeeEmailID.getText(), employeePassword.getText())) {
+                    employeeEmailID.getText(), getPasswordTextfield())) {
                 new ShowAlertDialogue().infoBox("Employee Add Successful!", null, "Add Employee");
                 refreshTextField();
             }
@@ -86,6 +92,7 @@ public class AddEmployeeController {
 
     @FXML
     void handleImportFileButton() throws Exception{
+
         if (new AddEmployeeModel().addEmployee()) {
             new ShowAlertDialogue().infoBox("Employee Added Successfully", null, "employee add");
         } else new ShowAlertDialogue().infoBox("Select Correct File", null, "employee add");

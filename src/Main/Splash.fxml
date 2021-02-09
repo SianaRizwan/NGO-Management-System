@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -18,23 +20,40 @@
       </ImageView>
       <Pane layoutY="-1.0" opacity="0.94" prefHeight="1290.0" prefWidth="2058.0" style="-fx-background-color: #000000;">
          <children>
-            <Circle fx:id="Logo" fill="WHITE" layoutX="971.0" layoutY="481.0" radius="77.0" stroke="#e86868" strokeType="INSIDE" strokeWidth="2.0" />
-            <Text fill="WHITE" layoutX="866.0" layoutY="606.0" strokeMiterLimit="20.0" strokeType="INSIDE" strokeWidth="0.0" text="Help 4 U" textAlignment="CENTER" wrappingWidth="214.328125">
+            <Circle fx:id="Logo" fill="WHITE" layoutX="958.0" layoutY="526.0" radius="77.0" stroke="#e86868" strokeType="INSIDE" strokeWidth="2.0" />
+            <Text fill="WHITE" layoutX="817.0" layoutY="661.0" strokeMiterLimit="20.0" strokeType="INSIDE" strokeWidth="0.0" text="Help 4 U" textAlignment="CENTER" wrappingWidth="282.328125">
                <font>
-                  <Font name="Californian FB Bold" size="45.0" />
+                  <Font name="Broadway" size="48.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#f29c95" offsetY="3.0" spread="0.17" />
+               </effect>
+            </Text>
+            <Text fill="WHITE" layoutX="773.0" layoutY="273.0" strokeMiterLimit="20.0" strokeType="INSIDE" strokeWidth="0.0" text="Welcome" textAlignment="CENTER" wrappingWidth="370.328125">
+               <font>
+                  <Font name="Broadway" size="48.0" />
                </font>
                <effect>
                   <DropShadow color="#f29c95" offsetY="3.0" />
                </effect>
             </Text>
-            <Text fill="WHITE" layoutX="886.0" layoutY="361.0" strokeMiterLimit="20.0" strokeType="INSIDE" strokeWidth="0.0" text="Welcome" textAlignment="CENTER" wrappingWidth="184.328125">
+            <Text fill="WHITE" layoutX="773.0" layoutY="355.0" strokeMiterLimit="20.0" strokeType="INSIDE" strokeWidth="0.0" text="To" textAlignment="CENTER" wrappingWidth="370.328125">
                <font>
-                  <Font name="Californian FB Bold" size="32.0" />
+                  <Font name="Broadway" size="48.0" />
                </font>
                <effect>
                   <DropShadow color="#f29c95" offsetY="3.0" />
                </effect>
             </Text>
+            <Line endX="183.0" layoutX="964.0" layoutY="202.0" startX="-179.0" stroke="WHITE" strokeMiterLimit="20.0">
+               <effect>
+                  <Reflection bottomOpacity="0.6" topOpacity="0.0" />
+               </effect>
+            </Line>
+            <Circle fill="#f8d0cd" layoutX="762.0" layoutY="202.0" radius="33.0" stroke="#c62c21" strokeType="INSIDE" />
+            <Circle fill="#f8d0cd" layoutX="1167.0" layoutY="203.0" radius="33.0" stroke="#b22323" strokeType="INSIDE" />
+            <Circle fill="#fba7a1" layoutX="1254.0" layoutY="202.0" radius="22.0" stroke="#b22323" strokeType="INSIDE" />
+            <Circle fill="#fba7a1" layoutX="675.0" layoutY="200.0" radius="22.0" stroke="#c62c21" strokeType="INSIDE" />
          </children>
       </Pane>
    </children>

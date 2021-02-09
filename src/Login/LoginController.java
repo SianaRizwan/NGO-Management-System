@@ -1,6 +1,7 @@
 package Login;
 
 import Main.Main;
+import Registration.RegisterController;
 import Utilities.ShowAlertDialogue;
 import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
@@ -28,23 +29,24 @@ public class LoginController {
     @FXML
     private TextField usernameTextfield, passwordTextfield;
 
+    RegisterController registerController = new RegisterController();
 
     public String getUsernameTextfield() {
         return usernameTextfield.getText().trim();
     }
 
     public String getPasswordTextfield() {
-        return passwordTextfield.getText();
+        System.out.println(registerController.encryptPassword(passwordTextfield.getText()));
+        return registerController.encryptPassword(passwordTextfield.getText());
     }
-
 
     LoginModel loginModel = new LoginModel();
 
 
     ShowAlertDialogue alert = new ShowAlertDialogue();
 
-    public void initialize(){
-        if(!Main.isSplashLoaded) {
+    public void initialize() {
+        if (!Main.isSplashLoaded) {
             try {
                 loadSplash();
             } catch (IOException e) {
@@ -52,19 +54,20 @@ public class LoginController {
             }
         }
         Logo.setStroke(Color.FLORALWHITE);
-        Image image = new Image("images/Peace.jpg",false);
+        Image image = new Image("images/Peace.jpg", false);
         Logo.setFill(new ImagePattern(image));
-        Logo.setEffect(new DropShadow(+20d,0d,2d,Color.CRIMSON));
+        Logo.setEffect(new DropShadow(+20d, 0d, 2d, Color.CRIMSON));
     }
+
     void loadSplash() throws IOException {
         try {
-            Main.isSplashLoaded=true;
+            Main.isSplashLoaded = true;
             AnchorPane pane = FXMLLoader.load(getClass().getResource("../Main/Splash.fxml"));
             loginPane.getChildren().setAll(pane);
 
-            FadeTransition fade = new FadeTransition(Duration.seconds(2.5),pane);
-            fade.setFromValue(1);
-            fade.setToValue(0.2);
+            FadeTransition fade = new FadeTransition(Duration.seconds(3), pane);
+            fade.setFromValue(0.3);
+            fade.setToValue(1);
             fade.setCycleCount(1);
 
             fade.play();
@@ -82,6 +85,7 @@ public class LoginController {
             e.printStackTrace();
         }
     }
+
 
     @FXML
     public void handleLogin() throws IOException {
