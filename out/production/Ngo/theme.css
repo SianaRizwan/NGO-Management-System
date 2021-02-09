@@ -91,8 +91,20 @@
     -fx-background-color: White;
 }
 
-.dash_event:hover {
-    -fx-background-color: #bf16164d;
+.dash_event-FE {
+-fx-background-color: #db9b0f;
+}
+
+.dash_event-M {
+-fx-background-color: #b31c14;
+}
+
+.dash_event-V {
+-fx-background-color: #1b1b1b;
+}
+
+.dash_event-FE:hover, .dash_event-M:hover, .dash_event-V:hover {
+    -fx-background-color: #42353564;
     -fx-cursor: hand;
 }
 

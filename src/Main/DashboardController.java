@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
@@ -51,6 +52,15 @@ public class DashboardController implements Initializable {
     private Circle Logo123;
 
     @FXML
+    private Label donationMoney;
+
+    @FXML
+    private Label expenseMoney;
+
+    @FXML
+    private Label eventCount;
+
+    @FXML
     private Button totalVolunteer;
     DashboardModel model=new DashboardModel();
 
@@ -70,6 +80,9 @@ public class DashboardController implements Initializable {
         totalDoctor.setText(String.valueOf(model.getTotalDoctor()));
         totalDonor.setText(String.valueOf(model.getTotalDonor()));
         totalVolunteer.setText(String.valueOf(model.getTotalVolunteer()));
+        donationMoney.setText(String.valueOf(model.getTotalDonation()));
+        expenseMoney.setText(String.valueOf(model.getTotalExpense()));
+        eventCount.setText(String.valueOf(model.getTotalEvent()));
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {

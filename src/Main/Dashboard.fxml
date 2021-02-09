@@ -313,17 +313,17 @@
                         <FontAwesomeIconView glyphName="CHECK_CIRCLE" layoutX="200.0" layoutY="50.0" size="32.0" styleClass="glyph-icon-back" />
                         <FontAwesomeIconView glyphName="CHECK_CIRCLE" layoutX="200.0" layoutY="125.0" size="32.0" styleClass="glyph-icon-back" />
                         <FontAwesomeIconView glyphName="CHECK_CIRCLE" layoutX="200.0" layoutY="200.0" size="32.0" styleClass="glyph-icon-back" />
-                        <Label layoutX="260.0" layoutY="25.0" text="Label" textFill="#5e0707">
+                        <Label fx:id="donationMoney" layoutX="260.0" layoutY="25.0" text="Label" textFill="#5e0707">
                            <font>
                               <Font name="Arial Bold" size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="260.0" layoutY="100.0" text="Label" textFill="#5e0707">
+                        <Label fx:id="expenseMoney" layoutX="260.0" layoutY="100.0" text="Label" textFill="#5e0707">
                            <font>
                               <Font name="Arial Bold" size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="260.0" layoutY="175.0" text="Label" textFill="#5e0707">
+                        <Label fx:id="eventCount" layoutX="260.0" layoutY="175.0" text="Label" textFill="#5e0707">
                            <font>
                               <Font name="Arial Bold" size="24.0" />
                            </font>
