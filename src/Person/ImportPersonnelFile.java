@@ -27,7 +27,7 @@ public class ImportPersonnelFile {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        removeFile();
+  //      removeFile();
         return false;
     }
 

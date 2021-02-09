@@ -30,8 +30,7 @@ public class UpdateEmployeeController implements Initializable {
     public TextField employeeName;
     @FXML
     public TextField employeeEmailID;
-    @FXML
-    public TextField employeePassword;
+
     @FXML
     public DatePicker employeeDOB;
     @FXML
@@ -55,7 +54,7 @@ public class UpdateEmployeeController implements Initializable {
         if (new Validation().checkEmailAndPhoneValidation(employeeEmailID.getText(), employeePhoneNumber.getText())) {
             if (updateEmployeeModel.isUpdateEmployeeSuccessful(dobDate, employeeGender.getSelectionModel().getSelectedItem().toString(),
                     employeeAddress.getText(), employeePhoneNumber.getText(), employeeDesignation.getSelectionModel().getSelectedItem().toString(),
-                    employeeEmailID.getText(), employeePassword.getText(), Integer.parseInt(employeeID.getText()))) {
+                    employeeEmailID.getText(),  Integer.parseInt(employeeID.getText()))) {
                 new ShowAlertDialogue().infoBox("update Successful!", null, "update Employee");
                 refreshTextField();
             }
@@ -69,9 +68,10 @@ public class UpdateEmployeeController implements Initializable {
         employeeAddress.setText("");
         employeePhoneNumber.setText("");
         employeeEmailID.setText("");
-        employeePassword.setText("");
         employeeID.setText("");
         employeeName.setText("");
+        employeeGender.getEditor().setText("");
+        employeeDesignation.getEditor().setText("");
     }
 
 
@@ -94,15 +94,15 @@ public class UpdateEmployeeController implements Initializable {
 
     @FXML
     public void IDOnEnter() {
-        String[] list = new String[7];
+        String[] list = new String[6];
         String[] info = updateEmployeeModel.setEmployeeInformation(list, Integer.parseInt(employeeID.getText()));
         employeeName.setText(info[0]);
-        employeeEmailID.setText(info[2]);
-        employeePassword.setText(info[1]);
-        employeeDOB.getEditor().setText(info[3]);
-        employeeGender.getEditor().setText(info[4]);
-        employeeAddress.setText(info[5]);
-        employeePhoneNumber.setText(info[6]);
+        employeeEmailID.setText(info[1]);
+     //   employeePassword.setText(info[1]);
+        employeeDOB.getEditor().setText(info[2]);
+        employeeGender.getEditor().setText(info[3]);
+        employeeAddress.setText(info[4]);
+        employeePhoneNumber.setText(info[5]);
     }
 
 }
