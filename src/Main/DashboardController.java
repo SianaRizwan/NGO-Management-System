@@ -4,6 +4,7 @@ import Login.LoginModel;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
@@ -28,6 +29,30 @@ public class DashboardController implements Initializable {
     private Circle Logo;
     @FXML
     private HBox dashboardAccounts;
+    @FXML
+    private Circle Logo12;
+
+    @FXML
+    private Button totalDoctor;
+
+    @FXML
+    private Circle Logo121;
+
+    @FXML
+    private Button totalEmployee;
+
+    @FXML
+    private Circle Logo122;
+
+    @FXML
+    private Button totalDonor;
+
+    @FXML
+    private Circle Logo123;
+
+    @FXML
+    private Button totalVolunteer;
+    DashboardModel model=new DashboardModel();
 
     @FXML
     private void viewEmployeeDetails() throws IOException{
@@ -39,8 +64,16 @@ public class DashboardController implements Initializable {
         AnchorPane pane2 = FXMLLoader.load(getClass().getResource("../Login/login.fxml"));
         mainPane.getChildren().setAll(pane2);
     }
+
+    private void viewDashboard(){
+        totalEmployee.setText(String.valueOf(model.getTotalEmployee()));
+        totalDoctor.setText(String.valueOf(model.getTotalDoctor()));
+        totalDonor.setText(String.valueOf(model.getTotalDonor()));
+        totalVolunteer.setText(String.valueOf(model.getTotalVolunteer()));
+    }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        viewDashboard();
         Logo.setStroke(Color.FLORALWHITE);
         Image image = new Image("images/Peace.jpg",false);
         Logo.setFill(new ImagePattern(image));
