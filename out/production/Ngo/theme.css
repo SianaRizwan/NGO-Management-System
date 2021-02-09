@@ -91,6 +91,11 @@
     -fx-background-color: White;
 }
 
+.dash_event:hover {
+    -fx-background-color: #bf16164d;
+    -fx-cursor: hand;
+}
+
 .supply-button:hover {
     -fx-background-color: #f8f1f1;
 }

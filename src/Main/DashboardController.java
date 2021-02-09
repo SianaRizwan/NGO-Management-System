@@ -84,6 +84,12 @@ public class DashboardController implements Initializable {
         }
     }
 
+    @FXML
+    void handleDashboard() throws IOException {
+        AnchorPane pane  = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
+        employeeDetailsBorderPane.getChildren().setAll(pane);
+    }
+
     public void viewDoctorDetails() throws IOException {
         AnchorPane pane  = FXMLLoader.load(getClass().getResource("../Person/DoctorDetails/DoctorDetails.fxml"));
         employeeDetailsBorderPane.setCenter(pane);

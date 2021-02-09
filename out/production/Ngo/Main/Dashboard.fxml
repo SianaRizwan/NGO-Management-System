@@ -12,6 +12,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -31,7 +32,7 @@
                         <Insets top="50.0" />
                      </VBox.margin>
                      <children>
-                        <Circle fx:id="Logo" fill="WHITE" radius="63.0" stroke="#e86868" strokeType="INSIDE" strokeWidth="2.0" />
+                        <Circle fx:id="Logo" fill="WHITE" onMouseClicked="#handleDashboard" radius="63.0" stroke="#e86868" strokeType="INSIDE" strokeWidth="2.0" />
                      </children>
                   </HBox>
                   <Text fill="WHITE" strokeMiterLimit="20.0" strokeType="INSIDE" strokeWidth="0.0" text="Help 4 U" textAlignment="CENTER" wrappingWidth="214.328125">
@@ -225,6 +226,87 @@
                         </Label>
                      </children>
                   </AnchorPane>
+                  <Line endX="1389.6666259765625" layoutX="138.0" layoutY="990.0" startX="-100.0" />
+                  <HBox layoutX="-3.0" layoutY="386.0" prefHeight="270.0" prefWidth="1640.0">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="370.0">
+                           <HBox.margin>
+                              <Insets left="45.0" />
+                           </HBox.margin>
+                           <children>
+                              <ImageView fitHeight="267.0" fitWidth="370.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../images/foodDash.jpg" />
+                                 </image>
+                              </ImageView>
+                              <AnchorPane layoutX="-1.0" prefHeight="268.0" prefWidth="372.0" style="-fx-background-color: #db9b0f;" styleClass="dash_event">
+                                 <children>
+                                    <Label layoutX="84.0" layoutY="92.0" text="Food Distribution" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="370.0">
+                           <children>
+                              <ImageView fitHeight="267.0" fitWidth="370.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../images/foodDash.jpg" />
+                                 </image>
+                              </ImageView>
+                              <AnchorPane layoutX="-1.0" prefHeight="268.0" prefWidth="372.0" style="-fx-background-color: #b31c14;" styleClass="dash_event">
+                                 <children>
+                                    <Label layoutX="84.0" layoutY="92.0" text="Medical Camp" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="370.0">
+                           <children>
+                              <ImageView fitHeight="267.0" fitWidth="370.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../images/foodDash.jpg" />
+                                 </image>
+                              </ImageView>
+                              <AnchorPane layoutX="-1.0" prefHeight="268.0" prefWidth="372.0" style="-fx-background-color: #1b1b1b;" styleClass="dash_event">
+                                 <children>
+                                    <Label layoutX="84.0" layoutY="92.0" text="Vaccine for All" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="370.0">
+                           <children>
+                              <ImageView fitHeight="267.0" fitWidth="370.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../images/foodDash.jpg" />
+                                 </image>
+                              </ImageView>
+                              <AnchorPane layoutX="-1.0" prefHeight="268.0" prefWidth="372.0" style="-fx-background-color: #db9b0f;" styleClass="dash_event">
+                                 <children>
+                                    <Label layoutX="84.0" layoutY="92.0" text="Emergency" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="370.0" />
                </children>
             </AnchorPane>
          </center>
