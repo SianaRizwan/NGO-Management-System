@@ -66,6 +66,13 @@
     -fx-text-fill: -fx-buttonText;
     -fx-background-radius: 10px;
 }
+
+.dashboard_circle_button {
+    -fx-background-color: -fx-primary;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 5em;
+}
+
 .logout-button{
     -fx-background-color: -fx-secondary;
     -fx-text-fill: -fx-buttonText;
@@ -82,6 +89,26 @@
 
 .supply-button {
     -fx-background-color: White;
+}
+
+.dash_event-FE {
+-fx-background-color: #C33C54;
+}
+
+.dash_event-M {
+-fx-background-color: #983628;
+}
+
+.dash_event-V {
+-fx-background-color: #1b1b1b;
+}
+.dash_event-E{
+-fx-background-color: #EF8275;
+}
+
+.dash_event-FE:hover, .dash_event-M:hover, .dash_event-V:hover,.dash_event-E:hover {
+    -fx-background-color: #42353564;
+    -fx-cursor: hand;
 }
 
 .supply-button:hover {
