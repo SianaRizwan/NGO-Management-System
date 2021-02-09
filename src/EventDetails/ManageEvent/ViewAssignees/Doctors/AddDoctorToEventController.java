@@ -17,8 +17,6 @@ import java.util.Arrays;
 
 public class AddDoctorToEventController {
     @FXML
-    private AnchorPane viewDetails;
-    @FXML
     private AnchorPane viewIDs;
     @FXML
     private JFXTextField searchOption;
@@ -100,8 +98,8 @@ public class AddDoctorToEventController {
         getSelectedVolunteers();
         //System.out.println(selectedID);
         if (addDoctorToEventModel.isAssignVolunteerSuccessful(selectedID, new ManageEventController().getEventID())) {
-            new ShowAlertDialogue().infoBox("Docotr Assigned!", null, "Assign Docotr");
-            Stage stage = (Stage) viewDetails.getScene().getWindow();
+            new ShowAlertDialogue().infoBox("Doctor Assigned!", null, "Assign Docotr");
+            Stage stage = (Stage) viewIDs.getScene().getWindow();
             stage.close();
         } else {
             new ShowAlertDialogue().infoBox("Docotr Assigning Failed!", null, "Assign Docotr");
@@ -110,7 +108,7 @@ public class AddDoctorToEventController {
 
     @FXML
     void handleBackButton() throws IOException {
-        Stage stage = (Stage) viewDetails.getScene().getWindow();
+        Stage stage = (Stage) viewIDs.getScene().getWindow();
         stage.close();
     }
 }
