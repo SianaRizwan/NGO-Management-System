@@ -38,7 +38,7 @@
                 <JFXTextField fx:id="healthProdName" layoutX="167.0" layoutY="86.0" prefHeight="31.0" prefWidth="435.0" promptText="Product Name" stylesheets="@../../../theme.css" />
                 <JFXTextField fx:id="healthProdSupplier" layoutX="167.0" layoutY="151.0" prefHeight="31.0" prefWidth="435.0" promptText="Supplier Name" stylesheets="@../../../theme.css" />
                 <JFXTextField fx:id="healthProdQuantity" layoutX="167.0" layoutY="220.0" prefHeight="31.0" prefWidth="435.0" promptText="Enter Quantity" stylesheets="@../../../theme.css" />
-                <JFXTextField fx:id="healthProdPrice" layoutX="167.0" layoutY="288.0" prefHeight="31.0" prefWidth="435.0" promptText="Unit Price" stylesheets="@../../../theme.css" />
+                <JFXTextField fx:id="healthProdPrice" layoutX="167.0" layoutY="288.0" prefHeight="31.0" prefWidth="435.0" promptText="Unit Price (Bdt)" stylesheets="@../../../theme.css" />
                 <JFXTextField fx:id="healthProdManufacturer" layoutX="167.0" layoutY="489.0" prefHeight="31.0" prefWidth="435.0" promptText="Manufacturer Name" stylesheets="@../../../theme.css" />
                 <JFXDatePicker fx:id="healthProdPurchaseDate" defaultColor="#f3e4e4" layoutX="167.0" layoutY="358.0" prefHeight="31.0" prefWidth="435.0" promptText="Purchase Date" stylesheets="@../../../theme.css" />
                 <JFXDatePicker fx:id="healthProdExpiryDate" defaultColor="#f3e4e4" layoutX="167.0" layoutY="423.0" prefHeight="34.0" prefWidth="435.0" promptText="Expiry Date" stylesheets="@../../../theme.css" />

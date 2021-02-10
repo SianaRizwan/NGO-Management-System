@@ -27,14 +27,14 @@
             <TableColumn fx:id="colID" editable="false" maxWidth="300.0" minWidth="120.0" prefWidth="152.0" text="Event ID" />
             <TableColumn fx:id="colName" editable="false" maxWidth="300.0" minWidth="-Infinity" prefWidth="179.0" text="Event Name" />
             <TableColumn fx:id="colDate" editable="false" minWidth="112.0" prefWidth="131.0" text="Date" />
-            <TableColumn fx:id="colBudget" editable="false" maxWidth="390.0" minWidth="-Infinity" prefWidth="121.0" text="Budget" />
+            <TableColumn fx:id="colBudget" editable="false" maxWidth="390.0" minWidth="-Infinity" prefWidth="121.0" text="Budget (Bdt)" />
          </columns>
       </TableView>
       <JFXTextField fx:id="totalDonationTextfield" editable="false" layoutX="935.0" layoutY="507.0" prefHeight="39.0" prefWidth="166.0" style="-fx-background-color: #ffffff;" styleClass="second-text-field">
          <effect>
             <Reflection fraction="0.3" />
          </effect></JFXTextField>
-      <Label graphicTextGap="22.0" layoutX="764.0" layoutY="515.0" prefHeight="21.0" prefWidth="166.0" text="Total Event Cost :">
+      <Label graphicTextGap="22.0" layoutX="726.0" layoutY="515.0" prefHeight="23.0" prefWidth="204.0" text="Total Event Cost(Bdt) :">
          <font>
             <Font name="Californian FB Bold" size="20.0" />
          </font>

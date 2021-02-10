@@ -65,9 +65,9 @@ public class LoginController {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("../Main/Splash.fxml"));
             loginPane.getChildren().setAll(pane);
 
-            FadeTransition fade = new FadeTransition(Duration.seconds(2.5), pane);
-            fade.setFromValue(1);
-            fade.setToValue(0.2);
+            FadeTransition fade = new FadeTransition(Duration.seconds(3), pane);
+            fade.setFromValue(0.3);
+            fade.setToValue(1);
             fade.setCycleCount(1);
 
             fade.play();

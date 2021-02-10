@@ -25,7 +25,7 @@
                          <columns>
                              <TableColumn fx:id="colMedicineName" editable="false" minWidth="240.0" prefWidth="412.0" text="Name" />
                              <TableColumn fx:id="colMedicineQuantity" editable="false" maxWidth="1000.0" minWidth="-Infinity" prefWidth="387.0" text="Quantity" />
-                             <TableColumn fx:id="colMedicineBuyingPrice" editable="false" maxWidth="1000.0" minWidth="-Infinity" prefWidth="382.0" text="Buying Price" />
+                             <TableColumn fx:id="colMedicineBuyingPrice" editable="false" maxWidth="1000.0" minWidth="-Infinity" prefWidth="382.0" text="Total Buying Price (Bdt)" />
                          </columns>
                      <contextMenu>
                         <ContextMenu>
@@ -64,7 +64,7 @@
                              <Font name="Californian FB Bold" size="36.0" />
                          </font>
                      </Label>
-                     <FontAwesomeIconView glyphName="ARROW_LEFT" layoutX="73.0" layoutY="66.0" onMouseClicked="#handleBackButton" styleClass="glyph-icon-back" size="28.0" wrappingWidth="30.755958557128906" />
+                     <FontAwesomeIconView glyphName="ARROW_LEFT" layoutX="73.0" layoutY="66.0" onMouseClicked="#handleBackButton" size="28.0" styleClass="glyph-icon-back" wrappingWidth="30.755958557128906" />
                  </children>
              </AnchorPane>
          </children>

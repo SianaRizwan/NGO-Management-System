@@ -25,7 +25,7 @@
                          <columns>
                              <TableColumn fx:id="colFoodName" editable="false" minWidth="240.0" prefWidth="507.0" text="Name" />
                              <TableColumn fx:id="colFoodQuantity" editable="false" maxWidth="1000.0" minWidth="-Infinity" prefWidth="379.0" text="Quantity" />
-                             <TableColumn fx:id="colFoodBuyingPrice" editable="false" maxWidth="1000.0" minWidth="-Infinity" prefWidth="295.0" text="Buying Cost" />
+                             <TableColumn fx:id="colFoodBuyingPrice" editable="false" maxWidth="1000.0" minWidth="-Infinity" prefWidth="295.0" text="Total Buying Cost (Bdt)" />
                          </columns>
                      <contextMenu>
                         <ContextMenu>

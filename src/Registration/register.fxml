@@ -21,7 +21,7 @@
             <Image url="@../images/background.jpg" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="562.0" layoutY="-4.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1392.0" prefWidth="689.0" style="-fx-background-color: #212121;" styleClass="bg" stylesheets="@../theme.css" AnchorPane.bottomAnchor="412.0" AnchorPane.leftAnchor="590.0" AnchorPane.rightAnchor="590.0" AnchorPane.topAnchor="-4.0">
+      <AnchorPane layoutX="544.0" layoutY="-8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="942.0" prefWidth="771.0" style="-fx-background-color: #212121;" styleClass="bg" stylesheets="@../theme.css" AnchorPane.bottomAnchor="866.0" AnchorPane.leftAnchor="544.0" AnchorPane.rightAnchor="554.0" AnchorPane.topAnchor="-8.0">
          <children>
             <Label alignment="CENTER" layoutX="233.0" layoutY="40.0" prefHeight="66.0" prefWidth="291.0" text="Register Here !!" textFill="#fffbfb">
                <font>
@@ -36,14 +36,14 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Button fx:id="confirmButton" graphicTextGap="22.0" layoutX="282.0" layoutY="750.0" mnemonicParsing="false" onAction="#confirmRegistration" onMouseClicked="#confirmRegistration" opacity="0.9" prefHeight="47.0" prefWidth="193.0" text="Confirm">
+            <Button fx:id="confirmButton" graphicTextGap="22.0" layoutX="245.0" layoutY="746.0" mnemonicParsing="false" onAction="#confirmRegistration" onMouseClicked="#confirmRegistration" opacity="0.9" prefHeight="45.0" prefWidth="120.0" text="Confirm">
                <font>
                   <Font name="Calibri" size="24.0" />
                </font>
                <effect>
                   <DropShadow color="#fbf9f9" />
                </effect></Button>
-            <Button fx:id="backToLoginPageButton" layoutX="233.0" layoutY="831.0" mnemonicParsing="false" onAction="#handleBackToLoginPage" onMouseClicked="#handleBackToLoginPage" opacity="0.9" prefHeight="47.0" prefWidth="291.0" text="Back To LoginPage">
+            <Button fx:id="backToLoginPageButton" layoutX="405.0" layoutY="743.0" mnemonicParsing="false" onAction="#handleBackToLoginPage" onMouseClicked="#handleBackToLoginPage" opacity="0.9" prefHeight="45.0" prefWidth="120.0" text="Back">
                <font>
                   <Font name="Calibri" size="24.0" />
                </font>
