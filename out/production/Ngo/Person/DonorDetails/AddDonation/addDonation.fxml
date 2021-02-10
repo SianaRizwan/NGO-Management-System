@@ -39,7 +39,7 @@
                      </effect>
                         </Button>
                         <JFXTextField fx:id="donorName" editable="false" layoutX="216.0" layoutY="209.0" prefHeight="31.0" prefWidth="435.0" promptText="Donor Name" stylesheets="@../../../theme.css" />
-                        <JFXTextField fx:id="donationAmount" layoutX="216.0" layoutY="299.0" prefHeight="31.0" prefWidth="435.0" promptText="Donation Amount" stylesheets="@../../../theme.css" />
+                        <JFXTextField fx:id="donationAmount" layoutX="216.0" layoutY="299.0" prefHeight="31.0" prefWidth="435.0" promptText="Donation Amount (Bdt)" stylesheets="@../../../theme.css" />
                         <JFXDatePicker fx:id="donationDate" defaultColor="#f3e4e4" layoutX="216.0" layoutY="403.0" prefHeight="31.0" prefWidth="435.0" promptText="Date of Donation" stylesheets="@../../../theme.css" />
                         <FontAwesomeIconView glyphName="CALENDAR_ALT" layoutX="154.0" layoutY="239.0" size="25" />
                         <FontAwesomeIconView glyphName="MONEY" layoutX="153.0" layoutY="327.0" size="25" />

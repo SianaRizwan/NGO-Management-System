@@ -30,7 +30,7 @@
                         <Font name="Californian FB" size="18.0" />
                     </font>
                 </Label>
-                <JFXTextField fx:id="totalEmpTextField" alignment="CENTER" layoutX="245.0" layoutY="188.0" style="-fx-background-color: #ffffff;">
+                <JFXTextField fx:id="totalEmpTextField" alignment="CENTER" editable="false" layoutX="245.0" layoutY="188.0" style="-fx-background-color: #ffffff;">
                     <effect>
                         <DropShadow radius="4.75" width="0.0" />
                     </effect></JFXTextField>
@@ -39,7 +39,7 @@
                         <Font name="Californian FB" size="18.0" />
                     </font>
                 </Label>
-                <JFXTextField fx:id="totalDocTextField" alignment="CENTER" layoutX="983.0" layoutY="188.0" style="-fx-background-color: #ffffff;">
+                <JFXTextField fx:id="totalDocTextField" alignment="CENTER" editable="false" layoutX="983.0" layoutY="188.0" style="-fx-background-color: #ffffff;">
                     <effect>
                         <DropShadow radius="4.75" width="0.0" />
                     </effect></JFXTextField>

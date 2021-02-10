@@ -38,7 +38,7 @@
             <JFXTextField fx:id="foodName" layoutX="159.0" layoutY="77.0" prefHeight="31.0" prefWidth="435.0" promptText="Enter Food Name" stylesheets="@../../../theme.css" />
             <JFXTextField fx:id="foodSupplier" layoutX="159.0" layoutY="147.0" prefHeight="31.0" prefWidth="435.0" promptText="Enter Supplier Name" stylesheets="@../../../theme.css" />
             <JFXTextField fx:id="foodQuantity" layoutX="159.0" layoutY="223.0" prefHeight="31.0" prefWidth="435.0" promptText="Enter Quantity" stylesheets="@../../../theme.css" />
-            <JFXTextField fx:id="foodPrice" layoutX="159.0" layoutY="298.0" prefHeight="31.0" prefWidth="435.0" promptText="Enter Price" stylesheets="@../../../theme.css" />
+            <JFXTextField fx:id="foodPrice" layoutX="159.0" layoutY="298.0" prefHeight="31.0" prefWidth="435.0" promptText="Enter Price (Bdt)" stylesheets="@../../../theme.css" />
             <JFXDatePicker fx:id="foodPurchaseDate" defaultColor="#f3e4e4" layoutX="157.0" layoutY="369.0" prefHeight="31.0" prefWidth="435.0" promptText="Purchase Date" stylesheets="@../../../theme.css" />
             <JFXDatePicker fx:id="foodExpiryDate" defaultColor="#f3e4e4" layoutX="157.0" layoutY="439.0" prefHeight="31.0" prefWidth="435.0" promptText="Expiry Date" stylesheets="@../../../theme.css" />
             <FontAwesomeIconView glyphName="PAGELINES" layoutX="97.0" layoutY="107.0" size="25" />

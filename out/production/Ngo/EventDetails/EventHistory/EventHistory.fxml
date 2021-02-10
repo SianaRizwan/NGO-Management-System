@@ -14,17 +14,17 @@
     <children>
         <Pane fx:id="eventDetailsPane" prefHeight="1275.0" prefWidth="1473.0">
             <children>
-                <TableView fx:id="informationTable" layoutX="129.0" layoutY="245.0" prefHeight="537.0" prefWidth="1175.0" styleClass="table-row-cell">
+                <TableView fx:id="informationTable" layoutX="129.0" layoutY="245.0" prefHeight="537.0" prefWidth="1248.0" styleClass="table-row-cell">
                     <columns>
                         <TableColumn fx:id="colID" prefWidth="151.0" text="EVENT ID" />
                         <TableColumn fx:id="colName" prefWidth="149.0" text="EVENT NAME" />
                         <TableColumn fx:id="colDate" prefWidth="132.0" text="EVENT DATE" />
-                        <TableColumn fx:id="colActualBudget" prefWidth="148.0" text="ACTUAL BUDGET" />
-                        <TableColumn fx:id="colEstBudget" prefWidth="146.0" text="EST. BUDGET" />
-                        <TableColumn fx:id="colEmployee" prefWidth="112.0" text="EMPLOYEE" />
-                        <TableColumn fx:id="colDoctor" prefWidth="112.0" text="DOCTOR" />
+                        <TableColumn fx:id="colActualBudget" prefWidth="182.0" text="ACTUAL BUDGET (Bdt)" />
+                        <TableColumn fx:id="colEstBudget" prefWidth="171.0" text="EST. BUDGET (Bdt)" />
+                        <TableColumn fx:id="colEmployee" prefWidth="125.0" text="EMPLOYEE" />
+                        <TableColumn fx:id="colDoctor" prefWidth="110.0" text="DOCTOR" />
                         <TableColumn fx:id="colvolunteer" prefWidth="114.0" text="VOLUNTEER" />
-                        <TableColumn fx:id="colSupplies" prefWidth="112.0" text="SUPPLIES" />
+                        <TableColumn fx:id="colSupplies" prefWidth="114.0" text="SUPPLIES" />
                     </columns>
                 </TableView>
                 <Label layoutX="114.0" layoutY="6.0" prefHeight="98.0" prefWidth="511.0" text="Event History">

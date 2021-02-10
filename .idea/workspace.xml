@@ -2,8 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Report.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/~WRL0865.tmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Accounts/Summary/SummaryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts/Summary/SummaryModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Accounts.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Accounts.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Designation/DesignationDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Designation/DesignationDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Expenses/ExpensesDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Expenses/ExpensesDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/DonationSummary/donationSummary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/DonationSummary/donationSummary.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/EventSummary/EventSummary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/EventSummary/EventSummary.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/ExpenseBarChart/expenseschart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/ExpenseBarChart/expenseschart.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/SalaryBarchart/salarychart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/SalaryBarchart/salarychart.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/summary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Accounts/Summary/summary.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/CreateEvent/CreateEvent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/CreateEvent/CreateEvent.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventHistory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventHistory.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventSupply/Food/viewAssignedFood.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventSupply/Food/viewAssignedFood.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventSupply/Health/viewAssignedMed.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/EventHistory/EventSupply/Health/viewAssignedMed.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ManageEvent/ManageEvent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/EventDetails/ManageEvent/ManageEvent.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Login/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Login/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Main/DashLanding.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Main/DashLandingController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Main/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Main/Dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Main/DashboardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Main/DashboardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Person/DonorDetails/AddDonation/addDonation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Person/DonorDetails/AddDonation/addDonation.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/Registration/register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/Registration/register.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Emergency/EmergencySupply.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Emergency/EmergencySupply.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Emergency/ViewEmergencySupplyDetails/ViewEmergencySupplyDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Emergency/ViewEmergencySupplyDetails/ViewEmergencySupplyDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Food/AddFood/addFoodSupply.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Food/AddFood/addFoodSupply.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Food/ViewFoodDetails/ViewFoodInformation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Food/ViewFoodDetails/ViewFoodInformation.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Food/food.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/Food/food.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/HealthProduct/AddHealthProducts/addHealthProd.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/HealthProduct/AddHealthProducts/addHealthProd.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/HealthProduct/Medicine/ViewMedicineDetails/ViewMedicineInformation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/HealthProduct/Medicine/ViewMedicineDetails/ViewMedicineInformation.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/HealthProduct/Medicine/medicine.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/HealthProduct/Medicine/medicine.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/HealthProduct/Vaccine/ViewVaccineDetails/ViewVaccineInformation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/HealthProduct/Vaccine/ViewVaccineDetails/ViewVaccineInformation.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/HealthProduct/Vaccine/vaccine.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ngo/SupplyDetails/HealthProduct/Vaccine/vaccine.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,29 +262,29 @@
       <screen x="0" y="0" width="1920" height="1030" />
     </state>
     <state x="686" y="211" key="FileChooserDialogImpl/0.0.1920.1030@0.0.1920.1030" timestamp="1612635512315" />
-    <state width="1864" height="331" key="GridCell.Tab.0.bottom" timestamp="1612902587065">
+    <state width="1864" height="331" key="GridCell.Tab.0.bottom" timestamp="1612974279906">
       <screen x="0" y="0" width="1920" height="1030" />
     </state>
-    <state width="1864" height="331" key="GridCell.Tab.0.bottom/0.0.1920.1030@0.0.1920.1030" timestamp="1612902587065" />
-    <state width="1864" height="331" key="GridCell.Tab.0.center" timestamp="1612902587065">
+    <state width="1864" height="331" key="GridCell.Tab.0.bottom/0.0.1920.1030@0.0.1920.1030" timestamp="1612974279906" />
+    <state width="1864" height="331" key="GridCell.Tab.0.center" timestamp="1612974279906">
       <screen x="0" y="0" width="1920" height="1030" />
     </state>
-    <state width="1864" height="331" key="GridCell.Tab.0.center/0.0.1920.1030@0.0.1920.1030" timestamp="1612902587065" />
-    <state width="1864" height="331" key="GridCell.Tab.0.left" timestamp="1612902587065">
+    <state width="1864" height="331" key="GridCell.Tab.0.center/0.0.1920.1030@0.0.1920.1030" timestamp="1612974279906" />
+    <state width="1864" height="331" key="GridCell.Tab.0.left" timestamp="1612974279906">
       <screen x="0" y="0" width="1920" height="1030" />
     </state>
-    <state width="1864" height="331" key="GridCell.Tab.0.left/0.0.1920.1030@0.0.1920.1030" timestamp="1612902587065" />
-    <state width="1864" height="331" key="GridCell.Tab.0.right" timestamp="1612902587065">
+    <state width="1864" height="331" key="GridCell.Tab.0.left/0.0.1920.1030@0.0.1920.1030" timestamp="1612974279906" />
+    <state width="1864" height="331" key="GridCell.Tab.0.right" timestamp="1612974279906">
       <screen x="0" y="0" width="1920" height="1030" />
     </state>
-    <state width="1864" height="331" key="GridCell.Tab.0.right/0.0.1920.1030@0.0.1920.1030" timestamp="1612902587065" />
+    <state width="1864" height="331" key="GridCell.Tab.0.right/0.0.1920.1030@0.0.1920.1030" timestamp="1612974279906" />
     <state x="347" y="0" key="SettingsEditor" timestamp="1606794385478">
       <screen x="0" y="0" width="1920" height="1030" />
     </state>
     <state x="347" y="0" key="SettingsEditor/0.0.1920.1030@0.0.1920.1030" timestamp="1606794385478" />
-    <state x="594" y="298" key="com.intellij.ide.util.TipDialog" timestamp="1612871040920">
+    <state x="594" y="298" key="com.intellij.ide.util.TipDialog" timestamp="1612970398483">
       <screen x="0" y="0" width="1920" height="1030" />
     </state>
-    <state x="594" y="298" key="com.intellij.ide.util.TipDialog/0.0.1920.1030@0.0.1920.1030" timestamp="1612871040920" />
+    <state x="594" y="298" key="com.intellij.ide.util.TipDialog/0.0.1920.1030@0.0.1920.1030" timestamp="1612970398483" />
   </component>
 </project>
