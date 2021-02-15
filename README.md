@@ -9,7 +9,7 @@ There are 2 types of users who will use this software- Admin and other type of e
 
 #### Features
 
-There is main 4 types of features:
+There are main 4 types of features:
 
 - Storing personal information of the employees, doctors, donors and volunteers
 - Managing the inventory by storing details of the supplies
