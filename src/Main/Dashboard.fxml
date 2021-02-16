@@ -328,17 +328,17 @@
                               <Font name="Arial Bold" size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="400.0" layoutY="27.0" text="donation raised this month" textFill="#2c2a2a">
+                        <Label layoutX="408.0" layoutY="27.0" text="Donation Raised This Month" textFill="#2c2a2a">
                            <font>
                               <Font name="Arial Bold" size="20.0" />
                            </font>
                         </Label>
-                        <Label layoutX="400.0" layoutY="102.0" text="expenses" textFill="#2c2a2a">
+                        <Label layoutX="411.0" layoutY="102.0" text="Expenses" textFill="#2c2a2a">
                            <font>
                               <Font name="Arial Bold" size="20.0" />
                            </font>
                         </Label>
-                        <Label layoutX="300.0" layoutY="175.0" text="upcoming events" textFill="#2c2a2a">
+                        <Label layoutX="300.0" layoutY="175.0" text="Current Events" textFill="#2c2a2a">
                            <font>
                               <Font name="Arial Bold" size="20.0" />
                            </font>

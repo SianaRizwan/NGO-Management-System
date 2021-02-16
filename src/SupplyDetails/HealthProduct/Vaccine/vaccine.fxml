@@ -25,7 +25,7 @@
                             <columns>
                                 <TableColumn fx:id="colVaccineName" editable="false" minWidth="240.0" prefWidth="300.0" text="Name" />
                                 <TableColumn fx:id="colVaccineQuantity" editable="false" maxWidth="1000.0" minWidth="-Infinity" prefWidth="300.0" text="Quantity" />
-                                <TableColumn fx:id="colVaccineBuyingPrice" editable="false" maxWidth="1000.0" minWidth="-Infinity" prefWidth="300.0" text="Buying Price" />
+                                <TableColumn fx:id="colVaccineBuyingPrice" editable="false" maxWidth="1000.0" minWidth="-Infinity" prefWidth="300.0" text="Total Buying Price (Bdt)" />
                             </columns>
                             <contextMenu>
                                 <ContextMenu>

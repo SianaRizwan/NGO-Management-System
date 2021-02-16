@@ -53,7 +53,7 @@ public class UpdateEmployeeController implements Initializable {
         Date dobDate = new SimpleDateFormat("yyyy-dd-MM").parse(employeeDOB.getEditor().getText());
         if (new Validation().checkEmailAndPhoneValidation(employeeEmailID.getText(), employeePhoneNumber.getText())) {
             if (updateEmployeeModel.isUpdateEmployeeSuccessful(dobDate, employeeGender.getSelectionModel().getSelectedItem().toString(),
-                    employeeAddress.getText(), employeePhoneNumber.getText(), employeeDesignation.getSelectionModel().getSelectedItem().toString(),
+                    employeeAddress.getText(), employeePhoneNumber.getText(), employeeDesignation.getText(),
                     employeeEmailID.getText(),  Integer.parseInt(employeeID.getText()))) {
                 new ShowAlertDialogue().infoBox("update Successful!", null, "update Employee");
                 refreshTextField();

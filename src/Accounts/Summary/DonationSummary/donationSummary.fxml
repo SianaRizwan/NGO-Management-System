@@ -28,7 +28,7 @@
                 <TableColumn fx:id="colDonorID" editable="false" maxWidth="300.0" minWidth="-Infinity" prefWidth="204.0" text="Donor ID" />
                 <TableColumn fx:id="colDonorName" editable="false" minWidth="179.0" prefWidth="221.0" text="Donor Name" />
                 <TableColumn fx:id="colDonDate" editable="false" maxWidth="337.0" minWidth="-Infinity" prefWidth="214.0" text="Donation Date" />
-                <TableColumn fx:id="colDonAmount" editable="false" maxWidth="429.0" minWidth="0.0" prefWidth="202.0" text="Donation Amount" />
+                <TableColumn fx:id="colDonAmount" editable="false" maxWidth="429.0" minWidth="0.0" prefWidth="202.0" text="Donation Amount (Bdt)" />
             </columns>
         </TableView>
       <JFXTextField fx:id="totalDonationTextfield" editable="false" layoutX="904.0" layoutY="497.0" prefHeight="31.0" prefWidth="166.0" style="-fx-background-color: #ffffff;">

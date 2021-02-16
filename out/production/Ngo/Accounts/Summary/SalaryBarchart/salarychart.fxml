@@ -23,7 +23,7 @@
          <effect>
             <Reflection fraction="0.3" />
          </effect></JFXTextField>
-       <Label graphicTextGap="22.0" layoutX="913.0" layoutY="503.0" prefHeight="22.0" prefWidth="128.0" text="Total Salary :">
+       <Label graphicTextGap="22.0" layoutX="868.0" layoutY="503.0" prefHeight="23.0" prefWidth="173.0" text="Total Salary (Bdt) :">
            <font>
                <Font name="Californian FB Bold" size="20.0" />
            </font>

@@ -31,7 +31,7 @@
                                 <TableColumn fx:id="colDesigID" editable="false" maxWidth="300.0" minWidth="225.99996948242188" prefWidth="250.0" text="Designation ID" />
                                 <TableColumn fx:id="colDesigType" editable="false" maxWidth="300.0" minWidth="-Infinity" prefWidth="219.0" text="Designation Type" />
                                 <TableColumn fx:id="colDesigName" editable="false" minWidth="240.0" prefWidth="248.0" text="Designation Name" />
-                                <TableColumn fx:id="colDesigSalary" editable="false" maxWidth="300.0" minWidth="-Infinity" prefWidth="214.0" text="Salary" />
+                                <TableColumn fx:id="colDesigSalary" editable="false" maxWidth="300.0" minWidth="-Infinity" prefWidth="214.0" text="Salary (Bdt)" />
                         <TableColumn fx:id="colEmpCount" editable="false" maxWidth="319.0" minWidth="204.0" prefWidth="224.0" text="Total Employee" />
                             </columns>
                         </TableView>
@@ -44,7 +44,7 @@
                 <AnchorPane layoutX="345.0" layoutY="119.0" prefHeight="279.0" prefWidth="712.0" style="-fx-background-color: #212121;">
                     <children>
                         <JFXTextField fx:id="desigNameTextField" layoutX="181.0" layoutY="100.0" prefHeight="31.0" prefWidth="350.0" promptText="Designation" />
-                        <JFXTextField fx:id="desigSalaryTextField" layoutX="181.0" layoutY="164.0" prefHeight="30.0" prefWidth="350.0" promptText="Salary" />
+                        <JFXTextField fx:id="desigSalaryTextField" layoutX="181.0" layoutY="164.0" prefHeight="30.0" prefWidth="350.0" promptText="Salary (Bdt)" />
                         <FontAwesomeIconView glyphName="USER_PLUS" layoutX="136.0" layoutY="127.0" size="20" />
                         <JFXButton graphicTextGap="22.0" layoutX="309.0" layoutY="226.0" onAction="#desigConfirmBtn" onMouseClicked="#desigConfirmBtn" prefHeight="31.0" prefWidth="82.0" styleClass="password-change" text="Add">
                      <effect>

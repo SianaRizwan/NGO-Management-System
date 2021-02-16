@@ -32,7 +32,7 @@
                      </effect>
                         </Button>
                         <JFXTextField fx:id="eventID" labelFloat="true" layoutX="236.0" layoutY="72.0" onAction="#handleEventID" onInputMethodTextChanged="#handleEventID" prefHeight="39.0" prefWidth="336.0" promptText="Enter Event ID" stylesheets="@../../theme.css" />
-                        <JFXTextField fx:id="estimatedBudget" labelFloat="true" layoutX="236.0" layoutY="209.0" prefHeight="39.0" prefWidth="336.0" promptText="Expense amount (if any)" stylesheets="@../../theme.css" />
+                        <JFXTextField fx:id="estimatedBudget" labelFloat="true" layoutX="236.0" layoutY="209.0" prefHeight="39.0" prefWidth="336.0" promptText="Extra Expense (Bdt)" stylesheets="@../../theme.css" />
                         <FontAwesomeIconView glyphName="CALENDAR_ALT" layoutX="174.0" layoutY="102.0" size="25" />
                         <FontAwesomeIconView glyphName="USERS" layoutX="174.0" layoutY="375.0" size="25" />
                         <FontAwesomeIconView glyphName="USERS" layoutX="174.0" layoutY="308.0" size="25" />

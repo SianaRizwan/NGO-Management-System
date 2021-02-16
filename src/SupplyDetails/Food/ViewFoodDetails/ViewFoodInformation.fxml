@@ -10,17 +10,17 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="foodDetailsPane" prefHeight="544.0" prefWidth="938.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SupplyDetails.Food.ViewFoodDetails.ViewFoodInformationController">
+<AnchorPane fx:id="foodDetailsPane" prefHeight="544.0" prefWidth="938.0" stylesheets="@../../../theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SupplyDetails.Food.ViewFoodDetails.ViewFoodInformationController">
    <children>
-      <TableView fx:id="informationTable" layoutY="66.0" prefHeight="431.0" prefWidth="938.0" style="-fx-background-color: #F7E9E9;">
+      <TableView fx:id="informationTable" layoutY="66.0" prefHeight="431.0" prefWidth="938.0">
         <columns>
-          <TableColumn fx:id="colID" prefWidth="151.0" style="-fx-background-color: #EEB1B1;" text="ITEM ID" />
-            <TableColumn fx:id="colName" prefWidth="149.0" style="-fx-background-color: #EEB1B1;" text="NAME" />
-            <TableColumn fx:id="colPurchaseDate" prefWidth="132.0" style="-fx-background-color: #EEB1B1;" text="PURC_DATE" />
-            <TableColumn fx:id="colExpireDate" prefWidth="125.0" style="-fx-background-color: #EEB1B1;" text="EXP_DATE" />
-            <TableColumn fx:id="colSupplier" prefWidth="127.0" style="-fx-background-color: #EEB1B1;" text="SUPPLIER" />
-            <TableColumn fx:id="colQuantity" prefWidth="127.0" style="-fx-background-color: #EEB1B1;" text="QUANTITY" />
-            <TableColumn fx:id="colPrice" prefWidth="125.0" style="-fx-background-color: #EEB1B1;" text="UNIT_PRICE" />
+          <TableColumn fx:id="colID" prefWidth="151.0" text="ITEM ID" />
+            <TableColumn fx:id="colName" prefWidth="149.0" text="NAME" />
+            <TableColumn fx:id="colPurchaseDate" prefWidth="132.0" text="PURC_DATE" />
+            <TableColumn fx:id="colExpireDate" prefWidth="125.0" text="EXP_DATE" />
+            <TableColumn fx:id="colSupplier" prefWidth="127.0" text="SUPPLIER" />
+            <TableColumn fx:id="colQuantity" prefWidth="117.0" text="QUANTITY" />
+            <TableColumn fx:id="colPrice" prefWidth="135.0" text="UNIT_PRICE (Bdt)" />
         </columns>
       </TableView>
       <Button graphicTextGap="22.0" layoutX="867.0" layoutY="507.0" mnemonicParsing="false" onAction="#handleBackButton" style="-fx-background-color: FDAB9F;" text="BACK">

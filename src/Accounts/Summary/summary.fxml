@@ -62,7 +62,7 @@
                         <String fx:value="second-text-field" />
                      </styleClass>
                   </TextField>
-                  <JFXTextField fx:id="netTotal" editable="false" layoutX="619.0" layoutY="395.0" prefHeight="31.0" prefWidth="166.0" style="-fx-background-color: #ffffff;" stylesheets="@../../theme.css">
+                  <JFXTextField fx:id="netTotal" editable="false" layoutX="674.0" layoutY="395.0" prefHeight="31.0" prefWidth="166.0" style="-fx-background-color: #ffffff;" stylesheets="@../../theme.css">
                      <styleClass>
                         <String fx:value="summary-text-field" />
                         <String fx:value="second-text-field" />
@@ -71,7 +71,7 @@
                         <Reflection fraction="0.3" />
                      </effect>
                   </JFXTextField>
-                  <Label graphicTextGap="22.0" layoutX="443.0" layoutY="400.0" prefHeight="22.0" prefWidth="128.0" text="Net Total :">
+                  <Label graphicTextGap="22.0" layoutX="354.0" layoutY="400.0" prefHeight="28.0" prefWidth="277.0" text="Remaining balance (Bdt) :">
                      <font>
                         <Font name="Californian FB Bold" size="24.0" />
                      </font>
